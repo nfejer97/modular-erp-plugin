@@ -65114,7 +65114,7 @@ const plugin = {
     container.shadowRoot?.appendChild(el2);
     root = clientExports.createRoot(el2);
     root.render(
-      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BrowserRouter, { basename: "/models", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Plugin, { context, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Routes, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Route, { path: "/" }, void 0, false, {
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BrowserRouter, { basename: "/modular-erp", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Plugin, { context, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Routes, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Route, { path: "/projects" }, void 0, false, {
         fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin-entry.tsx",
         lineNumber: 35,
         columnNumber: 13
