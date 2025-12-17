@@ -71017,7 +71017,6 @@ const pagesService = {
         limit: 1
       }
     });
-    console.log("pagesService.getByRoute - response:", response);
     if (!response.data.data || response.data.data.length === 0) {
       throw new Error("Page not found");
     }
