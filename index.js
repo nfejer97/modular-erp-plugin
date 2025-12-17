@@ -76074,12 +76074,12 @@ function SlugPage() {
     return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 flex items-center justify-center py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-2xl mx-auto px-4 text-center", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-white rounded-lg shadow-md p-12", children: [
       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-6xl font-bold text-gray-300 mb-4", children: "404" }, void 0, false, {
         fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-        lineNumber: 21,
+        lineNumber: 19,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h1", { className: "text-3xl font-bold text-gray-800 mb-4", children: "Page Not Found" }, void 0, false, {
         fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-        lineNumber: 22,
+        lineNumber: 20,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-gray-600 mb-8", children: [
@@ -76090,13 +76090,13 @@ function SlugPage() {
           fullPath
         ] }, void 0, true, {
           fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-          lineNumber: 27,
+          lineNumber: 25,
           columnNumber: 15
         }, this),
         " could not be found."
       ] }, void 0, true, {
         fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-        lineNumber: 25,
+        lineNumber: 23,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -76110,41 +76110,41 @@ function SlugPage() {
         false,
         {
           fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-          lineNumber: 30,
+          lineNumber: 28,
           columnNumber: 13
         },
         this
       )
     ] }, void 0, true, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 20,
+      lineNumber: 18,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 19,
+      lineNumber: 17,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 18,
+      lineNumber: 16,
       columnNumber: 7
     }, this);
   }
   if (isLoading) {
     return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-white rounded-lg shadow-md p-8 text-center", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(LoadingSpinner, { message: "Loading page content..." }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 48,
+      lineNumber: 46,
       columnNumber: 13
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 47,
+      lineNumber: 45,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 46,
+      lineNumber: 44,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 45,
+      lineNumber: 43,
       columnNumber: 7
     }, this);
   }
@@ -76152,25 +76152,25 @@ function SlugPage() {
     const errorMessage = error instanceof Error ? error.message : "An error occurred while loading the page";
     return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ErrorMessage, { title: "Error Loading Page", message: errorMessage }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 64,
+      lineNumber: 62,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 63,
+      lineNumber: 61,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 62,
+      lineNumber: 60,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: data?.data?.sections && data.data.sections.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PageRenderer, { sections: data.data.sections }, void 0, false, {
     fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-    lineNumber: 75,
+    lineNumber: 73,
     columnNumber: 11
   }, this) }, void 0, false, {
     fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-    lineNumber: 74,
+    lineNumber: 72,
     columnNumber: 9
   }, this) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
     EmptyState,
@@ -76182,17 +76182,17 @@ function SlugPage() {
     false,
     {
       fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-      lineNumber: 79,
+      lineNumber: 77,
       columnNumber: 11
     },
     this
   ) }, void 0, false, {
     fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-    lineNumber: 78,
+    lineNumber: 76,
     columnNumber: 9
   }, this) }, void 0, false, {
     fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
-    lineNumber: 72,
+    lineNumber: 70,
     columnNumber: 5
   }, this);
 }
