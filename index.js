@@ -70967,7 +70967,7 @@ const env = {
 };
 const api = axios.create({
   // baseURL: env.apiBaseUrl,
-  baseURL: "https://directus.dijkstra.hu/",
+  baseURL: "https://directus.dijkstra.hu",
   headers: {
     "Content-Type": "application/json",
     Authorization: `Bearer ${env.apiKey}`
@@ -70992,13 +70992,7 @@ api.interceptors.response.use(
 const pagesService = {
   // Fetch a page by its route
   async getByRoute(params) {
-    console.log("pagesService.getByRoute - params:", params);
-    console.log(
-      "pagesService.getByRoute - API_ENDPOINTS.PAGES:",
-      API_ENDPOINTS.PAGES
-    );
-    console.log("pagesService.getByRoute - api:", api);
-    const response = await api.get("items/pages", {
+    const response = await api.get(API_ENDPOINTS.PAGES, {
       params: {
         filter: {
           route: {
