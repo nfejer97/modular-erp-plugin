@@ -47,7 +47,7 @@ var hasRequiredReact_production;
 function requireReact_production() {
   if (hasRequiredReact_production) return react_production;
   hasRequiredReact_production = 1;
-  var define_process_default = {};
+  var define_process_default2 = {};
   /**
    * @license React
    * react.production.js
@@ -105,9 +105,9 @@ function requireReact_production() {
   assign(pureComponentPrototype, Component.prototype);
   pureComponentPrototype.isPureReactComponent = true;
   var isArrayImpl = Array.isArray;
-  function noop() {
+  function noop2() {
   }
-  var ReactSharedInternals = { H: null, A: null, T: null, S: null }, hasOwnProperty = Object.prototype.hasOwnProperty;
+  var ReactSharedInternals = { H: null, A: null, T: null, S: null }, hasOwnProperty2 = Object.prototype.hasOwnProperty;
   function ReactElement(type, key, props) {
     var refProp = props.ref;
     return {
@@ -141,7 +141,7 @@ function requireReact_production() {
       case "rejected":
         throw thenable.reason;
       default:
-        switch ("string" === typeof thenable.status ? thenable.then(noop, noop) : (thenable.status = "pending", thenable.then(
+        switch ("string" === typeof thenable.status ? thenable.then(noop2, noop2) : (thenable.status = "pending", thenable.then(
           function(fulfilledValue) {
             "pending" === thenable.status && (thenable.status = "fulfilled", thenable.value = fulfilledValue);
           },
@@ -267,8 +267,8 @@ function requireReact_production() {
         error
       });
       if (!window.dispatchEvent(event)) return;
-    } else if ("object" === typeof define_process_default && "function" === typeof define_process_default.emit) {
-      define_process_default.emit("uncaughtException", error);
+    } else if ("object" === typeof define_process_default2 && "function" === typeof define_process_default2.emit) {
+      define_process_default2.emit("uncaughtException", error);
       return;
     }
     console.error(error);
@@ -334,7 +334,7 @@ function requireReact_production() {
     var props = assign({}, element.props), key = element.key;
     if (null != config)
       for (propName in void 0 !== config.key && (key = "" + config.key), config)
-        !hasOwnProperty.call(config, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config.ref || (props[propName] = config[propName]);
+        !hasOwnProperty2.call(config, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config.ref || (props[propName] = config[propName]);
     var propName = arguments.length - 2;
     if (1 === propName) props.children = children;
     else if (1 < propName) {
@@ -364,7 +364,7 @@ function requireReact_production() {
     var propName, props = {}, key = null;
     if (null != config)
       for (propName in void 0 !== config.key && (key = "" + config.key), config)
-        hasOwnProperty.call(config, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (props[propName] = config[propName]);
+        hasOwnProperty2.call(config, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (props[propName] = config[propName]);
     var childrenLength = arguments.length - 2;
     if (1 === childrenLength) props.children = children;
     else if (1 < childrenLength) {
@@ -404,7 +404,7 @@ function requireReact_production() {
     try {
       var returnValue = scope(), onStartTransitionFinish = ReactSharedInternals.S;
       null !== onStartTransitionFinish && onStartTransitionFinish(currentTransition, returnValue);
-      "object" === typeof returnValue && null !== returnValue && "function" === typeof returnValue.then && returnValue.then(noop, reportGlobalError);
+      "object" === typeof returnValue && null !== returnValue && "function" === typeof returnValue.then && returnValue.then(noop2, reportGlobalError);
     } catch (error) {
       reportGlobalError(error);
     } finally {
@@ -484,7 +484,7 @@ function requireReact_development() {
   if (hasRequiredReact_development) return react_development.exports;
   hasRequiredReact_development = 1;
   (function(module, exports) {
-    var define_process_default = {};
+    var define_process_default2 = {};
     var define_process_env_default2 = {};
     /**
      * @license React
@@ -536,7 +536,7 @@ function requireReact_development() {
         this.refs = emptyObject;
         this.updater = updater || ReactNoopUpdateQueue;
       }
-      function noop() {
+      function noop2() {
       }
       function testStringCoercion(value) {
         return "" + value;
@@ -625,7 +625,7 @@ function requireReact_development() {
         return Error("react-stack-top-frame");
       }
       function hasValidKey(config) {
-        if (hasOwnProperty.call(config, "key")) {
+        if (hasOwnProperty2.call(config, "key")) {
           var getter = Object.getOwnPropertyDescriptor(config, "key").get;
           if (getter && getter.isReactWarning) return false;
         }
@@ -727,7 +727,7 @@ function requireReact_development() {
           case "rejected":
             throw thenable.reason;
           default:
-            switch ("string" === typeof thenable.status ? thenable.then(noop, noop) : (thenable.status = "pending", thenable.then(
+            switch ("string" === typeof thenable.status ? thenable.then(noop2, noop2) : (thenable.status = "pending", thenable.then(
               function(fulfilledValue) {
                 "pending" === thenable.status && (thenable.status = "fulfilled", thenable.value = fulfilledValue);
               },
@@ -1016,7 +1016,7 @@ function requireReact_development() {
         thrownErrors: [],
         getCurrentStack: null,
         recentlyCreatedOwnerStacks: 0
-      }, hasOwnProperty = Object.prototype.hasOwnProperty, createTask = console.createTask ? console.createTask : function() {
+      }, hasOwnProperty2 = Object.prototype.hasOwnProperty, createTask = console.createTask ? console.createTask : function() {
         return null;
       };
       deprecatedAPIs = {
@@ -1040,8 +1040,8 @@ function requireReact_development() {
             error
           });
           if (!window.dispatchEvent(event)) return;
-        } else if ("object" === typeof define_process_default && "function" === typeof define_process_default.emit) {
-          define_process_default.emit("uncaughtException", error);
+        } else if ("object" === typeof define_process_default2 && "function" === typeof define_process_default2.emit) {
+          define_process_default2.emit("uncaughtException", error);
           return;
         }
         console.error(error);
@@ -1195,7 +1195,7 @@ function requireReact_development() {
         if (null != config) {
           var JSCompiler_inline_result;
           a: {
-            if (hasOwnProperty.call(config, "ref") && (JSCompiler_inline_result = Object.getOwnPropertyDescriptor(
+            if (hasOwnProperty2.call(config, "ref") && (JSCompiler_inline_result = Object.getOwnPropertyDescriptor(
               config,
               "ref"
             ).get) && JSCompiler_inline_result.isReactWarning) {
@@ -1207,7 +1207,7 @@ function requireReact_development() {
           JSCompiler_inline_result && (owner = getOwner());
           hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key);
           for (propName in config)
-            !hasOwnProperty.call(config, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config.ref || (props[propName] = config[propName]);
+            !hasOwnProperty2.call(config, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config.ref || (props[propName] = config[propName]);
         }
         var propName = arguments.length - 2;
         if (1 === propName) props.children = children;
@@ -1256,7 +1256,7 @@ function requireReact_development() {
           for (propName in didWarnAboutOldJSXRuntime || !("__self" in config) || "key" in config || (didWarnAboutOldJSXRuntime = true, console.warn(
             "Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform"
           )), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), config)
-            hasOwnProperty.call(config, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (i[propName] = config[propName]);
+            hasOwnProperty2.call(config, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (i[propName] = config[propName]);
         var childrenLength = arguments.length - 2;
         if (1 === childrenLength) i.children = children;
         else if (1 < childrenLength) {
@@ -1365,7 +1365,7 @@ function requireReact_development() {
         try {
           var returnValue = scope(), onStartTransitionFinish = ReactSharedInternals.S;
           null !== onStartTransitionFinish && onStartTransitionFinish(currentTransition, returnValue);
-          "object" === typeof returnValue && null !== returnValue && "function" === typeof returnValue.then && (ReactSharedInternals.asyncTransitions++, returnValue.then(releaseAsyncTransition, releaseAsyncTransition), returnValue.then(noop, reportGlobalError));
+          "object" === typeof returnValue && null !== returnValue && "function" === typeof returnValue.then && (ReactSharedInternals.asyncTransitions++, returnValue.then(releaseAsyncTransition, releaseAsyncTransition), returnValue.then(noop2, reportGlobalError));
         } catch (error) {
           reportGlobalError(error);
         } finally {
@@ -1577,7 +1577,7 @@ function requireReactJsxDevRuntime_development() {
       return Error("react-stack-top-frame");
     }
     function hasValidKey(config) {
-      if (hasOwnProperty.call(config, "key")) {
+      if (hasOwnProperty2.call(config, "key")) {
         var getter = Object.getOwnPropertyDescriptor(config, "key").get;
         if (getter && getter.isReactWarning) return false;
       }
@@ -1658,7 +1658,7 @@ function requireReactJsxDevRuntime_development() {
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
         else validateChildKeys(children);
-      if (hasOwnProperty.call(config, "key")) {
+      if (hasOwnProperty2.call(config, "key")) {
         children = getComponentNameFromType(type);
         var keys = Object.keys(config).filter(function(k) {
           return "key" !== k;
@@ -1699,7 +1699,7 @@ function requireReactJsxDevRuntime_development() {
     function isValidElement(object) {
       return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
     }
-    var React2 = requireReact(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+    var React2 = requireReact(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty2 = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
       return null;
     };
     React2 = {
@@ -2319,21 +2319,21 @@ function requireReactDom_production() {
     }
     return "Minified React error #" + code + "; visit " + url + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
   }
-  function noop() {
+  function noop2() {
   }
   var Internals = {
     d: {
-      f: noop,
+      f: noop2,
       r: function() {
         throw Error(formatProdErrorMessage(522));
       },
-      D: noop,
-      C: noop,
-      L: noop,
-      m: noop,
-      X: noop,
-      S: noop,
-      M: noop
+      D: noop2,
+      C: noop2,
+      L: noop2,
+      m: noop2,
+      X: noop2,
+      S: noop2,
+      M: noop2
     },
     p: 0,
     findDOMNode: null
@@ -2468,7 +2468,7 @@ function requireReactDom_development() {
    * LICENSE file in the root directory of this source tree.
    */
   "production" !== define_process_env_default2.NODE_ENV && (function() {
-    function noop() {
+    function noop2() {
     }
     function testStringCoercion(value) {
       return "" + value;
@@ -2514,19 +2514,19 @@ function requireReactDom_development() {
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
     var React2 = requireReact(), Internals = {
       d: {
-        f: noop,
+        f: noop2,
         r: function() {
           throw Error(
             "Invalid form element. requestFormReset must be passed a form that was rendered by React."
           );
         },
-        D: noop,
-        C: noop,
-        L: noop,
-        m: noop,
-        X: noop,
-        S: noop,
-        M: noop
+        D: noop2,
+        C: noop2,
+        L: noop2,
+        m: noop2,
+        X: noop2,
+        S: noop2,
+        M: noop2
       },
       p: 0,
       findDOMNode: null
@@ -2736,7 +2736,7 @@ var hasRequiredReactDomClient_production;
 function requireReactDomClient_production() {
   if (hasRequiredReactDomClient_production) return reactDomClient_production;
   hasRequiredReactDomClient_production = 1;
-  var define_process_default = {};
+  var define_process_default2 = {};
   /**
    * @license React
    * react-dom-client.production.js
@@ -3121,7 +3121,7 @@ function requireReactDomClient_production() {
       return "\nError generating stack: " + x.message + "\n" + x.stack;
     }
   }
-  var hasOwnProperty = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null;
+  var hasOwnProperty2 = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null;
   function setIsStrictModeForDevtools(newIsStrictMode) {
     "function" === typeof log$1 && unstable_setDisableYieldValue(newIsStrictMode);
     if (injectedHook && "function" === typeof injectedHook.setStrictMode)
@@ -3422,9 +3422,9 @@ function requireReactDomClient_production() {
     "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
   ), illegalAttributeNameCache = {}, validatedAttributeNameCache = {};
   function isAttributeNameSafe(attributeName) {
-    if (hasOwnProperty.call(validatedAttributeNameCache, attributeName))
+    if (hasOwnProperty2.call(validatedAttributeNameCache, attributeName))
       return true;
-    if (hasOwnProperty.call(illegalAttributeNameCache, attributeName)) return false;
+    if (hasOwnProperty2.call(illegalAttributeNameCache, attributeName)) return false;
     if (VALID_ATTRIBUTE_NAME_REGEX.test(attributeName))
       return validatedAttributeNameCache[attributeName] = true;
     illegalAttributeNameCache[attributeName] = true;
@@ -3502,15 +3502,15 @@ function requireReactDomClient_production() {
       valueField
     );
     if (!node.hasOwnProperty(valueField) && "undefined" !== typeof descriptor && "function" === typeof descriptor.get && "function" === typeof descriptor.set) {
-      var get = descriptor.get, set = descriptor.set;
+      var get2 = descriptor.get, set2 = descriptor.set;
       Object.defineProperty(node, valueField, {
         configurable: true,
         get: function() {
-          return get.call(this);
+          return get2.call(this);
         },
         set: function(value) {
           currentValue = "" + value;
-          set.call(this, value);
+          set2.call(this, value);
         }
       });
       Object.defineProperty(node, valueField, {
@@ -3785,7 +3785,7 @@ function requireReactDomClient_production() {
   function sanitizeURL(url) {
     return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
   }
-  function noop$1() {
+  function noop$12() {
   }
   var currentReplayingEvent = null;
   function getEventTarget(nativeEvent) {
@@ -4277,7 +4277,7 @@ function requireReactDomClient_production() {
     if (keysA.length !== keysB.length) return false;
     for (keysB = 0; keysB < keysA.length; keysB++) {
       var currentKey = keysA[keysB];
-      if (!hasOwnProperty.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey]))
+      if (!hasOwnProperty2.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey]))
         return false;
     }
     return true;
@@ -4389,8 +4389,8 @@ function requireReactDomClient_production() {
         error
       });
       if (!window.dispatchEvent(event)) return;
-    } else if ("object" === typeof define_process_default && "function" === typeof define_process_default.emit) {
-      define_process_default.emit("uncaughtException", error);
+    } else if ("object" === typeof define_process_default2 && "function" === typeof define_process_default2.emit) {
+      define_process_default2.emit("uncaughtException", error);
       return;
     }
     console.error(error);
@@ -4715,7 +4715,7 @@ function requireReactDomClient_production() {
         listenToNonDelegatedEvent("invalid", instance), initTextarea(instance, props.value, props.defaultValue, props.children);
     }
     type = props.children;
-    "string" !== typeof type && "number" !== typeof type && "bigint" !== typeof type || instance.textContent === "" + type || true === props.suppressHydrationWarning || checkForUnmatchedText(instance.textContent, type) ? (null != props.popover && (listenToNonDelegatedEvent("beforetoggle", instance), listenToNonDelegatedEvent("toggle", instance)), null != props.onScroll && listenToNonDelegatedEvent("scroll", instance), null != props.onScrollEnd && listenToNonDelegatedEvent("scrollend", instance), null != props.onClick && (instance.onclick = noop$1), instance = true) : instance = false;
+    "string" !== typeof type && "number" !== typeof type && "bigint" !== typeof type || instance.textContent === "" + type || true === props.suppressHydrationWarning || checkForUnmatchedText(instance.textContent, type) ? (null != props.popover && (listenToNonDelegatedEvent("beforetoggle", instance), listenToNonDelegatedEvent("toggle", instance)), null != props.onScroll && listenToNonDelegatedEvent("scroll", instance), null != props.onScrollEnd && listenToNonDelegatedEvent("scrollend", instance), null != props.onClick && (instance.onclick = noop$12), instance = true) : instance = false;
     instance || throwOnHydrationMismatch(fiber, true);
   }
   function popToNextHostParent(fiber) {
@@ -4937,10 +4937,10 @@ function requireReactDomClient_production() {
       refCount: 0
     };
   }
-  function releaseCache(cache) {
-    cache.refCount--;
-    0 === cache.refCount && scheduleCallback$2(NormalPriority, function() {
-      cache.controller.abort();
+  function releaseCache(cache2) {
+    cache2.refCount--;
+    0 === cache2.refCount && scheduleCallback$2(NormalPriority, function() {
+      cache2.controller.abort();
     });
   }
   var currentEntangledListeners = null, currentEntangledPendingCount = 0, currentEntangledLane = 0, currentEntangledActionThenable = null;
@@ -5021,14 +5021,14 @@ function requireReactDomClient_production() {
   }
   function trackUsedThenable(thenableState2, thenable, index2) {
     index2 = thenableState2[index2];
-    void 0 === index2 ? thenableState2.push(thenable) : index2 !== thenable && (thenable.then(noop$1, noop$1), thenable = index2);
+    void 0 === index2 ? thenableState2.push(thenable) : index2 !== thenable && (thenable.then(noop$12, noop$12), thenable = index2);
     switch (thenable.status) {
       case "fulfilled":
         return thenable.value;
       case "rejected":
         throw thenableState2 = thenable.reason, checkIfUseWrappedInAsyncCatch(thenableState2), thenableState2;
       default:
-        if ("string" === typeof thenable.status) thenable.then(noop$1, noop$1);
+        if ("string" === typeof thenable.status) thenable.then(noop$12, noop$12);
         else {
           thenableState2 = workInProgressRoot;
           if (null !== thenableState2 && 100 < thenableState2.shellSuspendCounter)
@@ -6526,7 +6526,7 @@ function requireReactDomClient_production() {
       ReactDOMSharedInternals.p = previousPriority, null !== prevTransition && null !== currentTransition.types && (prevTransition.types = currentTransition.types), ReactSharedInternals.T = prevTransition;
     }
   }
-  function noop() {
+  function noop2() {
   }
   function startHostTransition(formFiber, pendingState, action, formData) {
     if (5 !== formFiber.tag) throw Error(formatProdErrorMessage(476));
@@ -6536,7 +6536,7 @@ function requireReactDomClient_production() {
       queue,
       pendingState,
       sharedNotPendingObject,
-      null === action ? noop : function() {
+      null === action ? noop2 : function() {
         requestFormReset$1(formFiber);
         return action(formData);
       }
@@ -8928,7 +8928,7 @@ function requireReactDomClient_production() {
   function insertOrAppendPlacementNodeIntoContainer(node, before, parent) {
     var tag = node.tag;
     if (5 === tag || 6 === tag)
-      node = node.stateNode, before ? (9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent).insertBefore(node, before) : (before = 9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent, before.appendChild(node), parent = parent._reactRootContainer, null !== parent && void 0 !== parent || null !== before.onclick || (before.onclick = noop$1));
+      node = node.stateNode, before ? (9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent).insertBefore(node, before) : (before = 9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent, before.appendChild(node), parent = parent._reactRootContainer, null !== parent && void 0 !== parent || null !== before.onclick || (before.onclick = noop$12));
     else if (4 !== tag && (27 === tag && isSingletonScope(node.type) && (parent = node.stateNode, before = null), node = node.child, null !== node))
       for (insertOrAppendPlacementNodeIntoContainer(node, before, parent), node = node.sibling; null !== node; )
         insertOrAppendPlacementNodeIntoContainer(node, before, parent), node = node.sibling;
@@ -10272,21 +10272,21 @@ function requireReactDomClient_production() {
         case 23:
         case 22:
           if (null !== fiber.memoizedState && null !== fiber.memoizedState.cachePool) {
-            var cache = fiber.memoizedState.cachePool.pool;
-            null != cache && cache.refCount++;
+            var cache2 = fiber.memoizedState.cachePool.pool;
+            null != cache2 && cache2.refCount++;
           }
           break;
         case 24:
           releaseCache(fiber.memoizedState.cache);
       }
-      cache = fiber.child;
-      if (null !== cache) cache.return = fiber, nextEffect = cache;
+      cache2 = fiber.child;
+      if (null !== cache2) cache2.return = fiber, nextEffect = cache2;
       else
         a: for (fiber = deletedSubtreeRoot; null !== nextEffect; ) {
-          cache = nextEffect;
-          var sibling = cache.sibling, returnFiber = cache.return;
-          detachFiberAfterEffects(cache);
-          if (cache === fiber) {
+          cache2 = nextEffect;
+          var sibling = cache2.sibling, returnFiber = cache2.return;
+          detachFiberAfterEffects(cache2);
+          if (cache2 === fiber) {
             nextEffect = null;
             break a;
           }
@@ -10301,8 +10301,8 @@ function requireReactDomClient_production() {
   }
   var DefaultAsyncDispatcher = {
     getCacheForType: function(resourceType) {
-      var cache = readContext(CacheContext), cacheForType = cache.data.get(resourceType);
-      void 0 === cacheForType && (cacheForType = resourceType(), cache.data.set(resourceType, cacheForType));
+      var cache2 = readContext(CacheContext), cacheForType = cache2.data.get(resourceType);
+      void 0 === cacheForType && (cacheForType = resourceType(), cache2.data.set(resourceType, cacheForType));
       return cacheForType;
     },
     cacheSignal: function() {
@@ -10489,7 +10489,7 @@ function requireReactDomClient_production() {
         suspenseyImages: [],
         waitingForImages: true,
         waitingForViewTransition: false,
-        unsuspend: noop$1
+        unsuspend: noop$12
       };
       accumulateSuspenseyCommitOnFiber(
         finishedWork,
@@ -12051,7 +12051,7 @@ function requireReactDomClient_production() {
         domElement.setAttribute(key, value);
         break;
       case "onClick":
-        null != value && (domElement.onclick = noop$1);
+        null != value && (domElement.onclick = noop$12);
         break;
       case "onScroll":
         null != value && listenToNonDelegatedEvent("scroll", domElement);
@@ -12260,7 +12260,7 @@ function requireReactDomClient_production() {
         null != value && listenToNonDelegatedEvent("scrollend", domElement);
         break;
       case "onClick":
-        null != value && (domElement.onclick = noop$1);
+        null != value && (domElement.onclick = noop$12);
         break;
       case "suppressContentEditableWarning":
       case "suppressHydrationWarning":
@@ -13390,24 +13390,24 @@ function requireReactDomClient_production() {
   var tagCaches = null;
   function getHydratableHoistableCache(type, keyAttribute, ownerDocument) {
     if (null === tagCaches) {
-      var cache = /* @__PURE__ */ new Map();
+      var cache2 = /* @__PURE__ */ new Map();
       var caches = tagCaches = /* @__PURE__ */ new Map();
-      caches.set(ownerDocument, cache);
+      caches.set(ownerDocument, cache2);
     } else
-      caches = tagCaches, cache = caches.get(ownerDocument), cache || (cache = /* @__PURE__ */ new Map(), caches.set(ownerDocument, cache));
-    if (cache.has(type)) return cache;
-    cache.set(type, null);
+      caches = tagCaches, cache2 = caches.get(ownerDocument), cache2 || (cache2 = /* @__PURE__ */ new Map(), caches.set(ownerDocument, cache2));
+    if (cache2.has(type)) return cache2;
+    cache2.set(type, null);
     ownerDocument = ownerDocument.getElementsByTagName(type);
     for (caches = 0; caches < ownerDocument.length; caches++) {
       var node = ownerDocument[caches];
       if (!(node[internalHoistableMarker] || node[internalInstanceKey] || "link" === type && "stylesheet" === node.getAttribute("rel")) && "http://www.w3.org/2000/svg" !== node.namespaceURI) {
         var nodeKey = node.getAttribute(keyAttribute) || "";
         nodeKey = type + nodeKey;
-        var existing = cache.get(nodeKey);
-        existing ? existing.push(node) : cache.set(nodeKey, [node]);
+        var existing = cache2.get(nodeKey);
+        existing ? existing.push(node) : cache2.set(nodeKey, [node]);
       }
     }
-    return cache;
+    return cache2;
   }
   function mountHoistable(hoistableRoot, type, instance) {
     hoistableRoot = hoistableRoot.ownerDocument || hoistableRoot;
@@ -14264,7 +14264,7 @@ var hasRequiredReactDomClient_development;
 function requireReactDomClient_development() {
   if (hasRequiredReactDomClient_development) return reactDomClient_development;
   hasRequiredReactDomClient_development = 1;
-  var define_process_default = {};
+  var define_process_default2 = {};
   var define_process_env_default2 = {};
   /**
    * @license React
@@ -14334,13 +14334,13 @@ function requireReactDomClient_development() {
         "Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
       );
     }
-    function noop() {
+    function noop2() {
     }
     function warnForMissingKey() {
     }
-    function setToSortedString(set) {
+    function setToSortedString(set2) {
       var array = [];
-      set.forEach(function(value) {
+      set2.forEach(function(value) {
         array.push(value);
       });
       return array.sort().join(", ");
@@ -14898,7 +14898,7 @@ function requireReactDomClient_development() {
               if ("string" === typeof entry.name) {
                 var JSCompiler_temp_const = info;
                 a: {
-                  var name = entry.name, env = entry.env, location = entry.debugLocation;
+                  var name = entry.name, env2 = entry.env, location = entry.debugLocation;
                   if (null != location) {
                     var childStack = formatOwnerStack(location), idx = childStack.lastIndexOf("\n"), lastLine = -1 === idx ? childStack : childStack.slice(idx + 1);
                     if (-1 !== lastLine.indexOf(name)) {
@@ -14907,7 +14907,7 @@ function requireReactDomClient_development() {
                     }
                   }
                   JSCompiler_inline_result = describeBuiltInComponentFrame(
-                    name + (env ? " [" + env + "]" : "")
+                    name + (env2 ? " [" + env2 + "]" : "")
                   );
                 }
                 info = JSCompiler_temp_const + JSCompiler_inline_result;
@@ -15393,9 +15393,9 @@ function requireReactDomClient_development() {
       );
     }
     function isAttributeNameSafe(attributeName) {
-      if (hasOwnProperty.call(validatedAttributeNameCache, attributeName))
+      if (hasOwnProperty2.call(validatedAttributeNameCache, attributeName))
         return true;
-      if (hasOwnProperty.call(illegalAttributeNameCache, attributeName))
+      if (hasOwnProperty2.call(illegalAttributeNameCache, attributeName))
         return false;
       if (VALID_ATTRIBUTE_NAME_REGEX.test(attributeName))
         return validatedAttributeNameCache[attributeName] = true;
@@ -15498,16 +15498,16 @@ function requireReactDomClient_development() {
         valueField
       );
       if (!node.hasOwnProperty(valueField) && "undefined" !== typeof descriptor && "function" === typeof descriptor.get && "function" === typeof descriptor.set) {
-        var get = descriptor.get, set = descriptor.set;
+        var get2 = descriptor.get, set2 = descriptor.set;
         Object.defineProperty(node, valueField, {
           configurable: true,
           get: function() {
-            return get.call(this);
+            return get2.call(this);
           },
           set: function(value) {
             checkFormFieldValueStringCoercion(value);
             currentValue = "" + value;
-            set.call(this, value);
+            set2.call(this, value);
           }
         });
         Object.defineProperty(node, valueField, {
@@ -16288,7 +16288,7 @@ function requireReactDomClient_development() {
       return aliases.get(name) || name;
     }
     function validateProperty$1(tagName, name) {
-      if (hasOwnProperty.call(warnedProperties$1, name) && warnedProperties$1[name])
+      if (hasOwnProperty2.call(warnedProperties$1, name) && warnedProperties$1[name])
         return true;
       if (rARIACamel$1.test(name)) {
         tagName = "aria-" + name.slice(4).toLowerCase();
@@ -16335,7 +16335,7 @@ function requireReactDomClient_development() {
       );
     }
     function validateProperty(tagName, name, value, eventRegistry) {
-      if (hasOwnProperty.call(warnedProperties, name) && warnedProperties[name])
+      if (hasOwnProperty2.call(warnedProperties, name) && warnedProperties[name])
         return true;
       var lowerCasedName = name.toLowerCase();
       if ("onfocusin" === lowerCasedName || "onfocusout" === lowerCasedName)
@@ -16547,7 +16547,7 @@ function requireReactDomClient_development() {
     function sanitizeURL(url) {
       return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
     }
-    function noop$1() {
+    function noop$12() {
     }
     function getEventTarget(nativeEvent) {
       nativeEvent = nativeEvent.target || nativeEvent.srcElement || window;
@@ -16836,7 +16836,7 @@ function requireReactDomClient_development() {
       if (keysA.length !== keysB.length) return false;
       for (keysB = 0; keysB < keysA.length; keysB++) {
         var currentKey = keysA[keysB];
-        if (!hasOwnProperty.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey]))
+        if (!hasOwnProperty2.call(objB, currentKey) || !objectIs(objA[currentKey], objB[currentKey]))
           return false;
       }
       return true;
@@ -16943,7 +16943,7 @@ function requireReactDomClient_development() {
     }
     function addObjectToProperties(object, properties, indent, prefix2) {
       for (var key in object)
-        hasOwnProperty.call(object, key) && "_" !== key[0] && addValueToProperties(key, object[key], properties, indent, prefix2);
+        hasOwnProperty2.call(object, key) && "_" !== key[0] && addValueToProperties(key, object[key], properties, indent, prefix2);
     }
     function addValueToProperties(propertyName, value, properties, indent, prefix2) {
       switch (typeof value) {
@@ -16977,7 +16977,7 @@ function requireReactDomClient_development() {
               );
               propertyName = false;
               for (var propKey in value)
-                "children" === propKey ? null != value.children && (!isArrayImpl(value.children) || 0 < value.children.length) && (propertyName = true) : hasOwnProperty.call(value, propKey) && "_" !== propKey[0] && addValueToProperties(
+                "children" === propKey ? null != value.children && (!isArrayImpl(value.children) || 0 < value.children.length) && (propertyName = true) : hasOwnProperty2.call(value, propKey) && "_" !== propKey[0] && addValueToProperties(
                   propKey,
                   value[propKey],
                   properties,
@@ -17972,7 +17972,7 @@ function requireReactDomClient_development() {
           );
       }
       type = props.children;
-      "string" !== typeof type && "number" !== typeof type && "bigint" !== typeof type || didHydrate.textContent === "" + type || true === props.suppressHydrationWarning || checkForUnmatchedText(didHydrate.textContent, type) ? (null != props.popover && (listenToNonDelegatedEvent("beforetoggle", didHydrate), listenToNonDelegatedEvent("toggle", didHydrate)), null != props.onScroll && listenToNonDelegatedEvent("scroll", didHydrate), null != props.onScrollEnd && listenToNonDelegatedEvent("scrollend", didHydrate), null != props.onClick && (didHydrate.onclick = noop$1), didHydrate = true) : didHydrate = false;
+      "string" !== typeof type && "number" !== typeof type && "bigint" !== typeof type || didHydrate.textContent === "" + type || true === props.suppressHydrationWarning || checkForUnmatchedText(didHydrate.textContent, type) ? (null != props.popover && (listenToNonDelegatedEvent("beforetoggle", didHydrate), listenToNonDelegatedEvent("toggle", didHydrate)), null != props.onScroll && listenToNonDelegatedEvent("scroll", didHydrate), null != props.onScrollEnd && listenToNonDelegatedEvent("scrollend", didHydrate), null != props.onClick && (didHydrate.onclick = noop$12), didHydrate = true) : didHydrate = false;
       didHydrate || throwOnHydrationMismatch(fiber, true);
     }
     function popToNextHostParent(fiber) {
@@ -18235,19 +18235,19 @@ function requireReactDomClient_development() {
         refCount: 0
       };
     }
-    function retainCache(cache) {
-      cache.controller.signal.aborted && console.warn(
+    function retainCache(cache2) {
+      cache2.controller.signal.aborted && console.warn(
         "A cache instance was retained after it was already freed. This likely indicates a bug in React."
       );
-      cache.refCount++;
+      cache2.refCount++;
     }
-    function releaseCache(cache) {
-      cache.refCount--;
-      0 > cache.refCount && console.warn(
+    function releaseCache(cache2) {
+      cache2.refCount--;
+      0 > cache2.refCount && console.warn(
         "A cache instance was released after it was already freed. This likely indicates a bug in React."
       );
-      0 === cache.refCount && scheduleCallback$2(NormalPriority, function() {
-        cache.controller.abort();
+      0 === cache2.refCount && scheduleCallback$2(NormalPriority, function() {
+        cache2.controller.abort();
       });
     }
     function startUpdateTimerByLane(lane, method, fiber) {
@@ -18442,7 +18442,7 @@ function requireReactDomClient_development() {
       index = trackedThenables[index];
       void 0 === index ? trackedThenables.push(thenable) : index !== thenable && (thenableState2.didWarnAboutUncachedPromise || (thenableState2.didWarnAboutUncachedPromise = true, console.error(
         "A component was suspended by an uncached promise. Creating promises inside a Client Component or hook is not yet supported, except via a Suspense-compatible library or framework."
-      )), thenable.then(noop$1, noop$1), thenable = index);
+      )), thenable.then(noop$12, noop$12), thenable = index);
       if (void 0 === thenable._debugInfo) {
         thenableState2 = performance.now();
         trackedThenables = thenable.displayName;
@@ -18464,7 +18464,7 @@ function requireReactDomClient_development() {
           throw thenableState2 = thenable.reason, checkIfUseWrappedInAsyncCatch(thenableState2), thenableState2;
         default:
           if ("string" === typeof thenable.status)
-            thenable.then(noop$1, noop$1);
+            thenable.then(noop$12, noop$12);
           else {
             thenableState2 = workInProgressRoot;
             if (null !== thenableState2 && 100 < thenableState2.shellSuspendCounter)
@@ -20639,7 +20639,7 @@ function requireReactDomClient_development() {
         queue,
         pendingState,
         NotPendingTransition,
-        null === action ? noop : function() {
+        null === action ? noop2 : function() {
           requestFormReset$1(formFiber);
           return action(formData);
         }
@@ -20977,7 +20977,7 @@ function requireReactDomClient_development() {
           resetStyle
         );
         error.unshift(console);
-        JSCompiler_inline_result = bind.apply(console.error, error);
+        JSCompiler_inline_result = bind2.apply(console.error, error);
         JSCompiler_inline_result();
       } else
         console.error(
@@ -23030,7 +23030,7 @@ function requireReactDomClient_development() {
                       }) : nextResource.createElement(type), -1 === type.indexOf("-") && (type !== type.toLowerCase() && console.error(
                         "<%s /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.",
                         type
-                      ), "[object HTMLUnknownElement]" !== Object.prototype.toString.call(nextResource) || hasOwnProperty.call(warnedUnknownTags, type) || (warnedUnknownTags[type] = true, console.error(
+                      ), "[object HTMLUnknownElement]" !== Object.prototype.toString.call(nextResource) || hasOwnProperty2.call(warnedUnknownTags, type) || (warnedUnknownTags[type] = true, console.error(
                         "The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.",
                         type
                       )));
@@ -23685,7 +23685,7 @@ function requireReactDomClient_development() {
     function insertOrAppendPlacementNodeIntoContainer(node, before, parent) {
       var tag = node.tag;
       if (5 === tag || 6 === tag)
-        node = node.stateNode, before ? (warnForReactChildrenConflict(parent), (9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent).insertBefore(node, before)) : (warnForReactChildrenConflict(parent), before = 9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent, before.appendChild(node), parent = parent._reactRootContainer, null !== parent && void 0 !== parent || null !== before.onclick || (before.onclick = noop$1));
+        node = node.stateNode, before ? (warnForReactChildrenConflict(parent), (9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent).insertBefore(node, before)) : (warnForReactChildrenConflict(parent), before = 9 === parent.nodeType ? parent.body : "HTML" === parent.nodeName ? parent.ownerDocument.body : parent, before.appendChild(node), parent = parent._reactRootContainer, null !== parent && void 0 !== parent || null !== before.onclick || (before.onclick = noop$12));
       else if (4 !== tag && (27 === tag && isSingletonScope(node.type) && (parent = node.stateNode, before = null), node = node.child, null !== node))
         for (insertOrAppendPlacementNodeIntoContainer(node, before, parent), node = node.sibling; null !== node; )
           insertOrAppendPlacementNodeIntoContainer(node, before, parent), node = node.sibling;
@@ -25964,7 +25964,7 @@ function requireReactDomClient_development() {
           suspenseyImages: [],
           waitingForImages: true,
           waitingForViewTransition: false,
-          unsuspend: noop$1
+          unsuspend: noop$12
         }, accumulateSuspenseyCommitOnFiber(finishedWork, lanes, suspendedState), subtreeFlags = (lanes & 62914560) === lanes ? globalMostRecentFallbackTime - now$1() : (lanes & 4194048) === lanes ? globalMostRecentTransitionTime - now$1() : 0, subtreeFlags = waitForCommitToBeReady(suspendedState, subtreeFlags), null !== subtreeFlags) {
           pendingEffectsLanes = lanes;
           root22.cancelPendingCommit = subtreeFlags(
@@ -28260,7 +28260,7 @@ function requireReactDomClient_development() {
           domElement.setAttribute(key, value);
           break;
         case "onClick":
-          null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), domElement.onclick = noop$1);
+          null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), domElement.onclick = noop$12);
           break;
         case "onScroll":
           null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), listenToNonDelegatedEvent("scroll", domElement));
@@ -28487,7 +28487,7 @@ function requireReactDomClient_development() {
           null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), listenToNonDelegatedEvent("scrollend", domElement));
           break;
         case "onClick":
-          null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), domElement.onclick = noop$1);
+          null != value && ("function" !== typeof value && warnForInvalidEventListener(key, value), domElement.onclick = noop$12);
           break;
         case "suppressContentEditableWarning":
         case "suppressHydrationWarning":
@@ -30267,9 +30267,9 @@ function requireReactDomClient_development() {
     }
     function describeLinkForResourceErrorDEV(props) {
       var describedProps = 0, description = "<link";
-      "string" === typeof props.rel ? (describedProps++, description += ' rel="' + props.rel + '"') : hasOwnProperty.call(props, "rel") && (describedProps++, description += ' rel="' + (null === props.rel ? "null" : "invalid type " + typeof props.rel) + '"');
-      "string" === typeof props.href ? (describedProps++, description += ' href="' + props.href + '"') : hasOwnProperty.call(props, "href") && (describedProps++, description += ' href="' + (null === props.href ? "null" : "invalid type " + typeof props.href) + '"');
-      "string" === typeof props.precedence ? (describedProps++, description += ' precedence="' + props.precedence + '"') : hasOwnProperty.call(props, "precedence") && (describedProps++, description += " precedence={" + (null === props.precedence ? "null" : "invalid type " + typeof props.precedence) + "}");
+      "string" === typeof props.rel ? (describedProps++, description += ' rel="' + props.rel + '"') : hasOwnProperty2.call(props, "rel") && (describedProps++, description += ' rel="' + (null === props.rel ? "null" : "invalid type " + typeof props.rel) + '"');
+      "string" === typeof props.href ? (describedProps++, description += ' href="' + props.href + '"') : hasOwnProperty2.call(props, "href") && (describedProps++, description += ' href="' + (null === props.href ? "null" : "invalid type " + typeof props.href) + '"');
+      "string" === typeof props.precedence ? (describedProps++, description += ' precedence="' + props.precedence + '"') : hasOwnProperty2.call(props, "precedence") && (describedProps++, description += " precedence={" + (null === props.precedence ? "null" : "invalid type " + typeof props.precedence) + "}");
       Object.getOwnPropertyNames(props).length > describedProps && (description += " ...");
       return description + " />";
     }
@@ -30389,24 +30389,24 @@ function requireReactDomClient_development() {
     }
     function getHydratableHoistableCache(type, keyAttribute, ownerDocument) {
       if (null === tagCaches) {
-        var cache = /* @__PURE__ */ new Map();
+        var cache2 = /* @__PURE__ */ new Map();
         var caches = tagCaches = /* @__PURE__ */ new Map();
-        caches.set(ownerDocument, cache);
+        caches.set(ownerDocument, cache2);
       } else
-        caches = tagCaches, cache = caches.get(ownerDocument), cache || (cache = /* @__PURE__ */ new Map(), caches.set(ownerDocument, cache));
-      if (cache.has(type)) return cache;
-      cache.set(type, null);
+        caches = tagCaches, cache2 = caches.get(ownerDocument), cache2 || (cache2 = /* @__PURE__ */ new Map(), caches.set(ownerDocument, cache2));
+      if (cache2.has(type)) return cache2;
+      cache2.set(type, null);
       ownerDocument = ownerDocument.getElementsByTagName(type);
       for (caches = 0; caches < ownerDocument.length; caches++) {
         var node = ownerDocument[caches];
         if (!(node[internalHoistableMarker] || node[internalInstanceKey] || "link" === type && "stylesheet" === node.getAttribute("rel")) && node.namespaceURI !== SVG_NAMESPACE) {
           var nodeKey = node.getAttribute(keyAttribute) || "";
           nodeKey = type + nodeKey;
-          var existing = cache.get(nodeKey);
-          existing ? existing.push(node) : cache.set(nodeKey, [node]);
+          var existing = cache2.get(nodeKey);
+          existing ? existing.push(node) : cache2.set(nodeKey, [node]);
         }
       }
-      return cache;
+      return cache2;
     }
     function mountHoistable(hoistableRoot, type, instance) {
       hoistableRoot = hoistableRoot.ownerDocument || hoistableRoot;
@@ -31231,7 +31231,7 @@ function requireReactDomClient_development() {
     disabledLog.__reactDisabledLog = true;
     var prefix, suffix, reentry = false;
     var componentFrameCache = new ("function" === typeof WeakMap ? WeakMap : Map)();
-    var current = null, isRendering = false, hasOwnProperty = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now$1 = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null, hasLoggedError = false, isDevToolsPresent = "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__, clz32 = Math.clz32 ? Math.clz32 : clz32Fallback, log = Math.log, LN2 = Math.LN2, nextTransitionUpdateLane = 256, nextTransitionDeferredLane = 262144, nextRetryLane = 4194304, DiscreteEventPriority = 2, ContinuousEventPriority = 8, DefaultEventPriority = 32, IdleEventPriority = 268435456, randomKey = Math.random().toString(36).slice(2), internalInstanceKey = "__reactFiber$" + randomKey, internalPropsKey = "__reactProps$" + randomKey, internalContainerInstanceKey = "__reactContainer$" + randomKey, internalEventHandlersKey = "__reactEvents$" + randomKey, internalEventHandlerListenersKey = "__reactListeners$" + randomKey, internalEventHandlesSetKey = "__reactHandles$" + randomKey, internalRootNodeResourcesKey = "__reactResources$" + randomKey, internalHoistableMarker = "__reactMarker$" + randomKey, allNativeEvents = /* @__PURE__ */ new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {}, hasReadOnlyValue = {
+    var current = null, isRendering = false, hasOwnProperty2 = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now$1 = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null, hasLoggedError = false, isDevToolsPresent = "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__, clz32 = Math.clz32 ? Math.clz32 : clz32Fallback, log = Math.log, LN2 = Math.LN2, nextTransitionUpdateLane = 256, nextTransitionDeferredLane = 262144, nextRetryLane = 4194304, DiscreteEventPriority = 2, ContinuousEventPriority = 8, DefaultEventPriority = 32, IdleEventPriority = 268435456, randomKey = Math.random().toString(36).slice(2), internalInstanceKey = "__reactFiber$" + randomKey, internalPropsKey = "__reactProps$" + randomKey, internalContainerInstanceKey = "__reactContainer$" + randomKey, internalEventHandlersKey = "__reactEvents$" + randomKey, internalEventHandlerListenersKey = "__reactListeners$" + randomKey, internalEventHandlesSetKey = "__reactHandles$" + randomKey, internalRootNodeResourcesKey = "__reactResources$" + randomKey, internalHoistableMarker = "__reactMarker$" + randomKey, allNativeEvents = /* @__PURE__ */ new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {}, hasReadOnlyValue = {
       button: true,
       checkbox: true,
       image: true,
@@ -32256,8 +32256,8 @@ function requireReactDomClient_development() {
           error
         });
         if (!window.dispatchEvent(event)) return;
-      } else if ("object" === typeof define_process_default && "function" === typeof define_process_default.emit) {
-        define_process_default.emit("uncaughtException", error);
+      } else if ("object" === typeof define_process_default2 && "function" === typeof define_process_default2.emit) {
+        define_process_default2.emit("uncaughtException", error);
         return;
       }
       console.error(error);
@@ -33664,8 +33664,8 @@ function requireReactDomClient_development() {
     didWarnAboutUndefinedSnapshotBeforeUpdate = /* @__PURE__ */ new Set();
     var offscreenSubtreeIsHidden = false, offscreenSubtreeWasHidden = false, needsFormReset = false, PossiblyWeakSet = "function" === typeof WeakSet ? WeakSet : Set, nextEffect = null, inProgressLanes = null, inProgressRoot = null, hostParent = null, hostParentIsContainer = false, currentHoistableRoot = null, inHydratedSubtree = false, suspenseyCommitFlag = 8192, DefaultAsyncDispatcher = {
       getCacheForType: function(resourceType) {
-        var cache = readContext(CacheContext), cacheForType = cache.data.get(resourceType);
-        void 0 === cacheForType && (cacheForType = resourceType(), cache.data.set(resourceType, cacheForType));
+        var cache2 = readContext(CacheContext), cacheForType = cache2.data.get(resourceType);
+        void 0 === cacheForType && (cacheForType = resourceType(), cache2.data.set(resourceType, cacheForType));
         return cacheForType;
       },
       cacheSignal: function() {
@@ -33912,7 +33912,7 @@ function requireReactDomClient_development() {
       _currentValue: NotPendingTransition,
       _currentValue2: NotPendingTransition,
       _threadCount: 0
-    }, badgeFormat = "%c%s%c", badgeStyle = "background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px", resetStyle = "", pad = " ", bind = Function.prototype.bind;
+    }, badgeFormat = "%c%s%c", badgeStyle = "background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px", resetStyle = "", pad = " ", bind2 = Function.prototype.bind;
     var didWarnAboutNestedUpdates = false;
     var overrideHookState = null, overrideHookStateDeletePath = null, overrideHookStateRenamePath = null, overrideProps = null, overridePropsDeletePath = null, overridePropsRenamePath = null, scheduleUpdate = null, scheduleRetry = null, setErrorHandler = null, setSuspenseHandler = null;
     overrideHookState = function(fiber, id2, path, value) {
@@ -34809,7 +34809,7 @@ function useLocation() {
   return reactExports.useContext(LocationContext).location;
 }
 var navigateEffectWarning = `You should call navigate() in a React.useEffect(), not when your component is first rendered.`;
-function useIsomorphicLayoutEffect(cb2) {
+function useIsomorphicLayoutEffect$1(cb2) {
   let isStatic = reactExports.useContext(NavigationContext).static;
   if (!isStatic) {
     reactExports.useLayoutEffect(cb2);
@@ -34832,7 +34832,7 @@ function useNavigateUnstable() {
   let { pathname: locationPathname } = useLocation();
   let routePathnamesJson = JSON.stringify(getResolveToMatches(matches));
   let activeRef = reactExports.useRef(false);
-  useIsomorphicLayoutEffect(() => {
+  useIsomorphicLayoutEffect$1(() => {
     activeRef.current = true;
   });
   let navigate = reactExports.useCallback(
@@ -34869,6 +34869,11 @@ function useNavigateUnstable() {
   return navigate;
 }
 reactExports.createContext(null);
+function useParams() {
+  let { matches } = reactExports.useContext(RouteContext);
+  let routeMatch = matches[matches.length - 1];
+  return routeMatch ? routeMatch.params : {};
+}
 function useResolvedPath(to, { relative } = {}) {
   let { matches } = reactExports.useContext(RouteContext);
   let { pathname: locationPathname } = useLocation();
@@ -35242,7 +35247,7 @@ function useNavigateStable() {
     /* UseNavigateStable */
   );
   let activeRef = reactExports.useRef(false);
-  useIsomorphicLayoutEffect(() => {
+  useIsomorphicLayoutEffect$1(() => {
     activeRef.current = true;
   });
   let navigate = reactExports.useCallback(
@@ -35416,6 +35421,29 @@ function shouldProcessLinkClick(event, target) {
   return event.button === 0 && // Ignore everything but left clicks
   (!target || target === "_self") && // Let browser handle "target=_blank" etc.
   !isModifiedEvent(event);
+}
+function createSearchParams(init = "") {
+  return new URLSearchParams(
+    typeof init === "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo2, key) => {
+      let value = init[key];
+      return memo2.concat(
+        Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]
+      );
+    }, [])
+  );
+}
+function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
+  let searchParams = createSearchParams(locationSearch);
+  if (defaultSearchParams) {
+    defaultSearchParams.forEach((_, key) => {
+      if (!searchParams.has(key)) {
+        defaultSearchParams.getAll(key).forEach((value) => {
+          searchParams.append(key, value);
+        });
+      }
+    });
+  }
+  return searchParams;
 }
 var _formDataSupportsSubmitter = null;
 function isFormDataSubmitterSupported() {
@@ -35650,13 +35678,13 @@ function sortKeys(obj) {
   }
   return sorted;
 }
-function dedupeLinkDescriptors(descriptors, preloads) {
-  let set = /* @__PURE__ */ new Set();
+function dedupeLinkDescriptors(descriptors2, preloads) {
+  let set2 = /* @__PURE__ */ new Set();
   new Set(preloads);
-  return descriptors.reduce((deduped, descriptor) => {
+  return descriptors2.reduce((deduped, descriptor) => {
     let key = JSON.stringify(sortKeys(descriptor));
-    if (!set.has(key)) {
-      set.add(key);
+    if (!set2.has(key)) {
+      set2.add(key);
       deduped.push({ key, link: descriptor });
     }
     return deduped;
@@ -36159,6 +36187,39 @@ function useLinkClickHandler(to, {
     ]
   );
 }
+function useSearchParams(defaultInit) {
+  warning(
+    typeof URLSearchParams !== "undefined",
+    `You cannot use the \`useSearchParams\` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params.`
+  );
+  let defaultSearchParamsRef = reactExports.useRef(createSearchParams(defaultInit));
+  let hasSetSearchParamsRef = reactExports.useRef(false);
+  let location = useLocation();
+  let searchParams = reactExports.useMemo(
+    () => (
+      // Only merge in the defaults if we haven't yet called setSearchParams.
+      // Once we call that we want those to take precedence, otherwise you can't
+      // remove a param with setSearchParams({}) if it has an initial value
+      getSearchParamsForLocation(
+        location.search,
+        hasSetSearchParamsRef.current ? null : defaultSearchParamsRef.current
+      )
+    ),
+    [location.search]
+  );
+  let navigate = useNavigate();
+  let setSearchParams = reactExports.useCallback(
+    (nextInit, navigateOptions) => {
+      const newSearchParams = createSearchParams(
+        typeof nextInit === "function" ? nextInit(new URLSearchParams(searchParams)) : nextInit
+      );
+      hasSetSearchParamsRef.current = true;
+      navigate("?" + newSearchParams, navigateOptions);
+    },
+    [navigate, searchParams]
+  );
+  return [searchParams, setSearchParams];
+}
 var fetcherId = 0;
 var getUniqueFetcherId = () => `__${String(++fetcherId)}__`;
 function useSubmit() {
@@ -36258,12 +36319,12 @@ const Plugin = ({ context, children }) => {
     return unregister;
   }, [context, navigate]);
   return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "h-full w-full", children }, void 0, false, {
-    fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin.tsx",
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin.tsx",
     lineNumber: 16,
     columnNumber: 10
   }, void 0);
 };
-var define_process_env_default = {};
+var define_process_env_default$5 = {};
 var di = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
 function Yt(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;
@@ -36312,7 +36373,7 @@ var ko = {};
  */
 var kh;
 function mI() {
-  return kh || (kh = 1, define_process_env_default.NODE_ENV !== "production" && (function() {
+  return kh || (kh = 1, define_process_env_default$5.NODE_ENV !== "production" && (function() {
     function e(P) {
       if (P == null) return null;
       if (typeof P == "function")
@@ -36545,7 +36606,7 @@ React keys must be passed directly to JSX without using spread:
 }
 var $h;
 function hI() {
-  return $h || ($h = 1, define_process_env_default.NODE_ENV === "production" ? fi.exports = gI() : fi.exports = mI()), fi.exports;
+  return $h || ($h = 1, define_process_env_default$5.NODE_ENV === "production" ? fi.exports = gI() : fi.exports = mI()), fi.exports;
 }
 var f = hI();
 function vI(e, t) {
@@ -40177,15 +40238,13 @@ const VO = U(
       variant: "info"
     }
   }
-), zO = U("col-start-2 line-clamp-1 min-h-4 text-base font-medium tracking-tight"), BO = U("col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed");
-reactExports.forwardRef(
+), zO = U("col-start-2 line-clamp-1 min-h-4 text-base font-medium tracking-tight"), BO = U("col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed"), Rre = reactExports.forwardRef(
   ({ className: e, variant: t, title: n, description: r, ...o }, a) => /* @__PURE__ */ f.jsxs("div", { "data-slot": "alert", role: "alert", className: I(VO({ variant: t, className: e })), ref: a, ...o, children: [
     t === "info" ? /* @__PURE__ */ f.jsx(LD, { strokeWidth: 1, size: 16, className: "mt-0.5" }) : /* @__PURE__ */ f.jsx(I0, { strokeWidth: 1, size: 16, className: "mt-0.5" }),
     /* @__PURE__ */ f.jsx(HO, { children: n }),
     r && /* @__PURE__ */ f.jsx(qO, { children: r })
   ] })
-);
-const HO = reactExports.forwardRef(({ className: e, ...t }, n) => /* @__PURE__ */ f.jsx("div", { "data-slot": "alert-title", className: I(zO({ className: e })), ref: n, ...t })), qO = reactExports.forwardRef(({ className: e, ...t }, n) => /* @__PURE__ */ f.jsx("div", { "data-slot": "alert-description", className: I(BO({ className: e })), ref: n, ...t }));
+), HO = reactExports.forwardRef(({ className: e, ...t }, n) => /* @__PURE__ */ f.jsx("div", { "data-slot": "alert-title", className: I(zO({ className: e })), ref: n, ...t })), qO = reactExports.forwardRef(({ className: e, ...t }, n) => /* @__PURE__ */ f.jsx("div", { "data-slot": "alert-description", className: I(BO({ className: e })), ref: n, ...t }));
 function q0(e, t = globalThis == null ? void 0 : globalThis.document) {
   const n = Me(e);
   reactExports.useEffect(() => {
@@ -41591,7 +41650,7 @@ var Wl = {};
  */
 var av;
 function Fk() {
-  return av || (av = 1, define_process_env_default.NODE_ENV !== "production" && (function() {
+  return av || (av = 1, define_process_env_default$5.NODE_ENV !== "production" && (function() {
     function e(m, v) {
       return m === v && (m !== 0 || 1 / m === 1 / v) || m !== m && v !== v;
     }
@@ -41644,7 +41703,7 @@ function Fk() {
 }
 var iv;
 function Vk() {
-  return iv || (iv = 1, define_process_env_default.NODE_ENV === "production" ? bi.exports = Lk() : bi.exports = Fk()), bi.exports;
+  return iv || (iv = 1, define_process_env_default$5.NODE_ENV === "production" ? bi.exports = Lk() : bi.exports = Fk()), bi.exports;
 }
 var zk = Vk();
 function Bk() {
@@ -44438,7 +44497,7 @@ var ze = {};
  */
 var Cb;
 function wF() {
-  return Cb || (Cb = 1, define_process_env_default.NODE_ENV !== "production" && (function() {
+  return Cb || (Cb = 1, define_process_env_default$5.NODE_ENV !== "production" && (function() {
     var e = Symbol.for("react.element"), t = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), r = Symbol.for("react.strict_mode"), o = Symbol.for("react.profiler"), a = Symbol.for("react.provider"), i = Symbol.for("react.context"), s = Symbol.for("react.server_context"), l = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), d = Symbol.for("react.suspense_list"), u = Symbol.for("react.memo"), g = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), v = false, h = false, b = false, y = false, x = false, w;
     w = Symbol.for("react.module.reference");
     function S(z) {
@@ -44528,7 +44587,7 @@ function wF() {
 }
 var _b;
 function SF() {
-  return _b || (_b = 1, define_process_env_default.NODE_ENV === "production" ? wi.exports = xF() : wi.exports = wF()), wi.exports;
+  return _b || (_b = 1, define_process_env_default$5.NODE_ENV === "production" ? wi.exports = xF() : wi.exports = wF()), wi.exports;
 }
 SF();
 var Xc, Rb;
@@ -44957,7 +45016,7 @@ function $F(e) {
     viewBox: "".concat(d.x, " ").concat(d.y, " ").concat(d.width, " ").concat(d.height)
   }), /* @__PURE__ */ React.createElement("title", null, s), /* @__PURE__ */ React.createElement("desc", null, l), t);
 }
-var LF = define_process_env_default.NODE_ENV !== "production", Bi = function(t, n) {
+var LF = define_process_env_default$5.NODE_ENV !== "production", Bi = function(t, n) {
   for (var r = arguments.length, o = new Array(r > 2 ? r - 2 : 0), a = 2; a < r; a++)
     o[a - 2] = arguments[a];
   if (LF && typeof console < "u" && console.warn && (n === void 0 && console.warn("LogUtils requires an error message argument"), !t))
@@ -48042,7 +48101,7 @@ var He = {};
  */
 var Wx;
 function u5() {
-  return Wx || (Wx = 1, define_process_env_default.NODE_ENV !== "production" && (function() {
+  return Wx || (Wx = 1, define_process_env_default$5.NODE_ENV !== "production" && (function() {
     var e = typeof Symbol == "function" && Symbol.for, t = e ? Symbol.for("react.element") : 60103, n = e ? Symbol.for("react.portal") : 60106, r = e ? Symbol.for("react.fragment") : 60107, o = e ? Symbol.for("react.strict_mode") : 60108, a = e ? Symbol.for("react.profiler") : 60114, i = e ? Symbol.for("react.provider") : 60109, s = e ? Symbol.for("react.context") : 60110, l = e ? Symbol.for("react.async_mode") : 60111, c = e ? Symbol.for("react.concurrent_mode") : 60111, d = e ? Symbol.for("react.forward_ref") : 60112, u = e ? Symbol.for("react.suspense") : 60113, g = e ? Symbol.for("react.suspense_list") : 60120, m = e ? Symbol.for("react.memo") : 60115, v = e ? Symbol.for("react.lazy") : 60116, h = e ? Symbol.for("react.block") : 60121, b = e ? Symbol.for("react.fundamental") : 60117, y = e ? Symbol.for("react.responder") : 60118, x = e ? Symbol.for("react.scope") : 60119;
     function w(q) {
       return typeof q == "string" || typeof q == "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
@@ -48125,7 +48184,7 @@ function u5() {
 }
 var Ux;
 function v_() {
-  return Ux || (Ux = 1, define_process_env_default.NODE_ENV === "production" ? Pi.exports = c5() : Pi.exports = u5()), Pi.exports;
+  return Ux || (Ux = 1, define_process_env_default$5.NODE_ENV === "production" ? Pi.exports = c5() : Pi.exports = u5()), Pi.exports;
 }
 /*
 object-assign
@@ -48195,7 +48254,7 @@ function f5() {
   Jx = 1;
   var e = function() {
   };
-  if (define_process_env_default.NODE_ENV !== "production") {
+  if (define_process_env_default$5.NODE_ENV !== "production") {
     var t = /* @__PURE__ */ um(), n = {}, r = /* @__PURE__ */ b_();
     e = function(a) {
       var i = "Warning: " + a;
@@ -48207,7 +48266,7 @@ function f5() {
     };
   }
   function o(a, i, s, l, c) {
-    if (define_process_env_default.NODE_ENV !== "production") {
+    if (define_process_env_default$5.NODE_ENV !== "production") {
       for (var d in a)
         if (r(a, d)) {
           var u;
@@ -48235,7 +48294,7 @@ function f5() {
     }
   }
   return o.resetWarningCache = function() {
-    define_process_env_default.NODE_ENV !== "production" && (n = {});
+    define_process_env_default$5.NODE_ENV !== "production" && (n = {});
   }, nf = o, nf;
 }
 var rf, Zx;
@@ -48244,7 +48303,7 @@ function p5() {
   Zx = 1;
   var e = v_(), t = d5(), n = /* @__PURE__ */ um(), r = /* @__PURE__ */ b_(), o = /* @__PURE__ */ f5(), a = function() {
   };
-  define_process_env_default.NODE_ENV !== "production" && (a = function(s) {
+  define_process_env_default$5.NODE_ENV !== "production" && (a = function(s) {
     var l = "Warning: " + s;
     typeof console < "u" && console.error(l);
     try {
@@ -48291,7 +48350,7 @@ function p5() {
     }
     h.prototype = Error.prototype;
     function b(P) {
-      if (define_process_env_default.NODE_ENV !== "production")
+      if (define_process_env_default$5.NODE_ENV !== "production")
         var $ = {}, T = 0;
       function A(G, H, O, K, ee, Q, te) {
         if (K = K || g, Q = Q || O, te !== n) {
@@ -48300,7 +48359,7 @@ function p5() {
               "Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types"
             );
             throw q.name = "Invariant Violation", q;
-          } else if (define_process_env_default.NODE_ENV !== "production" && typeof console < "u") {
+          } else if (define_process_env_default$5.NODE_ENV !== "production" && typeof console < "u") {
             var ne = K + ":" + O;
             !$[ne] && // Avoid spamming the console because they are often not actionable except for lib authors
             T < 3 && (a(
@@ -48382,7 +48441,7 @@ function p5() {
     }
     function _(P) {
       if (!Array.isArray(P))
-        return define_process_env_default.NODE_ENV !== "production" && (arguments.length > 1 ? a(
+        return define_process_env_default$5.NODE_ENV !== "production" && (arguments.length > 1 ? a(
           "Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z])."
         ) : a("Invalid argument supplied to oneOf, expected an array.")), i;
       function $(T, A, B, G, H) {
@@ -48416,7 +48475,7 @@ function p5() {
     }
     function N(P) {
       if (!Array.isArray(P))
-        return define_process_env_default.NODE_ENV !== "production" && a("Invalid argument supplied to oneOfType, expected an instance of array."), i;
+        return define_process_env_default$5.NODE_ENV !== "production" && a("Invalid argument supplied to oneOfType, expected an instance of array."), i;
       for (var $ = 0; $ < P.length; $++) {
         var T = P[$];
         if (typeof T != "function")
@@ -48610,7 +48669,7 @@ function g5() {
 var ew;
 function m5() {
   if (ew) return Ei.exports;
-  if (ew = 1, define_process_env_default.NODE_ENV !== "production") {
+  if (ew = 1, define_process_env_default$5.NODE_ENV !== "production") {
     var e = v_(), t = true;
     Ei.exports = /* @__PURE__ */ p5()(e.isElement, t);
   } else
@@ -52153,12 +52212,58 @@ const T4 = reactExports.forwardRef(({ className: e, ...t }, n) => /* @__PURE__ *
   }
 ));
 T4.displayName = "DropdownMenuSubContent";
-var Jo = (e) => e instanceof Date, jm = (e) => e == null;
+var A4 = (e) => e.type === "checkbox", Jo = (e) => e instanceof Date, jm = (e) => e == null;
 const A1 = (e) => typeof e == "object";
-var Er = (e) => !jm(e) && !Array.isArray(e) && A1(e) && !Jo(e);
-const hw = {
+var Er = (e) => !jm(e) && !Array.isArray(e) && A1(e) && !Jo(e), I4 = (e) => Er(e) && e.target ? A4(e.target) ? e.target.checked : e.target.value : e, D4 = (e) => e.substring(0, e.search(/\.\d+(\.|$)/)) || e, O4 = (e, t) => e.has(D4(t)), j4 = (e) => {
+  const t = e.constructor && e.constructor.prototype;
+  return Er(t) && t.hasOwnProperty("isPrototypeOf");
+}, k4 = typeof window < "u" && typeof window.HTMLElement < "u" && typeof document < "u";
+function I1(e) {
+  let t;
+  const n = Array.isArray(e), r = typeof FileList < "u" ? e instanceof FileList : false;
+  if (e instanceof Date)
+    t = new Date(e);
+  else if (e instanceof Set)
+    t = new Set(e);
+  else if (!(k4 && (e instanceof Blob || r)) && (n || Er(e)))
+    if (t = n ? [] : {}, !n && !j4(e))
+      t = e;
+    else
+      for (const o in e)
+        e.hasOwnProperty(o) && (t[o] = I1(e[o]));
+  else
+    return e;
+  return t;
+}
+var D1 = (e) => Array.isArray(e) ? e.filter(Boolean) : [], Rp = (e) => e === void 0, At = (e, t, n) => {
+  if (!t || !Er(e))
+    return n;
+  const r = D1(t.split(/[,[\].]+?/)).reduce((o, a) => jm(o) ? o : o[a], e);
+  return Rp(r) || r === e ? Rp(e[t]) ? n : e[t] : r;
+}, vf = (e) => typeof e == "boolean", $4 = (e) => /^\w*$/.test(e), L4 = (e) => D1(e.replace(/["|']|\]/g, "").split(/\.|\[/)), gw = (e, t, n) => {
+  let r = -1;
+  const o = $4(t) ? [t] : L4(t), a = o.length, i = a - 1;
+  for (; ++r < a; ) {
+    const s = o[r];
+    let l = n;
+    if (r !== i) {
+      const c = e[s];
+      l = Er(c) || Array.isArray(c) ? c : isNaN(+o[r + 1]) ? {} : [];
+    }
+    if (s === "__proto__" || s === "constructor" || s === "prototype")
+      return;
+    e[s] = l, e = e[s];
+  }
+};
+const mw = {
+  BLUR: "blur",
+  CHANGE: "change"
+}, hw = {
   all: "all"
-}, O1 = React.createContext(null), fl = () => React.useContext(O1);
+}, O1 = React.createContext(null), fl = () => React.useContext(O1), F4 = (e) => {
+  const { children: t, ...n } = e;
+  return React.createElement(O1.Provider, { value: n }, t);
+};
 var V4 = (e, t, n, r = true) => {
   const o = {
     defaultValues: t._defaultValues
@@ -52221,6 +52326,110 @@ function $1(e) {
     l.current.isValid && n._setValid(true);
   }, [n]), React.useMemo(() => V4(i, n, l.current, false), [i, n]);
 }
+var z4 = (e) => typeof e == "string", B4 = (e, t, n, r, o) => z4(e) ? At(n, e, o) : Array.isArray(e) ? e.map((a) => At(n, a)) : n;
+function H4(e) {
+  const t = fl(), { control: n = t.control, name: r, defaultValue: o, disabled: a, exact: i } = e || {}, [s, l] = React.useState(n._getWatch(r, o));
+  return k1(() => n._subscribe({
+    name: r,
+    formState: {
+      values: true
+    },
+    exact: i,
+    callback: (c) => !a && l(B4(r, n._names, c.values || n._formValues, false, o))
+  }), [r, o, a, i]), React.useEffect(() => n._removeUnmounted()), s;
+}
+function q4(e) {
+  const t = fl(), { name: n, disabled: r, control: o = t.control, shouldUnregister: a } = e, i = O4(o._names.array, n), s = H4({
+    control: o,
+    name: n,
+    defaultValue: At(o._formValues, n, At(o._defaultValues, n, e.defaultValue)),
+    exact: true
+  }), l = $1({
+    control: o,
+    name: n,
+    exact: true
+  }), c = React.useRef(e), d = React.useRef(o.register(n, {
+    ...e.rules,
+    value: s,
+    ...vf(e.disabled) ? { disabled: e.disabled } : {}
+  })), u = React.useMemo(() => Object.defineProperties({}, {
+    invalid: {
+      enumerable: true,
+      get: () => !!At(l.errors, n)
+    },
+    isDirty: {
+      enumerable: true,
+      get: () => !!At(l.dirtyFields, n)
+    },
+    isTouched: {
+      enumerable: true,
+      get: () => !!At(l.touchedFields, n)
+    },
+    isValidating: {
+      enumerable: true,
+      get: () => !!At(l.validatingFields, n)
+    },
+    error: {
+      enumerable: true,
+      get: () => At(l.errors, n)
+    }
+  }), [l, n]), g = React.useCallback((b) => d.current.onChange({
+    target: {
+      value: I4(b),
+      name: n
+    },
+    type: mw.CHANGE
+  }), [n]), m = React.useCallback(() => d.current.onBlur({
+    target: {
+      value: At(o._formValues, n),
+      name: n
+    },
+    type: mw.BLUR
+  }), [n, o._formValues]), v = React.useCallback((b) => {
+    const y = At(o._fields, n);
+    y && b && (y._f.ref = {
+      focus: () => b.focus(),
+      select: () => b.select(),
+      setCustomValidity: (x) => b.setCustomValidity(x),
+      reportValidity: () => b.reportValidity()
+    });
+  }, [o._fields, n]), h = React.useMemo(() => ({
+    name: n,
+    value: s,
+    ...vf(r) || l.disabled ? { disabled: l.disabled || r } : {},
+    onChange: g,
+    onBlur: m,
+    ref: v
+  }), [n, r, l.disabled, g, m, v, s]);
+  return React.useEffect(() => {
+    const b = o._options.shouldUnregister || a;
+    o.register(n, {
+      ...c.current.rules,
+      ...vf(c.current.disabled) ? { disabled: c.current.disabled } : {}
+    });
+    const y = (x, w) => {
+      const S = At(o._fields, x);
+      S && S._f && (S._f.mount = w);
+    };
+    if (y(n, true), b) {
+      const x = I1(At(o._options.defaultValues, n));
+      gw(o._defaultValues, n, x), Rp(At(o._formValues, n)) && gw(o._formValues, n, x);
+    }
+    return !i && o.register(n), () => {
+      (i ? b && !o._state.action : b) ? o.unregister(n) : y(n, false);
+    };
+  }, [n, o, i, a]), React.useEffect(() => {
+    o._setDisabledField({
+      disabled: r,
+      name: n
+    });
+  }, [r, n, o]), React.useMemo(() => ({
+    field: h,
+    formState: l,
+    fieldState: u
+  }), [h, l, u]);
+}
+const G4 = (e) => e.render(q4(e));
 typeof window < "u" ? React.useLayoutEffect : React.useEffect;
 var W4 = "Label", km = reactExports.forwardRef((e, t) => /* @__PURE__ */ f.jsx(
   ie.label,
@@ -52254,7 +52463,10 @@ const V1 = reactExports.createContext({}), z1 = reactExports.createContext({}), 
     formMessageId: `${a}-form-item-message`,
     ...o
   };
-};
+}, Dre = F4, K4 = ({
+  ...e
+}) => /* @__PURE__ */ f.jsx(V1.Provider, { value: { name: e.name }, children: /* @__PURE__ */ f.jsx(G4, { ...e }) });
+K4.displayName = "FormField";
 const Y4 = reactExports.forwardRef(
   ({ className: e, ...t }, n) => {
     const r = reactExports.useId();
@@ -52988,6 +53200,46 @@ var x8 = "RadioGroupIndicator", MP = reactExports.forwardRef(
   }
 );
 MP.displayName = x8;
+var w8 = RP, S8 = PP, C8 = MP;
+const _8 = U(
+  "border-primary empty:border-foreground text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 aspect-square size-4 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px]",
+  {
+    variants: {
+      disabled: {
+        true: "cursor-not-allowed opacity-50",
+        false: ""
+      }
+    },
+    defaultVariants: {
+      disabled: false
+    }
+  }
+);
+function zre({ className: e, ...t }) {
+  return /* @__PURE__ */ f.jsx(w8, { "data-slot": "radio-group", className: I("grid gap-2", e), ...t });
+}
+function Bre({ className: e, label: t = "", ...n }) {
+  const r = /* @__PURE__ */ f.jsx(
+    S8,
+    {
+      "data-slot": "radio-group-item",
+      className: I(_8({ disabled: n.disabled, className: e })),
+      ...n,
+      children: /* @__PURE__ */ f.jsx(
+        C8,
+        {
+          "data-slot": "radio-group-indicator",
+          className: "relative flex items-center justify-center",
+          children: /* @__PURE__ */ f.jsx($s, { className: "fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2" })
+        }
+      )
+    }
+  );
+  return t ? /* @__PURE__ */ f.jsxs("div", { className: "flex items-center space-x-2", children: [
+    r,
+    /* @__PURE__ */ f.jsx(km, { htmlFor: n.id, className: `${n.disabled && "opacity-50"}`, children: t })
+  ] }) : r;
+}
 function wa(e, [t, n]) {
   return Math.min(n, Math.max(t, e));
 }
@@ -56832,7 +57084,93 @@ zN.displayName = mh.displayName;
 var yX = [" ", "Enter", "ArrowUp", "ArrowDown"], xX = [" ", "Enter"], Nr = "Select", [_l, Rl, wX] = $r(Nr), [To] = ke(Nr, [
   wX,
   En
-]), El = En(), [SX, ur] = To(Nr), [CX, _X] = To(Nr);
+]), El = En(), [SX, ur] = To(Nr), [CX, _X] = To(Nr), BN = (e) => {
+  const {
+    __scopeSelect: t,
+    children: n,
+    open: r,
+    defaultOpen: o,
+    onOpenChange: a,
+    value: i,
+    defaultValue: s,
+    onValueChange: l,
+    dir: c,
+    name: d,
+    autoComplete: u,
+    disabled: g,
+    required: m,
+    form: v
+  } = e, h = El(t), [b, y] = reactExports.useState(null), [x, w] = reactExports.useState(null), [S, C] = reactExports.useState(false), R = jt(c), [_, E] = vt({
+    prop: r,
+    defaultProp: o ?? false,
+    onChange: a,
+    caller: Nr
+  }), [N, F] = vt({
+    prop: i,
+    defaultProp: s,
+    onChange: l,
+    caller: Nr
+  }), D = reactExports.useRef(null), Y = b ? v || !!b.closest("form") : true, [j, X] = reactExports.useState(/* @__PURE__ */ new Set()), Z = Array.from(j).map((k) => k.props.value).join(";");
+  return /* @__PURE__ */ f.jsx(Co, { ...h, children: /* @__PURE__ */ f.jsxs(
+    SX,
+    {
+      required: m,
+      scope: t,
+      trigger: b,
+      onTriggerChange: y,
+      valueNode: x,
+      onValueNodeChange: w,
+      valueNodeHasChildren: S,
+      onValueNodeHasChildrenChange: C,
+      contentId: Fe(),
+      value: N,
+      onValueChange: F,
+      open: _,
+      onOpenChange: E,
+      dir: R,
+      triggerPointerDownPosRef: D,
+      disabled: g,
+      children: [
+        /* @__PURE__ */ f.jsx(_l.Provider, { scope: t, children: /* @__PURE__ */ f.jsx(
+          CX,
+          {
+            scope: e.__scopeSelect,
+            onNativeOptionAdd: reactExports.useCallback((k) => {
+              X((W) => new Set(W).add(k));
+            }, []),
+            onNativeOptionRemove: reactExports.useCallback((k) => {
+              X((W) => {
+                const L = new Set(W);
+                return L.delete(k), L;
+              });
+            }, []),
+            children: n
+          }
+        ) }),
+        Y ? /* @__PURE__ */ f.jsxs(
+          pT,
+          {
+            "aria-hidden": true,
+            required: m,
+            tabIndex: -1,
+            name: d,
+            autoComplete: u,
+            value: N,
+            onChange: (k) => F(k.target.value),
+            disabled: g,
+            form: v,
+            children: [
+              N === void 0 ? /* @__PURE__ */ f.jsx("option", { value: "" }) : null,
+              Array.from(j)
+            ]
+          },
+          Z
+        ) : null
+      ]
+    }
+  ) });
+};
+BN.displayName = Nr;
 var HN = "SelectTrigger", qN = reactExports.forwardRef(
   (e, t) => {
     const { __scopeSelect: n, disabled: r = false, ...o } = e, a = El(n), i = ur(HN, n), s = i.disabled || r, l = oe(t, i.onTriggerChange), c = Rl(n), d = reactExports.useRef("touch"), [u, g, m] = mT((h) => {
@@ -57547,7 +57885,7 @@ function hT(e, t, n) {
 function LX(e, t) {
   return e.map((n, r) => e[(t + r) % e.length]);
 }
-var bT = qN, yT = WN, FX = UN, VX = KN, xT = YN, zX = QN, wT = tT, ST = rT, CT = aT, BX = iT, HX = lT, _T = cT, RT = uT, ET = fT;
+var vT = BN, bT = qN, yT = WN, FX = UN, VX = KN, xT = YN, zX = QN, wT = tT, ST = rT, CT = aT, BX = iT, HX = lT, _T = cT, RT = uT, ET = fT;
 const qX = U(
   "border-border data-[placeholder]:text-muted-foreground flex h-9 w-full items-center justify-between rounded-xs border bg-background px-3 py-2 text-sm whitespace-nowrap shadow-sm disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:outline-muted-foreground focus:outline-2 focus:outline-offset-1"
 ), GX = U("flex cursor-default items-center justify-center py-1"), WX = U("flex cursor-default items-center justify-center py-1"), UX = U(
@@ -57575,7 +57913,8 @@ const qX = U(
   }
 }), YX = U("pr-2 py-1.5 pl-8 text-sm font-medium leading-5"), XX = U(
   "text-sm font-medium leading-5 focus:bg-accent focus:text-accent-foreground relative flex w-full cursor-default items-center rounded-xs py-1.5 pl-8 pr-2 text-sm outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-), JX = U("bg-muted -mx-1 my-1 h-px");
+), JX = U("bg-muted -mx-1 my-1 h-px"), ZX = vT;
+ZX.displayName = vT.displayName;
 const QX = wT;
 QX.displayName = wT.displayName;
 const eJ = yT;
@@ -59766,7 +60105,7 @@ function be(e, t, n, r) {
       var o;
       return (o = e == null ? void 0 : e.debugAll) != null ? o : e[t];
     },
-    key: define_process_env_default.NODE_ENV === "development" && n,
+    key: define_process_env_default$5.NODE_ENV === "development" && n,
     onChange: r
   };
 }
@@ -59804,11 +60143,11 @@ function mee(e, t, n, r) {
     let m = g;
     for (const h of l.split(".")) {
       var v;
-      m = (v = m) == null ? void 0 : v[h], define_process_env_default.NODE_ENV !== "production" && m === void 0 && console.warn(`"${h}" in deeply nested key "${l}" returned undefined.`);
+      m = (v = m) == null ? void 0 : v[h], define_process_env_default$5.NODE_ENV !== "production" && m === void 0 && console.warn(`"${h}" in deeply nested key "${l}" returned undefined.`);
     }
     return m;
   } : d = (g) => g[s.accessorKey]), !c)
-    throw define_process_env_default.NODE_ENV !== "production" ? new Error(s.accessorFn ? "Columns require an id when using an accessorFn" : "Columns require an id when using a non-string header") : new Error();
+    throw define_process_env_default$5.NODE_ENV !== "production" ? new Error(s.accessorFn ? "Columns require an id when using an accessorFn" : "Columns require an id when using a non-string header") : new Error();
   let u = {
     id: `${String(c)}`,
     accessorFn: d,
@@ -61208,7 +61547,7 @@ const Go = {
 ];
 function Jee(e) {
   var t, n;
-  define_process_env_default.NODE_ENV !== "production" && (e.debugAll || e.debugTable) && console.info("Creating Table Instance...");
+  define_process_env_default$5.NODE_ENV !== "production" && (e.debugAll || e.debugTable) && console.info("Creating Table Instance...");
   const r = [...Xee, ...(t = e._features) != null ? t : []];
   let o = {
     _features: r
@@ -61266,7 +61605,7 @@ function Jee(e) {
     getRow: (g, m) => {
       let v = (m ? o.getPrePaginationRowModel() : o.getRowModel()).rowsById[g];
       if (!v && (v = o.getCoreRowModel().rowsById[g], !v))
-        throw define_process_env_default.NODE_ENV !== "production" ? new Error(`getRow could not find row with ID: ${g}`) : new Error();
+        throw define_process_env_default$5.NODE_ENV !== "production" ? new Error(`getRow could not find row with ID: ${g}`) : new Error();
       return v;
     },
     _getDefaultColumnDef: ve(() => [o.options.defaultColumn], (g) => {
@@ -61303,7 +61642,7 @@ function Jee(e) {
     }, be(e, "debugColumns", "getAllLeafColumns")),
     getColumn: (g) => {
       const m = o._getAllFlatColumnsById()[g];
-      return define_process_env_default.NODE_ENV !== "production" && !m && console.error(`[Table] Column with id '${g}' does not exist.`), m;
+      return define_process_env_default$5.NODE_ENV !== "production" && !m && console.error(`[Table] Column with id '${g}' does not exist.`), m;
     }
   };
   Object.assign(o, u);
@@ -64383,8 +64722,7 @@ const Vne = ({ className: e, ...t }) => {
       o > n.pageSize && /* @__PURE__ */ f.jsx(ote, { table: S })
     ] })
   ] });
-};
-reactExports.forwardRef(Hne);
+}, aoe = reactExports.forwardRef(Hne);
 function qne(e) {
   const t = e + "CollectionProvider", [n, r] = ke(t), [o, a] = n(
     t,
@@ -64813,7 +65151,7 @@ const fre = React.forwardRef(
   ({ className: e, ...t }, n) => /* @__PURE__ */ f.jsx(QA, { ref: n, className: I(lre({ className: e })), ...t })
 );
 fre.displayName = QA.displayName;
-reactExports.forwardRef(
+const soe = reactExports.forwardRef(
   ({ className: e, Header: t, Footer: n, buttonLabel: r, disabled: o, rows: a, onButtonClick: i, ...s }, l) => /* @__PURE__ */ f.jsxs("div", { className: "", children: [
     t && t,
     /* @__PURE__ */ f.jsx(
@@ -65070,34 +65408,12406 @@ const createStoreImpl = (createState) => {
     listeners.add(listener);
     return () => listeners.delete(listener);
   };
-  const api = { setState, getState, getInitialState, subscribe };
-  const initialState = state = createState(setState, getState, api);
-  return api;
+  const api2 = { setState, getState, getInitialState, subscribe };
+  const initialState = state = createState(setState, getState, api2);
+  return api2;
 };
 const createStore = ((createState) => createState ? createStoreImpl(createState) : createStoreImpl);
 const identity = (arg) => arg;
-function useStore(api, selector = identity) {
+function useStore(api2, selector = identity) {
   const slice = React.useSyncExternalStore(
-    api.subscribe,
-    React.useCallback(() => selector(api.getState()), [api, selector]),
-    React.useCallback(() => selector(api.getInitialState()), [api, selector])
+    api2.subscribe,
+    React.useCallback(() => selector(api2.getState()), [api2, selector]),
+    React.useCallback(() => selector(api2.getInitialState()), [api2, selector])
   );
   React.useDebugValue(slice);
   return slice;
 }
 const createImpl = (createState) => {
-  const api = createStore(createState);
-  const useBoundStore = (selector) => useStore(api, selector);
-  Object.assign(useBoundStore, api);
+  const api2 = createStore(createState);
+  const useBoundStore = (selector) => useStore(api2, selector);
+  Object.assign(useBoundStore, api2);
   return useBoundStore;
 };
 const create = ((createState) => createState ? createImpl(createState) : createImpl);
-const usePluginStore = create((set) => ({
+const usePluginStore = create((set2) => ({
   toast: noe,
-  setToast: (toast2) => set({ toast: toast2 }),
+  setToast: (toast2) => set2({ toast: toast2 }),
   theme: "dark",
-  setTheme: (theme) => set({ theme })
+  setTheme: (theme) => set2({ theme })
 }));
+var Subscribable = class {
+  constructor() {
+    this.listeners = /* @__PURE__ */ new Set();
+    this.subscribe = this.subscribe.bind(this);
+  }
+  subscribe(listener) {
+    this.listeners.add(listener);
+    this.onSubscribe();
+    return () => {
+      this.listeners.delete(listener);
+      this.onUnsubscribe();
+    };
+  }
+  hasListeners() {
+    return this.listeners.size > 0;
+  }
+  onSubscribe() {
+  }
+  onUnsubscribe() {
+  }
+};
+var define_process_env_default$4 = {};
+var defaultTimeoutProvider = {
+  // We need the wrapper function syntax below instead of direct references to
+  // global setTimeout etc.
+  //
+  // BAD: `setTimeout: setTimeout`
+  // GOOD: `setTimeout: (cb, delay) => setTimeout(cb, delay)`
+  //
+  // If we use direct references here, then anything that wants to spy on or
+  // replace the global setTimeout (like tests) won't work since we'll already
+  // have a hard reference to the original implementation at the time when this
+  // file was imported.
+  setTimeout: (callback, delay) => setTimeout(callback, delay),
+  clearTimeout: (timeoutId) => clearTimeout(timeoutId),
+  setInterval: (callback, delay) => setInterval(callback, delay),
+  clearInterval: (intervalId) => clearInterval(intervalId)
+};
+var TimeoutManager = class {
+  // We cannot have TimeoutManager<T> as we must instantiate it with a concrete
+  // type at app boot; and if we leave that type, then any new timer provider
+  // would need to support ReturnType<typeof setTimeout>, which is infeasible.
+  //
+  // We settle for type safety for the TimeoutProvider type, and accept that
+  // this class is unsafe internally to allow for extension.
+  #provider = defaultTimeoutProvider;
+  #providerCalled = false;
+  setTimeoutProvider(provider) {
+    if (define_process_env_default$4.NODE_ENV !== "production") {
+      if (this.#providerCalled && provider !== this.#provider) {
+        console.error(
+          `[timeoutManager]: Switching provider after calls to previous provider might result in unexpected behavior.`,
+          { previous: this.#provider, provider }
+        );
+      }
+    }
+    this.#provider = provider;
+    if (define_process_env_default$4.NODE_ENV !== "production") {
+      this.#providerCalled = false;
+    }
+  }
+  setTimeout(callback, delay) {
+    if (define_process_env_default$4.NODE_ENV !== "production") {
+      this.#providerCalled = true;
+    }
+    return this.#provider.setTimeout(callback, delay);
+  }
+  clearTimeout(timeoutId) {
+    this.#provider.clearTimeout(timeoutId);
+  }
+  setInterval(callback, delay) {
+    if (define_process_env_default$4.NODE_ENV !== "production") {
+      this.#providerCalled = true;
+    }
+    return this.#provider.setInterval(callback, delay);
+  }
+  clearInterval(intervalId) {
+    this.#provider.clearInterval(intervalId);
+  }
+};
+var timeoutManager = new TimeoutManager();
+function systemSetTimeoutZero(callback) {
+  setTimeout(callback, 0);
+}
+var define_process_env_default$3 = {};
+var isServer = typeof window === "undefined" || "Deno" in globalThis;
+function noop$1() {
+}
+function functionalUpdate(updater, input) {
+  return typeof updater === "function" ? updater(input) : updater;
+}
+function isValidTimeout(value) {
+  return typeof value === "number" && value >= 0 && value !== Infinity;
+}
+function timeUntilStale(updatedAt, staleTime) {
+  return Math.max(updatedAt + (staleTime || 0) - Date.now(), 0);
+}
+function resolveStaleTime(staleTime, query) {
+  return typeof staleTime === "function" ? staleTime(query) : staleTime;
+}
+function resolveEnabled(enabled, query) {
+  return typeof enabled === "function" ? enabled(query) : enabled;
+}
+function matchQuery(filters, query) {
+  const {
+    type = "all",
+    exact,
+    fetchStatus,
+    predicate,
+    queryKey,
+    stale
+  } = filters;
+  if (queryKey) {
+    if (exact) {
+      if (query.queryHash !== hashQueryKeyByOptions(queryKey, query.options)) {
+        return false;
+      }
+    } else if (!partialMatchKey(query.queryKey, queryKey)) {
+      return false;
+    }
+  }
+  if (type !== "all") {
+    const isActive = query.isActive();
+    if (type === "active" && !isActive) {
+      return false;
+    }
+    if (type === "inactive" && isActive) {
+      return false;
+    }
+  }
+  if (typeof stale === "boolean" && query.isStale() !== stale) {
+    return false;
+  }
+  if (fetchStatus && fetchStatus !== query.state.fetchStatus) {
+    return false;
+  }
+  if (predicate && !predicate(query)) {
+    return false;
+  }
+  return true;
+}
+function matchMutation(filters, mutation) {
+  const { exact, status, predicate, mutationKey } = filters;
+  if (mutationKey) {
+    if (!mutation.options.mutationKey) {
+      return false;
+    }
+    if (exact) {
+      if (hashKey(mutation.options.mutationKey) !== hashKey(mutationKey)) {
+        return false;
+      }
+    } else if (!partialMatchKey(mutation.options.mutationKey, mutationKey)) {
+      return false;
+    }
+  }
+  if (status && mutation.state.status !== status) {
+    return false;
+  }
+  if (predicate && !predicate(mutation)) {
+    return false;
+  }
+  return true;
+}
+function hashQueryKeyByOptions(queryKey, options) {
+  const hashFn = options?.queryKeyHashFn || hashKey;
+  return hashFn(queryKey);
+}
+function hashKey(queryKey) {
+  return JSON.stringify(
+    queryKey,
+    (_, val) => isPlainObject$2(val) ? Object.keys(val).sort().reduce((result, key) => {
+      result[key] = val[key];
+      return result;
+    }, {}) : val
+  );
+}
+function partialMatchKey(a, b) {
+  if (a === b) {
+    return true;
+  }
+  if (typeof a !== typeof b) {
+    return false;
+  }
+  if (a && b && typeof a === "object" && typeof b === "object") {
+    return Object.keys(b).every((key) => partialMatchKey(a[key], b[key]));
+  }
+  return false;
+}
+var hasOwn = Object.prototype.hasOwnProperty;
+function replaceEqualDeep(a, b) {
+  if (a === b) {
+    return a;
+  }
+  const array = isPlainArray(a) && isPlainArray(b);
+  if (!array && !(isPlainObject$2(a) && isPlainObject$2(b))) return b;
+  const aItems = array ? a : Object.keys(a);
+  const aSize = aItems.length;
+  const bItems = array ? b : Object.keys(b);
+  const bSize = bItems.length;
+  const copy = array ? new Array(bSize) : {};
+  let equalItems = 0;
+  for (let i = 0; i < bSize; i++) {
+    const key = array ? i : bItems[i];
+    const aItem = a[key];
+    const bItem = b[key];
+    if (aItem === bItem) {
+      copy[key] = aItem;
+      if (array ? i < aSize : hasOwn.call(a, key)) equalItems++;
+      continue;
+    }
+    if (aItem === null || bItem === null || typeof aItem !== "object" || typeof bItem !== "object") {
+      copy[key] = bItem;
+      continue;
+    }
+    const v = replaceEqualDeep(aItem, bItem);
+    copy[key] = v;
+    if (v === aItem) equalItems++;
+  }
+  return aSize === bSize && equalItems === aSize ? a : copy;
+}
+function shallowEqualObjects(a, b) {
+  if (!b || Object.keys(a).length !== Object.keys(b).length) {
+    return false;
+  }
+  for (const key in a) {
+    if (a[key] !== b[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+function isPlainArray(value) {
+  return Array.isArray(value) && value.length === Object.keys(value).length;
+}
+function isPlainObject$2(o) {
+  if (!hasObjectPrototype(o)) {
+    return false;
+  }
+  const ctor = o.constructor;
+  if (ctor === void 0) {
+    return true;
+  }
+  const prot = ctor.prototype;
+  if (!hasObjectPrototype(prot)) {
+    return false;
+  }
+  if (!prot.hasOwnProperty("isPrototypeOf")) {
+    return false;
+  }
+  if (Object.getPrototypeOf(o) !== Object.prototype) {
+    return false;
+  }
+  return true;
+}
+function hasObjectPrototype(o) {
+  return Object.prototype.toString.call(o) === "[object Object]";
+}
+function sleep(timeout) {
+  return new Promise((resolve) => {
+    timeoutManager.setTimeout(resolve, timeout);
+  });
+}
+function replaceData(prevData, data, options) {
+  if (typeof options.structuralSharing === "function") {
+    return options.structuralSharing(prevData, data);
+  } else if (options.structuralSharing !== false) {
+    if (define_process_env_default$3.NODE_ENV !== "production") {
+      try {
+        return replaceEqualDeep(prevData, data);
+      } catch (error) {
+        console.error(
+          `Structural sharing requires data to be JSON serializable. To fix this, turn off structuralSharing or return JSON-serializable data from your queryFn. [${options.queryHash}]: ${error}`
+        );
+        throw error;
+      }
+    }
+    return replaceEqualDeep(prevData, data);
+  }
+  return data;
+}
+function addToEnd(items, item, max = 0) {
+  const newItems = [...items, item];
+  return max && newItems.length > max ? newItems.slice(1) : newItems;
+}
+function addToStart(items, item, max = 0) {
+  const newItems = [item, ...items];
+  return max && newItems.length > max ? newItems.slice(0, -1) : newItems;
+}
+var skipToken = Symbol();
+function ensureQueryFn(options, fetchOptions) {
+  if (define_process_env_default$3.NODE_ENV !== "production") {
+    if (options.queryFn === skipToken) {
+      console.error(
+        `Attempted to invoke queryFn when set to skipToken. This is likely a configuration error. Query hash: '${options.queryHash}'`
+      );
+    }
+  }
+  if (!options.queryFn && fetchOptions?.initialPromise) {
+    return () => fetchOptions.initialPromise;
+  }
+  if (!options.queryFn || options.queryFn === skipToken) {
+    return () => Promise.reject(new Error(`Missing queryFn: '${options.queryHash}'`));
+  }
+  return options.queryFn;
+}
+function shouldThrowError(throwOnError, params) {
+  if (typeof throwOnError === "function") {
+    return throwOnError(...params);
+  }
+  return !!throwOnError;
+}
+var FocusManager = class extends Subscribable {
+  #focused;
+  #cleanup;
+  #setup;
+  constructor() {
+    super();
+    this.#setup = (onFocus) => {
+      if (!isServer && window.addEventListener) {
+        const listener = () => onFocus();
+        window.addEventListener("visibilitychange", listener, false);
+        return () => {
+          window.removeEventListener("visibilitychange", listener);
+        };
+      }
+      return;
+    };
+  }
+  onSubscribe() {
+    if (!this.#cleanup) {
+      this.setEventListener(this.#setup);
+    }
+  }
+  onUnsubscribe() {
+    if (!this.hasListeners()) {
+      this.#cleanup?.();
+      this.#cleanup = void 0;
+    }
+  }
+  setEventListener(setup) {
+    this.#setup = setup;
+    this.#cleanup?.();
+    this.#cleanup = setup((focused) => {
+      if (typeof focused === "boolean") {
+        this.setFocused(focused);
+      } else {
+        this.onFocus();
+      }
+    });
+  }
+  setFocused(focused) {
+    const changed = this.#focused !== focused;
+    if (changed) {
+      this.#focused = focused;
+      this.onFocus();
+    }
+  }
+  onFocus() {
+    const isFocused = this.isFocused();
+    this.listeners.forEach((listener) => {
+      listener(isFocused);
+    });
+  }
+  isFocused() {
+    if (typeof this.#focused === "boolean") {
+      return this.#focused;
+    }
+    return globalThis.document?.visibilityState !== "hidden";
+  }
+};
+var focusManager = new FocusManager();
+function pendingThenable() {
+  let resolve;
+  let reject;
+  const thenable = new Promise((_resolve, _reject) => {
+    resolve = _resolve;
+    reject = _reject;
+  });
+  thenable.status = "pending";
+  thenable.catch(() => {
+  });
+  function finalize(data) {
+    Object.assign(thenable, data);
+    delete thenable.resolve;
+    delete thenable.reject;
+  }
+  thenable.resolve = (value) => {
+    finalize({
+      status: "fulfilled",
+      value
+    });
+    resolve(value);
+  };
+  thenable.reject = (reason) => {
+    finalize({
+      status: "rejected",
+      reason
+    });
+    reject(reason);
+  };
+  return thenable;
+}
+var defaultScheduler = systemSetTimeoutZero;
+function createNotifyManager() {
+  let queue = [];
+  let transactions = 0;
+  let notifyFn = (callback) => {
+    callback();
+  };
+  let batchNotifyFn = (callback) => {
+    callback();
+  };
+  let scheduleFn = defaultScheduler;
+  const schedule = (callback) => {
+    if (transactions) {
+      queue.push(callback);
+    } else {
+      scheduleFn(() => {
+        notifyFn(callback);
+      });
+    }
+  };
+  const flush = () => {
+    const originalQueue = queue;
+    queue = [];
+    if (originalQueue.length) {
+      scheduleFn(() => {
+        batchNotifyFn(() => {
+          originalQueue.forEach((callback) => {
+            notifyFn(callback);
+          });
+        });
+      });
+    }
+  };
+  return {
+    batch: (callback) => {
+      let result;
+      transactions++;
+      try {
+        result = callback();
+      } finally {
+        transactions--;
+        if (!transactions) {
+          flush();
+        }
+      }
+      return result;
+    },
+    /**
+     * All calls to the wrapped function will be batched.
+     */
+    batchCalls: (callback) => {
+      return (...args) => {
+        schedule(() => {
+          callback(...args);
+        });
+      };
+    },
+    schedule,
+    /**
+     * Use this method to set a custom notify function.
+     * This can be used to for example wrap notifications with `React.act` while running tests.
+     */
+    setNotifyFunction: (fn2) => {
+      notifyFn = fn2;
+    },
+    /**
+     * Use this method to set a custom function to batch notifications together into a single tick.
+     * By default React Query will use the batch function provided by ReactDOM or React Native.
+     */
+    setBatchNotifyFunction: (fn2) => {
+      batchNotifyFn = fn2;
+    },
+    setScheduler: (fn2) => {
+      scheduleFn = fn2;
+    }
+  };
+}
+var notifyManager = createNotifyManager();
+var OnlineManager = class extends Subscribable {
+  #online = true;
+  #cleanup;
+  #setup;
+  constructor() {
+    super();
+    this.#setup = (onOnline) => {
+      if (!isServer && window.addEventListener) {
+        const onlineListener = () => onOnline(true);
+        const offlineListener = () => onOnline(false);
+        window.addEventListener("online", onlineListener, false);
+        window.addEventListener("offline", offlineListener, false);
+        return () => {
+          window.removeEventListener("online", onlineListener);
+          window.removeEventListener("offline", offlineListener);
+        };
+      }
+      return;
+    };
+  }
+  onSubscribe() {
+    if (!this.#cleanup) {
+      this.setEventListener(this.#setup);
+    }
+  }
+  onUnsubscribe() {
+    if (!this.hasListeners()) {
+      this.#cleanup?.();
+      this.#cleanup = void 0;
+    }
+  }
+  setEventListener(setup) {
+    this.#setup = setup;
+    this.#cleanup?.();
+    this.#cleanup = setup(this.setOnline.bind(this));
+  }
+  setOnline(online) {
+    const changed = this.#online !== online;
+    if (changed) {
+      this.#online = online;
+      this.listeners.forEach((listener) => {
+        listener(online);
+      });
+    }
+  }
+  isOnline() {
+    return this.#online;
+  }
+};
+var onlineManager = new OnlineManager();
+function defaultRetryDelay(failureCount) {
+  return Math.min(1e3 * 2 ** failureCount, 3e4);
+}
+function canFetch(networkMode) {
+  return (networkMode ?? "online") === "online" ? onlineManager.isOnline() : true;
+}
+var CancelledError = class extends Error {
+  constructor(options) {
+    super("CancelledError");
+    this.revert = options?.revert;
+    this.silent = options?.silent;
+  }
+};
+function createRetryer(config) {
+  let isRetryCancelled = false;
+  let failureCount = 0;
+  let continueFn;
+  const thenable = pendingThenable();
+  const isResolved = () => thenable.status !== "pending";
+  const cancel = (cancelOptions) => {
+    if (!isResolved()) {
+      const error = new CancelledError(cancelOptions);
+      reject(error);
+      config.onCancel?.(error);
+    }
+  };
+  const cancelRetry = () => {
+    isRetryCancelled = true;
+  };
+  const continueRetry = () => {
+    isRetryCancelled = false;
+  };
+  const canContinue = () => focusManager.isFocused() && (config.networkMode === "always" || onlineManager.isOnline()) && config.canRun();
+  const canStart = () => canFetch(config.networkMode) && config.canRun();
+  const resolve = (value) => {
+    if (!isResolved()) {
+      continueFn?.();
+      thenable.resolve(value);
+    }
+  };
+  const reject = (value) => {
+    if (!isResolved()) {
+      continueFn?.();
+      thenable.reject(value);
+    }
+  };
+  const pause = () => {
+    return new Promise((continueResolve) => {
+      continueFn = (value) => {
+        if (isResolved() || canContinue()) {
+          continueResolve(value);
+        }
+      };
+      config.onPause?.();
+    }).then(() => {
+      continueFn = void 0;
+      if (!isResolved()) {
+        config.onContinue?.();
+      }
+    });
+  };
+  const run = () => {
+    if (isResolved()) {
+      return;
+    }
+    let promiseOrValue;
+    const initialPromise = failureCount === 0 ? config.initialPromise : void 0;
+    try {
+      promiseOrValue = initialPromise ?? config.fn();
+    } catch (error) {
+      promiseOrValue = Promise.reject(error);
+    }
+    Promise.resolve(promiseOrValue).then(resolve).catch((error) => {
+      if (isResolved()) {
+        return;
+      }
+      const retry = config.retry ?? (isServer ? 0 : 3);
+      const retryDelay = config.retryDelay ?? defaultRetryDelay;
+      const delay = typeof retryDelay === "function" ? retryDelay(failureCount, error) : retryDelay;
+      const shouldRetry = retry === true || typeof retry === "number" && failureCount < retry || typeof retry === "function" && retry(failureCount, error);
+      if (isRetryCancelled || !shouldRetry) {
+        reject(error);
+        return;
+      }
+      failureCount++;
+      config.onFail?.(failureCount, error);
+      sleep(delay).then(() => {
+        return canContinue() ? void 0 : pause();
+      }).then(() => {
+        if (isRetryCancelled) {
+          reject(error);
+        } else {
+          run();
+        }
+      });
+    });
+  };
+  return {
+    promise: thenable,
+    status: () => thenable.status,
+    cancel,
+    continue: () => {
+      continueFn?.();
+      return thenable;
+    },
+    cancelRetry,
+    continueRetry,
+    canStart,
+    start: () => {
+      if (canStart()) {
+        run();
+      } else {
+        pause().then(run);
+      }
+      return thenable;
+    }
+  };
+}
+var Removable = class {
+  #gcTimeout;
+  destroy() {
+    this.clearGcTimeout();
+  }
+  scheduleGc() {
+    this.clearGcTimeout();
+    if (isValidTimeout(this.gcTime)) {
+      this.#gcTimeout = timeoutManager.setTimeout(() => {
+        this.optionalRemove();
+      }, this.gcTime);
+    }
+  }
+  updateGcTime(newGcTime) {
+    this.gcTime = Math.max(
+      this.gcTime || 0,
+      newGcTime ?? (isServer ? Infinity : 5 * 60 * 1e3)
+    );
+  }
+  clearGcTimeout() {
+    if (this.#gcTimeout) {
+      timeoutManager.clearTimeout(this.#gcTimeout);
+      this.#gcTimeout = void 0;
+    }
+  }
+};
+var define_process_env_default$2 = {};
+var Query = class extends Removable {
+  #initialState;
+  #revertState;
+  #cache;
+  #client;
+  #retryer;
+  #defaultOptions;
+  #abortSignalConsumed;
+  constructor(config) {
+    super();
+    this.#abortSignalConsumed = false;
+    this.#defaultOptions = config.defaultOptions;
+    this.setOptions(config.options);
+    this.observers = [];
+    this.#client = config.client;
+    this.#cache = this.#client.getQueryCache();
+    this.queryKey = config.queryKey;
+    this.queryHash = config.queryHash;
+    this.#initialState = getDefaultState$1(this.options);
+    this.state = config.state ?? this.#initialState;
+    this.scheduleGc();
+  }
+  get meta() {
+    return this.options.meta;
+  }
+  get promise() {
+    return this.#retryer?.promise;
+  }
+  setOptions(options) {
+    this.options = { ...this.#defaultOptions, ...options };
+    this.updateGcTime(this.options.gcTime);
+    if (this.state && this.state.data === void 0) {
+      const defaultState = getDefaultState$1(this.options);
+      if (defaultState.data !== void 0) {
+        this.setData(defaultState.data, {
+          updatedAt: defaultState.dataUpdatedAt,
+          manual: true
+        });
+        this.#initialState = defaultState;
+      }
+    }
+  }
+  optionalRemove() {
+    if (!this.observers.length && this.state.fetchStatus === "idle") {
+      this.#cache.remove(this);
+    }
+  }
+  setData(newData, options) {
+    const data = replaceData(this.state.data, newData, this.options);
+    this.#dispatch({
+      data,
+      type: "success",
+      dataUpdatedAt: options?.updatedAt,
+      manual: options?.manual
+    });
+    return data;
+  }
+  setState(state, setStateOptions) {
+    this.#dispatch({ type: "setState", state, setStateOptions });
+  }
+  cancel(options) {
+    const promise = this.#retryer?.promise;
+    this.#retryer?.cancel(options);
+    return promise ? promise.then(noop$1).catch(noop$1) : Promise.resolve();
+  }
+  destroy() {
+    super.destroy();
+    this.cancel({ silent: true });
+  }
+  reset() {
+    this.destroy();
+    this.setState(this.#initialState);
+  }
+  isActive() {
+    return this.observers.some(
+      (observer) => resolveEnabled(observer.options.enabled, this) !== false
+    );
+  }
+  isDisabled() {
+    if (this.getObserversCount() > 0) {
+      return !this.isActive();
+    }
+    return this.options.queryFn === skipToken || this.state.dataUpdateCount + this.state.errorUpdateCount === 0;
+  }
+  isStatic() {
+    if (this.getObserversCount() > 0) {
+      return this.observers.some(
+        (observer) => resolveStaleTime(observer.options.staleTime, this) === "static"
+      );
+    }
+    return false;
+  }
+  isStale() {
+    if (this.getObserversCount() > 0) {
+      return this.observers.some(
+        (observer) => observer.getCurrentResult().isStale
+      );
+    }
+    return this.state.data === void 0 || this.state.isInvalidated;
+  }
+  isStaleByTime(staleTime = 0) {
+    if (this.state.data === void 0) {
+      return true;
+    }
+    if (staleTime === "static") {
+      return false;
+    }
+    if (this.state.isInvalidated) {
+      return true;
+    }
+    return !timeUntilStale(this.state.dataUpdatedAt, staleTime);
+  }
+  onFocus() {
+    const observer = this.observers.find((x) => x.shouldFetchOnWindowFocus());
+    observer?.refetch({ cancelRefetch: false });
+    this.#retryer?.continue();
+  }
+  onOnline() {
+    const observer = this.observers.find((x) => x.shouldFetchOnReconnect());
+    observer?.refetch({ cancelRefetch: false });
+    this.#retryer?.continue();
+  }
+  addObserver(observer) {
+    if (!this.observers.includes(observer)) {
+      this.observers.push(observer);
+      this.clearGcTimeout();
+      this.#cache.notify({ type: "observerAdded", query: this, observer });
+    }
+  }
+  removeObserver(observer) {
+    if (this.observers.includes(observer)) {
+      this.observers = this.observers.filter((x) => x !== observer);
+      if (!this.observers.length) {
+        if (this.#retryer) {
+          if (this.#abortSignalConsumed) {
+            this.#retryer.cancel({ revert: true });
+          } else {
+            this.#retryer.cancelRetry();
+          }
+        }
+        this.scheduleGc();
+      }
+      this.#cache.notify({ type: "observerRemoved", query: this, observer });
+    }
+  }
+  getObserversCount() {
+    return this.observers.length;
+  }
+  invalidate() {
+    if (!this.state.isInvalidated) {
+      this.#dispatch({ type: "invalidate" });
+    }
+  }
+  async fetch(options, fetchOptions) {
+    if (this.state.fetchStatus !== "idle" && // If the promise in the retyer is already rejected, we have to definitely
+    // re-start the fetch; there is a chance that the query is still in a
+    // pending state when that happens
+    this.#retryer?.status() !== "rejected") {
+      if (this.state.data !== void 0 && fetchOptions?.cancelRefetch) {
+        this.cancel({ silent: true });
+      } else if (this.#retryer) {
+        this.#retryer.continueRetry();
+        return this.#retryer.promise;
+      }
+    }
+    if (options) {
+      this.setOptions(options);
+    }
+    if (!this.options.queryFn) {
+      const observer = this.observers.find((x) => x.options.queryFn);
+      if (observer) {
+        this.setOptions(observer.options);
+      }
+    }
+    if (define_process_env_default$2.NODE_ENV !== "production") {
+      if (!Array.isArray(this.options.queryKey)) {
+        console.error(
+          `As of v4, queryKey needs to be an Array. If you are using a string like 'repoData', please change it to an Array, e.g. ['repoData']`
+        );
+      }
+    }
+    const abortController = new AbortController();
+    const addSignalProperty = (object) => {
+      Object.defineProperty(object, "signal", {
+        enumerable: true,
+        get: () => {
+          this.#abortSignalConsumed = true;
+          return abortController.signal;
+        }
+      });
+    };
+    const fetchFn = () => {
+      const queryFn = ensureQueryFn(this.options, fetchOptions);
+      const createQueryFnContext = () => {
+        const queryFnContext2 = {
+          client: this.#client,
+          queryKey: this.queryKey,
+          meta: this.meta
+        };
+        addSignalProperty(queryFnContext2);
+        return queryFnContext2;
+      };
+      const queryFnContext = createQueryFnContext();
+      this.#abortSignalConsumed = false;
+      if (this.options.persister) {
+        return this.options.persister(
+          queryFn,
+          queryFnContext,
+          this
+        );
+      }
+      return queryFn(queryFnContext);
+    };
+    const createFetchContext = () => {
+      const context2 = {
+        fetchOptions,
+        options: this.options,
+        queryKey: this.queryKey,
+        client: this.#client,
+        state: this.state,
+        fetchFn
+      };
+      addSignalProperty(context2);
+      return context2;
+    };
+    const context = createFetchContext();
+    this.options.behavior?.onFetch(context, this);
+    this.#revertState = this.state;
+    if (this.state.fetchStatus === "idle" || this.state.fetchMeta !== context.fetchOptions?.meta) {
+      this.#dispatch({ type: "fetch", meta: context.fetchOptions?.meta });
+    }
+    this.#retryer = createRetryer({
+      initialPromise: fetchOptions?.initialPromise,
+      fn: context.fetchFn,
+      onCancel: (error) => {
+        if (error instanceof CancelledError && error.revert) {
+          this.setState({
+            ...this.#revertState,
+            fetchStatus: "idle"
+          });
+        }
+        abortController.abort();
+      },
+      onFail: (failureCount, error) => {
+        this.#dispatch({ type: "failed", failureCount, error });
+      },
+      onPause: () => {
+        this.#dispatch({ type: "pause" });
+      },
+      onContinue: () => {
+        this.#dispatch({ type: "continue" });
+      },
+      retry: context.options.retry,
+      retryDelay: context.options.retryDelay,
+      networkMode: context.options.networkMode,
+      canRun: () => true
+    });
+    try {
+      const data = await this.#retryer.start();
+      if (data === void 0) {
+        if (define_process_env_default$2.NODE_ENV !== "production") {
+          console.error(
+            `Query data cannot be undefined. Please make sure to return a value other than undefined from your query function. Affected query key: ${this.queryHash}`
+          );
+        }
+        throw new Error(`${this.queryHash} data is undefined`);
+      }
+      this.setData(data);
+      this.#cache.config.onSuccess?.(data, this);
+      this.#cache.config.onSettled?.(
+        data,
+        this.state.error,
+        this
+      );
+      return data;
+    } catch (error) {
+      if (error instanceof CancelledError) {
+        if (error.silent) {
+          return this.#retryer.promise;
+        } else if (error.revert) {
+          if (this.state.data === void 0) {
+            throw error;
+          }
+          return this.state.data;
+        }
+      }
+      this.#dispatch({
+        type: "error",
+        error
+      });
+      this.#cache.config.onError?.(
+        error,
+        this
+      );
+      this.#cache.config.onSettled?.(
+        this.state.data,
+        error,
+        this
+      );
+      throw error;
+    } finally {
+      this.scheduleGc();
+    }
+  }
+  #dispatch(action) {
+    const reducer = (state) => {
+      switch (action.type) {
+        case "failed":
+          return {
+            ...state,
+            fetchFailureCount: action.failureCount,
+            fetchFailureReason: action.error
+          };
+        case "pause":
+          return {
+            ...state,
+            fetchStatus: "paused"
+          };
+        case "continue":
+          return {
+            ...state,
+            fetchStatus: "fetching"
+          };
+        case "fetch":
+          return {
+            ...state,
+            ...fetchState(state.data, this.options),
+            fetchMeta: action.meta ?? null
+          };
+        case "success":
+          const newState = {
+            ...state,
+            data: action.data,
+            dataUpdateCount: state.dataUpdateCount + 1,
+            dataUpdatedAt: action.dataUpdatedAt ?? Date.now(),
+            error: null,
+            isInvalidated: false,
+            status: "success",
+            ...!action.manual && {
+              fetchStatus: "idle",
+              fetchFailureCount: 0,
+              fetchFailureReason: null
+            }
+          };
+          this.#revertState = action.manual ? newState : void 0;
+          return newState;
+        case "error":
+          const error = action.error;
+          return {
+            ...state,
+            error,
+            errorUpdateCount: state.errorUpdateCount + 1,
+            errorUpdatedAt: Date.now(),
+            fetchFailureCount: state.fetchFailureCount + 1,
+            fetchFailureReason: error,
+            fetchStatus: "idle",
+            status: "error"
+          };
+        case "invalidate":
+          return {
+            ...state,
+            isInvalidated: true
+          };
+        case "setState":
+          return {
+            ...state,
+            ...action.state
+          };
+      }
+    };
+    this.state = reducer(this.state);
+    notifyManager.batch(() => {
+      this.observers.forEach((observer) => {
+        observer.onQueryUpdate();
+      });
+      this.#cache.notify({ query: this, type: "updated", action });
+    });
+  }
+};
+function fetchState(data, options) {
+  return {
+    fetchFailureCount: 0,
+    fetchFailureReason: null,
+    fetchStatus: canFetch(options.networkMode) ? "fetching" : "paused",
+    ...data === void 0 && {
+      error: null,
+      status: "pending"
+    }
+  };
+}
+function getDefaultState$1(options) {
+  const data = typeof options.initialData === "function" ? options.initialData() : options.initialData;
+  const hasData = data !== void 0;
+  const initialDataUpdatedAt = hasData ? typeof options.initialDataUpdatedAt === "function" ? options.initialDataUpdatedAt() : options.initialDataUpdatedAt : 0;
+  return {
+    data,
+    dataUpdateCount: 0,
+    dataUpdatedAt: hasData ? initialDataUpdatedAt ?? Date.now() : 0,
+    error: null,
+    errorUpdateCount: 0,
+    errorUpdatedAt: 0,
+    fetchFailureCount: 0,
+    fetchFailureReason: null,
+    fetchMeta: null,
+    isInvalidated: false,
+    status: hasData ? "success" : "pending",
+    fetchStatus: "idle"
+  };
+}
+var QueryObserver = class extends Subscribable {
+  constructor(client2, options) {
+    super();
+    this.options = options;
+    this.#client = client2;
+    this.#selectError = null;
+    this.#currentThenable = pendingThenable();
+    this.bindMethods();
+    this.setOptions(options);
+  }
+  #client;
+  #currentQuery = void 0;
+  #currentQueryInitialState = void 0;
+  #currentResult = void 0;
+  #currentResultState;
+  #currentResultOptions;
+  #currentThenable;
+  #selectError;
+  #selectFn;
+  #selectResult;
+  // This property keeps track of the last query with defined data.
+  // It will be used to pass the previous data and query to the placeholder function between renders.
+  #lastQueryWithDefinedData;
+  #staleTimeoutId;
+  #refetchIntervalId;
+  #currentRefetchInterval;
+  #trackedProps = /* @__PURE__ */ new Set();
+  bindMethods() {
+    this.refetch = this.refetch.bind(this);
+  }
+  onSubscribe() {
+    if (this.listeners.size === 1) {
+      this.#currentQuery.addObserver(this);
+      if (shouldFetchOnMount(this.#currentQuery, this.options)) {
+        this.#executeFetch();
+      } else {
+        this.updateResult();
+      }
+      this.#updateTimers();
+    }
+  }
+  onUnsubscribe() {
+    if (!this.hasListeners()) {
+      this.destroy();
+    }
+  }
+  shouldFetchOnReconnect() {
+    return shouldFetchOn(
+      this.#currentQuery,
+      this.options,
+      this.options.refetchOnReconnect
+    );
+  }
+  shouldFetchOnWindowFocus() {
+    return shouldFetchOn(
+      this.#currentQuery,
+      this.options,
+      this.options.refetchOnWindowFocus
+    );
+  }
+  destroy() {
+    this.listeners = /* @__PURE__ */ new Set();
+    this.#clearStaleTimeout();
+    this.#clearRefetchInterval();
+    this.#currentQuery.removeObserver(this);
+  }
+  setOptions(options) {
+    const prevOptions = this.options;
+    const prevQuery = this.#currentQuery;
+    this.options = this.#client.defaultQueryOptions(options);
+    if (this.options.enabled !== void 0 && typeof this.options.enabled !== "boolean" && typeof this.options.enabled !== "function" && typeof resolveEnabled(this.options.enabled, this.#currentQuery) !== "boolean") {
+      throw new Error(
+        "Expected enabled to be a boolean or a callback that returns a boolean"
+      );
+    }
+    this.#updateQuery();
+    this.#currentQuery.setOptions(this.options);
+    if (prevOptions._defaulted && !shallowEqualObjects(this.options, prevOptions)) {
+      this.#client.getQueryCache().notify({
+        type: "observerOptionsUpdated",
+        query: this.#currentQuery,
+        observer: this
+      });
+    }
+    const mounted = this.hasListeners();
+    if (mounted && shouldFetchOptionally(
+      this.#currentQuery,
+      prevQuery,
+      this.options,
+      prevOptions
+    )) {
+      this.#executeFetch();
+    }
+    this.updateResult();
+    if (mounted && (this.#currentQuery !== prevQuery || resolveEnabled(this.options.enabled, this.#currentQuery) !== resolveEnabled(prevOptions.enabled, this.#currentQuery) || resolveStaleTime(this.options.staleTime, this.#currentQuery) !== resolveStaleTime(prevOptions.staleTime, this.#currentQuery))) {
+      this.#updateStaleTimeout();
+    }
+    const nextRefetchInterval = this.#computeRefetchInterval();
+    if (mounted && (this.#currentQuery !== prevQuery || resolveEnabled(this.options.enabled, this.#currentQuery) !== resolveEnabled(prevOptions.enabled, this.#currentQuery) || nextRefetchInterval !== this.#currentRefetchInterval)) {
+      this.#updateRefetchInterval(nextRefetchInterval);
+    }
+  }
+  getOptimisticResult(options) {
+    const query = this.#client.getQueryCache().build(this.#client, options);
+    const result = this.createResult(query, options);
+    if (shouldAssignObserverCurrentProperties(this, result)) {
+      this.#currentResult = result;
+      this.#currentResultOptions = this.options;
+      this.#currentResultState = this.#currentQuery.state;
+    }
+    return result;
+  }
+  getCurrentResult() {
+    return this.#currentResult;
+  }
+  trackResult(result, onPropTracked) {
+    return new Proxy(result, {
+      get: (target, key) => {
+        this.trackProp(key);
+        onPropTracked?.(key);
+        if (key === "promise") {
+          this.trackProp("data");
+          if (!this.options.experimental_prefetchInRender && this.#currentThenable.status === "pending") {
+            this.#currentThenable.reject(
+              new Error(
+                "experimental_prefetchInRender feature flag is not enabled"
+              )
+            );
+          }
+        }
+        return Reflect.get(target, key);
+      }
+    });
+  }
+  trackProp(key) {
+    this.#trackedProps.add(key);
+  }
+  getCurrentQuery() {
+    return this.#currentQuery;
+  }
+  refetch({ ...options } = {}) {
+    return this.fetch({
+      ...options
+    });
+  }
+  fetchOptimistic(options) {
+    const defaultedOptions = this.#client.defaultQueryOptions(options);
+    const query = this.#client.getQueryCache().build(this.#client, defaultedOptions);
+    return query.fetch().then(() => this.createResult(query, defaultedOptions));
+  }
+  fetch(fetchOptions) {
+    return this.#executeFetch({
+      ...fetchOptions,
+      cancelRefetch: fetchOptions.cancelRefetch ?? true
+    }).then(() => {
+      this.updateResult();
+      return this.#currentResult;
+    });
+  }
+  #executeFetch(fetchOptions) {
+    this.#updateQuery();
+    let promise = this.#currentQuery.fetch(
+      this.options,
+      fetchOptions
+    );
+    if (!fetchOptions?.throwOnError) {
+      promise = promise.catch(noop$1);
+    }
+    return promise;
+  }
+  #updateStaleTimeout() {
+    this.#clearStaleTimeout();
+    const staleTime = resolveStaleTime(
+      this.options.staleTime,
+      this.#currentQuery
+    );
+    if (isServer || this.#currentResult.isStale || !isValidTimeout(staleTime)) {
+      return;
+    }
+    const time2 = timeUntilStale(this.#currentResult.dataUpdatedAt, staleTime);
+    const timeout = time2 + 1;
+    this.#staleTimeoutId = timeoutManager.setTimeout(() => {
+      if (!this.#currentResult.isStale) {
+        this.updateResult();
+      }
+    }, timeout);
+  }
+  #computeRefetchInterval() {
+    return (typeof this.options.refetchInterval === "function" ? this.options.refetchInterval(this.#currentQuery) : this.options.refetchInterval) ?? false;
+  }
+  #updateRefetchInterval(nextInterval) {
+    this.#clearRefetchInterval();
+    this.#currentRefetchInterval = nextInterval;
+    if (isServer || resolveEnabled(this.options.enabled, this.#currentQuery) === false || !isValidTimeout(this.#currentRefetchInterval) || this.#currentRefetchInterval === 0) {
+      return;
+    }
+    this.#refetchIntervalId = timeoutManager.setInterval(() => {
+      if (this.options.refetchIntervalInBackground || focusManager.isFocused()) {
+        this.#executeFetch();
+      }
+    }, this.#currentRefetchInterval);
+  }
+  #updateTimers() {
+    this.#updateStaleTimeout();
+    this.#updateRefetchInterval(this.#computeRefetchInterval());
+  }
+  #clearStaleTimeout() {
+    if (this.#staleTimeoutId) {
+      timeoutManager.clearTimeout(this.#staleTimeoutId);
+      this.#staleTimeoutId = void 0;
+    }
+  }
+  #clearRefetchInterval() {
+    if (this.#refetchIntervalId) {
+      timeoutManager.clearInterval(this.#refetchIntervalId);
+      this.#refetchIntervalId = void 0;
+    }
+  }
+  createResult(query, options) {
+    const prevQuery = this.#currentQuery;
+    const prevOptions = this.options;
+    const prevResult = this.#currentResult;
+    const prevResultState = this.#currentResultState;
+    const prevResultOptions = this.#currentResultOptions;
+    const queryChange = query !== prevQuery;
+    const queryInitialState = queryChange ? query.state : this.#currentQueryInitialState;
+    const { state } = query;
+    let newState = { ...state };
+    let isPlaceholderData = false;
+    let data;
+    if (options._optimisticResults) {
+      const mounted = this.hasListeners();
+      const fetchOnMount = !mounted && shouldFetchOnMount(query, options);
+      const fetchOptionally = mounted && shouldFetchOptionally(query, prevQuery, options, prevOptions);
+      if (fetchOnMount || fetchOptionally) {
+        newState = {
+          ...newState,
+          ...fetchState(state.data, query.options)
+        };
+      }
+      if (options._optimisticResults === "isRestoring") {
+        newState.fetchStatus = "idle";
+      }
+    }
+    let { error, errorUpdatedAt, status } = newState;
+    data = newState.data;
+    let skipSelect = false;
+    if (options.placeholderData !== void 0 && data === void 0 && status === "pending") {
+      let placeholderData;
+      if (prevResult?.isPlaceholderData && options.placeholderData === prevResultOptions?.placeholderData) {
+        placeholderData = prevResult.data;
+        skipSelect = true;
+      } else {
+        placeholderData = typeof options.placeholderData === "function" ? options.placeholderData(
+          this.#lastQueryWithDefinedData?.state.data,
+          this.#lastQueryWithDefinedData
+        ) : options.placeholderData;
+      }
+      if (placeholderData !== void 0) {
+        status = "success";
+        data = replaceData(
+          prevResult?.data,
+          placeholderData,
+          options
+        );
+        isPlaceholderData = true;
+      }
+    }
+    if (options.select && data !== void 0 && !skipSelect) {
+      if (prevResult && data === prevResultState?.data && options.select === this.#selectFn) {
+        data = this.#selectResult;
+      } else {
+        try {
+          this.#selectFn = options.select;
+          data = options.select(data);
+          data = replaceData(prevResult?.data, data, options);
+          this.#selectResult = data;
+          this.#selectError = null;
+        } catch (selectError) {
+          this.#selectError = selectError;
+        }
+      }
+    }
+    if (this.#selectError) {
+      error = this.#selectError;
+      data = this.#selectResult;
+      errorUpdatedAt = Date.now();
+      status = "error";
+    }
+    const isFetching = newState.fetchStatus === "fetching";
+    const isPending = status === "pending";
+    const isError = status === "error";
+    const isLoading = isPending && isFetching;
+    const hasData = data !== void 0;
+    const result = {
+      status,
+      fetchStatus: newState.fetchStatus,
+      isPending,
+      isSuccess: status === "success",
+      isError,
+      isInitialLoading: isLoading,
+      isLoading,
+      data,
+      dataUpdatedAt: newState.dataUpdatedAt,
+      error,
+      errorUpdatedAt,
+      failureCount: newState.fetchFailureCount,
+      failureReason: newState.fetchFailureReason,
+      errorUpdateCount: newState.errorUpdateCount,
+      isFetched: newState.dataUpdateCount > 0 || newState.errorUpdateCount > 0,
+      isFetchedAfterMount: newState.dataUpdateCount > queryInitialState.dataUpdateCount || newState.errorUpdateCount > queryInitialState.errorUpdateCount,
+      isFetching,
+      isRefetching: isFetching && !isPending,
+      isLoadingError: isError && !hasData,
+      isPaused: newState.fetchStatus === "paused",
+      isPlaceholderData,
+      isRefetchError: isError && hasData,
+      isStale: isStale(query, options),
+      refetch: this.refetch,
+      promise: this.#currentThenable,
+      isEnabled: resolveEnabled(options.enabled, query) !== false
+    };
+    const nextResult = result;
+    if (this.options.experimental_prefetchInRender) {
+      const finalizeThenableIfPossible = (thenable) => {
+        if (nextResult.status === "error") {
+          thenable.reject(nextResult.error);
+        } else if (nextResult.data !== void 0) {
+          thenable.resolve(nextResult.data);
+        }
+      };
+      const recreateThenable = () => {
+        const pending = this.#currentThenable = nextResult.promise = pendingThenable();
+        finalizeThenableIfPossible(pending);
+      };
+      const prevThenable = this.#currentThenable;
+      switch (prevThenable.status) {
+        case "pending":
+          if (query.queryHash === prevQuery.queryHash) {
+            finalizeThenableIfPossible(prevThenable);
+          }
+          break;
+        case "fulfilled":
+          if (nextResult.status === "error" || nextResult.data !== prevThenable.value) {
+            recreateThenable();
+          }
+          break;
+        case "rejected":
+          if (nextResult.status !== "error" || nextResult.error !== prevThenable.reason) {
+            recreateThenable();
+          }
+          break;
+      }
+    }
+    return nextResult;
+  }
+  updateResult() {
+    const prevResult = this.#currentResult;
+    const nextResult = this.createResult(this.#currentQuery, this.options);
+    this.#currentResultState = this.#currentQuery.state;
+    this.#currentResultOptions = this.options;
+    if (this.#currentResultState.data !== void 0) {
+      this.#lastQueryWithDefinedData = this.#currentQuery;
+    }
+    if (shallowEqualObjects(nextResult, prevResult)) {
+      return;
+    }
+    this.#currentResult = nextResult;
+    const shouldNotifyListeners = () => {
+      if (!prevResult) {
+        return true;
+      }
+      const { notifyOnChangeProps } = this.options;
+      const notifyOnChangePropsValue = typeof notifyOnChangeProps === "function" ? notifyOnChangeProps() : notifyOnChangeProps;
+      if (notifyOnChangePropsValue === "all" || !notifyOnChangePropsValue && !this.#trackedProps.size) {
+        return true;
+      }
+      const includedProps = new Set(
+        notifyOnChangePropsValue ?? this.#trackedProps
+      );
+      if (this.options.throwOnError) {
+        includedProps.add("error");
+      }
+      return Object.keys(this.#currentResult).some((key) => {
+        const typedKey = key;
+        const changed = this.#currentResult[typedKey] !== prevResult[typedKey];
+        return changed && includedProps.has(typedKey);
+      });
+    };
+    this.#notify({ listeners: shouldNotifyListeners() });
+  }
+  #updateQuery() {
+    const query = this.#client.getQueryCache().build(this.#client, this.options);
+    if (query === this.#currentQuery) {
+      return;
+    }
+    const prevQuery = this.#currentQuery;
+    this.#currentQuery = query;
+    this.#currentQueryInitialState = query.state;
+    if (this.hasListeners()) {
+      prevQuery?.removeObserver(this);
+      query.addObserver(this);
+    }
+  }
+  onQueryUpdate() {
+    this.updateResult();
+    if (this.hasListeners()) {
+      this.#updateTimers();
+    }
+  }
+  #notify(notifyOptions) {
+    notifyManager.batch(() => {
+      if (notifyOptions.listeners) {
+        this.listeners.forEach((listener) => {
+          listener(this.#currentResult);
+        });
+      }
+      this.#client.getQueryCache().notify({
+        query: this.#currentQuery,
+        type: "observerResultsUpdated"
+      });
+    });
+  }
+};
+function shouldLoadOnMount(query, options) {
+  return resolveEnabled(options.enabled, query) !== false && query.state.data === void 0 && !(query.state.status === "error" && options.retryOnMount === false);
+}
+function shouldFetchOnMount(query, options) {
+  return shouldLoadOnMount(query, options) || query.state.data !== void 0 && shouldFetchOn(query, options, options.refetchOnMount);
+}
+function shouldFetchOn(query, options, field) {
+  if (resolveEnabled(options.enabled, query) !== false && resolveStaleTime(options.staleTime, query) !== "static") {
+    const value = typeof field === "function" ? field(query) : field;
+    return value === "always" || value !== false && isStale(query, options);
+  }
+  return false;
+}
+function shouldFetchOptionally(query, prevQuery, options, prevOptions) {
+  return (query !== prevQuery || resolveEnabled(prevOptions.enabled, query) === false) && (!options.suspense || query.state.status !== "error") && isStale(query, options);
+}
+function isStale(query, options) {
+  return resolveEnabled(options.enabled, query) !== false && query.isStaleByTime(resolveStaleTime(options.staleTime, query));
+}
+function shouldAssignObserverCurrentProperties(observer, optimisticResult) {
+  if (!shallowEqualObjects(observer.getCurrentResult(), optimisticResult)) {
+    return true;
+  }
+  return false;
+}
+function infiniteQueryBehavior(pages) {
+  return {
+    onFetch: (context, query) => {
+      const options = context.options;
+      const direction = context.fetchOptions?.meta?.fetchMore?.direction;
+      const oldPages = context.state.data?.pages || [];
+      const oldPageParams = context.state.data?.pageParams || [];
+      let result = { pages: [], pageParams: [] };
+      let currentPage = 0;
+      const fetchFn = async () => {
+        let cancelled = false;
+        const addSignalProperty = (object) => {
+          Object.defineProperty(object, "signal", {
+            enumerable: true,
+            get: () => {
+              if (context.signal.aborted) {
+                cancelled = true;
+              } else {
+                context.signal.addEventListener("abort", () => {
+                  cancelled = true;
+                });
+              }
+              return context.signal;
+            }
+          });
+        };
+        const queryFn = ensureQueryFn(context.options, context.fetchOptions);
+        const fetchPage = async (data, param, previous) => {
+          if (cancelled) {
+            return Promise.reject();
+          }
+          if (param == null && data.pages.length) {
+            return Promise.resolve(data);
+          }
+          const createQueryFnContext = () => {
+            const queryFnContext2 = {
+              client: context.client,
+              queryKey: context.queryKey,
+              pageParam: param,
+              direction: previous ? "backward" : "forward",
+              meta: context.options.meta
+            };
+            addSignalProperty(queryFnContext2);
+            return queryFnContext2;
+          };
+          const queryFnContext = createQueryFnContext();
+          const page = await queryFn(queryFnContext);
+          const { maxPages } = context.options;
+          const addTo = previous ? addToStart : addToEnd;
+          return {
+            pages: addTo(data.pages, page, maxPages),
+            pageParams: addTo(data.pageParams, param, maxPages)
+          };
+        };
+        if (direction && oldPages.length) {
+          const previous = direction === "backward";
+          const pageParamFn = previous ? getPreviousPageParam : getNextPageParam;
+          const oldData = {
+            pages: oldPages,
+            pageParams: oldPageParams
+          };
+          const param = pageParamFn(options, oldData);
+          result = await fetchPage(oldData, param, previous);
+        } else {
+          const remainingPages = pages ?? oldPages.length;
+          do {
+            const param = currentPage === 0 ? oldPageParams[0] ?? options.initialPageParam : getNextPageParam(options, result);
+            if (currentPage > 0 && param == null) {
+              break;
+            }
+            result = await fetchPage(result, param);
+            currentPage++;
+          } while (currentPage < remainingPages);
+        }
+        return result;
+      };
+      if (context.options.persister) {
+        context.fetchFn = () => {
+          return context.options.persister?.(
+            fetchFn,
+            {
+              client: context.client,
+              queryKey: context.queryKey,
+              meta: context.options.meta,
+              signal: context.signal
+            },
+            query
+          );
+        };
+      } else {
+        context.fetchFn = fetchFn;
+      }
+    }
+  };
+}
+function getNextPageParam(options, { pages, pageParams }) {
+  const lastIndex = pages.length - 1;
+  return pages.length > 0 ? options.getNextPageParam(
+    pages[lastIndex],
+    pages,
+    pageParams[lastIndex],
+    pageParams
+  ) : void 0;
+}
+function getPreviousPageParam(options, { pages, pageParams }) {
+  return pages.length > 0 ? options.getPreviousPageParam?.(pages[0], pages, pageParams[0], pageParams) : void 0;
+}
+var Mutation = class extends Removable {
+  #client;
+  #observers;
+  #mutationCache;
+  #retryer;
+  constructor(config) {
+    super();
+    this.#client = config.client;
+    this.mutationId = config.mutationId;
+    this.#mutationCache = config.mutationCache;
+    this.#observers = [];
+    this.state = config.state || getDefaultState();
+    this.setOptions(config.options);
+    this.scheduleGc();
+  }
+  setOptions(options) {
+    this.options = options;
+    this.updateGcTime(this.options.gcTime);
+  }
+  get meta() {
+    return this.options.meta;
+  }
+  addObserver(observer) {
+    if (!this.#observers.includes(observer)) {
+      this.#observers.push(observer);
+      this.clearGcTimeout();
+      this.#mutationCache.notify({
+        type: "observerAdded",
+        mutation: this,
+        observer
+      });
+    }
+  }
+  removeObserver(observer) {
+    this.#observers = this.#observers.filter((x) => x !== observer);
+    this.scheduleGc();
+    this.#mutationCache.notify({
+      type: "observerRemoved",
+      mutation: this,
+      observer
+    });
+  }
+  optionalRemove() {
+    if (!this.#observers.length) {
+      if (this.state.status === "pending") {
+        this.scheduleGc();
+      } else {
+        this.#mutationCache.remove(this);
+      }
+    }
+  }
+  continue() {
+    return this.#retryer?.continue() ?? // continuing a mutation assumes that variables are set, mutation must have been dehydrated before
+    this.execute(this.state.variables);
+  }
+  async execute(variables) {
+    const onContinue = () => {
+      this.#dispatch({ type: "continue" });
+    };
+    const mutationFnContext = {
+      client: this.#client,
+      meta: this.options.meta,
+      mutationKey: this.options.mutationKey
+    };
+    this.#retryer = createRetryer({
+      fn: () => {
+        if (!this.options.mutationFn) {
+          return Promise.reject(new Error("No mutationFn found"));
+        }
+        return this.options.mutationFn(variables, mutationFnContext);
+      },
+      onFail: (failureCount, error) => {
+        this.#dispatch({ type: "failed", failureCount, error });
+      },
+      onPause: () => {
+        this.#dispatch({ type: "pause" });
+      },
+      onContinue,
+      retry: this.options.retry ?? 0,
+      retryDelay: this.options.retryDelay,
+      networkMode: this.options.networkMode,
+      canRun: () => this.#mutationCache.canRun(this)
+    });
+    const restored = this.state.status === "pending";
+    const isPaused = !this.#retryer.canStart();
+    try {
+      if (restored) {
+        onContinue();
+      } else {
+        this.#dispatch({ type: "pending", variables, isPaused });
+        await this.#mutationCache.config.onMutate?.(
+          variables,
+          this,
+          mutationFnContext
+        );
+        const context = await this.options.onMutate?.(
+          variables,
+          mutationFnContext
+        );
+        if (context !== this.state.context) {
+          this.#dispatch({
+            type: "pending",
+            context,
+            variables,
+            isPaused
+          });
+        }
+      }
+      const data = await this.#retryer.start();
+      await this.#mutationCache.config.onSuccess?.(
+        data,
+        variables,
+        this.state.context,
+        this,
+        mutationFnContext
+      );
+      await this.options.onSuccess?.(
+        data,
+        variables,
+        this.state.context,
+        mutationFnContext
+      );
+      await this.#mutationCache.config.onSettled?.(
+        data,
+        null,
+        this.state.variables,
+        this.state.context,
+        this,
+        mutationFnContext
+      );
+      await this.options.onSettled?.(
+        data,
+        null,
+        variables,
+        this.state.context,
+        mutationFnContext
+      );
+      this.#dispatch({ type: "success", data });
+      return data;
+    } catch (error) {
+      try {
+        await this.#mutationCache.config.onError?.(
+          error,
+          variables,
+          this.state.context,
+          this,
+          mutationFnContext
+        );
+        await this.options.onError?.(
+          error,
+          variables,
+          this.state.context,
+          mutationFnContext
+        );
+        await this.#mutationCache.config.onSettled?.(
+          void 0,
+          error,
+          this.state.variables,
+          this.state.context,
+          this,
+          mutationFnContext
+        );
+        await this.options.onSettled?.(
+          void 0,
+          error,
+          variables,
+          this.state.context,
+          mutationFnContext
+        );
+        throw error;
+      } finally {
+        this.#dispatch({ type: "error", error });
+      }
+    } finally {
+      this.#mutationCache.runNext(this);
+    }
+  }
+  #dispatch(action) {
+    const reducer = (state) => {
+      switch (action.type) {
+        case "failed":
+          return {
+            ...state,
+            failureCount: action.failureCount,
+            failureReason: action.error
+          };
+        case "pause":
+          return {
+            ...state,
+            isPaused: true
+          };
+        case "continue":
+          return {
+            ...state,
+            isPaused: false
+          };
+        case "pending":
+          return {
+            ...state,
+            context: action.context,
+            data: void 0,
+            failureCount: 0,
+            failureReason: null,
+            error: null,
+            isPaused: action.isPaused,
+            status: "pending",
+            variables: action.variables,
+            submittedAt: Date.now()
+          };
+        case "success":
+          return {
+            ...state,
+            data: action.data,
+            failureCount: 0,
+            failureReason: null,
+            error: null,
+            status: "success",
+            isPaused: false
+          };
+        case "error":
+          return {
+            ...state,
+            data: void 0,
+            error: action.error,
+            failureCount: state.failureCount + 1,
+            failureReason: action.error,
+            isPaused: false,
+            status: "error"
+          };
+      }
+    };
+    this.state = reducer(this.state);
+    notifyManager.batch(() => {
+      this.#observers.forEach((observer) => {
+        observer.onMutationUpdate(action);
+      });
+      this.#mutationCache.notify({
+        mutation: this,
+        type: "updated",
+        action
+      });
+    });
+  }
+};
+function getDefaultState() {
+  return {
+    context: void 0,
+    data: void 0,
+    error: null,
+    failureCount: 0,
+    failureReason: null,
+    isPaused: false,
+    status: "idle",
+    variables: void 0,
+    submittedAt: 0
+  };
+}
+var MutationCache = class extends Subscribable {
+  constructor(config = {}) {
+    super();
+    this.config = config;
+    this.#mutations = /* @__PURE__ */ new Set();
+    this.#scopes = /* @__PURE__ */ new Map();
+    this.#mutationId = 0;
+  }
+  #mutations;
+  #scopes;
+  #mutationId;
+  build(client2, options, state) {
+    const mutation = new Mutation({
+      client: client2,
+      mutationCache: this,
+      mutationId: ++this.#mutationId,
+      options: client2.defaultMutationOptions(options),
+      state
+    });
+    this.add(mutation);
+    return mutation;
+  }
+  add(mutation) {
+    this.#mutations.add(mutation);
+    const scope = scopeFor(mutation);
+    if (typeof scope === "string") {
+      const scopedMutations = this.#scopes.get(scope);
+      if (scopedMutations) {
+        scopedMutations.push(mutation);
+      } else {
+        this.#scopes.set(scope, [mutation]);
+      }
+    }
+    this.notify({ type: "added", mutation });
+  }
+  remove(mutation) {
+    if (this.#mutations.delete(mutation)) {
+      const scope = scopeFor(mutation);
+      if (typeof scope === "string") {
+        const scopedMutations = this.#scopes.get(scope);
+        if (scopedMutations) {
+          if (scopedMutations.length > 1) {
+            const index = scopedMutations.indexOf(mutation);
+            if (index !== -1) {
+              scopedMutations.splice(index, 1);
+            }
+          } else if (scopedMutations[0] === mutation) {
+            this.#scopes.delete(scope);
+          }
+        }
+      }
+    }
+    this.notify({ type: "removed", mutation });
+  }
+  canRun(mutation) {
+    const scope = scopeFor(mutation);
+    if (typeof scope === "string") {
+      const mutationsWithSameScope = this.#scopes.get(scope);
+      const firstPendingMutation = mutationsWithSameScope?.find(
+        (m) => m.state.status === "pending"
+      );
+      return !firstPendingMutation || firstPendingMutation === mutation;
+    } else {
+      return true;
+    }
+  }
+  runNext(mutation) {
+    const scope = scopeFor(mutation);
+    if (typeof scope === "string") {
+      const foundMutation = this.#scopes.get(scope)?.find((m) => m !== mutation && m.state.isPaused);
+      return foundMutation?.continue() ?? Promise.resolve();
+    } else {
+      return Promise.resolve();
+    }
+  }
+  clear() {
+    notifyManager.batch(() => {
+      this.#mutations.forEach((mutation) => {
+        this.notify({ type: "removed", mutation });
+      });
+      this.#mutations.clear();
+      this.#scopes.clear();
+    });
+  }
+  getAll() {
+    return Array.from(this.#mutations);
+  }
+  find(filters) {
+    const defaultedFilters = { exact: true, ...filters };
+    return this.getAll().find(
+      (mutation) => matchMutation(defaultedFilters, mutation)
+    );
+  }
+  findAll(filters = {}) {
+    return this.getAll().filter((mutation) => matchMutation(filters, mutation));
+  }
+  notify(event) {
+    notifyManager.batch(() => {
+      this.listeners.forEach((listener) => {
+        listener(event);
+      });
+    });
+  }
+  resumePausedMutations() {
+    const pausedMutations = this.getAll().filter((x) => x.state.isPaused);
+    return notifyManager.batch(
+      () => Promise.all(
+        pausedMutations.map((mutation) => mutation.continue().catch(noop$1))
+      )
+    );
+  }
+};
+function scopeFor(mutation) {
+  return mutation.options.scope?.id;
+}
+var MutationObserver$1 = class MutationObserver2 extends Subscribable {
+  #client;
+  #currentResult = void 0;
+  #currentMutation;
+  #mutateOptions;
+  constructor(client2, options) {
+    super();
+    this.#client = client2;
+    this.setOptions(options);
+    this.bindMethods();
+    this.#updateResult();
+  }
+  bindMethods() {
+    this.mutate = this.mutate.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+  setOptions(options) {
+    const prevOptions = this.options;
+    this.options = this.#client.defaultMutationOptions(options);
+    if (!shallowEqualObjects(this.options, prevOptions)) {
+      this.#client.getMutationCache().notify({
+        type: "observerOptionsUpdated",
+        mutation: this.#currentMutation,
+        observer: this
+      });
+    }
+    if (prevOptions?.mutationKey && this.options.mutationKey && hashKey(prevOptions.mutationKey) !== hashKey(this.options.mutationKey)) {
+      this.reset();
+    } else if (this.#currentMutation?.state.status === "pending") {
+      this.#currentMutation.setOptions(this.options);
+    }
+  }
+  onUnsubscribe() {
+    if (!this.hasListeners()) {
+      this.#currentMutation?.removeObserver(this);
+    }
+  }
+  onMutationUpdate(action) {
+    this.#updateResult();
+    this.#notify(action);
+  }
+  getCurrentResult() {
+    return this.#currentResult;
+  }
+  reset() {
+    this.#currentMutation?.removeObserver(this);
+    this.#currentMutation = void 0;
+    this.#updateResult();
+    this.#notify();
+  }
+  mutate(variables, options) {
+    this.#mutateOptions = options;
+    this.#currentMutation?.removeObserver(this);
+    this.#currentMutation = this.#client.getMutationCache().build(this.#client, this.options);
+    this.#currentMutation.addObserver(this);
+    return this.#currentMutation.execute(variables);
+  }
+  #updateResult() {
+    const state = this.#currentMutation?.state ?? getDefaultState();
+    this.#currentResult = {
+      ...state,
+      isPending: state.status === "pending",
+      isSuccess: state.status === "success",
+      isError: state.status === "error",
+      isIdle: state.status === "idle",
+      mutate: this.mutate,
+      reset: this.reset
+    };
+  }
+  #notify(action) {
+    notifyManager.batch(() => {
+      if (this.#mutateOptions && this.hasListeners()) {
+        const variables = this.#currentResult.variables;
+        const onMutateResult = this.#currentResult.context;
+        const context = {
+          client: this.#client,
+          meta: this.options.meta,
+          mutationKey: this.options.mutationKey
+        };
+        if (action?.type === "success") {
+          this.#mutateOptions.onSuccess?.(
+            action.data,
+            variables,
+            onMutateResult,
+            context
+          );
+          this.#mutateOptions.onSettled?.(
+            action.data,
+            null,
+            variables,
+            onMutateResult,
+            context
+          );
+        } else if (action?.type === "error") {
+          this.#mutateOptions.onError?.(
+            action.error,
+            variables,
+            onMutateResult,
+            context
+          );
+          this.#mutateOptions.onSettled?.(
+            void 0,
+            action.error,
+            variables,
+            onMutateResult,
+            context
+          );
+        }
+      }
+      this.listeners.forEach((listener) => {
+        listener(this.#currentResult);
+      });
+    });
+  }
+};
+var QueryCache = class extends Subscribable {
+  constructor(config = {}) {
+    super();
+    this.config = config;
+    this.#queries = /* @__PURE__ */ new Map();
+  }
+  #queries;
+  build(client2, options, state) {
+    const queryKey = options.queryKey;
+    const queryHash = options.queryHash ?? hashQueryKeyByOptions(queryKey, options);
+    let query = this.get(queryHash);
+    if (!query) {
+      query = new Query({
+        client: client2,
+        queryKey,
+        queryHash,
+        options: client2.defaultQueryOptions(options),
+        state,
+        defaultOptions: client2.getQueryDefaults(queryKey)
+      });
+      this.add(query);
+    }
+    return query;
+  }
+  add(query) {
+    if (!this.#queries.has(query.queryHash)) {
+      this.#queries.set(query.queryHash, query);
+      this.notify({
+        type: "added",
+        query
+      });
+    }
+  }
+  remove(query) {
+    const queryInMap = this.#queries.get(query.queryHash);
+    if (queryInMap) {
+      query.destroy();
+      if (queryInMap === query) {
+        this.#queries.delete(query.queryHash);
+      }
+      this.notify({ type: "removed", query });
+    }
+  }
+  clear() {
+    notifyManager.batch(() => {
+      this.getAll().forEach((query) => {
+        this.remove(query);
+      });
+    });
+  }
+  get(queryHash) {
+    return this.#queries.get(queryHash);
+  }
+  getAll() {
+    return [...this.#queries.values()];
+  }
+  find(filters) {
+    const defaultedFilters = { exact: true, ...filters };
+    return this.getAll().find(
+      (query) => matchQuery(defaultedFilters, query)
+    );
+  }
+  findAll(filters = {}) {
+    const queries = this.getAll();
+    return Object.keys(filters).length > 0 ? queries.filter((query) => matchQuery(filters, query)) : queries;
+  }
+  notify(event) {
+    notifyManager.batch(() => {
+      this.listeners.forEach((listener) => {
+        listener(event);
+      });
+    });
+  }
+  onFocus() {
+    notifyManager.batch(() => {
+      this.getAll().forEach((query) => {
+        query.onFocus();
+      });
+    });
+  }
+  onOnline() {
+    notifyManager.batch(() => {
+      this.getAll().forEach((query) => {
+        query.onOnline();
+      });
+    });
+  }
+};
+var QueryClient = class {
+  #queryCache;
+  #mutationCache;
+  #defaultOptions;
+  #queryDefaults;
+  #mutationDefaults;
+  #mountCount;
+  #unsubscribeFocus;
+  #unsubscribeOnline;
+  constructor(config = {}) {
+    this.#queryCache = config.queryCache || new QueryCache();
+    this.#mutationCache = config.mutationCache || new MutationCache();
+    this.#defaultOptions = config.defaultOptions || {};
+    this.#queryDefaults = /* @__PURE__ */ new Map();
+    this.#mutationDefaults = /* @__PURE__ */ new Map();
+    this.#mountCount = 0;
+  }
+  mount() {
+    this.#mountCount++;
+    if (this.#mountCount !== 1) return;
+    this.#unsubscribeFocus = focusManager.subscribe(async (focused) => {
+      if (focused) {
+        await this.resumePausedMutations();
+        this.#queryCache.onFocus();
+      }
+    });
+    this.#unsubscribeOnline = onlineManager.subscribe(async (online) => {
+      if (online) {
+        await this.resumePausedMutations();
+        this.#queryCache.onOnline();
+      }
+    });
+  }
+  unmount() {
+    this.#mountCount--;
+    if (this.#mountCount !== 0) return;
+    this.#unsubscribeFocus?.();
+    this.#unsubscribeFocus = void 0;
+    this.#unsubscribeOnline?.();
+    this.#unsubscribeOnline = void 0;
+  }
+  isFetching(filters) {
+    return this.#queryCache.findAll({ ...filters, fetchStatus: "fetching" }).length;
+  }
+  isMutating(filters) {
+    return this.#mutationCache.findAll({ ...filters, status: "pending" }).length;
+  }
+  /**
+   * Imperative (non-reactive) way to retrieve data for a QueryKey.
+   * Should only be used in callbacks or functions where reading the latest data is necessary, e.g. for optimistic updates.
+   *
+   * Hint: Do not use this function inside a component, because it won't receive updates.
+   * Use `useQuery` to create a `QueryObserver` that subscribes to changes.
+   */
+  getQueryData(queryKey) {
+    const options = this.defaultQueryOptions({ queryKey });
+    return this.#queryCache.get(options.queryHash)?.state.data;
+  }
+  ensureQueryData(options) {
+    const defaultedOptions = this.defaultQueryOptions(options);
+    const query = this.#queryCache.build(this, defaultedOptions);
+    const cachedData = query.state.data;
+    if (cachedData === void 0) {
+      return this.fetchQuery(options);
+    }
+    if (options.revalidateIfStale && query.isStaleByTime(resolveStaleTime(defaultedOptions.staleTime, query))) {
+      void this.prefetchQuery(defaultedOptions);
+    }
+    return Promise.resolve(cachedData);
+  }
+  getQueriesData(filters) {
+    return this.#queryCache.findAll(filters).map(({ queryKey, state }) => {
+      const data = state.data;
+      return [queryKey, data];
+    });
+  }
+  setQueryData(queryKey, updater, options) {
+    const defaultedOptions = this.defaultQueryOptions({ queryKey });
+    const query = this.#queryCache.get(
+      defaultedOptions.queryHash
+    );
+    const prevData = query?.state.data;
+    const data = functionalUpdate(updater, prevData);
+    if (data === void 0) {
+      return void 0;
+    }
+    return this.#queryCache.build(this, defaultedOptions).setData(data, { ...options, manual: true });
+  }
+  setQueriesData(filters, updater, options) {
+    return notifyManager.batch(
+      () => this.#queryCache.findAll(filters).map(({ queryKey }) => [
+        queryKey,
+        this.setQueryData(queryKey, updater, options)
+      ])
+    );
+  }
+  getQueryState(queryKey) {
+    const options = this.defaultQueryOptions({ queryKey });
+    return this.#queryCache.get(
+      options.queryHash
+    )?.state;
+  }
+  removeQueries(filters) {
+    const queryCache = this.#queryCache;
+    notifyManager.batch(() => {
+      queryCache.findAll(filters).forEach((query) => {
+        queryCache.remove(query);
+      });
+    });
+  }
+  resetQueries(filters, options) {
+    const queryCache = this.#queryCache;
+    return notifyManager.batch(() => {
+      queryCache.findAll(filters).forEach((query) => {
+        query.reset();
+      });
+      return this.refetchQueries(
+        {
+          type: "active",
+          ...filters
+        },
+        options
+      );
+    });
+  }
+  cancelQueries(filters, cancelOptions = {}) {
+    const defaultedCancelOptions = { revert: true, ...cancelOptions };
+    const promises = notifyManager.batch(
+      () => this.#queryCache.findAll(filters).map((query) => query.cancel(defaultedCancelOptions))
+    );
+    return Promise.all(promises).then(noop$1).catch(noop$1);
+  }
+  invalidateQueries(filters, options = {}) {
+    return notifyManager.batch(() => {
+      this.#queryCache.findAll(filters).forEach((query) => {
+        query.invalidate();
+      });
+      if (filters?.refetchType === "none") {
+        return Promise.resolve();
+      }
+      return this.refetchQueries(
+        {
+          ...filters,
+          type: filters?.refetchType ?? filters?.type ?? "active"
+        },
+        options
+      );
+    });
+  }
+  refetchQueries(filters, options = {}) {
+    const fetchOptions = {
+      ...options,
+      cancelRefetch: options.cancelRefetch ?? true
+    };
+    const promises = notifyManager.batch(
+      () => this.#queryCache.findAll(filters).filter((query) => !query.isDisabled() && !query.isStatic()).map((query) => {
+        let promise = query.fetch(void 0, fetchOptions);
+        if (!fetchOptions.throwOnError) {
+          promise = promise.catch(noop$1);
+        }
+        return query.state.fetchStatus === "paused" ? Promise.resolve() : promise;
+      })
+    );
+    return Promise.all(promises).then(noop$1);
+  }
+  fetchQuery(options) {
+    const defaultedOptions = this.defaultQueryOptions(options);
+    if (defaultedOptions.retry === void 0) {
+      defaultedOptions.retry = false;
+    }
+    const query = this.#queryCache.build(this, defaultedOptions);
+    return query.isStaleByTime(
+      resolveStaleTime(defaultedOptions.staleTime, query)
+    ) ? query.fetch(defaultedOptions) : Promise.resolve(query.state.data);
+  }
+  prefetchQuery(options) {
+    return this.fetchQuery(options).then(noop$1).catch(noop$1);
+  }
+  fetchInfiniteQuery(options) {
+    options.behavior = infiniteQueryBehavior(options.pages);
+    return this.fetchQuery(options);
+  }
+  prefetchInfiniteQuery(options) {
+    return this.fetchInfiniteQuery(options).then(noop$1).catch(noop$1);
+  }
+  ensureInfiniteQueryData(options) {
+    options.behavior = infiniteQueryBehavior(options.pages);
+    return this.ensureQueryData(options);
+  }
+  resumePausedMutations() {
+    if (onlineManager.isOnline()) {
+      return this.#mutationCache.resumePausedMutations();
+    }
+    return Promise.resolve();
+  }
+  getQueryCache() {
+    return this.#queryCache;
+  }
+  getMutationCache() {
+    return this.#mutationCache;
+  }
+  getDefaultOptions() {
+    return this.#defaultOptions;
+  }
+  setDefaultOptions(options) {
+    this.#defaultOptions = options;
+  }
+  setQueryDefaults(queryKey, options) {
+    this.#queryDefaults.set(hashKey(queryKey), {
+      queryKey,
+      defaultOptions: options
+    });
+  }
+  getQueryDefaults(queryKey) {
+    const defaults2 = [...this.#queryDefaults.values()];
+    const result = {};
+    defaults2.forEach((queryDefault) => {
+      if (partialMatchKey(queryKey, queryDefault.queryKey)) {
+        Object.assign(result, queryDefault.defaultOptions);
+      }
+    });
+    return result;
+  }
+  setMutationDefaults(mutationKey, options) {
+    this.#mutationDefaults.set(hashKey(mutationKey), {
+      mutationKey,
+      defaultOptions: options
+    });
+  }
+  getMutationDefaults(mutationKey) {
+    const defaults2 = [...this.#mutationDefaults.values()];
+    const result = {};
+    defaults2.forEach((queryDefault) => {
+      if (partialMatchKey(mutationKey, queryDefault.mutationKey)) {
+        Object.assign(result, queryDefault.defaultOptions);
+      }
+    });
+    return result;
+  }
+  defaultQueryOptions(options) {
+    if (options._defaulted) {
+      return options;
+    }
+    const defaultedOptions = {
+      ...this.#defaultOptions.queries,
+      ...this.getQueryDefaults(options.queryKey),
+      ...options,
+      _defaulted: true
+    };
+    if (!defaultedOptions.queryHash) {
+      defaultedOptions.queryHash = hashQueryKeyByOptions(
+        defaultedOptions.queryKey,
+        defaultedOptions
+      );
+    }
+    if (defaultedOptions.refetchOnReconnect === void 0) {
+      defaultedOptions.refetchOnReconnect = defaultedOptions.networkMode !== "always";
+    }
+    if (defaultedOptions.throwOnError === void 0) {
+      defaultedOptions.throwOnError = !!defaultedOptions.suspense;
+    }
+    if (!defaultedOptions.networkMode && defaultedOptions.persister) {
+      defaultedOptions.networkMode = "offlineFirst";
+    }
+    if (defaultedOptions.queryFn === skipToken) {
+      defaultedOptions.enabled = false;
+    }
+    return defaultedOptions;
+  }
+  defaultMutationOptions(options) {
+    if (options?._defaulted) {
+      return options;
+    }
+    return {
+      ...this.#defaultOptions.mutations,
+      ...options?.mutationKey && this.getMutationDefaults(options.mutationKey),
+      ...options,
+      _defaulted: true
+    };
+  }
+  clear() {
+    this.#queryCache.clear();
+    this.#mutationCache.clear();
+  }
+};
+var jsxRuntime = { exports: {} };
+var reactJsxRuntime_production = {};
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var hasRequiredReactJsxRuntime_production;
+function requireReactJsxRuntime_production() {
+  if (hasRequiredReactJsxRuntime_production) return reactJsxRuntime_production;
+  hasRequiredReactJsxRuntime_production = 1;
+  var REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+  function jsxProd(type, config, maybeKey) {
+    var key = null;
+    void 0 !== maybeKey && (key = "" + maybeKey);
+    void 0 !== config.key && (key = "" + config.key);
+    if ("key" in config) {
+      maybeKey = {};
+      for (var propName in config)
+        "key" !== propName && (maybeKey[propName] = config[propName]);
+    } else maybeKey = config;
+    config = maybeKey.ref;
+    return {
+      $$typeof: REACT_ELEMENT_TYPE,
+      type,
+      key,
+      ref: void 0 !== config ? config : null,
+      props: maybeKey
+    };
+  }
+  reactJsxRuntime_production.Fragment = REACT_FRAGMENT_TYPE;
+  reactJsxRuntime_production.jsx = jsxProd;
+  reactJsxRuntime_production.jsxs = jsxProd;
+  return reactJsxRuntime_production;
+}
+var reactJsxRuntime_development = {};
+var hasRequiredReactJsxRuntime_development;
+function requireReactJsxRuntime_development() {
+  if (hasRequiredReactJsxRuntime_development) return reactJsxRuntime_development;
+  hasRequiredReactJsxRuntime_development = 1;
+  var define_process_env_default2 = {};
+  /**
+   * @license React
+   * react-jsx-runtime.development.js
+   *
+   * Copyright (c) Meta Platforms, Inc. and affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+  "production" !== define_process_env_default2.NODE_ENV && (function() {
+    function getComponentNameFromType(type) {
+      if (null == type) return null;
+      if ("function" === typeof type)
+        return type.$$typeof === REACT_CLIENT_REFERENCE ? null : type.displayName || type.name || null;
+      if ("string" === typeof type) return type;
+      switch (type) {
+        case REACT_FRAGMENT_TYPE:
+          return "Fragment";
+        case REACT_PROFILER_TYPE:
+          return "Profiler";
+        case REACT_STRICT_MODE_TYPE:
+          return "StrictMode";
+        case REACT_SUSPENSE_TYPE:
+          return "Suspense";
+        case REACT_SUSPENSE_LIST_TYPE:
+          return "SuspenseList";
+        case REACT_ACTIVITY_TYPE:
+          return "Activity";
+      }
+      if ("object" === typeof type)
+        switch ("number" === typeof type.tag && console.error(
+          "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
+        ), type.$$typeof) {
+          case REACT_PORTAL_TYPE:
+            return "Portal";
+          case REACT_CONTEXT_TYPE:
+            return type.displayName || "Context";
+          case REACT_CONSUMER_TYPE:
+            return (type._context.displayName || "Context") + ".Consumer";
+          case REACT_FORWARD_REF_TYPE:
+            var innerType = type.render;
+            type = type.displayName;
+            type || (type = innerType.displayName || innerType.name || "", type = "" !== type ? "ForwardRef(" + type + ")" : "ForwardRef");
+            return type;
+          case REACT_MEMO_TYPE:
+            return innerType = type.displayName || null, null !== innerType ? innerType : getComponentNameFromType(type.type) || "Memo";
+          case REACT_LAZY_TYPE:
+            innerType = type._payload;
+            type = type._init;
+            try {
+              return getComponentNameFromType(type(innerType));
+            } catch (x) {
+            }
+        }
+      return null;
+    }
+    function testStringCoercion(value) {
+      return "" + value;
+    }
+    function checkKeyStringCoercion(value) {
+      try {
+        testStringCoercion(value);
+        var JSCompiler_inline_result = false;
+      } catch (e) {
+        JSCompiler_inline_result = true;
+      }
+      if (JSCompiler_inline_result) {
+        JSCompiler_inline_result = console;
+        var JSCompiler_temp_const = JSCompiler_inline_result.error;
+        var JSCompiler_inline_result$jscomp$0 = "function" === typeof Symbol && Symbol.toStringTag && value[Symbol.toStringTag] || value.constructor.name || "Object";
+        JSCompiler_temp_const.call(
+          JSCompiler_inline_result,
+          "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
+          JSCompiler_inline_result$jscomp$0
+        );
+        return testStringCoercion(value);
+      }
+    }
+    function getTaskName(type) {
+      if (type === REACT_FRAGMENT_TYPE) return "<>";
+      if ("object" === typeof type && null !== type && type.$$typeof === REACT_LAZY_TYPE)
+        return "<...>";
+      try {
+        var name = getComponentNameFromType(type);
+        return name ? "<" + name + ">" : "<...>";
+      } catch (x) {
+        return "<...>";
+      }
+    }
+    function getOwner() {
+      var dispatcher = ReactSharedInternals.A;
+      return null === dispatcher ? null : dispatcher.getOwner();
+    }
+    function UnknownOwner() {
+      return Error("react-stack-top-frame");
+    }
+    function hasValidKey(config) {
+      if (hasOwnProperty2.call(config, "key")) {
+        var getter = Object.getOwnPropertyDescriptor(config, "key").get;
+        if (getter && getter.isReactWarning) return false;
+      }
+      return void 0 !== config.key;
+    }
+    function defineKeyPropWarningGetter(props, displayName) {
+      function warnAboutAccessingKey() {
+        specialPropKeyWarningShown || (specialPropKeyWarningShown = true, console.error(
+          "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
+          displayName
+        ));
+      }
+      warnAboutAccessingKey.isReactWarning = true;
+      Object.defineProperty(props, "key", {
+        get: warnAboutAccessingKey,
+        configurable: true
+      });
+    }
+    function elementRefGetterWithDeprecationWarning() {
+      var componentName = getComponentNameFromType(this.type);
+      didWarnAboutElementRef[componentName] || (didWarnAboutElementRef[componentName] = true, console.error(
+        "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
+      ));
+      componentName = this.props.ref;
+      return void 0 !== componentName ? componentName : null;
+    }
+    function ReactElement(type, key, props, owner, debugStack, debugTask) {
+      var refProp = props.ref;
+      type = {
+        $$typeof: REACT_ELEMENT_TYPE,
+        type,
+        key,
+        props,
+        _owner: owner
+      };
+      null !== (void 0 !== refProp ? refProp : null) ? Object.defineProperty(type, "ref", {
+        enumerable: false,
+        get: elementRefGetterWithDeprecationWarning
+      }) : Object.defineProperty(type, "ref", { enumerable: false, value: null });
+      type._store = {};
+      Object.defineProperty(type._store, "validated", {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: 0
+      });
+      Object.defineProperty(type, "_debugInfo", {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: null
+      });
+      Object.defineProperty(type, "_debugStack", {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: debugStack
+      });
+      Object.defineProperty(type, "_debugTask", {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: debugTask
+      });
+      Object.freeze && (Object.freeze(type.props), Object.freeze(type));
+      return type;
+    }
+    function jsxDEVImpl(type, config, maybeKey, isStaticChildren, debugStack, debugTask) {
+      var children = config.children;
+      if (void 0 !== children)
+        if (isStaticChildren)
+          if (isArrayImpl(children)) {
+            for (isStaticChildren = 0; isStaticChildren < children.length; isStaticChildren++)
+              validateChildKeys(children[isStaticChildren]);
+            Object.freeze && Object.freeze(children);
+          } else
+            console.error(
+              "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
+            );
+        else validateChildKeys(children);
+      if (hasOwnProperty2.call(config, "key")) {
+        children = getComponentNameFromType(type);
+        var keys = Object.keys(config).filter(function(k) {
+          return "key" !== k;
+        });
+        isStaticChildren = 0 < keys.length ? "{key: someKey, " + keys.join(": ..., ") + ": ...}" : "{key: someKey}";
+        didWarnAboutKeySpread[children + isStaticChildren] || (keys = 0 < keys.length ? "{" + keys.join(": ..., ") + ": ...}" : "{}", console.error(
+          'A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />',
+          isStaticChildren,
+          children,
+          keys,
+          children
+        ), didWarnAboutKeySpread[children + isStaticChildren] = true);
+      }
+      children = null;
+      void 0 !== maybeKey && (checkKeyStringCoercion(maybeKey), children = "" + maybeKey);
+      hasValidKey(config) && (checkKeyStringCoercion(config.key), children = "" + config.key);
+      if ("key" in config) {
+        maybeKey = {};
+        for (var propName in config)
+          "key" !== propName && (maybeKey[propName] = config[propName]);
+      } else maybeKey = config;
+      children && defineKeyPropWarningGetter(
+        maybeKey,
+        "function" === typeof type ? type.displayName || type.name || "Unknown" : type
+      );
+      return ReactElement(
+        type,
+        children,
+        maybeKey,
+        getOwner(),
+        debugStack,
+        debugTask
+      );
+    }
+    function validateChildKeys(node) {
+      isValidElement(node) ? node._store && (node._store.validated = 1) : "object" === typeof node && null !== node && node.$$typeof === REACT_LAZY_TYPE && ("fulfilled" === node._payload.status ? isValidElement(node._payload.value) && node._payload.value._store && (node._payload.value._store.validated = 1) : node._store && (node._store.validated = 1));
+    }
+    function isValidElement(object) {
+      return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    var React2 = requireReact(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty2 = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+      return null;
+    };
+    React2 = {
+      react_stack_bottom_frame: function(callStackForError) {
+        return callStackForError();
+      }
+    };
+    var specialPropKeyWarningShown;
+    var didWarnAboutElementRef = {};
+    var unknownOwnerDebugStack = React2.react_stack_bottom_frame.bind(
+      React2,
+      UnknownOwner
+    )();
+    var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
+    var didWarnAboutKeySpread = {};
+    reactJsxRuntime_development.Fragment = REACT_FRAGMENT_TYPE;
+    reactJsxRuntime_development.jsx = function(type, config, maybeKey) {
+      var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
+      return jsxDEVImpl(
+        type,
+        config,
+        maybeKey,
+        false,
+        trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack,
+        trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask
+      );
+    };
+    reactJsxRuntime_development.jsxs = function(type, config, maybeKey) {
+      var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
+      return jsxDEVImpl(
+        type,
+        config,
+        maybeKey,
+        true,
+        trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack,
+        trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask
+      );
+    };
+  })();
+  return reactJsxRuntime_development;
+}
+var hasRequiredJsxRuntime;
+function requireJsxRuntime() {
+  if (hasRequiredJsxRuntime) return jsxRuntime.exports;
+  hasRequiredJsxRuntime = 1;
+  var define_process_env_default2 = {};
+  if (define_process_env_default2.NODE_ENV === "production") {
+    jsxRuntime.exports = requireReactJsxRuntime_production();
+  } else {
+    jsxRuntime.exports = requireReactJsxRuntime_development();
+  }
+  return jsxRuntime.exports;
+}
+var jsxRuntimeExports = requireJsxRuntime();
+var QueryClientContext = reactExports.createContext(
+  void 0
+);
+var useQueryClient = (queryClient2) => {
+  const client2 = reactExports.useContext(QueryClientContext);
+  if (!client2) {
+    throw new Error("No QueryClient set, use QueryClientProvider to set one");
+  }
+  return client2;
+};
+var QueryClientProvider = ({
+  client: client2,
+  children
+}) => {
+  reactExports.useEffect(() => {
+    client2.mount();
+    return () => {
+      client2.unmount();
+    };
+  }, [client2]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientContext.Provider, { value: client2, children });
+};
+var IsRestoringContext = reactExports.createContext(false);
+var useIsRestoring = () => reactExports.useContext(IsRestoringContext);
+IsRestoringContext.Provider;
+function createValue() {
+  let isReset = false;
+  return {
+    clearReset: () => {
+      isReset = false;
+    },
+    reset: () => {
+      isReset = true;
+    },
+    isReset: () => {
+      return isReset;
+    }
+  };
+}
+var QueryErrorResetBoundaryContext = reactExports.createContext(createValue());
+var useQueryErrorResetBoundary = () => reactExports.useContext(QueryErrorResetBoundaryContext);
+var ensurePreventErrorBoundaryRetry = (options, errorResetBoundary) => {
+  if (options.suspense || options.throwOnError || options.experimental_prefetchInRender) {
+    if (!errorResetBoundary.isReset()) {
+      options.retryOnMount = false;
+    }
+  }
+};
+var useClearResetErrorBoundary = (errorResetBoundary) => {
+  reactExports.useEffect(() => {
+    errorResetBoundary.clearReset();
+  }, [errorResetBoundary]);
+};
+var getHasError = ({
+  result,
+  errorResetBoundary,
+  throwOnError,
+  query,
+  suspense
+}) => {
+  return result.isError && !errorResetBoundary.isReset() && !result.isFetching && query && (suspense && result.data === void 0 || shouldThrowError(throwOnError, [result.error, query]));
+};
+var ensureSuspenseTimers = (defaultedOptions) => {
+  if (defaultedOptions.suspense) {
+    const MIN_SUSPENSE_TIME_MS = 1e3;
+    const clamp = (value) => value === "static" ? value : Math.max(value ?? MIN_SUSPENSE_TIME_MS, MIN_SUSPENSE_TIME_MS);
+    const originalStaleTime = defaultedOptions.staleTime;
+    defaultedOptions.staleTime = typeof originalStaleTime === "function" ? (...args) => clamp(originalStaleTime(...args)) : clamp(originalStaleTime);
+    if (typeof defaultedOptions.gcTime === "number") {
+      defaultedOptions.gcTime = Math.max(
+        defaultedOptions.gcTime,
+        MIN_SUSPENSE_TIME_MS
+      );
+    }
+  }
+};
+var willFetch = (result, isRestoring) => result.isLoading && result.isFetching && !isRestoring;
+var shouldSuspend = (defaultedOptions, result) => defaultedOptions?.suspense && result.isPending;
+var fetchOptimistic = (defaultedOptions, observer, errorResetBoundary) => observer.fetchOptimistic(defaultedOptions).catch(() => {
+  errorResetBoundary.clearReset();
+});
+var define_process_env_default$1 = {};
+function useBaseQuery(options, Observer, queryClient2) {
+  if (define_process_env_default$1.NODE_ENV !== "production") {
+    if (typeof options !== "object" || Array.isArray(options)) {
+      throw new Error(
+        'Bad argument type. Starting with v5, only the "Object" form is allowed when calling query related functions. Please use the error stack to find the culprit call. More info here: https://tanstack.com/query/latest/docs/react/guides/migrating-to-v5#supports-a-single-signature-one-object'
+      );
+    }
+  }
+  const isRestoring = useIsRestoring();
+  const errorResetBoundary = useQueryErrorResetBoundary();
+  const client2 = useQueryClient();
+  const defaultedOptions = client2.defaultQueryOptions(options);
+  client2.getDefaultOptions().queries?._experimental_beforeQuery?.(
+    defaultedOptions
+  );
+  if (define_process_env_default$1.NODE_ENV !== "production") {
+    if (!defaultedOptions.queryFn) {
+      console.error(
+        `[${defaultedOptions.queryHash}]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function`
+      );
+    }
+  }
+  defaultedOptions._optimisticResults = isRestoring ? "isRestoring" : "optimistic";
+  ensureSuspenseTimers(defaultedOptions);
+  ensurePreventErrorBoundaryRetry(defaultedOptions, errorResetBoundary);
+  useClearResetErrorBoundary(errorResetBoundary);
+  const isNewCacheEntry = !client2.getQueryCache().get(defaultedOptions.queryHash);
+  const [observer] = reactExports.useState(
+    () => new Observer(
+      client2,
+      defaultedOptions
+    )
+  );
+  const result = observer.getOptimisticResult(defaultedOptions);
+  const shouldSubscribe = !isRestoring && options.subscribed !== false;
+  reactExports.useSyncExternalStore(
+    reactExports.useCallback(
+      (onStoreChange) => {
+        const unsubscribe = shouldSubscribe ? observer.subscribe(notifyManager.batchCalls(onStoreChange)) : noop$1;
+        observer.updateResult();
+        return unsubscribe;
+      },
+      [observer, shouldSubscribe]
+    ),
+    () => observer.getCurrentResult(),
+    () => observer.getCurrentResult()
+  );
+  reactExports.useEffect(() => {
+    observer.setOptions(defaultedOptions);
+  }, [defaultedOptions, observer]);
+  if (shouldSuspend(defaultedOptions, result)) {
+    throw fetchOptimistic(defaultedOptions, observer, errorResetBoundary);
+  }
+  if (getHasError({
+    result,
+    errorResetBoundary,
+    throwOnError: defaultedOptions.throwOnError,
+    query: client2.getQueryCache().get(defaultedOptions.queryHash),
+    suspense: defaultedOptions.suspense
+  })) {
+    throw result.error;
+  }
+  client2.getDefaultOptions().queries?._experimental_afterQuery?.(
+    defaultedOptions,
+    result
+  );
+  if (defaultedOptions.experimental_prefetchInRender && !isServer && willFetch(result, isRestoring)) {
+    const promise = isNewCacheEntry ? (
+      // Fetch immediately on render in order to ensure `.promise` is resolved even if the component is unmounted
+      fetchOptimistic(defaultedOptions, observer, errorResetBoundary)
+    ) : (
+      // subscribe to the "cache promise" so that we can finalize the currentThenable once data comes in
+      client2.getQueryCache().get(defaultedOptions.queryHash)?.promise
+    );
+    promise?.catch(noop$1).finally(() => {
+      observer.updateResult();
+    });
+  }
+  return !defaultedOptions.notifyOnChangeProps ? observer.trackResult(result) : result;
+}
+function useQuery(options, queryClient2) {
+  return useBaseQuery(options, QueryObserver);
+}
+function useMutation(options, queryClient2) {
+  const client2 = useQueryClient();
+  const [observer] = reactExports.useState(
+    () => new MutationObserver$1(
+      client2,
+      options
+    )
+  );
+  reactExports.useEffect(() => {
+    observer.setOptions(options);
+  }, [observer, options]);
+  const result = reactExports.useSyncExternalStore(
+    reactExports.useCallback(
+      (onStoreChange) => observer.subscribe(notifyManager.batchCalls(onStoreChange)),
+      [observer]
+    ),
+    () => observer.getCurrentResult(),
+    () => observer.getCurrentResult()
+  );
+  const mutate = reactExports.useCallback(
+    (variables, mutateOptions) => {
+      observer.mutate(variables, mutateOptions).catch(noop$1);
+    },
+    [observer]
+  );
+  if (result.error && shouldThrowError(observer.options.throwOnError, [result.error])) {
+    throw result.error;
+  }
+  return { ...result, mutate, mutateAsync: result.mutate };
+}
+const PAGINATION = {
+  DEFAULT_LIMIT: 10,
+  DEFAULT_PAGE: 1
+};
+const QUERY_KEYS = {
+  NAVIGATION: ["navigation"],
+  PAGE: (slug) => ["page", slug],
+  COLLECTION: (collection, page, limit, search) => ["collection", collection, page, limit, search ?? ""],
+  COLLECTION_FIELDS: (collection) => ["collection-fields", collection],
+  CUSTOM_DATA_TABLE: (url, page, limit, search) => ["custom-data-table", url, page, limit, search ?? ""]
+};
+const API_ENDPOINTS = {
+  NAVIGATION: "/items/nav_bar/1",
+  PAGES: "/items/pages",
+  FIELDS: (collection) => `/fields/${collection}`,
+  ITEMS: (collection) => `/items/${collection}`
+};
+const TIMEOUTS = {
+  API_REQUEST: 1e4
+};
+function bind(fn2, thisArg) {
+  return function wrap() {
+    return fn2.apply(thisArg, arguments);
+  };
+}
+var define_process_default = {};
+const { toString } = Object.prototype;
+const { getPrototypeOf } = Object;
+const { iterator, toStringTag } = Symbol;
+const kindOf = /* @__PURE__ */ ((cache2) => (thing) => {
+  const str = toString.call(thing);
+  return cache2[str] || (cache2[str] = str.slice(8, -1).toLowerCase());
+})(/* @__PURE__ */ Object.create(null));
+const kindOfTest = (type) => {
+  type = type.toLowerCase();
+  return (thing) => kindOf(thing) === type;
+};
+const typeOfTest = (type) => (thing) => typeof thing === type;
+const { isArray } = Array;
+const isUndefined$1 = typeOfTest("undefined");
+function isBuffer(val) {
+  return val !== null && !isUndefined$1(val) && val.constructor !== null && !isUndefined$1(val.constructor) && isFunction$3(val.constructor.isBuffer) && val.constructor.isBuffer(val);
+}
+const isArrayBuffer = kindOfTest("ArrayBuffer");
+function isArrayBufferView(val) {
+  let result;
+  if (typeof ArrayBuffer !== "undefined" && ArrayBuffer.isView) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = val && val.buffer && isArrayBuffer(val.buffer);
+  }
+  return result;
+}
+const isString$2 = typeOfTest("string");
+const isFunction$3 = typeOfTest("function");
+const isNumber = typeOfTest("number");
+const isObject$1 = (thing) => thing !== null && typeof thing === "object";
+const isBoolean$1 = (thing) => thing === true || thing === false;
+const isPlainObject$1 = (val) => {
+  if (kindOf(val) !== "object") {
+    return false;
+  }
+  const prototype2 = getPrototypeOf(val);
+  return (prototype2 === null || prototype2 === Object.prototype || Object.getPrototypeOf(prototype2) === null) && !(toStringTag in val) && !(iterator in val);
+};
+const isEmptyObject$1 = (val) => {
+  if (!isObject$1(val) || isBuffer(val)) {
+    return false;
+  }
+  try {
+    return Object.keys(val).length === 0 && Object.getPrototypeOf(val) === Object.prototype;
+  } catch (e) {
+    return false;
+  }
+};
+const isDate = kindOfTest("Date");
+const isFile = kindOfTest("File");
+const isBlob = kindOfTest("Blob");
+const isFileList = kindOfTest("FileList");
+const isStream = (val) => isObject$1(val) && isFunction$3(val.pipe);
+const isFormData = (thing) => {
+  let kind;
+  return thing && (typeof FormData === "function" && thing instanceof FormData || isFunction$3(thing.append) && ((kind = kindOf(thing)) === "formdata" || // detect form-data instance
+  kind === "object" && isFunction$3(thing.toString) && thing.toString() === "[object FormData]"));
+};
+const isURLSearchParams = kindOfTest("URLSearchParams");
+const [isReadableStream, isRequest, isResponse, isHeaders] = ["ReadableStream", "Request", "Response", "Headers"].map(kindOfTest);
+const trim = (str) => str.trim ? str.trim() : str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+function forEach(obj, fn2, { allOwnKeys = false } = {}) {
+  if (obj === null || typeof obj === "undefined") {
+    return;
+  }
+  let i;
+  let l;
+  if (typeof obj !== "object") {
+    obj = [obj];
+  }
+  if (isArray(obj)) {
+    for (i = 0, l = obj.length; i < l; i++) {
+      fn2.call(null, obj[i], i, obj);
+    }
+  } else {
+    if (isBuffer(obj)) {
+      return;
+    }
+    const keys = allOwnKeys ? Object.getOwnPropertyNames(obj) : Object.keys(obj);
+    const len = keys.length;
+    let key;
+    for (i = 0; i < len; i++) {
+      key = keys[i];
+      fn2.call(null, obj[key], key, obj);
+    }
+  }
+}
+function findKey(obj, key) {
+  if (isBuffer(obj)) {
+    return null;
+  }
+  key = key.toLowerCase();
+  const keys = Object.keys(obj);
+  let i = keys.length;
+  let _key;
+  while (i-- > 0) {
+    _key = keys[i];
+    if (key === _key.toLowerCase()) {
+      return _key;
+    }
+  }
+  return null;
+}
+const _global = (() => {
+  if (typeof globalThis !== "undefined") return globalThis;
+  return typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : global;
+})();
+const isContextDefined = (context) => !isUndefined$1(context) && context !== _global;
+function merge() {
+  const { caseless, skipUndefined } = isContextDefined(this) && this || {};
+  const result = {};
+  const assignValue = (val, key) => {
+    const targetKey = caseless && findKey(result, key) || key;
+    if (isPlainObject$1(result[targetKey]) && isPlainObject$1(val)) {
+      result[targetKey] = merge(result[targetKey], val);
+    } else if (isPlainObject$1(val)) {
+      result[targetKey] = merge({}, val);
+    } else if (isArray(val)) {
+      result[targetKey] = val.slice();
+    } else if (!skipUndefined || !isUndefined$1(val)) {
+      result[targetKey] = val;
+    }
+  };
+  for (let i = 0, l = arguments.length; i < l; i++) {
+    arguments[i] && forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+const extend = (a, b, thisArg, { allOwnKeys } = {}) => {
+  forEach(b, (val, key) => {
+    if (thisArg && isFunction$3(val)) {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  }, { allOwnKeys });
+  return a;
+};
+const stripBOM = (content) => {
+  if (content.charCodeAt(0) === 65279) {
+    content = content.slice(1);
+  }
+  return content;
+};
+const inherits = (constructor, superConstructor, props, descriptors2) => {
+  constructor.prototype = Object.create(superConstructor.prototype, descriptors2);
+  constructor.prototype.constructor = constructor;
+  Object.defineProperty(constructor, "super", {
+    value: superConstructor.prototype
+  });
+  props && Object.assign(constructor.prototype, props);
+};
+const toFlatObject = (sourceObj, destObj, filter2, propFilter) => {
+  let props;
+  let i;
+  let prop;
+  const merged = {};
+  destObj = destObj || {};
+  if (sourceObj == null) return destObj;
+  do {
+    props = Object.getOwnPropertyNames(sourceObj);
+    i = props.length;
+    while (i-- > 0) {
+      prop = props[i];
+      if ((!propFilter || propFilter(prop, sourceObj, destObj)) && !merged[prop]) {
+        destObj[prop] = sourceObj[prop];
+        merged[prop] = true;
+      }
+    }
+    sourceObj = filter2 !== false && getPrototypeOf(sourceObj);
+  } while (sourceObj && (!filter2 || filter2(sourceObj, destObj)) && sourceObj !== Object.prototype);
+  return destObj;
+};
+const endsWith = (str, searchString, position) => {
+  str = String(str);
+  if (position === void 0 || position > str.length) {
+    position = str.length;
+  }
+  position -= searchString.length;
+  const lastIndex = str.indexOf(searchString, position);
+  return lastIndex !== -1 && lastIndex === position;
+};
+const toArray = (thing) => {
+  if (!thing) return null;
+  if (isArray(thing)) return thing;
+  let i = thing.length;
+  if (!isNumber(i)) return null;
+  const arr = new Array(i);
+  while (i-- > 0) {
+    arr[i] = thing[i];
+  }
+  return arr;
+};
+const isTypedArray = /* @__PURE__ */ ((TypedArray) => {
+  return (thing) => {
+    return TypedArray && thing instanceof TypedArray;
+  };
+})(typeof Uint8Array !== "undefined" && getPrototypeOf(Uint8Array));
+const forEachEntry = (obj, fn2) => {
+  const generator = obj && obj[iterator];
+  const _iterator = generator.call(obj);
+  let result;
+  while ((result = _iterator.next()) && !result.done) {
+    const pair = result.value;
+    fn2.call(obj, pair[0], pair[1]);
+  }
+};
+const matchAll = (regExp, str) => {
+  let matches;
+  const arr = [];
+  while ((matches = regExp.exec(str)) !== null) {
+    arr.push(matches);
+  }
+  return arr;
+};
+const isHTMLForm = kindOfTest("HTMLFormElement");
+const toCamelCase = (str) => {
+  return str.toLowerCase().replace(
+    /[-_\s]([a-z\d])(\w*)/g,
+    function replacer(m, p1, p2) {
+      return p1.toUpperCase() + p2;
+    }
+  );
+};
+const hasOwnProperty = (({ hasOwnProperty: hasOwnProperty2 }) => (obj, prop) => hasOwnProperty2.call(obj, prop))(Object.prototype);
+const isRegExp = kindOfTest("RegExp");
+const reduceDescriptors = (obj, reducer) => {
+  const descriptors2 = Object.getOwnPropertyDescriptors(obj);
+  const reducedDescriptors = {};
+  forEach(descriptors2, (descriptor, name) => {
+    let ret;
+    if ((ret = reducer(descriptor, name, obj)) !== false) {
+      reducedDescriptors[name] = ret || descriptor;
+    }
+  });
+  Object.defineProperties(obj, reducedDescriptors);
+};
+const freezeMethods = (obj) => {
+  reduceDescriptors(obj, (descriptor, name) => {
+    if (isFunction$3(obj) && ["arguments", "caller", "callee"].indexOf(name) !== -1) {
+      return false;
+    }
+    const value = obj[name];
+    if (!isFunction$3(value)) return;
+    descriptor.enumerable = false;
+    if ("writable" in descriptor) {
+      descriptor.writable = false;
+      return;
+    }
+    if (!descriptor.set) {
+      descriptor.set = () => {
+        throw Error("Can not rewrite read-only method '" + name + "'");
+      };
+    }
+  });
+};
+const toObjectSet = (arrayOrString, delimiter) => {
+  const obj = {};
+  const define = (arr) => {
+    arr.forEach((value) => {
+      obj[value] = true;
+    });
+  };
+  isArray(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
+  return obj;
+};
+const noop = () => {
+};
+const toFiniteNumber = (value, defaultValue) => {
+  return value != null && Number.isFinite(value = +value) ? value : defaultValue;
+};
+function isSpecCompliantForm(thing) {
+  return !!(thing && isFunction$3(thing.append) && thing[toStringTag] === "FormData" && thing[iterator]);
+}
+const toJSONObject = (obj) => {
+  const stack = new Array(10);
+  const visit = (source, i) => {
+    if (isObject$1(source)) {
+      if (stack.indexOf(source) >= 0) {
+        return;
+      }
+      if (isBuffer(source)) {
+        return source;
+      }
+      if (!("toJSON" in source)) {
+        stack[i] = source;
+        const target = isArray(source) ? [] : {};
+        forEach(source, (value, key) => {
+          const reducedValue = visit(value, i + 1);
+          !isUndefined$1(reducedValue) && (target[key] = reducedValue);
+        });
+        stack[i] = void 0;
+        return target;
+      }
+    }
+    return source;
+  };
+  return visit(obj, 0);
+};
+const isAsyncFn = kindOfTest("AsyncFunction");
+const isThenable = (thing) => thing && (isObject$1(thing) || isFunction$3(thing)) && isFunction$3(thing.then) && isFunction$3(thing.catch);
+const _setImmediate = ((setImmediateSupported, postMessageSupported) => {
+  if (setImmediateSupported) {
+    return setImmediate;
+  }
+  return postMessageSupported ? ((token, callbacks) => {
+    _global.addEventListener("message", ({ source, data }) => {
+      if (source === _global && data === token) {
+        callbacks.length && callbacks.shift()();
+      }
+    }, false);
+    return (cb2) => {
+      callbacks.push(cb2);
+      _global.postMessage(token, "*");
+    };
+  })(`axios@${Math.random()}`, []) : (cb2) => setTimeout(cb2);
+})(
+  typeof setImmediate === "function",
+  isFunction$3(_global.postMessage)
+);
+const asap = typeof queueMicrotask !== "undefined" ? queueMicrotask.bind(_global) : typeof define_process_default !== "undefined" && define_process_default.nextTick || _setImmediate;
+const isIterable = (thing) => thing != null && isFunction$3(thing[iterator]);
+const utils$1 = {
+  isArray,
+  isArrayBuffer,
+  isBuffer,
+  isFormData,
+  isArrayBufferView,
+  isString: isString$2,
+  isNumber,
+  isBoolean: isBoolean$1,
+  isObject: isObject$1,
+  isPlainObject: isPlainObject$1,
+  isEmptyObject: isEmptyObject$1,
+  isReadableStream,
+  isRequest,
+  isResponse,
+  isHeaders,
+  isUndefined: isUndefined$1,
+  isDate,
+  isFile,
+  isBlob,
+  isRegExp,
+  isFunction: isFunction$3,
+  isStream,
+  isURLSearchParams,
+  isTypedArray,
+  isFileList,
+  forEach,
+  merge,
+  extend,
+  trim,
+  stripBOM,
+  inherits,
+  toFlatObject,
+  kindOf,
+  kindOfTest,
+  endsWith,
+  toArray,
+  forEachEntry,
+  matchAll,
+  isHTMLForm,
+  hasOwnProperty,
+  hasOwnProp: hasOwnProperty,
+  // an alias to avoid ESLint no-prototype-builtins detection
+  reduceDescriptors,
+  freezeMethods,
+  toObjectSet,
+  toCamelCase,
+  noop,
+  toFiniteNumber,
+  findKey,
+  global: _global,
+  isContextDefined,
+  isSpecCompliantForm,
+  toJSONObject,
+  isAsyncFn,
+  isThenable,
+  setImmediate: _setImmediate,
+  asap,
+  isIterable
+};
+function AxiosError$1(message, code, config, request, response) {
+  Error.call(this);
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    this.stack = new Error().stack;
+  }
+  this.message = message;
+  this.name = "AxiosError";
+  code && (this.code = code);
+  config && (this.config = config);
+  request && (this.request = request);
+  if (response) {
+    this.response = response;
+    this.status = response.status ? response.status : null;
+  }
+}
+utils$1.inherits(AxiosError$1, Error, {
+  toJSON: function toJSON() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: utils$1.toJSONObject(this.config),
+      code: this.code,
+      status: this.status
+    };
+  }
+});
+const prototype$1 = AxiosError$1.prototype;
+const descriptors = {};
+[
+  "ERR_BAD_OPTION_VALUE",
+  "ERR_BAD_OPTION",
+  "ECONNABORTED",
+  "ETIMEDOUT",
+  "ERR_NETWORK",
+  "ERR_FR_TOO_MANY_REDIRECTS",
+  "ERR_DEPRECATED",
+  "ERR_BAD_RESPONSE",
+  "ERR_BAD_REQUEST",
+  "ERR_CANCELED",
+  "ERR_NOT_SUPPORT",
+  "ERR_INVALID_URL"
+  // eslint-disable-next-line func-names
+].forEach((code) => {
+  descriptors[code] = { value: code };
+});
+Object.defineProperties(AxiosError$1, descriptors);
+Object.defineProperty(prototype$1, "isAxiosError", { value: true });
+AxiosError$1.from = (error, code, config, request, response, customProps) => {
+  const axiosError = Object.create(prototype$1);
+  utils$1.toFlatObject(error, axiosError, function filter2(obj) {
+    return obj !== Error.prototype;
+  }, (prop) => {
+    return prop !== "isAxiosError";
+  });
+  const msg = error && error.message ? error.message : "Error";
+  const errCode = code == null && error ? error.code : code;
+  AxiosError$1.call(axiosError, msg, errCode, config, request, response);
+  if (error && axiosError.cause == null) {
+    Object.defineProperty(axiosError, "cause", { value: error, configurable: true });
+  }
+  axiosError.name = error && error.name || "Error";
+  customProps && Object.assign(axiosError, customProps);
+  return axiosError;
+};
+const httpAdapter = null;
+function isVisitable(thing) {
+  return utils$1.isPlainObject(thing) || utils$1.isArray(thing);
+}
+function removeBrackets(key) {
+  return utils$1.endsWith(key, "[]") ? key.slice(0, -2) : key;
+}
+function renderKey(path, key, dots) {
+  if (!path) return key;
+  return path.concat(key).map(function each(token, i) {
+    token = removeBrackets(token);
+    return !dots && i ? "[" + token + "]" : token;
+  }).join(dots ? "." : "");
+}
+function isFlatArray(arr) {
+  return utils$1.isArray(arr) && !arr.some(isVisitable);
+}
+const predicates = utils$1.toFlatObject(utils$1, {}, null, function filter(prop) {
+  return /^is[A-Z]/.test(prop);
+});
+function toFormData$1(obj, formData, options) {
+  if (!utils$1.isObject(obj)) {
+    throw new TypeError("target must be an object");
+  }
+  formData = formData || new FormData();
+  options = utils$1.toFlatObject(options, {
+    metaTokens: true,
+    dots: false,
+    indexes: false
+  }, false, function defined(option, source) {
+    return !utils$1.isUndefined(source[option]);
+  });
+  const metaTokens = options.metaTokens;
+  const visitor = options.visitor || defaultVisitor;
+  const dots = options.dots;
+  const indexes = options.indexes;
+  const _Blob = options.Blob || typeof Blob !== "undefined" && Blob;
+  const useBlob = _Blob && utils$1.isSpecCompliantForm(formData);
+  if (!utils$1.isFunction(visitor)) {
+    throw new TypeError("visitor must be a function");
+  }
+  function convertValue(value) {
+    if (value === null) return "";
+    if (utils$1.isDate(value)) {
+      return value.toISOString();
+    }
+    if (utils$1.isBoolean(value)) {
+      return value.toString();
+    }
+    if (!useBlob && utils$1.isBlob(value)) {
+      throw new AxiosError$1("Blob is not supported. Use a Buffer instead.");
+    }
+    if (utils$1.isArrayBuffer(value) || utils$1.isTypedArray(value)) {
+      return useBlob && typeof Blob === "function" ? new Blob([value]) : Buffer.from(value);
+    }
+    return value;
+  }
+  function defaultVisitor(value, key, path) {
+    let arr = value;
+    if (value && !path && typeof value === "object") {
+      if (utils$1.endsWith(key, "{}")) {
+        key = metaTokens ? key : key.slice(0, -2);
+        value = JSON.stringify(value);
+      } else if (utils$1.isArray(value) && isFlatArray(value) || (utils$1.isFileList(value) || utils$1.endsWith(key, "[]")) && (arr = utils$1.toArray(value))) {
+        key = removeBrackets(key);
+        arr.forEach(function each(el2, index) {
+          !(utils$1.isUndefined(el2) || el2 === null) && formData.append(
+            // eslint-disable-next-line no-nested-ternary
+            indexes === true ? renderKey([key], index, dots) : indexes === null ? key : key + "[]",
+            convertValue(el2)
+          );
+        });
+        return false;
+      }
+    }
+    if (isVisitable(value)) {
+      return true;
+    }
+    formData.append(renderKey(path, key, dots), convertValue(value));
+    return false;
+  }
+  const stack = [];
+  const exposedHelpers = Object.assign(predicates, {
+    defaultVisitor,
+    convertValue,
+    isVisitable
+  });
+  function build(value, path) {
+    if (utils$1.isUndefined(value)) return;
+    if (stack.indexOf(value) !== -1) {
+      throw Error("Circular reference detected in " + path.join("."));
+    }
+    stack.push(value);
+    utils$1.forEach(value, function each(el2, key) {
+      const result = !(utils$1.isUndefined(el2) || el2 === null) && visitor.call(
+        formData,
+        el2,
+        utils$1.isString(key) ? key.trim() : key,
+        path,
+        exposedHelpers
+      );
+      if (result === true) {
+        build(el2, path ? path.concat(key) : [key]);
+      }
+    });
+    stack.pop();
+  }
+  if (!utils$1.isObject(obj)) {
+    throw new TypeError("data must be an object");
+  }
+  build(obj);
+  return formData;
+}
+function encode$1(str) {
+  const charMap = {
+    "!": "%21",
+    "'": "%27",
+    "(": "%28",
+    ")": "%29",
+    "~": "%7E",
+    "%20": "+",
+    "%00": "\0"
+  };
+  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match) {
+    return charMap[match];
+  });
+}
+function AxiosURLSearchParams(params, options) {
+  this._pairs = [];
+  params && toFormData$1(params, this, options);
+}
+const prototype = AxiosURLSearchParams.prototype;
+prototype.append = function append(name, value) {
+  this._pairs.push([name, value]);
+};
+prototype.toString = function toString2(encoder) {
+  const _encode = encoder ? function(value) {
+    return encoder.call(this, value, encode$1);
+  } : encode$1;
+  return this._pairs.map(function each(pair) {
+    return _encode(pair[0]) + "=" + _encode(pair[1]);
+  }, "").join("&");
+};
+function encode(val) {
+  return encodeURIComponent(val).replace(/%3A/gi, ":").replace(/%24/g, "$").replace(/%2C/gi, ",").replace(/%20/g, "+");
+}
+function buildURL(url, params, options) {
+  if (!params) {
+    return url;
+  }
+  const _encode = options && options.encode || encode;
+  if (utils$1.isFunction(options)) {
+    options = {
+      serialize: options
+    };
+  }
+  const serializeFn = options && options.serialize;
+  let serializedParams;
+  if (serializeFn) {
+    serializedParams = serializeFn(params, options);
+  } else {
+    serializedParams = utils$1.isURLSearchParams(params) ? params.toString() : new AxiosURLSearchParams(params, options).toString(_encode);
+  }
+  if (serializedParams) {
+    const hashmarkIndex = url.indexOf("#");
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+    url += (url.indexOf("?") === -1 ? "?" : "&") + serializedParams;
+  }
+  return url;
+}
+class InterceptorManager {
+  constructor() {
+    this.handlers = [];
+  }
+  /**
+   * Add a new interceptor to the stack
+   *
+   * @param {Function} fulfilled The function to handle `then` for a `Promise`
+   * @param {Function} rejected The function to handle `reject` for a `Promise`
+   *
+   * @return {Number} An ID used to remove interceptor later
+   */
+  use(fulfilled, rejected, options) {
+    this.handlers.push({
+      fulfilled,
+      rejected,
+      synchronous: options ? options.synchronous : false,
+      runWhen: options ? options.runWhen : null
+    });
+    return this.handlers.length - 1;
+  }
+  /**
+   * Remove an interceptor from the stack
+   *
+   * @param {Number} id The ID that was returned by `use`
+   *
+   * @returns {void}
+   */
+  eject(id2) {
+    if (this.handlers[id2]) {
+      this.handlers[id2] = null;
+    }
+  }
+  /**
+   * Clear all interceptors from the stack
+   *
+   * @returns {void}
+   */
+  clear() {
+    if (this.handlers) {
+      this.handlers = [];
+    }
+  }
+  /**
+   * Iterate over all the registered interceptors
+   *
+   * This method is particularly useful for skipping over any
+   * interceptors that may have become `null` calling `eject`.
+   *
+   * @param {Function} fn The function to call for each interceptor
+   *
+   * @returns {void}
+   */
+  forEach(fn2) {
+    utils$1.forEach(this.handlers, function forEachHandler(h) {
+      if (h !== null) {
+        fn2(h);
+      }
+    });
+  }
+}
+const transitionalDefaults = {
+  silentJSONParsing: true,
+  forcedJSONParsing: true,
+  clarifyTimeoutError: false
+};
+const URLSearchParams$1 = typeof URLSearchParams !== "undefined" ? URLSearchParams : AxiosURLSearchParams;
+const FormData$1 = typeof FormData !== "undefined" ? FormData : null;
+const Blob$1 = typeof Blob !== "undefined" ? Blob : null;
+const platform$1 = {
+  isBrowser: true,
+  classes: {
+    URLSearchParams: URLSearchParams$1,
+    FormData: FormData$1,
+    Blob: Blob$1
+  },
+  protocols: ["http", "https", "file", "blob", "url", "data"]
+};
+const hasBrowserEnv = typeof window !== "undefined" && typeof document !== "undefined";
+const _navigator = typeof navigator === "object" && navigator || void 0;
+const hasStandardBrowserEnv = hasBrowserEnv && (!_navigator || ["ReactNative", "NativeScript", "NS"].indexOf(_navigator.product) < 0);
+const hasStandardBrowserWebWorkerEnv = (() => {
+  return typeof WorkerGlobalScope !== "undefined" && // eslint-disable-next-line no-undef
+  self instanceof WorkerGlobalScope && typeof self.importScripts === "function";
+})();
+const origin = hasBrowserEnv && window.location.href || "http://localhost";
+const utils = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  hasBrowserEnv,
+  hasStandardBrowserEnv,
+  hasStandardBrowserWebWorkerEnv,
+  navigator: _navigator,
+  origin
+}, Symbol.toStringTag, { value: "Module" }));
+const platform = {
+  ...utils,
+  ...platform$1
+};
+function toURLEncodedForm(data, options) {
+  return toFormData$1(data, new platform.classes.URLSearchParams(), {
+    visitor: function(value, key, path, helpers) {
+      if (platform.isNode && utils$1.isBuffer(value)) {
+        this.append(key, value.toString("base64"));
+        return false;
+      }
+      return helpers.defaultVisitor.apply(this, arguments);
+    },
+    ...options
+  });
+}
+function parsePropPath(name) {
+  return utils$1.matchAll(/\w+|\[(\w*)]/g, name).map((match) => {
+    return match[0] === "[]" ? "" : match[1] || match[0];
+  });
+}
+function arrayToObject(arr) {
+  const obj = {};
+  const keys = Object.keys(arr);
+  let i;
+  const len = keys.length;
+  let key;
+  for (i = 0; i < len; i++) {
+    key = keys[i];
+    obj[key] = arr[key];
+  }
+  return obj;
+}
+function formDataToJSON(formData) {
+  function buildPath(path, value, target, index) {
+    let name = path[index++];
+    if (name === "__proto__") return true;
+    const isNumericKey = Number.isFinite(+name);
+    const isLast = index >= path.length;
+    name = !name && utils$1.isArray(target) ? target.length : name;
+    if (isLast) {
+      if (utils$1.hasOwnProp(target, name)) {
+        target[name] = [target[name], value];
+      } else {
+        target[name] = value;
+      }
+      return !isNumericKey;
+    }
+    if (!target[name] || !utils$1.isObject(target[name])) {
+      target[name] = [];
+    }
+    const result = buildPath(path, value, target[name], index);
+    if (result && utils$1.isArray(target[name])) {
+      target[name] = arrayToObject(target[name]);
+    }
+    return !isNumericKey;
+  }
+  if (utils$1.isFormData(formData) && utils$1.isFunction(formData.entries)) {
+    const obj = {};
+    utils$1.forEachEntry(formData, (name, value) => {
+      buildPath(parsePropPath(name), value, obj, 0);
+    });
+    return obj;
+  }
+  return null;
+}
+function stringifySafely(rawValue, parser2, encoder) {
+  if (utils$1.isString(rawValue)) {
+    try {
+      (parser2 || JSON.parse)(rawValue);
+      return utils$1.trim(rawValue);
+    } catch (e) {
+      if (e.name !== "SyntaxError") {
+        throw e;
+      }
+    }
+  }
+  return (encoder || JSON.stringify)(rawValue);
+}
+const defaults = {
+  transitional: transitionalDefaults,
+  adapter: ["xhr", "http", "fetch"],
+  transformRequest: [function transformRequest(data, headers) {
+    const contentType = headers.getContentType() || "";
+    const hasJSONContentType = contentType.indexOf("application/json") > -1;
+    const isObjectPayload = utils$1.isObject(data);
+    if (isObjectPayload && utils$1.isHTMLForm(data)) {
+      data = new FormData(data);
+    }
+    const isFormData2 = utils$1.isFormData(data);
+    if (isFormData2) {
+      return hasJSONContentType ? JSON.stringify(formDataToJSON(data)) : data;
+    }
+    if (utils$1.isArrayBuffer(data) || utils$1.isBuffer(data) || utils$1.isStream(data) || utils$1.isFile(data) || utils$1.isBlob(data) || utils$1.isReadableStream(data)) {
+      return data;
+    }
+    if (utils$1.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils$1.isURLSearchParams(data)) {
+      headers.setContentType("application/x-www-form-urlencoded;charset=utf-8", false);
+      return data.toString();
+    }
+    let isFileList2;
+    if (isObjectPayload) {
+      if (contentType.indexOf("application/x-www-form-urlencoded") > -1) {
+        return toURLEncodedForm(data, this.formSerializer).toString();
+      }
+      if ((isFileList2 = utils$1.isFileList(data)) || contentType.indexOf("multipart/form-data") > -1) {
+        const _FormData = this.env && this.env.FormData;
+        return toFormData$1(
+          isFileList2 ? { "files[]": data } : data,
+          _FormData && new _FormData(),
+          this.formSerializer
+        );
+      }
+    }
+    if (isObjectPayload || hasJSONContentType) {
+      headers.setContentType("application/json", false);
+      return stringifySafely(data);
+    }
+    return data;
+  }],
+  transformResponse: [function transformResponse(data) {
+    const transitional2 = this.transitional || defaults.transitional;
+    const forcedJSONParsing = transitional2 && transitional2.forcedJSONParsing;
+    const JSONRequested = this.responseType === "json";
+    if (utils$1.isResponse(data) || utils$1.isReadableStream(data)) {
+      return data;
+    }
+    if (data && utils$1.isString(data) && (forcedJSONParsing && !this.responseType || JSONRequested)) {
+      const silentJSONParsing = transitional2 && transitional2.silentJSONParsing;
+      const strictJSONParsing = !silentJSONParsing && JSONRequested;
+      try {
+        return JSON.parse(data, this.parseReviver);
+      } catch (e) {
+        if (strictJSONParsing) {
+          if (e.name === "SyntaxError") {
+            throw AxiosError$1.from(e, AxiosError$1.ERR_BAD_RESPONSE, this, null, this.response);
+          }
+          throw e;
+        }
+      }
+    }
+    return data;
+  }],
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+  xsrfCookieName: "XSRF-TOKEN",
+  xsrfHeaderName: "X-XSRF-TOKEN",
+  maxContentLength: -1,
+  maxBodyLength: -1,
+  env: {
+    FormData: platform.classes.FormData,
+    Blob: platform.classes.Blob
+  },
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  },
+  headers: {
+    common: {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": void 0
+    }
+  }
+};
+utils$1.forEach(["delete", "get", "head", "post", "put", "patch"], (method) => {
+  defaults.headers[method] = {};
+});
+const ignoreDuplicateOf = utils$1.toObjectSet([
+  "age",
+  "authorization",
+  "content-length",
+  "content-type",
+  "etag",
+  "expires",
+  "from",
+  "host",
+  "if-modified-since",
+  "if-unmodified-since",
+  "last-modified",
+  "location",
+  "max-forwards",
+  "proxy-authorization",
+  "referer",
+  "retry-after",
+  "user-agent"
+]);
+const parseHeaders = (rawHeaders) => {
+  const parsed = {};
+  let key;
+  let val;
+  let i;
+  rawHeaders && rawHeaders.split("\n").forEach(function parser2(line) {
+    i = line.indexOf(":");
+    key = line.substring(0, i).trim().toLowerCase();
+    val = line.substring(i + 1).trim();
+    if (!key || parsed[key] && ignoreDuplicateOf[key]) {
+      return;
+    }
+    if (key === "set-cookie") {
+      if (parsed[key]) {
+        parsed[key].push(val);
+      } else {
+        parsed[key] = [val];
+      }
+    } else {
+      parsed[key] = parsed[key] ? parsed[key] + ", " + val : val;
+    }
+  });
+  return parsed;
+};
+const $internals = Symbol("internals");
+function normalizeHeader(header) {
+  return header && String(header).trim().toLowerCase();
+}
+function normalizeValue(value) {
+  if (value === false || value == null) {
+    return value;
+  }
+  return utils$1.isArray(value) ? value.map(normalizeValue) : String(value);
+}
+function parseTokens(str) {
+  const tokens = /* @__PURE__ */ Object.create(null);
+  const tokensRE = /([^\s,;=]+)\s*(?:=\s*([^,;]+))?/g;
+  let match;
+  while (match = tokensRE.exec(str)) {
+    tokens[match[1]] = match[2];
+  }
+  return tokens;
+}
+const isValidHeaderName = (str) => /^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(str.trim());
+function matchHeaderValue(context, value, header, filter2, isHeaderNameFilter) {
+  if (utils$1.isFunction(filter2)) {
+    return filter2.call(this, value, header);
+  }
+  if (isHeaderNameFilter) {
+    value = header;
+  }
+  if (!utils$1.isString(value)) return;
+  if (utils$1.isString(filter2)) {
+    return value.indexOf(filter2) !== -1;
+  }
+  if (utils$1.isRegExp(filter2)) {
+    return filter2.test(value);
+  }
+}
+function formatHeader(header) {
+  return header.trim().toLowerCase().replace(/([a-z\d])(\w*)/g, (w, char, str) => {
+    return char.toUpperCase() + str;
+  });
+}
+function buildAccessors(obj, header) {
+  const accessorName = utils$1.toCamelCase(" " + header);
+  ["get", "set", "has"].forEach((methodName) => {
+    Object.defineProperty(obj, methodName + accessorName, {
+      value: function(arg1, arg2, arg3) {
+        return this[methodName].call(this, header, arg1, arg2, arg3);
+      },
+      configurable: true
+    });
+  });
+}
+let AxiosHeaders$1 = class AxiosHeaders {
+  constructor(headers) {
+    headers && this.set(headers);
+  }
+  set(header, valueOrRewrite, rewrite) {
+    const self2 = this;
+    function setHeader(_value, _header, _rewrite) {
+      const lHeader = normalizeHeader(_header);
+      if (!lHeader) {
+        throw new Error("header name must be a non-empty string");
+      }
+      const key = utils$1.findKey(self2, lHeader);
+      if (!key || self2[key] === void 0 || _rewrite === true || _rewrite === void 0 && self2[key] !== false) {
+        self2[key || _header] = normalizeValue(_value);
+      }
+    }
+    const setHeaders = (headers, _rewrite) => utils$1.forEach(headers, (_value, _header) => setHeader(_value, _header, _rewrite));
+    if (utils$1.isPlainObject(header) || header instanceof this.constructor) {
+      setHeaders(header, valueOrRewrite);
+    } else if (utils$1.isString(header) && (header = header.trim()) && !isValidHeaderName(header)) {
+      setHeaders(parseHeaders(header), valueOrRewrite);
+    } else if (utils$1.isObject(header) && utils$1.isIterable(header)) {
+      let obj = {}, dest, key;
+      for (const entry of header) {
+        if (!utils$1.isArray(entry)) {
+          throw TypeError("Object iterator must return a key-value pair");
+        }
+        obj[key = entry[0]] = (dest = obj[key]) ? utils$1.isArray(dest) ? [...dest, entry[1]] : [dest, entry[1]] : entry[1];
+      }
+      setHeaders(obj, valueOrRewrite);
+    } else {
+      header != null && setHeader(valueOrRewrite, header, rewrite);
+    }
+    return this;
+  }
+  get(header, parser2) {
+    header = normalizeHeader(header);
+    if (header) {
+      const key = utils$1.findKey(this, header);
+      if (key) {
+        const value = this[key];
+        if (!parser2) {
+          return value;
+        }
+        if (parser2 === true) {
+          return parseTokens(value);
+        }
+        if (utils$1.isFunction(parser2)) {
+          return parser2.call(this, value, key);
+        }
+        if (utils$1.isRegExp(parser2)) {
+          return parser2.exec(value);
+        }
+        throw new TypeError("parser must be boolean|regexp|function");
+      }
+    }
+  }
+  has(header, matcher) {
+    header = normalizeHeader(header);
+    if (header) {
+      const key = utils$1.findKey(this, header);
+      return !!(key && this[key] !== void 0 && (!matcher || matchHeaderValue(this, this[key], key, matcher)));
+    }
+    return false;
+  }
+  delete(header, matcher) {
+    const self2 = this;
+    let deleted = false;
+    function deleteHeader(_header) {
+      _header = normalizeHeader(_header);
+      if (_header) {
+        const key = utils$1.findKey(self2, _header);
+        if (key && (!matcher || matchHeaderValue(self2, self2[key], key, matcher))) {
+          delete self2[key];
+          deleted = true;
+        }
+      }
+    }
+    if (utils$1.isArray(header)) {
+      header.forEach(deleteHeader);
+    } else {
+      deleteHeader(header);
+    }
+    return deleted;
+  }
+  clear(matcher) {
+    const keys = Object.keys(this);
+    let i = keys.length;
+    let deleted = false;
+    while (i--) {
+      const key = keys[i];
+      if (!matcher || matchHeaderValue(this, this[key], key, matcher, true)) {
+        delete this[key];
+        deleted = true;
+      }
+    }
+    return deleted;
+  }
+  normalize(format) {
+    const self2 = this;
+    const headers = {};
+    utils$1.forEach(this, (value, header) => {
+      const key = utils$1.findKey(headers, header);
+      if (key) {
+        self2[key] = normalizeValue(value);
+        delete self2[header];
+        return;
+      }
+      const normalized = format ? formatHeader(header) : String(header).trim();
+      if (normalized !== header) {
+        delete self2[header];
+      }
+      self2[normalized] = normalizeValue(value);
+      headers[normalized] = true;
+    });
+    return this;
+  }
+  concat(...targets) {
+    return this.constructor.concat(this, ...targets);
+  }
+  toJSON(asStrings) {
+    const obj = /* @__PURE__ */ Object.create(null);
+    utils$1.forEach(this, (value, header) => {
+      value != null && value !== false && (obj[header] = asStrings && utils$1.isArray(value) ? value.join(", ") : value);
+    });
+    return obj;
+  }
+  [Symbol.iterator]() {
+    return Object.entries(this.toJSON())[Symbol.iterator]();
+  }
+  toString() {
+    return Object.entries(this.toJSON()).map(([header, value]) => header + ": " + value).join("\n");
+  }
+  getSetCookie() {
+    return this.get("set-cookie") || [];
+  }
+  get [Symbol.toStringTag]() {
+    return "AxiosHeaders";
+  }
+  static from(thing) {
+    return thing instanceof this ? thing : new this(thing);
+  }
+  static concat(first, ...targets) {
+    const computed = new this(first);
+    targets.forEach((target) => computed.set(target));
+    return computed;
+  }
+  static accessor(header) {
+    const internals = this[$internals] = this[$internals] = {
+      accessors: {}
+    };
+    const accessors = internals.accessors;
+    const prototype2 = this.prototype;
+    function defineAccessor(_header) {
+      const lHeader = normalizeHeader(_header);
+      if (!accessors[lHeader]) {
+        buildAccessors(prototype2, _header);
+        accessors[lHeader] = true;
+      }
+    }
+    utils$1.isArray(header) ? header.forEach(defineAccessor) : defineAccessor(header);
+    return this;
+  }
+};
+AxiosHeaders$1.accessor(["Content-Type", "Content-Length", "Accept", "Accept-Encoding", "User-Agent", "Authorization"]);
+utils$1.reduceDescriptors(AxiosHeaders$1.prototype, ({ value }, key) => {
+  let mapped = key[0].toUpperCase() + key.slice(1);
+  return {
+    get: () => value,
+    set(headerValue) {
+      this[mapped] = headerValue;
+    }
+  };
+});
+utils$1.freezeMethods(AxiosHeaders$1);
+function transformData(fns, response) {
+  const config = this || defaults;
+  const context = response || config;
+  const headers = AxiosHeaders$1.from(context.headers);
+  let data = context.data;
+  utils$1.forEach(fns, function transform(fn2) {
+    data = fn2.call(config, data, headers.normalize(), response ? response.status : void 0);
+  });
+  headers.normalize();
+  return data;
+}
+function isCancel$1(value) {
+  return !!(value && value.__CANCEL__);
+}
+function CanceledError$1(message, config, request) {
+  AxiosError$1.call(this, message == null ? "canceled" : message, AxiosError$1.ERR_CANCELED, config, request);
+  this.name = "CanceledError";
+}
+utils$1.inherits(CanceledError$1, AxiosError$1, {
+  __CANCEL__: true
+});
+function settle(resolve, reject, response) {
+  const validateStatus2 = response.config.validateStatus;
+  if (!response.status || !validateStatus2 || validateStatus2(response.status)) {
+    resolve(response);
+  } else {
+    reject(new AxiosError$1(
+      "Request failed with status code " + response.status,
+      [AxiosError$1.ERR_BAD_REQUEST, AxiosError$1.ERR_BAD_RESPONSE][Math.floor(response.status / 100) - 4],
+      response.config,
+      response.request,
+      response
+    ));
+  }
+}
+function parseProtocol(url) {
+  const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
+  return match && match[1] || "";
+}
+function speedometer(samplesCount, min) {
+  samplesCount = samplesCount || 10;
+  const bytes = new Array(samplesCount);
+  const timestamps = new Array(samplesCount);
+  let head = 0;
+  let tail = 0;
+  let firstSampleTS;
+  min = min !== void 0 ? min : 1e3;
+  return function push(chunkLength) {
+    const now = Date.now();
+    const startedAt = timestamps[tail];
+    if (!firstSampleTS) {
+      firstSampleTS = now;
+    }
+    bytes[head] = chunkLength;
+    timestamps[head] = now;
+    let i = tail;
+    let bytesCount = 0;
+    while (i !== head) {
+      bytesCount += bytes[i++];
+      i = i % samplesCount;
+    }
+    head = (head + 1) % samplesCount;
+    if (head === tail) {
+      tail = (tail + 1) % samplesCount;
+    }
+    if (now - firstSampleTS < min) {
+      return;
+    }
+    const passed = startedAt && now - startedAt;
+    return passed ? Math.round(bytesCount * 1e3 / passed) : void 0;
+  };
+}
+function throttle(fn2, freq) {
+  let timestamp = 0;
+  let threshold = 1e3 / freq;
+  let lastArgs;
+  let timer;
+  const invoke = (args, now = Date.now()) => {
+    timestamp = now;
+    lastArgs = null;
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    fn2(...args);
+  };
+  const throttled = (...args) => {
+    const now = Date.now();
+    const passed = now - timestamp;
+    if (passed >= threshold) {
+      invoke(args, now);
+    } else {
+      lastArgs = args;
+      if (!timer) {
+        timer = setTimeout(() => {
+          timer = null;
+          invoke(lastArgs);
+        }, threshold - passed);
+      }
+    }
+  };
+  const flush = () => lastArgs && invoke(lastArgs);
+  return [throttled, flush];
+}
+const progressEventReducer = (listener, isDownloadStream, freq = 3) => {
+  let bytesNotified = 0;
+  const _speedometer = speedometer(50, 250);
+  return throttle((e) => {
+    const loaded = e.loaded;
+    const total = e.lengthComputable ? e.total : void 0;
+    const progressBytes = loaded - bytesNotified;
+    const rate = _speedometer(progressBytes);
+    const inRange = loaded <= total;
+    bytesNotified = loaded;
+    const data = {
+      loaded,
+      total,
+      progress: total ? loaded / total : void 0,
+      bytes: progressBytes,
+      rate: rate ? rate : void 0,
+      estimated: rate && total && inRange ? (total - loaded) / rate : void 0,
+      event: e,
+      lengthComputable: total != null,
+      [isDownloadStream ? "download" : "upload"]: true
+    };
+    listener(data);
+  }, freq);
+};
+const progressEventDecorator = (total, throttled) => {
+  const lengthComputable = total != null;
+  return [(loaded) => throttled[0]({
+    lengthComputable,
+    total,
+    loaded
+  }), throttled[1]];
+};
+const asyncDecorator = (fn2) => (...args) => utils$1.asap(() => fn2(...args));
+const isURLSameOrigin = platform.hasStandardBrowserEnv ? /* @__PURE__ */ ((origin2, isMSIE) => (url) => {
+  url = new URL(url, platform.origin);
+  return origin2.protocol === url.protocol && origin2.host === url.host && (isMSIE || origin2.port === url.port);
+})(
+  new URL(platform.origin),
+  platform.navigator && /(msie|trident)/i.test(platform.navigator.userAgent)
+) : () => true;
+const cookies = platform.hasStandardBrowserEnv ? (
+  // Standard browser envs support document.cookie
+  {
+    write(name, value, expires, path, domain, secure, sameSite) {
+      if (typeof document === "undefined") return;
+      const cookie = [`${name}=${encodeURIComponent(value)}`];
+      if (utils$1.isNumber(expires)) {
+        cookie.push(`expires=${new Date(expires).toUTCString()}`);
+      }
+      if (utils$1.isString(path)) {
+        cookie.push(`path=${path}`);
+      }
+      if (utils$1.isString(domain)) {
+        cookie.push(`domain=${domain}`);
+      }
+      if (secure === true) {
+        cookie.push("secure");
+      }
+      if (utils$1.isString(sameSite)) {
+        cookie.push(`SameSite=${sameSite}`);
+      }
+      document.cookie = cookie.join("; ");
+    },
+    read(name) {
+      if (typeof document === "undefined") return null;
+      const match = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+      return match ? decodeURIComponent(match[1]) : null;
+    },
+    remove(name) {
+      this.write(name, "", Date.now() - 864e5, "/");
+    }
+  }
+) : (
+  // Non-standard browser env (web workers, react-native) lack needed support.
+  {
+    write() {
+    },
+    read() {
+      return null;
+    },
+    remove() {
+    }
+  }
+);
+function isAbsoluteURL(url) {
+  return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
+}
+function combineURLs(baseURL, relativeURL) {
+  return relativeURL ? baseURL.replace(/\/?\/$/, "") + "/" + relativeURL.replace(/^\/+/, "") : baseURL;
+}
+function buildFullPath(baseURL, requestedURL, allowAbsoluteUrls) {
+  let isRelativeUrl = !isAbsoluteURL(requestedURL);
+  if (baseURL && (isRelativeUrl || allowAbsoluteUrls == false)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+}
+const headersToObject = (thing) => thing instanceof AxiosHeaders$1 ? { ...thing } : thing;
+function mergeConfig$1(config1, config2) {
+  config2 = config2 || {};
+  const config = {};
+  function getMergedValue(target, source, prop, caseless) {
+    if (utils$1.isPlainObject(target) && utils$1.isPlainObject(source)) {
+      return utils$1.merge.call({ caseless }, target, source);
+    } else if (utils$1.isPlainObject(source)) {
+      return utils$1.merge({}, source);
+    } else if (utils$1.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+  function mergeDeepProperties(a, b, prop, caseless) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(a, b, prop, caseless);
+    } else if (!utils$1.isUndefined(a)) {
+      return getMergedValue(void 0, a, prop, caseless);
+    }
+  }
+  function valueFromConfig2(a, b) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(void 0, b);
+    }
+  }
+  function defaultToConfig2(a, b) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(void 0, b);
+    } else if (!utils$1.isUndefined(a)) {
+      return getMergedValue(void 0, a);
+    }
+  }
+  function mergeDirectKeys(a, b, prop) {
+    if (prop in config2) {
+      return getMergedValue(a, b);
+    } else if (prop in config1) {
+      return getMergedValue(void 0, a);
+    }
+  }
+  const mergeMap = {
+    url: valueFromConfig2,
+    method: valueFromConfig2,
+    data: valueFromConfig2,
+    baseURL: defaultToConfig2,
+    transformRequest: defaultToConfig2,
+    transformResponse: defaultToConfig2,
+    paramsSerializer: defaultToConfig2,
+    timeout: defaultToConfig2,
+    timeoutMessage: defaultToConfig2,
+    withCredentials: defaultToConfig2,
+    withXSRFToken: defaultToConfig2,
+    adapter: defaultToConfig2,
+    responseType: defaultToConfig2,
+    xsrfCookieName: defaultToConfig2,
+    xsrfHeaderName: defaultToConfig2,
+    onUploadProgress: defaultToConfig2,
+    onDownloadProgress: defaultToConfig2,
+    decompress: defaultToConfig2,
+    maxContentLength: defaultToConfig2,
+    maxBodyLength: defaultToConfig2,
+    beforeRedirect: defaultToConfig2,
+    transport: defaultToConfig2,
+    httpAgent: defaultToConfig2,
+    httpsAgent: defaultToConfig2,
+    cancelToken: defaultToConfig2,
+    socketPath: defaultToConfig2,
+    responseEncoding: defaultToConfig2,
+    validateStatus: mergeDirectKeys,
+    headers: (a, b, prop) => mergeDeepProperties(headersToObject(a), headersToObject(b), prop, true)
+  };
+  utils$1.forEach(Object.keys({ ...config1, ...config2 }), function computeConfigValue(prop) {
+    const merge2 = mergeMap[prop] || mergeDeepProperties;
+    const configValue = merge2(config1[prop], config2[prop], prop);
+    utils$1.isUndefined(configValue) && merge2 !== mergeDirectKeys || (config[prop] = configValue);
+  });
+  return config;
+}
+const resolveConfig = (config) => {
+  const newConfig = mergeConfig$1({}, config);
+  let { data, withXSRFToken, xsrfHeaderName, xsrfCookieName, headers, auth } = newConfig;
+  newConfig.headers = headers = AxiosHeaders$1.from(headers);
+  newConfig.url = buildURL(buildFullPath(newConfig.baseURL, newConfig.url, newConfig.allowAbsoluteUrls), config.params, config.paramsSerializer);
+  if (auth) {
+    headers.set(
+      "Authorization",
+      "Basic " + btoa((auth.username || "") + ":" + (auth.password ? unescape(encodeURIComponent(auth.password)) : ""))
+    );
+  }
+  if (utils$1.isFormData(data)) {
+    if (platform.hasStandardBrowserEnv || platform.hasStandardBrowserWebWorkerEnv) {
+      headers.setContentType(void 0);
+    } else if (utils$1.isFunction(data.getHeaders)) {
+      const formHeaders = data.getHeaders();
+      const allowedHeaders = ["content-type", "content-length"];
+      Object.entries(formHeaders).forEach(([key, val]) => {
+        if (allowedHeaders.includes(key.toLowerCase())) {
+          headers.set(key, val);
+        }
+      });
+    }
+  }
+  if (platform.hasStandardBrowserEnv) {
+    withXSRFToken && utils$1.isFunction(withXSRFToken) && (withXSRFToken = withXSRFToken(newConfig));
+    if (withXSRFToken || withXSRFToken !== false && isURLSameOrigin(newConfig.url)) {
+      const xsrfValue = xsrfHeaderName && xsrfCookieName && cookies.read(xsrfCookieName);
+      if (xsrfValue) {
+        headers.set(xsrfHeaderName, xsrfValue);
+      }
+    }
+  }
+  return newConfig;
+};
+const isXHRAdapterSupported = typeof XMLHttpRequest !== "undefined";
+const xhrAdapter = isXHRAdapterSupported && function(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    const _config = resolveConfig(config);
+    let requestData = _config.data;
+    const requestHeaders = AxiosHeaders$1.from(_config.headers).normalize();
+    let { responseType, onUploadProgress, onDownloadProgress } = _config;
+    let onCanceled;
+    let uploadThrottled, downloadThrottled;
+    let flushUpload, flushDownload;
+    function done() {
+      flushUpload && flushUpload();
+      flushDownload && flushDownload();
+      _config.cancelToken && _config.cancelToken.unsubscribe(onCanceled);
+      _config.signal && _config.signal.removeEventListener("abort", onCanceled);
+    }
+    let request = new XMLHttpRequest();
+    request.open(_config.method.toUpperCase(), _config.url, true);
+    request.timeout = _config.timeout;
+    function onloadend() {
+      if (!request) {
+        return;
+      }
+      const responseHeaders = AxiosHeaders$1.from(
+        "getAllResponseHeaders" in request && request.getAllResponseHeaders()
+      );
+      const responseData = !responseType || responseType === "text" || responseType === "json" ? request.responseText : request.response;
+      const response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config,
+        request
+      };
+      settle(function _resolve(value) {
+        resolve(value);
+        done();
+      }, function _reject(err) {
+        reject(err);
+        done();
+      }, response);
+      request = null;
+    }
+    if ("onloadend" in request) {
+      request.onloadend = onloadend;
+    } else {
+      request.onreadystatechange = function handleLoad() {
+        if (!request || request.readyState !== 4) {
+          return;
+        }
+        if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf("file:") === 0)) {
+          return;
+        }
+        setTimeout(onloadend);
+      };
+    }
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+      reject(new AxiosError$1("Request aborted", AxiosError$1.ECONNABORTED, config, request));
+      request = null;
+    };
+    request.onerror = function handleError(event) {
+      const msg = event && event.message ? event.message : "Network Error";
+      const err = new AxiosError$1(msg, AxiosError$1.ERR_NETWORK, config, request);
+      err.event = event || null;
+      reject(err);
+      request = null;
+    };
+    request.ontimeout = function handleTimeout() {
+      let timeoutErrorMessage = _config.timeout ? "timeout of " + _config.timeout + "ms exceeded" : "timeout exceeded";
+      const transitional2 = _config.transitional || transitionalDefaults;
+      if (_config.timeoutErrorMessage) {
+        timeoutErrorMessage = _config.timeoutErrorMessage;
+      }
+      reject(new AxiosError$1(
+        timeoutErrorMessage,
+        transitional2.clarifyTimeoutError ? AxiosError$1.ETIMEDOUT : AxiosError$1.ECONNABORTED,
+        config,
+        request
+      ));
+      request = null;
+    };
+    requestData === void 0 && requestHeaders.setContentType(null);
+    if ("setRequestHeader" in request) {
+      utils$1.forEach(requestHeaders.toJSON(), function setRequestHeader(val, key) {
+        request.setRequestHeader(key, val);
+      });
+    }
+    if (!utils$1.isUndefined(_config.withCredentials)) {
+      request.withCredentials = !!_config.withCredentials;
+    }
+    if (responseType && responseType !== "json") {
+      request.responseType = _config.responseType;
+    }
+    if (onDownloadProgress) {
+      [downloadThrottled, flushDownload] = progressEventReducer(onDownloadProgress, true);
+      request.addEventListener("progress", downloadThrottled);
+    }
+    if (onUploadProgress && request.upload) {
+      [uploadThrottled, flushUpload] = progressEventReducer(onUploadProgress);
+      request.upload.addEventListener("progress", uploadThrottled);
+      request.upload.addEventListener("loadend", flushUpload);
+    }
+    if (_config.cancelToken || _config.signal) {
+      onCanceled = (cancel) => {
+        if (!request) {
+          return;
+        }
+        reject(!cancel || cancel.type ? new CanceledError$1(null, config, request) : cancel);
+        request.abort();
+        request = null;
+      };
+      _config.cancelToken && _config.cancelToken.subscribe(onCanceled);
+      if (_config.signal) {
+        _config.signal.aborted ? onCanceled() : _config.signal.addEventListener("abort", onCanceled);
+      }
+    }
+    const protocol = parseProtocol(_config.url);
+    if (protocol && platform.protocols.indexOf(protocol) === -1) {
+      reject(new AxiosError$1("Unsupported protocol " + protocol + ":", AxiosError$1.ERR_BAD_REQUEST, config));
+      return;
+    }
+    request.send(requestData || null);
+  });
+};
+const composeSignals = (signals, timeout) => {
+  const { length } = signals = signals ? signals.filter(Boolean) : [];
+  if (timeout || length) {
+    let controller = new AbortController();
+    let aborted;
+    const onabort = function(reason) {
+      if (!aborted) {
+        aborted = true;
+        unsubscribe();
+        const err = reason instanceof Error ? reason : this.reason;
+        controller.abort(err instanceof AxiosError$1 ? err : new CanceledError$1(err instanceof Error ? err.message : err));
+      }
+    };
+    let timer = timeout && setTimeout(() => {
+      timer = null;
+      onabort(new AxiosError$1(`timeout ${timeout} of ms exceeded`, AxiosError$1.ETIMEDOUT));
+    }, timeout);
+    const unsubscribe = () => {
+      if (signals) {
+        timer && clearTimeout(timer);
+        timer = null;
+        signals.forEach((signal2) => {
+          signal2.unsubscribe ? signal2.unsubscribe(onabort) : signal2.removeEventListener("abort", onabort);
+        });
+        signals = null;
+      }
+    };
+    signals.forEach((signal2) => signal2.addEventListener("abort", onabort));
+    const { signal } = controller;
+    signal.unsubscribe = () => utils$1.asap(unsubscribe);
+    return signal;
+  }
+};
+const streamChunk = function* (chunk, chunkSize) {
+  let len = chunk.byteLength;
+  if (len < chunkSize) {
+    yield chunk;
+    return;
+  }
+  let pos = 0;
+  let end;
+  while (pos < len) {
+    end = pos + chunkSize;
+    yield chunk.slice(pos, end);
+    pos = end;
+  }
+};
+const readBytes = async function* (iterable, chunkSize) {
+  for await (const chunk of readStream(iterable)) {
+    yield* streamChunk(chunk, chunkSize);
+  }
+};
+const readStream = async function* (stream) {
+  if (stream[Symbol.asyncIterator]) {
+    yield* stream;
+    return;
+  }
+  const reader = stream.getReader();
+  try {
+    for (; ; ) {
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
+      }
+      yield value;
+    }
+  } finally {
+    await reader.cancel();
+  }
+};
+const trackStream = (stream, chunkSize, onProgress, onFinish) => {
+  const iterator2 = readBytes(stream, chunkSize);
+  let bytes = 0;
+  let done;
+  let _onFinish = (e) => {
+    if (!done) {
+      done = true;
+      onFinish && onFinish(e);
+    }
+  };
+  return new ReadableStream({
+    async pull(controller) {
+      try {
+        const { done: done2, value } = await iterator2.next();
+        if (done2) {
+          _onFinish();
+          controller.close();
+          return;
+        }
+        let len = value.byteLength;
+        if (onProgress) {
+          let loadedBytes = bytes += len;
+          onProgress(loadedBytes);
+        }
+        controller.enqueue(new Uint8Array(value));
+      } catch (err) {
+        _onFinish(err);
+        throw err;
+      }
+    },
+    cancel(reason) {
+      _onFinish(reason);
+      return iterator2.return();
+    }
+  }, {
+    highWaterMark: 2
+  });
+};
+const DEFAULT_CHUNK_SIZE = 64 * 1024;
+const { isFunction: isFunction$2 } = utils$1;
+const globalFetchAPI = (({ Request, Response }) => ({
+  Request,
+  Response
+}))(utils$1.global);
+const {
+  ReadableStream: ReadableStream$1,
+  TextEncoder
+} = utils$1.global;
+const test = (fn2, ...args) => {
+  try {
+    return !!fn2(...args);
+  } catch (e) {
+    return false;
+  }
+};
+const factory = (env2) => {
+  env2 = utils$1.merge.call({
+    skipUndefined: true
+  }, globalFetchAPI, env2);
+  const { fetch: envFetch, Request, Response } = env2;
+  const isFetchSupported = envFetch ? isFunction$2(envFetch) : typeof fetch === "function";
+  const isRequestSupported = isFunction$2(Request);
+  const isResponseSupported = isFunction$2(Response);
+  if (!isFetchSupported) {
+    return false;
+  }
+  const isReadableStreamSupported = isFetchSupported && isFunction$2(ReadableStream$1);
+  const encodeText = isFetchSupported && (typeof TextEncoder === "function" ? /* @__PURE__ */ ((encoder) => (str) => encoder.encode(str))(new TextEncoder()) : async (str) => new Uint8Array(await new Request(str).arrayBuffer()));
+  const supportsRequestStream = isRequestSupported && isReadableStreamSupported && test(() => {
+    let duplexAccessed = false;
+    const hasContentType = new Request(platform.origin, {
+      body: new ReadableStream$1(),
+      method: "POST",
+      get duplex() {
+        duplexAccessed = true;
+        return "half";
+      }
+    }).headers.has("Content-Type");
+    return duplexAccessed && !hasContentType;
+  });
+  const supportsResponseStream = isResponseSupported && isReadableStreamSupported && test(() => utils$1.isReadableStream(new Response("").body));
+  const resolvers = {
+    stream: supportsResponseStream && ((res) => res.body)
+  };
+  isFetchSupported && (() => {
+    ["text", "arrayBuffer", "blob", "formData", "stream"].forEach((type) => {
+      !resolvers[type] && (resolvers[type] = (res, config) => {
+        let method = res && res[type];
+        if (method) {
+          return method.call(res);
+        }
+        throw new AxiosError$1(`Response type '${type}' is not supported`, AxiosError$1.ERR_NOT_SUPPORT, config);
+      });
+    });
+  })();
+  const getBodyLength = async (body) => {
+    if (body == null) {
+      return 0;
+    }
+    if (utils$1.isBlob(body)) {
+      return body.size;
+    }
+    if (utils$1.isSpecCompliantForm(body)) {
+      const _request = new Request(platform.origin, {
+        method: "POST",
+        body
+      });
+      return (await _request.arrayBuffer()).byteLength;
+    }
+    if (utils$1.isArrayBufferView(body) || utils$1.isArrayBuffer(body)) {
+      return body.byteLength;
+    }
+    if (utils$1.isURLSearchParams(body)) {
+      body = body + "";
+    }
+    if (utils$1.isString(body)) {
+      return (await encodeText(body)).byteLength;
+    }
+  };
+  const resolveBodyLength = async (headers, body) => {
+    const length = utils$1.toFiniteNumber(headers.getContentLength());
+    return length == null ? getBodyLength(body) : length;
+  };
+  return async (config) => {
+    let {
+      url,
+      method,
+      data,
+      signal,
+      cancelToken,
+      timeout,
+      onDownloadProgress,
+      onUploadProgress,
+      responseType,
+      headers,
+      withCredentials = "same-origin",
+      fetchOptions
+    } = resolveConfig(config);
+    let _fetch = envFetch || fetch;
+    responseType = responseType ? (responseType + "").toLowerCase() : "text";
+    let composedSignal = composeSignals([signal, cancelToken && cancelToken.toAbortSignal()], timeout);
+    let request = null;
+    const unsubscribe = composedSignal && composedSignal.unsubscribe && (() => {
+      composedSignal.unsubscribe();
+    });
+    let requestContentLength;
+    try {
+      if (onUploadProgress && supportsRequestStream && method !== "get" && method !== "head" && (requestContentLength = await resolveBodyLength(headers, data)) !== 0) {
+        let _request = new Request(url, {
+          method: "POST",
+          body: data,
+          duplex: "half"
+        });
+        let contentTypeHeader;
+        if (utils$1.isFormData(data) && (contentTypeHeader = _request.headers.get("content-type"))) {
+          headers.setContentType(contentTypeHeader);
+        }
+        if (_request.body) {
+          const [onProgress, flush] = progressEventDecorator(
+            requestContentLength,
+            progressEventReducer(asyncDecorator(onUploadProgress))
+          );
+          data = trackStream(_request.body, DEFAULT_CHUNK_SIZE, onProgress, flush);
+        }
+      }
+      if (!utils$1.isString(withCredentials)) {
+        withCredentials = withCredentials ? "include" : "omit";
+      }
+      const isCredentialsSupported = isRequestSupported && "credentials" in Request.prototype;
+      const resolvedOptions = {
+        ...fetchOptions,
+        signal: composedSignal,
+        method: method.toUpperCase(),
+        headers: headers.normalize().toJSON(),
+        body: data,
+        duplex: "half",
+        credentials: isCredentialsSupported ? withCredentials : void 0
+      };
+      request = isRequestSupported && new Request(url, resolvedOptions);
+      let response = await (isRequestSupported ? _fetch(request, fetchOptions) : _fetch(url, resolvedOptions));
+      const isStreamResponse = supportsResponseStream && (responseType === "stream" || responseType === "response");
+      if (supportsResponseStream && (onDownloadProgress || isStreamResponse && unsubscribe)) {
+        const options = {};
+        ["status", "statusText", "headers"].forEach((prop) => {
+          options[prop] = response[prop];
+        });
+        const responseContentLength = utils$1.toFiniteNumber(response.headers.get("content-length"));
+        const [onProgress, flush] = onDownloadProgress && progressEventDecorator(
+          responseContentLength,
+          progressEventReducer(asyncDecorator(onDownloadProgress), true)
+        ) || [];
+        response = new Response(
+          trackStream(response.body, DEFAULT_CHUNK_SIZE, onProgress, () => {
+            flush && flush();
+            unsubscribe && unsubscribe();
+          }),
+          options
+        );
+      }
+      responseType = responseType || "text";
+      let responseData = await resolvers[utils$1.findKey(resolvers, responseType) || "text"](response, config);
+      !isStreamResponse && unsubscribe && unsubscribe();
+      return await new Promise((resolve, reject) => {
+        settle(resolve, reject, {
+          data: responseData,
+          headers: AxiosHeaders$1.from(response.headers),
+          status: response.status,
+          statusText: response.statusText,
+          config,
+          request
+        });
+      });
+    } catch (err) {
+      unsubscribe && unsubscribe();
+      if (err && err.name === "TypeError" && /Load failed|fetch/i.test(err.message)) {
+        throw Object.assign(
+          new AxiosError$1("Network Error", AxiosError$1.ERR_NETWORK, config, request),
+          {
+            cause: err.cause || err
+          }
+        );
+      }
+      throw AxiosError$1.from(err, err && err.code, config, request);
+    }
+  };
+};
+const seedCache = /* @__PURE__ */ new Map();
+const getFetch = (config) => {
+  let env2 = config && config.env || {};
+  const { fetch: fetch2, Request, Response } = env2;
+  const seeds = [
+    Request,
+    Response,
+    fetch2
+  ];
+  let len = seeds.length, i = len, seed, target, map = seedCache;
+  while (i--) {
+    seed = seeds[i];
+    target = map.get(seed);
+    target === void 0 && map.set(seed, target = i ? /* @__PURE__ */ new Map() : factory(env2));
+    map = target;
+  }
+  return target;
+};
+getFetch();
+const knownAdapters = {
+  http: httpAdapter,
+  xhr: xhrAdapter,
+  fetch: {
+    get: getFetch
+  }
+};
+utils$1.forEach(knownAdapters, (fn2, value) => {
+  if (fn2) {
+    try {
+      Object.defineProperty(fn2, "name", { value });
+    } catch (e) {
+    }
+    Object.defineProperty(fn2, "adapterName", { value });
+  }
+});
+const renderReason = (reason) => `- ${reason}`;
+const isResolvedHandle = (adapter) => utils$1.isFunction(adapter) || adapter === null || adapter === false;
+function getAdapter$1(adapters2, config) {
+  adapters2 = utils$1.isArray(adapters2) ? adapters2 : [adapters2];
+  const { length } = adapters2;
+  let nameOrAdapter;
+  let adapter;
+  const rejectedReasons = {};
+  for (let i = 0; i < length; i++) {
+    nameOrAdapter = adapters2[i];
+    let id2;
+    adapter = nameOrAdapter;
+    if (!isResolvedHandle(nameOrAdapter)) {
+      adapter = knownAdapters[(id2 = String(nameOrAdapter)).toLowerCase()];
+      if (adapter === void 0) {
+        throw new AxiosError$1(`Unknown adapter '${id2}'`);
+      }
+    }
+    if (adapter && (utils$1.isFunction(adapter) || (adapter = adapter.get(config)))) {
+      break;
+    }
+    rejectedReasons[id2 || "#" + i] = adapter;
+  }
+  if (!adapter) {
+    const reasons = Object.entries(rejectedReasons).map(
+      ([id2, state]) => `adapter ${id2} ` + (state === false ? "is not supported by the environment" : "is not available in the build")
+    );
+    let s = length ? reasons.length > 1 ? "since :\n" + reasons.map(renderReason).join("\n") : " " + renderReason(reasons[0]) : "as no adapter specified";
+    throw new AxiosError$1(
+      `There is no suitable adapter to dispatch the request ` + s,
+      "ERR_NOT_SUPPORT"
+    );
+  }
+  return adapter;
+}
+const adapters = {
+  /**
+   * Resolve an adapter from a list of adapter names or functions.
+   * @type {Function}
+   */
+  getAdapter: getAdapter$1,
+  /**
+   * Exposes all known adapters
+   * @type {Object<string, Function|Object>}
+   */
+  adapters: knownAdapters
+};
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+  if (config.signal && config.signal.aborted) {
+    throw new CanceledError$1(null, config);
+  }
+}
+function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+  config.headers = AxiosHeaders$1.from(config.headers);
+  config.data = transformData.call(
+    config,
+    config.transformRequest
+  );
+  if (["post", "put", "patch"].indexOf(config.method) !== -1) {
+    config.headers.setContentType("application/x-www-form-urlencoded", false);
+  }
+  const adapter = adapters.getAdapter(config.adapter || defaults.adapter, config);
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+    response.data = transformData.call(
+      config,
+      config.transformResponse,
+      response
+    );
+    response.headers = AxiosHeaders$1.from(response.headers);
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel$1(reason)) {
+      throwIfCancellationRequested(config);
+      if (reason && reason.response) {
+        reason.response.data = transformData.call(
+          config,
+          config.transformResponse,
+          reason.response
+        );
+        reason.response.headers = AxiosHeaders$1.from(reason.response.headers);
+      }
+    }
+    return Promise.reject(reason);
+  });
+}
+const VERSION$1 = "1.13.0";
+const validators$1 = {};
+["object", "boolean", "number", "function", "string", "symbol"].forEach((type, i) => {
+  validators$1[type] = function validator2(thing) {
+    return typeof thing === type || "a" + (i < 1 ? "n " : " ") + type;
+  };
+});
+const deprecatedWarnings = {};
+validators$1.transitional = function transitional(validator2, version, message) {
+  function formatMessage(opt, desc) {
+    return "[Axios v" + VERSION$1 + "] Transitional option '" + opt + "'" + desc + (message ? ". " + message : "");
+  }
+  return (value, opt, opts) => {
+    if (validator2 === false) {
+      throw new AxiosError$1(
+        formatMessage(opt, " has been removed" + (version ? " in " + version : "")),
+        AxiosError$1.ERR_DEPRECATED
+      );
+    }
+    if (version && !deprecatedWarnings[opt]) {
+      deprecatedWarnings[opt] = true;
+      console.warn(
+        formatMessage(
+          opt,
+          " has been deprecated since v" + version + " and will be removed in the near future"
+        )
+      );
+    }
+    return validator2 ? validator2(value, opt, opts) : true;
+  };
+};
+validators$1.spelling = function spelling(correctSpelling) {
+  return (value, opt) => {
+    console.warn(`${opt} is likely a misspelling of ${correctSpelling}`);
+    return true;
+  };
+};
+function assertOptions(options, schema, allowUnknown) {
+  if (typeof options !== "object") {
+    throw new AxiosError$1("options must be an object", AxiosError$1.ERR_BAD_OPTION_VALUE);
+  }
+  const keys = Object.keys(options);
+  let i = keys.length;
+  while (i-- > 0) {
+    const opt = keys[i];
+    const validator2 = schema[opt];
+    if (validator2) {
+      const value = options[opt];
+      const result = value === void 0 || validator2(value, opt, options);
+      if (result !== true) {
+        throw new AxiosError$1("option " + opt + " must be " + result, AxiosError$1.ERR_BAD_OPTION_VALUE);
+      }
+      continue;
+    }
+    if (allowUnknown !== true) {
+      throw new AxiosError$1("Unknown option " + opt, AxiosError$1.ERR_BAD_OPTION);
+    }
+  }
+}
+const validator = {
+  assertOptions,
+  validators: validators$1
+};
+const validators = validator.validators;
+let Axios$1 = class Axios {
+  constructor(instanceConfig) {
+    this.defaults = instanceConfig || {};
+    this.interceptors = {
+      request: new InterceptorManager(),
+      response: new InterceptorManager()
+    };
+  }
+  /**
+   * Dispatch a request
+   *
+   * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
+   * @param {?Object} config
+   *
+   * @returns {Promise} The Promise to be fulfilled
+   */
+  async request(configOrUrl, config) {
+    try {
+      return await this._request(configOrUrl, config);
+    } catch (err) {
+      if (err instanceof Error) {
+        let dummy = {};
+        Error.captureStackTrace ? Error.captureStackTrace(dummy) : dummy = new Error();
+        const stack = dummy.stack ? dummy.stack.replace(/^.+\n/, "") : "";
+        try {
+          if (!err.stack) {
+            err.stack = stack;
+          } else if (stack && !String(err.stack).endsWith(stack.replace(/^.+\n.+\n/, ""))) {
+            err.stack += "\n" + stack;
+          }
+        } catch (e) {
+        }
+      }
+      throw err;
+    }
+  }
+  _request(configOrUrl, config) {
+    if (typeof configOrUrl === "string") {
+      config = config || {};
+      config.url = configOrUrl;
+    } else {
+      config = configOrUrl || {};
+    }
+    config = mergeConfig$1(this.defaults, config);
+    const { transitional: transitional2, paramsSerializer, headers } = config;
+    if (transitional2 !== void 0) {
+      validator.assertOptions(transitional2, {
+        silentJSONParsing: validators.transitional(validators.boolean),
+        forcedJSONParsing: validators.transitional(validators.boolean),
+        clarifyTimeoutError: validators.transitional(validators.boolean)
+      }, false);
+    }
+    if (paramsSerializer != null) {
+      if (utils$1.isFunction(paramsSerializer)) {
+        config.paramsSerializer = {
+          serialize: paramsSerializer
+        };
+      } else {
+        validator.assertOptions(paramsSerializer, {
+          encode: validators.function,
+          serialize: validators.function
+        }, true);
+      }
+    }
+    if (config.allowAbsoluteUrls !== void 0) ;
+    else if (this.defaults.allowAbsoluteUrls !== void 0) {
+      config.allowAbsoluteUrls = this.defaults.allowAbsoluteUrls;
+    } else {
+      config.allowAbsoluteUrls = true;
+    }
+    validator.assertOptions(config, {
+      baseUrl: validators.spelling("baseURL"),
+      withXsrfToken: validators.spelling("withXSRFToken")
+    }, true);
+    config.method = (config.method || this.defaults.method || "get").toLowerCase();
+    let contextHeaders = headers && utils$1.merge(
+      headers.common,
+      headers[config.method]
+    );
+    headers && utils$1.forEach(
+      ["delete", "get", "head", "post", "put", "patch", "common"],
+      (method) => {
+        delete headers[method];
+      }
+    );
+    config.headers = AxiosHeaders$1.concat(contextHeaders, headers);
+    const requestInterceptorChain = [];
+    let synchronousRequestInterceptors = true;
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+      if (typeof interceptor.runWhen === "function" && interceptor.runWhen(config) === false) {
+        return;
+      }
+      synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
+      requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
+    });
+    const responseInterceptorChain = [];
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+      responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
+    });
+    let promise;
+    let i = 0;
+    let len;
+    if (!synchronousRequestInterceptors) {
+      const chain = [dispatchRequest.bind(this), void 0];
+      chain.unshift(...requestInterceptorChain);
+      chain.push(...responseInterceptorChain);
+      len = chain.length;
+      promise = Promise.resolve(config);
+      while (i < len) {
+        promise = promise.then(chain[i++], chain[i++]);
+      }
+      return promise;
+    }
+    len = requestInterceptorChain.length;
+    let newConfig = config;
+    while (i < len) {
+      const onFulfilled = requestInterceptorChain[i++];
+      const onRejected = requestInterceptorChain[i++];
+      try {
+        newConfig = onFulfilled(newConfig);
+      } catch (error) {
+        onRejected.call(this, error);
+        break;
+      }
+    }
+    try {
+      promise = dispatchRequest.call(this, newConfig);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+    i = 0;
+    len = responseInterceptorChain.length;
+    while (i < len) {
+      promise = promise.then(responseInterceptorChain[i++], responseInterceptorChain[i++]);
+    }
+    return promise;
+  }
+  getUri(config) {
+    config = mergeConfig$1(this.defaults, config);
+    const fullPath = buildFullPath(config.baseURL, config.url, config.allowAbsoluteUrls);
+    return buildURL(fullPath, config.params, config.paramsSerializer);
+  }
+};
+utils$1.forEach(["delete", "get", "head", "options"], function forEachMethodNoData(method) {
+  Axios$1.prototype[method] = function(url, config) {
+    return this.request(mergeConfig$1(config || {}, {
+      method,
+      url,
+      data: (config || {}).data
+    }));
+  };
+});
+utils$1.forEach(["post", "put", "patch"], function forEachMethodWithData(method) {
+  function generateHTTPMethod(isForm) {
+    return function httpMethod(url, data, config) {
+      return this.request(mergeConfig$1(config || {}, {
+        method,
+        headers: isForm ? {
+          "Content-Type": "multipart/form-data"
+        } : {},
+        url,
+        data
+      }));
+    };
+  }
+  Axios$1.prototype[method] = generateHTTPMethod();
+  Axios$1.prototype[method + "Form"] = generateHTTPMethod(true);
+});
+let CancelToken$1 = class CancelToken {
+  constructor(executor) {
+    if (typeof executor !== "function") {
+      throw new TypeError("executor must be a function.");
+    }
+    let resolvePromise;
+    this.promise = new Promise(function promiseExecutor(resolve) {
+      resolvePromise = resolve;
+    });
+    const token = this;
+    this.promise.then((cancel) => {
+      if (!token._listeners) return;
+      let i = token._listeners.length;
+      while (i-- > 0) {
+        token._listeners[i](cancel);
+      }
+      token._listeners = null;
+    });
+    this.promise.then = (onfulfilled) => {
+      let _resolve;
+      const promise = new Promise((resolve) => {
+        token.subscribe(resolve);
+        _resolve = resolve;
+      }).then(onfulfilled);
+      promise.cancel = function reject() {
+        token.unsubscribe(_resolve);
+      };
+      return promise;
+    };
+    executor(function cancel(message, config, request) {
+      if (token.reason) {
+        return;
+      }
+      token.reason = new CanceledError$1(message, config, request);
+      resolvePromise(token.reason);
+    });
+  }
+  /**
+   * Throws a `CanceledError` if cancellation has been requested.
+   */
+  throwIfRequested() {
+    if (this.reason) {
+      throw this.reason;
+    }
+  }
+  /**
+   * Subscribe to the cancel signal
+   */
+  subscribe(listener) {
+    if (this.reason) {
+      listener(this.reason);
+      return;
+    }
+    if (this._listeners) {
+      this._listeners.push(listener);
+    } else {
+      this._listeners = [listener];
+    }
+  }
+  /**
+   * Unsubscribe from the cancel signal
+   */
+  unsubscribe(listener) {
+    if (!this._listeners) {
+      return;
+    }
+    const index = this._listeners.indexOf(listener);
+    if (index !== -1) {
+      this._listeners.splice(index, 1);
+    }
+  }
+  toAbortSignal() {
+    const controller = new AbortController();
+    const abort = (err) => {
+      controller.abort(err);
+    };
+    this.subscribe(abort);
+    controller.signal.unsubscribe = () => this.unsubscribe(abort);
+    return controller.signal;
+  }
+  /**
+   * Returns an object that contains a new `CancelToken` and a function that, when called,
+   * cancels the `CancelToken`.
+   */
+  static source() {
+    let cancel;
+    const token = new CancelToken(function executor(c) {
+      cancel = c;
+    });
+    return {
+      token,
+      cancel
+    };
+  }
+};
+function spread$1(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+}
+function isAxiosError$1(payload) {
+  return utils$1.isObject(payload) && payload.isAxiosError === true;
+}
+const HttpStatusCode$1 = {
+  Continue: 100,
+  SwitchingProtocols: 101,
+  Processing: 102,
+  EarlyHints: 103,
+  Ok: 200,
+  Created: 201,
+  Accepted: 202,
+  NonAuthoritativeInformation: 203,
+  NoContent: 204,
+  ResetContent: 205,
+  PartialContent: 206,
+  MultiStatus: 207,
+  AlreadyReported: 208,
+  ImUsed: 226,
+  MultipleChoices: 300,
+  MovedPermanently: 301,
+  Found: 302,
+  SeeOther: 303,
+  NotModified: 304,
+  UseProxy: 305,
+  Unused: 306,
+  TemporaryRedirect: 307,
+  PermanentRedirect: 308,
+  BadRequest: 400,
+  Unauthorized: 401,
+  PaymentRequired: 402,
+  Forbidden: 403,
+  NotFound: 404,
+  MethodNotAllowed: 405,
+  NotAcceptable: 406,
+  ProxyAuthenticationRequired: 407,
+  RequestTimeout: 408,
+  Conflict: 409,
+  Gone: 410,
+  LengthRequired: 411,
+  PreconditionFailed: 412,
+  PayloadTooLarge: 413,
+  UriTooLong: 414,
+  UnsupportedMediaType: 415,
+  RangeNotSatisfiable: 416,
+  ExpectationFailed: 417,
+  ImATeapot: 418,
+  MisdirectedRequest: 421,
+  UnprocessableEntity: 422,
+  Locked: 423,
+  FailedDependency: 424,
+  TooEarly: 425,
+  UpgradeRequired: 426,
+  PreconditionRequired: 428,
+  TooManyRequests: 429,
+  RequestHeaderFieldsTooLarge: 431,
+  UnavailableForLegalReasons: 451,
+  InternalServerError: 500,
+  NotImplemented: 501,
+  BadGateway: 502,
+  ServiceUnavailable: 503,
+  GatewayTimeout: 504,
+  HttpVersionNotSupported: 505,
+  VariantAlsoNegotiates: 506,
+  InsufficientStorage: 507,
+  LoopDetected: 508,
+  NotExtended: 510,
+  NetworkAuthenticationRequired: 511,
+  WebServerIsDown: 521,
+  ConnectionTimedOut: 522,
+  OriginIsUnreachable: 523,
+  TimeoutOccurred: 524,
+  SslHandshakeFailed: 525,
+  InvalidSslCertificate: 526
+};
+Object.entries(HttpStatusCode$1).forEach(([key, value]) => {
+  HttpStatusCode$1[value] = key;
+});
+function createInstance(defaultConfig) {
+  const context = new Axios$1(defaultConfig);
+  const instance = bind(Axios$1.prototype.request, context);
+  utils$1.extend(instance, Axios$1.prototype, context, { allOwnKeys: true });
+  utils$1.extend(instance, context, null, { allOwnKeys: true });
+  instance.create = function create2(instanceConfig) {
+    return createInstance(mergeConfig$1(defaultConfig, instanceConfig));
+  };
+  return instance;
+}
+const axios = createInstance(defaults);
+axios.Axios = Axios$1;
+axios.CanceledError = CanceledError$1;
+axios.CancelToken = CancelToken$1;
+axios.isCancel = isCancel$1;
+axios.VERSION = VERSION$1;
+axios.toFormData = toFormData$1;
+axios.AxiosError = AxiosError$1;
+axios.Cancel = axios.CanceledError;
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = spread$1;
+axios.isAxiosError = isAxiosError$1;
+axios.mergeConfig = mergeConfig$1;
+axios.AxiosHeaders = AxiosHeaders$1;
+axios.formToJSON = (thing) => formDataToJSON(utils$1.isHTMLForm(thing) ? new FormData(thing) : thing);
+axios.getAdapter = adapters.getAdapter;
+axios.HttpStatusCode = HttpStatusCode$1;
+axios.default = axios;
+const {
+  Axios: Axios2,
+  AxiosError,
+  CanceledError,
+  isCancel,
+  CancelToken: CancelToken2,
+  VERSION,
+  all: all2,
+  Cancel,
+  isAxiosError,
+  spread,
+  toFormData,
+  AxiosHeaders: AxiosHeaders2,
+  HttpStatusCode,
+  formToJSON,
+  getAdapter,
+  mergeConfig
+} = axios;
+const env = {
+  apiKey: "UMUDp6XpCeLe_ojMXhoJNEqBY-ICMhR6"
+};
+const api = axios.create({
+  // baseURL: env.apiBaseUrl,
+  baseURL: "https://directus.dijkstra.hu/",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${env.apiKey}`
+  },
+  timeout: TIMEOUTS.API_REQUEST
+});
+api.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+api.interceptors.response.use(
+  (res) => res,
+  (error) => {
+    {
+      console.error("API Error:", error.response?.data || error.message);
+    }
+    return Promise.reject(error);
+  }
+);
+const pagesService = {
+  // Fetch a page by its route
+  async getByRoute(params) {
+    console.log("pagesService.getByRoute - params:", params);
+    console.log(
+      "pagesService.getByRoute - API_ENDPOINTS.PAGES:",
+      API_ENDPOINTS.PAGES
+    );
+    console.log("pagesService.getByRoute - api:", api);
+    const response = await api.get("items/pages", {
+      params: {
+        filter: {
+          route: {
+            _eq: params.route
+          }
+        },
+        fields: [
+          "id",
+          "title",
+          "route",
+          "sections.id",
+          "sections.collection",
+          "sections.sort",
+          "sections.item.*",
+          "sections.item.containers.*",
+          "sections.item.containers.item.*",
+          "sections.item.containers.item.content.*",
+          "sections.item.containers.item.content.item.*",
+          "sections.item.containers.item.content.item.form.*",
+          "sections.item.containers.item.content.item.form.fields.*"
+        ].join(","),
+        limit: 1
+      }
+    });
+    console.log("pagesService.getByRoute - response:", response);
+    if (!response.data.data || response.data.data.length === 0) {
+      throw new Error("Page not found");
+    }
+    return {
+      data: response.data.data[0]
+    };
+  }
+};
+const collectionsService = {
+  // Fetch all fields for a collection
+  async getFields(collection) {
+    const response = await api.get(API_ENDPOINTS.FIELDS(collection));
+    return response.data.data || [];
+  },
+  // Fetch visible fields for a collection (excluding hidden fields)
+  async getVisibleFields(collection) {
+    const fields2 = await this.getFields(collection);
+    return fields2.filter((field) => !field.meta?.hidden).map((field) => field.field);
+  },
+  // Fetch items from a collection with pagination and search
+  async getData(params) {
+    const { collection, page, limit, search } = params;
+    const queryParams = {
+      meta: "*",
+      sort: "id"
+    };
+    if (page !== void 0 && limit !== void 0) {
+      queryParams.limit = limit;
+      queryParams.offset = (page - 1) * limit;
+    } else {
+      queryParams.limit = -1;
+    }
+    if (search?.trim()) {
+      queryParams.search = search.trim();
+    }
+    const response = await api.get(API_ENDPOINTS.ITEMS(collection), {
+      params: queryParams
+    });
+    return response.data;
+  }
+};
+const formsService = {
+  // Normalize webhook URL to use proxy if needed
+  normalizeWebhookUrl(url) {
+    return url;
+  },
+  // Submit form data to a webhook URL
+  async submit(params) {
+    const { url, data } = params;
+    const normalizedUrl = this.normalizeWebhookUrl(url);
+    const hasFiles = Object.values(data).some((value) => value instanceof File);
+    let requestData;
+    let headers = {};
+    if (hasFiles) {
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        if (value instanceof File) {
+          formData.append(key, value);
+        } else if (value !== null && value !== void 0) {
+          formData.append(key, String(value));
+        }
+      });
+      requestData = formData;
+    } else {
+      requestData = data;
+      headers["Content-Type"] = "application/json";
+    }
+    try {
+      const response = await axios.post(normalizedUrl, requestData, {
+        headers
+      });
+      return response.data;
+    } catch (error) {
+      if (error.response) {
+        throw error;
+      } else if (error.request) {
+        throw new Error(
+          "No response received from server. Please check your connection."
+        );
+      } else {
+        throw new Error(error.message || "An unexpected error occurred.");
+      }
+    }
+  },
+  // Fetch initial values for a form
+  async fetchInitialValues(url, params) {
+    const normalizedUrl = this.normalizeWebhookUrl(url);
+    try {
+      const response = await axios.get(normalizedUrl, {
+        params
+      });
+      return response.data;
+    } catch (error) {
+      if (error.response) {
+        throw error;
+      } else if (error.request) {
+        throw new Error(
+          "No response received from server. Please check your connection."
+        );
+      } else {
+        throw new Error(error.message || "An unexpected error occurred.");
+      }
+    }
+  }
+};
+function usePageData(slug) {
+  const res = useQuery({
+    queryKey: QUERY_KEYS.PAGE(slug),
+    queryFn: () => pagesService.getByRoute({ route: `/${slug}` }),
+    retry: 1
+  });
+  return res;
+}
+function useCollectionData({
+  collection,
+  page,
+  limit,
+  search = ""
+}) {
+  const finalPage = page ?? PAGINATION.DEFAULT_PAGE;
+  const finalLimit = limit ?? PAGINATION.DEFAULT_LIMIT;
+  return useQuery({
+    queryKey: QUERY_KEYS.COLLECTION(collection, finalPage, finalLimit, search),
+    queryFn: () => collectionsService.getData({ collection, page, limit, search })
+  });
+}
+function useCollectionFields(collection) {
+  return useQuery({
+    queryKey: QUERY_KEYS.COLLECTION_FIELDS(collection),
+    queryFn: () => collectionsService.getVisibleFields(collection),
+    staleTime: 10 * 60 * 1e3
+  });
+}
+function useFormSubmit(options) {
+  const queryClient2 = useQueryClient();
+  return useMutation({
+    mutationFn: (params) => formsService.submit(params),
+    onSuccess: (data) => {
+      queryClient2.invalidateQueries();
+      options?.onSuccess?.(data);
+    },
+    onError: options?.onError
+  });
+}
+function useFormInitialValues({
+  url,
+  params,
+  enabled = true
+}) {
+  return useQuery({
+    queryKey: ["form-initial-values", url, params],
+    queryFn: () => formsService.fetchInitialValues(url, params),
+    enabled: enabled && !!url && Object.keys(params).length > 0,
+    retry: false
+  });
+}
+function useFormDelete(options) {
+  const queryClient2 = useQueryClient();
+  return useMutation({
+    mutationFn: (params) => formsService.submit(params),
+    onSuccess: (data) => {
+      queryClient2.invalidateQueries();
+      options?.onSuccess?.(data);
+    },
+    onError: options?.onError
+  });
+}
+function useFormManagement({
+  block,
+  onSuccess,
+  onDeleteSuccess
+}) {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [formData, setFormData] = reactExports.useState({});
+  const [errors, setErrors] = reactExports.useState({});
+  const [successMessage, setSuccessMessage] = reactExports.useState(null);
+  const [errorMessage, setErrorMessage] = reactExports.useState(null);
+  const urlParams = reactExports.useMemo(() => {
+    const params = {};
+    searchParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
+  }, [searchParams]);
+  const isEditMode = reactExports.useMemo(() => {
+    return Object.keys(urlParams).length > 0 && !!urlParams.id;
+  }, [urlParams]);
+  const {
+    data: initialValues,
+    isLoading: isLoadingInitialValues,
+    refetch: refetchInitialValues
+  } = useFormInitialValues({
+    url: block.form.initial_values_url || "",
+    params: urlParams,
+    enabled: !!block.form.initial_values_url && isEditMode
+  });
+  reactExports.useEffect(() => {
+    if (initialValues) {
+      setFormData(initialValues);
+    } else if (!isEditMode) {
+      setFormData({});
+    }
+  }, [initialValues, isEditMode]);
+  const submitMutation = useFormSubmit({
+    onSuccess: (data) => {
+      setErrorMessage(null);
+      setErrors({});
+      if (block.form.on_success === "redirect" && block.form.success_redirect_url) {
+        window.location.href = block.form.success_redirect_url;
+      } else if (block.form.on_success === "back") {
+        navigate(-1);
+      } else if (block.form.on_success === "message") {
+        const message = block.form.success_message || data?.message || "Form submitted successfully!";
+        setSuccessMessage(message);
+        if (isEditMode) {
+          refetchInitialValues();
+        } else {
+          setFormData({});
+        }
+      } else {
+        alert(data?.message || "Form submitted successfully!");
+        if (isEditMode) {
+          refetchInitialValues();
+        } else {
+          setFormData({});
+        }
+      }
+      onSuccess?.();
+    },
+    onError: (error) => {
+      setSuccessMessage(null);
+      const errorResponse = error?.response?.data;
+      if (errorResponse?.errors && typeof errorResponse.errors === "object") {
+        const fieldErrors = {};
+        Object.entries(errorResponse.errors).forEach(([field, messages]) => {
+          if (Array.isArray(messages)) {
+            fieldErrors[field] = messages.join(", ");
+          } else if (typeof messages === "string") {
+            fieldErrors[field] = messages;
+          }
+        });
+        setErrors(fieldErrors);
+        setErrorMessage(
+          errorResponse.message || "Please correct the errors in the form."
+        );
+      } else {
+        const message = errorResponse?.message || error?.message || "Failed to submit form. Please try again.";
+        setErrorMessage(message);
+      }
+    }
+  });
+  const deleteMutation = useFormDelete({
+    onSuccess: (data) => {
+      setErrorMessage(null);
+      setErrors({});
+      navigate(-1);
+      onDeleteSuccess?.();
+    },
+    onError: (error) => {
+      const errorResponse = error?.response?.data;
+      const message = errorResponse?.message || error?.message || "Failed to delete item. Please try again.";
+      setErrorMessage(message);
+    }
+  });
+  const handleChange = (fieldName, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [fieldName]: value
+    }));
+    if (errors[fieldName]) {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[fieldName];
+        return newErrors;
+      });
+    }
+    if (errorMessage) {
+      setErrorMessage(null);
+    }
+  };
+  const handleSubmit = async (data) => {
+    setSuccessMessage(null);
+    setErrorMessage(null);
+    const dataToSubmit = data || formData;
+    if (!block.form.on_submit_url) {
+      console.log("Form data (no callback URL):", dataToSubmit);
+      alert("Form submitted successfully! (No callback URL configured)");
+      setFormData({});
+      return;
+    }
+    const submissionData = {
+      ...urlParams,
+      ...dataToSubmit
+    };
+    const cleanedData = Object.entries(submissionData).reduce(
+      (acc, [key, value]) => {
+        const field = block.form.fields.find((f2) => f2.name === key);
+        if (value === "" && field && (field.type === "date" || field.type === "number" || field.type === "select" || field.type === "radio" || field.type === "collectionSelect")) {
+          acc[key] = null;
+        } else {
+          acc[key] = value;
+        }
+        return acc;
+      },
+      {}
+    );
+    submitMutation.mutate({
+      url: block.form.on_submit_url,
+      data: cleanedData
+    });
+  };
+  const handleDelete = async () => {
+    if (!block.form.delete_item_webhook_url) {
+      console.error("No delete URL configured");
+      setErrorMessage("Delete functionality is not configured for this form.");
+      return;
+    }
+    if (!window.confirm(
+      "Are you sure you want to delete this item? This action cannot be undone."
+    )) {
+      return;
+    }
+    setSuccessMessage(null);
+    setErrorMessage(null);
+    const deletionData = {
+      ...urlParams
+    };
+    deleteMutation.mutate({
+      url: block.form.delete_item_webhook_url,
+      data: deletionData
+    });
+  };
+  return {
+    formData,
+    errors,
+    isLoadingInitialValues,
+    isSubmitting: submitMutation.isPending,
+    isDeleting: deleteMutation.isPending,
+    isEditMode,
+    successMessage,
+    errorMessage,
+    handleChange,
+    handleSubmit,
+    handleDelete,
+    showDelete: block.form.show_delete && isEditMode,
+    clearSuccessMessage: () => setSuccessMessage(null),
+    clearErrorMessage: () => setErrorMessage(null)
+  };
+}
+const useCollectionSelect = (fields2) => {
+  const [collectionStates, setCollectionStates] = reactExports.useState({});
+  const requestedCollectionsRef = reactExports.useRef(/* @__PURE__ */ new Set());
+  const fieldsKey = fields2.filter((f2) => f2.type === "collectionSelect" && f2.collection).map(
+    (f2) => `${f2.id}:${f2.collection}:${f2.collection_label_col_name || "name"}`
+  ).sort().join("|");
+  const fetchCollectionData = reactExports.useCallback(
+    async (collection, labelField) => {
+      setCollectionStates((prev) => ({
+        ...prev,
+        [collection]: {
+          data: prev[collection]?.data || [],
+          isLoading: true,
+          error: null
+        }
+      }));
+      try {
+        const response = await collectionsService.getData({
+          collection
+        });
+        const options = response.data.map((item) => ({
+          id: item.id,
+          label: item[labelField] || item.id
+        }));
+        setCollectionStates((prev) => ({
+          ...prev,
+          [collection]: {
+            data: options,
+            isLoading: false,
+            error: null
+          }
+        }));
+      } catch (error) {
+        console.error(
+          `Failed to fetch collection data for ${collection}:`,
+          error
+        );
+        setCollectionStates((prev) => ({
+          ...prev,
+          [collection]: {
+            data: [],
+            isLoading: false,
+            error: error instanceof Error ? error.message : "Failed to load data"
+          }
+        }));
+      }
+    },
+    []
+  );
+  reactExports.useEffect(() => {
+    const collectionFields = fields2.filter(
+      (field) => field.type === "collectionSelect" && field.collection
+    );
+    requestedCollectionsRef.current.clear();
+    const currentCollections = new Set(
+      collectionFields.map((f2) => f2.collection).filter(Boolean)
+    );
+    setCollectionStates((prev) => {
+      if (currentCollections.size === 0) {
+        return {};
+      }
+      const newState = {};
+      currentCollections.forEach((collection) => {
+        if (prev[collection]) {
+          newState[collection] = prev[collection];
+        }
+      });
+      return newState;
+    });
+    collectionFields.forEach((field) => {
+      if (field.collection && !requestedCollectionsRef.current.has(field.collection)) {
+        requestedCollectionsRef.current.add(field.collection);
+        const labelField = field.collection_label_col_name || "name";
+        fetchCollectionData(field.collection, labelField);
+      }
+    });
+  }, [fieldsKey, fetchCollectionData]);
+  const getCollectionData = reactExports.useCallback(
+    (collection) => {
+      return collectionStates[collection]?.data;
+    },
+    [collectionStates]
+  );
+  const isCollectionLoading = reactExports.useCallback(
+    (collection) => {
+      return collectionStates[collection]?.isLoading || false;
+    },
+    [collectionStates]
+  );
+  const getCollectionError = reactExports.useCallback(
+    (collection) => {
+      return collectionStates[collection]?.error || null;
+    },
+    [collectionStates]
+  );
+  const refetchCollection = reactExports.useCallback(
+    async (collection, labelField) => {
+      await fetchCollectionData(collection, labelField);
+    },
+    [fetchCollectionData]
+  );
+  return {
+    getCollectionData,
+    isCollectionLoading,
+    getCollectionError,
+    refetchCollection
+  };
+};
+function isBlockForm(block) {
+  return block.collection === "block_form";
+}
+function isBlockRichtext(block) {
+  return block.collection === "block_richtext";
+}
+function isBlockDataTable(block) {
+  return block.collection === "block_data_table";
+}
+function isBlockDataTableCustom(block) {
+  return block.collection === "block_data_table_custom";
+}
+function isBlockDataExport(block) {
+  return block.collection === "block_data_export";
+}
+function isPageHeaderButton(element) {
+  return element.collection === "page_header_button";
+}
+function isSectionWrapper(element) {
+  return element.collection === "sections";
+}
+var isCheckBoxInput = (element) => element.type === "checkbox";
+var isDateObject = (value) => value instanceof Date;
+var isNullOrUndefined = (value) => value == null;
+const isObjectType = (value) => typeof value === "object";
+var isObject = (value) => !isNullOrUndefined(value) && !Array.isArray(value) && isObjectType(value) && !isDateObject(value);
+var getEventValue = (event) => isObject(event) && event.target ? isCheckBoxInput(event.target) ? event.target.checked : event.target.value : event;
+var getNodeParentName = (name) => name.substring(0, name.search(/\.\d+(\.|$)/)) || name;
+var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
+var isPlainObject = (tempObject) => {
+  const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
+  return isObject(prototypeCopy) && prototypeCopy.hasOwnProperty("isPrototypeOf");
+};
+var isWeb = typeof window !== "undefined" && typeof window.HTMLElement !== "undefined" && typeof document !== "undefined";
+function cloneObject(data) {
+  let copy;
+  const isArray2 = Array.isArray(data);
+  const isFileListInstance = typeof FileList !== "undefined" ? data instanceof FileList : false;
+  if (data instanceof Date) {
+    copy = new Date(data);
+  } else if (!(isWeb && (data instanceof Blob || isFileListInstance)) && (isArray2 || isObject(data))) {
+    copy = isArray2 ? [] : Object.create(Object.getPrototypeOf(data));
+    if (!isArray2 && !isPlainObject(data)) {
+      copy = data;
+    } else {
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+          copy[key] = cloneObject(data[key]);
+        }
+      }
+    }
+  } else {
+    return data;
+  }
+  return copy;
+}
+var isKey = (value) => /^\w*$/.test(value);
+var isUndefined = (val) => val === void 0;
+var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
+var stringToPath = (input) => compact(input.replace(/["|']|\]/g, "").split(/\.|\[/));
+var get = (object, path, defaultValue) => {
+  if (!path || !isObject(object)) {
+    return defaultValue;
+  }
+  const result = (isKey(path) ? [path] : stringToPath(path)).reduce((result2, key) => isNullOrUndefined(result2) ? result2 : result2[key], object);
+  return isUndefined(result) || result === object ? isUndefined(object[path]) ? defaultValue : object[path] : result;
+};
+var isBoolean = (value) => typeof value === "boolean";
+var set = (object, path, value) => {
+  let index = -1;
+  const tempPath = isKey(path) ? [path] : stringToPath(path);
+  const length = tempPath.length;
+  const lastIndex = length - 1;
+  while (++index < length) {
+    const key = tempPath[index];
+    let newValue = value;
+    if (index !== lastIndex) {
+      const objValue = object[key];
+      newValue = isObject(objValue) || Array.isArray(objValue) ? objValue : !isNaN(+tempPath[index + 1]) ? [] : {};
+    }
+    if (key === "__proto__" || key === "constructor" || key === "prototype") {
+      return;
+    }
+    object[key] = newValue;
+    object = object[key];
+  }
+};
+const EVENTS = {
+  BLUR: "blur",
+  FOCUS_OUT: "focusout"
+};
+const VALIDATION_MODE = {
+  onBlur: "onBlur",
+  onChange: "onChange",
+  onSubmit: "onSubmit",
+  onTouched: "onTouched",
+  all: "all"
+};
+const INPUT_VALIDATION_RULES = {
+  max: "max",
+  min: "min",
+  maxLength: "maxLength",
+  minLength: "minLength",
+  pattern: "pattern",
+  required: "required",
+  validate: "validate"
+};
+const HookFormContext = React.createContext(null);
+HookFormContext.displayName = "HookFormContext";
+var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
+  const result = {
+    defaultValues: control._defaultValues
+  };
+  for (const key in formState) {
+    Object.defineProperty(result, key, {
+      get: () => {
+        const _key = key;
+        if (control._proxyFormState[_key] !== VALIDATION_MODE.all) {
+          control._proxyFormState[_key] = !isRoot || VALIDATION_MODE.all;
+        }
+        return formState[_key];
+      }
+    });
+  }
+  return result;
+};
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
+var isString$1 = (value) => typeof value === "string";
+var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
+  if (isString$1(names)) {
+    isGlobal && _names.watch.add(names);
+    return get(formValues, names, defaultValue);
+  }
+  if (Array.isArray(names)) {
+    return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName), get(formValues, fieldName)));
+  }
+  isGlobal && (_names.watchAll = true);
+  return formValues;
+};
+var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
+function deepEqual(object1, object2, _internal_visited = /* @__PURE__ */ new WeakSet()) {
+  if (isPrimitive(object1) || isPrimitive(object2)) {
+    return object1 === object2;
+  }
+  if (isDateObject(object1) && isDateObject(object2)) {
+    return object1.getTime() === object2.getTime();
+  }
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  if (_internal_visited.has(object1) || _internal_visited.has(object2)) {
+    return true;
+  }
+  _internal_visited.add(object1);
+  _internal_visited.add(object2);
+  for (const key of keys1) {
+    const val1 = object1[key];
+    if (!keys2.includes(key)) {
+      return false;
+    }
+    if (key !== "ref") {
+      const val2 = object2[key];
+      if (isDateObject(val1) && isDateObject(val2) || isObject(val1) && isObject(val2) || Array.isArray(val1) && Array.isArray(val2) ? !deepEqual(val1, val2, _internal_visited) : val1 !== val2) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria ? {
+  ...errors[name],
+  types: {
+    ...errors[name] && errors[name].types ? errors[name].types : {},
+    [type]: message || true
+  }
+} : {};
+var convertToArrayPayload = (value) => Array.isArray(value) ? value : [value];
+var createSubject = () => {
+  let _observers = [];
+  const next = (value) => {
+    for (const observer of _observers) {
+      observer.next && observer.next(value);
+    }
+  };
+  const subscribe = (observer) => {
+    _observers.push(observer);
+    return {
+      unsubscribe: () => {
+        _observers = _observers.filter((o) => o !== observer);
+      }
+    };
+  };
+  const unsubscribe = () => {
+    _observers = [];
+  };
+  return {
+    get observers() {
+      return _observers;
+    },
+    next,
+    subscribe,
+    unsubscribe
+  };
+};
+function extractFormValues(fieldsState, formValues) {
+  const values = {};
+  for (const key in fieldsState) {
+    if (fieldsState.hasOwnProperty(key)) {
+      const fieldState = fieldsState[key];
+      const fieldValue = formValues[key];
+      if (fieldState && isObject(fieldState) && fieldValue) {
+        const nestedFieldsState = extractFormValues(fieldState, fieldValue);
+        if (isObject(nestedFieldsState)) {
+          values[key] = nestedFieldsState;
+        }
+      } else if (fieldsState[key]) {
+        values[key] = fieldValue;
+      }
+    }
+  }
+  return values;
+}
+var isEmptyObject = (value) => isObject(value) && !Object.keys(value).length;
+var isFileInput = (element) => element.type === "file";
+var isFunction$1 = (value) => typeof value === "function";
+var isHTMLElement = (value) => {
+  if (!isWeb) {
+    return false;
+  }
+  const owner = value ? value.ownerDocument : 0;
+  return value instanceof (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement);
+};
+var isMultipleSelect = (element) => element.type === `select-multiple`;
+var isRadioInput = (element) => element.type === "radio";
+var isRadioOrCheckbox = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
+var live = (ref) => isHTMLElement(ref) && ref.isConnected;
+function baseGet(object, updatePath) {
+  const length = updatePath.slice(0, -1).length;
+  let index = 0;
+  while (index < length) {
+    object = isUndefined(object) ? index++ : object[updatePath[index++]];
+  }
+  return object;
+}
+function isEmptyArray(obj) {
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) {
+      return false;
+    }
+  }
+  return true;
+}
+function unset(object, path) {
+  const paths = Array.isArray(path) ? path : isKey(path) ? [path] : stringToPath(path);
+  const childObject = paths.length === 1 ? object : baseGet(object, paths);
+  const index = paths.length - 1;
+  const key = paths[index];
+  if (childObject) {
+    delete childObject[key];
+  }
+  if (index !== 0 && (isObject(childObject) && isEmptyObject(childObject) || Array.isArray(childObject) && isEmptyArray(childObject))) {
+    unset(object, paths.slice(0, -1));
+  }
+  return object;
+}
+var objectHasFunction = (data) => {
+  for (const key in data) {
+    if (isFunction$1(data[key])) {
+      return true;
+    }
+  }
+  return false;
+};
+function isTraversable(value) {
+  return Array.isArray(value) || isObject(value) && !objectHasFunction(value);
+}
+function markFieldsDirty(data, fields2 = {}) {
+  for (const key in data) {
+    if (isTraversable(data[key])) {
+      fields2[key] = Array.isArray(data[key]) ? [] : {};
+      markFieldsDirty(data[key], fields2[key]);
+    } else if (!isUndefined(data[key])) {
+      fields2[key] = true;
+    }
+  }
+  return fields2;
+}
+function getDirtyFields(data, formValues, dirtyFieldsFromValues) {
+  if (!dirtyFieldsFromValues) {
+    dirtyFieldsFromValues = markFieldsDirty(formValues);
+  }
+  for (const key in data) {
+    if (isTraversable(data[key])) {
+      if (isUndefined(formValues) || isPrimitive(dirtyFieldsFromValues[key])) {
+        dirtyFieldsFromValues[key] = markFieldsDirty(data[key], Array.isArray(data[key]) ? [] : {});
+      } else {
+        getDirtyFields(data[key], isNullOrUndefined(formValues) ? {} : formValues[key], dirtyFieldsFromValues[key]);
+      }
+    } else {
+      dirtyFieldsFromValues[key] = !deepEqual(data[key], formValues[key]);
+    }
+  }
+  return dirtyFieldsFromValues;
+}
+const defaultResult = {
+  value: false,
+  isValid: false
+};
+const validResult = { value: true, isValid: true };
+var getCheckboxValue = (options) => {
+  if (Array.isArray(options)) {
+    if (options.length > 1) {
+      const values = options.filter((option) => option && option.checked && !option.disabled).map((option) => option.value);
+      return { value: values, isValid: !!values.length };
+    }
+    return options[0].checked && !options[0].disabled ? (
+      // @ts-expect-error expected to work in the browser
+      options[0].attributes && !isUndefined(options[0].attributes.value) ? isUndefined(options[0].value) || options[0].value === "" ? validResult : { value: options[0].value, isValid: true } : validResult
+    ) : defaultResult;
+  }
+  return defaultResult;
+};
+var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined(value) ? value : valueAsNumber ? value === "" ? NaN : value ? +value : value : valueAsDate && isString$1(value) ? new Date(value) : setValueAs ? setValueAs(value) : value;
+const defaultReturn = {
+  isValid: false,
+  value: null
+};
+var getRadioValue = (options) => Array.isArray(options) ? options.reduce((previous, option) => option && option.checked && !option.disabled ? {
+  isValid: true,
+  value: option.value
+} : previous, defaultReturn) : defaultReturn;
+function getFieldValue(_f) {
+  const ref = _f.ref;
+  if (isFileInput(ref)) {
+    return ref.files;
+  }
+  if (isRadioInput(ref)) {
+    return getRadioValue(_f.refs).value;
+  }
+  if (isMultipleSelect(ref)) {
+    return [...ref.selectedOptions].map(({ value }) => value);
+  }
+  if (isCheckBoxInput(ref)) {
+    return getCheckboxValue(_f.refs).value;
+  }
+  return getFieldValueAs(isUndefined(ref.value) ? _f.ref.value : ref.value, _f);
+}
+var getResolverOptions = (fieldsNames, _fields, criteriaMode, shouldUseNativeValidation) => {
+  const fields2 = {};
+  for (const name of fieldsNames) {
+    const field = get(_fields, name);
+    field && set(fields2, name, field._f);
+  }
+  return {
+    criteriaMode,
+    names: [...fieldsNames],
+    fields: fields2,
+    shouldUseNativeValidation
+  };
+};
+var isRegex = (value) => value instanceof RegExp;
+var getRuleValue = (rule) => isUndefined(rule) ? rule : isRegex(rule) ? rule.source : isObject(rule) ? isRegex(rule.value) ? rule.value.source : rule.value : rule;
+var getValidationModes = (mode) => ({
+  isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
+  isOnBlur: mode === VALIDATION_MODE.onBlur,
+  isOnChange: mode === VALIDATION_MODE.onChange,
+  isOnAll: mode === VALIDATION_MODE.all,
+  isOnTouch: mode === VALIDATION_MODE.onTouched
+});
+const ASYNC_FUNCTION = "AsyncFunction";
+var hasPromiseValidation = (fieldReference) => !!fieldReference && !!fieldReference.validate && !!(isFunction$1(fieldReference.validate) && fieldReference.validate.constructor.name === ASYNC_FUNCTION || isObject(fieldReference.validate) && Object.values(fieldReference.validate).find((validateFunction) => validateFunction.constructor.name === ASYNC_FUNCTION));
+var hasValidation = (options) => options.mount && (options.required || options.min || options.max || options.maxLength || options.minLength || options.pattern || options.validate);
+var isWatched = (name, _names, isBlurEvent) => !isBlurEvent && (_names.watchAll || _names.watch.has(name) || [..._names.watch].some((watchName) => name.startsWith(watchName) && /^\.\w+/.test(name.slice(watchName.length))));
+const iterateFieldsByAction = (fields2, action, fieldsNames, abortEarly) => {
+  for (const key of fieldsNames || Object.keys(fields2)) {
+    const field = get(fields2, key);
+    if (field) {
+      const { _f, ...currentField } = field;
+      if (_f) {
+        if (_f.refs && _f.refs[0] && action(_f.refs[0], key) && !abortEarly) {
+          return true;
+        } else if (_f.ref && action(_f.ref, _f.name) && !abortEarly) {
+          return true;
+        } else {
+          if (iterateFieldsByAction(currentField, action)) {
+            break;
+          }
+        }
+      } else if (isObject(currentField)) {
+        if (iterateFieldsByAction(currentField, action)) {
+          break;
+        }
+      }
+    }
+  }
+  return;
+};
+function schemaErrorLookup(errors, _fields, name) {
+  const error = get(errors, name);
+  if (error || isKey(name)) {
+    return {
+      error,
+      name
+    };
+  }
+  const names = name.split(".");
+  while (names.length) {
+    const fieldName = names.join(".");
+    const field = get(_fields, fieldName);
+    const foundError = get(errors, fieldName);
+    if (field && !Array.isArray(field) && name !== fieldName) {
+      return { name };
+    }
+    if (foundError && foundError.type) {
+      return {
+        name: fieldName,
+        error: foundError
+      };
+    }
+    if (foundError && foundError.root && foundError.root.type) {
+      return {
+        name: `${fieldName}.root`,
+        error: foundError.root
+      };
+    }
+    names.pop();
+  }
+  return {
+    name
+  };
+}
+var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
+  updateFormState(formStateData);
+  const { name, ...formState } = formStateData;
+  return isEmptyObject(formState) || Object.keys(formState).length >= Object.keys(_proxyFormState).length || Object.keys(formState).find((key) => _proxyFormState[key] === (!isRoot || VALIDATION_MODE.all));
+};
+var shouldSubscribeByName = (name, signalName, exact) => !name || !signalName || name === signalName || convertToArrayPayload(name).some((currentName) => currentName && (exact ? currentName === signalName : currentName.startsWith(signalName) || signalName.startsWith(currentName)));
+var skipValidation = (isBlurEvent, isTouched, isSubmitted, reValidateMode, mode) => {
+  if (mode.isOnAll) {
+    return false;
+  } else if (!isSubmitted && mode.isOnTouch) {
+    return !(isTouched || isBlurEvent);
+  } else if (isSubmitted ? reValidateMode.isOnBlur : mode.isOnBlur) {
+    return !isBlurEvent;
+  } else if (isSubmitted ? reValidateMode.isOnChange : mode.isOnChange) {
+    return isBlurEvent;
+  }
+  return true;
+};
+var unsetEmptyArray = (ref, name) => !compact(get(ref, name)).length && unset(ref, name);
+var updateFieldArrayRootError = (errors, error, name) => {
+  const fieldArrayErrors = convertToArrayPayload(get(errors, name));
+  set(fieldArrayErrors, "root", error[name]);
+  set(errors, name, fieldArrayErrors);
+  return errors;
+};
+function getValidateError(result, ref, type = "validate") {
+  if (isString$1(result) || Array.isArray(result) && result.every(isString$1) || isBoolean(result) && !result) {
+    return {
+      type,
+      message: isString$1(result) ? result : "",
+      ref
+    };
+  }
+}
+var getValueAndMessage = (validationData) => isObject(validationData) && !isRegex(validationData) ? validationData : {
+  value: validationData,
+  message: ""
+};
+var validateField = async (field, disabledFieldNames, formValues, validateAllFieldCriteria, shouldUseNativeValidation, isFieldArray) => {
+  const { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, valueAsNumber, mount } = field._f;
+  const inputValue = get(formValues, name);
+  if (!mount || disabledFieldNames.has(name)) {
+    return {};
+  }
+  const inputRef = refs ? refs[0] : ref;
+  const setCustomValidity = (message) => {
+    if (shouldUseNativeValidation && inputRef.reportValidity) {
+      inputRef.setCustomValidity(isBoolean(message) ? "" : message || "");
+      inputRef.reportValidity();
+    }
+  };
+  const error = {};
+  const isRadio = isRadioInput(ref);
+  const isCheckBox = isCheckBoxInput(ref);
+  const isRadioOrCheckbox2 = isRadio || isCheckBox;
+  const isEmpty = (valueAsNumber || isFileInput(ref)) && isUndefined(ref.value) && isUndefined(inputValue) || isHTMLElement(ref) && ref.value === "" || inputValue === "" || Array.isArray(inputValue) && !inputValue.length;
+  const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
+  const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
+    const message = exceedMax ? maxLengthMessage : minLengthMessage;
+    error[name] = {
+      type: exceedMax ? maxType : minType,
+      message,
+      ref,
+      ...appendErrorsCurry(exceedMax ? maxType : minType, message)
+    };
+  };
+  if (isFieldArray ? !Array.isArray(inputValue) || !inputValue.length : required && (!isRadioOrCheckbox2 && (isEmpty || isNullOrUndefined(inputValue)) || isBoolean(inputValue) && !inputValue || isCheckBox && !getCheckboxValue(refs).isValid || isRadio && !getRadioValue(refs).isValid)) {
+    const { value, message } = isString$1(required) ? { value: !!required, message: required } : getValueAndMessage(required);
+    if (value) {
+      error[name] = {
+        type: INPUT_VALIDATION_RULES.required,
+        message,
+        ref: inputRef,
+        ...appendErrorsCurry(INPUT_VALIDATION_RULES.required, message)
+      };
+      if (!validateAllFieldCriteria) {
+        setCustomValidity(message);
+        return error;
+      }
+    }
+  }
+  if (!isEmpty && (!isNullOrUndefined(min) || !isNullOrUndefined(max))) {
+    let exceedMax;
+    let exceedMin;
+    const maxOutput = getValueAndMessage(max);
+    const minOutput = getValueAndMessage(min);
+    if (!isNullOrUndefined(inputValue) && !isNaN(inputValue)) {
+      const valueNumber = ref.valueAsNumber || (inputValue ? +inputValue : inputValue);
+      if (!isNullOrUndefined(maxOutput.value)) {
+        exceedMax = valueNumber > maxOutput.value;
+      }
+      if (!isNullOrUndefined(minOutput.value)) {
+        exceedMin = valueNumber < minOutput.value;
+      }
+    } else {
+      const valueDate = ref.valueAsDate || new Date(inputValue);
+      const convertTimeToDate = (time2) => /* @__PURE__ */ new Date((/* @__PURE__ */ new Date()).toDateString() + " " + time2);
+      const isTime = ref.type == "time";
+      const isWeek = ref.type == "week";
+      if (isString$1(maxOutput.value) && inputValue) {
+        exceedMax = isTime ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value) : isWeek ? inputValue > maxOutput.value : valueDate > new Date(maxOutput.value);
+      }
+      if (isString$1(minOutput.value) && inputValue) {
+        exceedMin = isTime ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value) : isWeek ? inputValue < minOutput.value : valueDate < new Date(minOutput.value);
+      }
+    }
+    if (exceedMax || exceedMin) {
+      getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
+      if (!validateAllFieldCriteria) {
+        setCustomValidity(error[name].message);
+        return error;
+      }
+    }
+  }
+  if ((maxLength || minLength) && !isEmpty && (isString$1(inputValue) || isFieldArray && Array.isArray(inputValue))) {
+    const maxLengthOutput = getValueAndMessage(maxLength);
+    const minLengthOutput = getValueAndMessage(minLength);
+    const exceedMax = !isNullOrUndefined(maxLengthOutput.value) && inputValue.length > +maxLengthOutput.value;
+    const exceedMin = !isNullOrUndefined(minLengthOutput.value) && inputValue.length < +minLengthOutput.value;
+    if (exceedMax || exceedMin) {
+      getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
+      if (!validateAllFieldCriteria) {
+        setCustomValidity(error[name].message);
+        return error;
+      }
+    }
+  }
+  if (pattern && !isEmpty && isString$1(inputValue)) {
+    const { value: patternValue, message } = getValueAndMessage(pattern);
+    if (isRegex(patternValue) && !inputValue.match(patternValue)) {
+      error[name] = {
+        type: INPUT_VALIDATION_RULES.pattern,
+        message,
+        ref,
+        ...appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message)
+      };
+      if (!validateAllFieldCriteria) {
+        setCustomValidity(message);
+        return error;
+      }
+    }
+  }
+  if (validate) {
+    if (isFunction$1(validate)) {
+      const result = await validate(inputValue, formValues);
+      const validateError = getValidateError(result, inputRef);
+      if (validateError) {
+        error[name] = {
+          ...validateError,
+          ...appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message)
+        };
+        if (!validateAllFieldCriteria) {
+          setCustomValidity(validateError.message);
+          return error;
+        }
+      }
+    } else if (isObject(validate)) {
+      let validationResult = {};
+      for (const key in validate) {
+        if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) {
+          break;
+        }
+        const validateError = getValidateError(await validate[key](inputValue, formValues), inputRef, key);
+        if (validateError) {
+          validationResult = {
+            ...validateError,
+            ...appendErrorsCurry(key, validateError.message)
+          };
+          setCustomValidity(validateError.message);
+          if (validateAllFieldCriteria) {
+            error[name] = validationResult;
+          }
+        }
+      }
+      if (!isEmptyObject(validationResult)) {
+        error[name] = {
+          ref: inputRef,
+          ...validationResult
+        };
+        if (!validateAllFieldCriteria) {
+          return error;
+        }
+      }
+    }
+  }
+  setCustomValidity(true);
+  return error;
+};
+const defaultOptions = {
+  mode: VALIDATION_MODE.onSubmit,
+  reValidateMode: VALIDATION_MODE.onChange,
+  shouldFocusError: true
+};
+function createFormControl(props = {}) {
+  let _options = {
+    ...defaultOptions,
+    ...props
+  };
+  let _formState = {
+    submitCount: 0,
+    isDirty: false,
+    isReady: false,
+    isLoading: isFunction$1(_options.defaultValues),
+    isValidating: false,
+    isSubmitted: false,
+    isSubmitting: false,
+    isSubmitSuccessful: false,
+    isValid: false,
+    touchedFields: {},
+    dirtyFields: {},
+    validatingFields: {},
+    errors: _options.errors || {},
+    disabled: _options.disabled || false
+  };
+  let _fields = {};
+  let _defaultValues = isObject(_options.defaultValues) || isObject(_options.values) ? cloneObject(_options.defaultValues || _options.values) || {} : {};
+  let _formValues = _options.shouldUnregister ? {} : cloneObject(_defaultValues);
+  let _state = {
+    action: false,
+    mount: false,
+    watch: false
+  };
+  let _names = {
+    mount: /* @__PURE__ */ new Set(),
+    disabled: /* @__PURE__ */ new Set(),
+    unMount: /* @__PURE__ */ new Set(),
+    array: /* @__PURE__ */ new Set(),
+    watch: /* @__PURE__ */ new Set()
+  };
+  let delayErrorCallback;
+  let timer = 0;
+  const _proxyFormState = {
+    isDirty: false,
+    dirtyFields: false,
+    validatingFields: false,
+    touchedFields: false,
+    isValidating: false,
+    isValid: false,
+    errors: false
+  };
+  let _proxySubscribeFormState = {
+    ..._proxyFormState
+  };
+  const _subjects = {
+    array: createSubject(),
+    state: createSubject()
+  };
+  const shouldDisplayAllAssociatedErrors = _options.criteriaMode === VALIDATION_MODE.all;
+  const debounce = (callback) => (wait) => {
+    clearTimeout(timer);
+    timer = setTimeout(callback, wait);
+  };
+  const _setValid = async (shouldUpdateValid) => {
+    if (!_options.disabled && (_proxyFormState.isValid || _proxySubscribeFormState.isValid || shouldUpdateValid)) {
+      const isValid = _options.resolver ? isEmptyObject((await _runSchema()).errors) : await executeBuiltInValidation(_fields, true);
+      if (isValid !== _formState.isValid) {
+        _subjects.state.next({
+          isValid
+        });
+      }
+    }
+  };
+  const _updateIsValidating = (names, isValidating) => {
+    if (!_options.disabled && (_proxyFormState.isValidating || _proxyFormState.validatingFields || _proxySubscribeFormState.isValidating || _proxySubscribeFormState.validatingFields)) {
+      (names || Array.from(_names.mount)).forEach((name) => {
+        if (name) {
+          isValidating ? set(_formState.validatingFields, name, isValidating) : unset(_formState.validatingFields, name);
+        }
+      });
+      _subjects.state.next({
+        validatingFields: _formState.validatingFields,
+        isValidating: !isEmptyObject(_formState.validatingFields)
+      });
+    }
+  };
+  const _setFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
+    if (args && method && !_options.disabled) {
+      _state.action = true;
+      if (shouldUpdateFieldsAndState && Array.isArray(get(_fields, name))) {
+        const fieldValues = method(get(_fields, name), args.argA, args.argB);
+        shouldSetValues && set(_fields, name, fieldValues);
+      }
+      if (shouldUpdateFieldsAndState && Array.isArray(get(_formState.errors, name))) {
+        const errors = method(get(_formState.errors, name), args.argA, args.argB);
+        shouldSetValues && set(_formState.errors, name, errors);
+        unsetEmptyArray(_formState.errors, name);
+      }
+      if ((_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && shouldUpdateFieldsAndState && Array.isArray(get(_formState.touchedFields, name))) {
+        const touchedFields = method(get(_formState.touchedFields, name), args.argA, args.argB);
+        shouldSetValues && set(_formState.touchedFields, name, touchedFields);
+      }
+      if (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) {
+        _formState.dirtyFields = getDirtyFields(_defaultValues, _formValues);
+      }
+      _subjects.state.next({
+        name,
+        isDirty: _getDirty(name, values),
+        dirtyFields: _formState.dirtyFields,
+        errors: _formState.errors,
+        isValid: _formState.isValid
+      });
+    } else {
+      set(_formValues, name, values);
+    }
+  };
+  const updateErrors = (name, error) => {
+    set(_formState.errors, name, error);
+    _subjects.state.next({
+      errors: _formState.errors
+    });
+  };
+  const _setErrors = (errors) => {
+    _formState.errors = errors;
+    _subjects.state.next({
+      errors: _formState.errors,
+      isValid: false
+    });
+  };
+  const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
+    const field = get(_fields, name);
+    if (field) {
+      const defaultValue = get(_formValues, name, isUndefined(value) ? get(_defaultValues, name) : value);
+      isUndefined(defaultValue) || ref && ref.defaultChecked || shouldSkipSetValueAs ? set(_formValues, name, shouldSkipSetValueAs ? defaultValue : getFieldValue(field._f)) : setFieldValue(name, defaultValue);
+      _state.mount && _setValid();
+    }
+  };
+  const updateTouchAndDirty = (name, fieldValue, isBlurEvent, shouldDirty, shouldRender) => {
+    let shouldUpdateField = false;
+    let isPreviousDirty = false;
+    const output = {
+      name
+    };
+    if (!_options.disabled) {
+      if (!isBlurEvent || shouldDirty) {
+        if (_proxyFormState.isDirty || _proxySubscribeFormState.isDirty) {
+          isPreviousDirty = _formState.isDirty;
+          _formState.isDirty = output.isDirty = _getDirty();
+          shouldUpdateField = isPreviousDirty !== output.isDirty;
+        }
+        const isCurrentFieldPristine = deepEqual(get(_defaultValues, name), fieldValue);
+        isPreviousDirty = !!get(_formState.dirtyFields, name);
+        isCurrentFieldPristine ? unset(_formState.dirtyFields, name) : set(_formState.dirtyFields, name, true);
+        output.dirtyFields = _formState.dirtyFields;
+        shouldUpdateField = shouldUpdateField || (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) && isPreviousDirty !== !isCurrentFieldPristine;
+      }
+      if (isBlurEvent) {
+        const isPreviousFieldTouched = get(_formState.touchedFields, name);
+        if (!isPreviousFieldTouched) {
+          set(_formState.touchedFields, name, isBlurEvent);
+          output.touchedFields = _formState.touchedFields;
+          shouldUpdateField = shouldUpdateField || (_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && isPreviousFieldTouched !== isBlurEvent;
+        }
+      }
+      shouldUpdateField && shouldRender && _subjects.state.next(output);
+    }
+    return shouldUpdateField ? output : {};
+  };
+  const shouldRenderByError = (name, isValid, error, fieldState) => {
+    const previousFieldError = get(_formState.errors, name);
+    const shouldUpdateValid = (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isBoolean(isValid) && _formState.isValid !== isValid;
+    if (_options.delayError && error) {
+      delayErrorCallback = debounce(() => updateErrors(name, error));
+      delayErrorCallback(_options.delayError);
+    } else {
+      clearTimeout(timer);
+      delayErrorCallback = null;
+      error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
+    }
+    if ((error ? !deepEqual(previousFieldError, error) : previousFieldError) || !isEmptyObject(fieldState) || shouldUpdateValid) {
+      const updatedFormState = {
+        ...fieldState,
+        ...shouldUpdateValid && isBoolean(isValid) ? { isValid } : {},
+        errors: _formState.errors,
+        name
+      };
+      _formState = {
+        ..._formState,
+        ...updatedFormState
+      };
+      _subjects.state.next(updatedFormState);
+    }
+  };
+  const _runSchema = async (name) => {
+    _updateIsValidating(name, true);
+    const result = await _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+    _updateIsValidating(name);
+    return result;
+  };
+  const executeSchemaAndUpdateState = async (names) => {
+    const { errors } = await _runSchema(names);
+    if (names) {
+      for (const name of names) {
+        const error = get(errors, name);
+        error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
+      }
+    } else {
+      _formState.errors = errors;
+    }
+    return errors;
+  };
+  const executeBuiltInValidation = async (fields2, shouldOnlyCheckValid, context = {
+    valid: true
+  }) => {
+    for (const name in fields2) {
+      const field = fields2[name];
+      if (field) {
+        const { _f, ...fieldValue } = field;
+        if (_f) {
+          const isFieldArrayRoot = _names.array.has(_f.name);
+          const isPromiseFunction = field._f && hasPromiseValidation(field._f);
+          if (isPromiseFunction && _proxyFormState.validatingFields) {
+            _updateIsValidating([_f.name], true);
+          }
+          const fieldError = await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation && !shouldOnlyCheckValid, isFieldArrayRoot);
+          if (isPromiseFunction && _proxyFormState.validatingFields) {
+            _updateIsValidating([_f.name]);
+          }
+          if (fieldError[_f.name]) {
+            context.valid = false;
+            if (shouldOnlyCheckValid) {
+              break;
+            }
+          }
+          !shouldOnlyCheckValid && (get(fieldError, _f.name) ? isFieldArrayRoot ? updateFieldArrayRootError(_formState.errors, fieldError, _f.name) : set(_formState.errors, _f.name, fieldError[_f.name]) : unset(_formState.errors, _f.name));
+        }
+        !isEmptyObject(fieldValue) && await executeBuiltInValidation(fieldValue, shouldOnlyCheckValid, context);
+      }
+    }
+    return context.valid;
+  };
+  const _removeUnmounted = () => {
+    for (const name of _names.unMount) {
+      const field = get(_fields, name);
+      field && (field._f.refs ? field._f.refs.every((ref) => !live(ref)) : !live(field._f.ref)) && unregister(name);
+    }
+    _names.unMount = /* @__PURE__ */ new Set();
+  };
+  const _getDirty = (name, data) => !_options.disabled && (name && data && set(_formValues, name, data), !deepEqual(getValues(), _defaultValues));
+  const _getWatch = (names, defaultValue, isGlobal) => generateWatchOutput(names, _names, {
+    ..._state.mount ? _formValues : isUndefined(defaultValue) ? _defaultValues : isString$1(names) ? { [names]: defaultValue } : defaultValue
+  }, isGlobal, defaultValue);
+  const _getFieldArray = (name) => compact(get(_state.mount ? _formValues : _defaultValues, name, _options.shouldUnregister ? get(_defaultValues, name, []) : []));
+  const setFieldValue = (name, value, options = {}) => {
+    const field = get(_fields, name);
+    let fieldValue = value;
+    if (field) {
+      const fieldReference = field._f;
+      if (fieldReference) {
+        !fieldReference.disabled && set(_formValues, name, getFieldValueAs(value, fieldReference));
+        fieldValue = isHTMLElement(fieldReference.ref) && isNullOrUndefined(value) ? "" : value;
+        if (isMultipleSelect(fieldReference.ref)) {
+          [...fieldReference.ref.options].forEach((optionRef) => optionRef.selected = fieldValue.includes(optionRef.value));
+        } else if (fieldReference.refs) {
+          if (isCheckBoxInput(fieldReference.ref)) {
+            fieldReference.refs.forEach((checkboxRef) => {
+              if (!checkboxRef.defaultChecked || !checkboxRef.disabled) {
+                if (Array.isArray(fieldValue)) {
+                  checkboxRef.checked = !!fieldValue.find((data) => data === checkboxRef.value);
+                } else {
+                  checkboxRef.checked = fieldValue === checkboxRef.value || !!fieldValue;
+                }
+              }
+            });
+          } else {
+            fieldReference.refs.forEach((radioRef) => radioRef.checked = radioRef.value === fieldValue);
+          }
+        } else if (isFileInput(fieldReference.ref)) {
+          fieldReference.ref.value = "";
+        } else {
+          fieldReference.ref.value = fieldValue;
+          if (!fieldReference.ref.type) {
+            _subjects.state.next({
+              name,
+              values: cloneObject(_formValues)
+            });
+          }
+        }
+      }
+    }
+    (options.shouldDirty || options.shouldTouch) && updateTouchAndDirty(name, fieldValue, options.shouldTouch, options.shouldDirty, true);
+    options.shouldValidate && trigger(name);
+  };
+  const setValues = (name, value, options) => {
+    for (const fieldKey in value) {
+      if (!value.hasOwnProperty(fieldKey)) {
+        return;
+      }
+      const fieldValue = value[fieldKey];
+      const fieldName = name + "." + fieldKey;
+      const field = get(_fields, fieldName);
+      (_names.array.has(name) || isObject(fieldValue) || field && !field._f) && !isDateObject(fieldValue) ? setValues(fieldName, fieldValue, options) : setFieldValue(fieldName, fieldValue, options);
+    }
+  };
+  const setValue = (name, value, options = {}) => {
+    const field = get(_fields, name);
+    const isFieldArray = _names.array.has(name);
+    const cloneValue = cloneObject(value);
+    set(_formValues, name, cloneValue);
+    if (isFieldArray) {
+      _subjects.array.next({
+        name,
+        values: cloneObject(_formValues)
+      });
+      if ((_proxyFormState.isDirty || _proxyFormState.dirtyFields || _proxySubscribeFormState.isDirty || _proxySubscribeFormState.dirtyFields) && options.shouldDirty) {
+        _subjects.state.next({
+          name,
+          dirtyFields: getDirtyFields(_defaultValues, _formValues),
+          isDirty: _getDirty(name, cloneValue)
+        });
+      }
+    } else {
+      field && !field._f && !isNullOrUndefined(cloneValue) ? setValues(name, cloneValue, options) : setFieldValue(name, cloneValue, options);
+    }
+    isWatched(name, _names) && _subjects.state.next({ ..._formState, name });
+    _subjects.state.next({
+      name: _state.mount ? name : void 0,
+      values: cloneObject(_formValues)
+    });
+  };
+  const onChange = async (event) => {
+    _state.mount = true;
+    const target = event.target;
+    let name = target.name;
+    let isFieldValueUpdated = true;
+    const field = get(_fields, name);
+    const _updateIsFieldValueUpdated = (fieldValue) => {
+      isFieldValueUpdated = Number.isNaN(fieldValue) || isDateObject(fieldValue) && isNaN(fieldValue.getTime()) || deepEqual(fieldValue, get(_formValues, name, fieldValue));
+    };
+    const validationModeBeforeSubmit = getValidationModes(_options.mode);
+    const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
+    if (field) {
+      let error;
+      let isValid;
+      const fieldValue = target.type ? getFieldValue(field._f) : getEventValue(event);
+      const isBlurEvent = event.type === EVENTS.BLUR || event.type === EVENTS.FOCUS_OUT;
+      const shouldSkipValidation = !hasValidation(field._f) && !_options.resolver && !get(_formState.errors, name) && !field._f.deps || skipValidation(isBlurEvent, get(_formState.touchedFields, name), _formState.isSubmitted, validationModeAfterSubmit, validationModeBeforeSubmit);
+      const watched = isWatched(name, _names, isBlurEvent);
+      set(_formValues, name, fieldValue);
+      if (isBlurEvent) {
+        if (!target || !target.readOnly) {
+          field._f.onBlur && field._f.onBlur(event);
+          delayErrorCallback && delayErrorCallback(0);
+        }
+      } else if (field._f.onChange) {
+        field._f.onChange(event);
+      }
+      const fieldState = updateTouchAndDirty(name, fieldValue, isBlurEvent);
+      const shouldRender = !isEmptyObject(fieldState) || watched;
+      !isBlurEvent && _subjects.state.next({
+        name,
+        type: event.type,
+        values: cloneObject(_formValues)
+      });
+      if (shouldSkipValidation) {
+        if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) {
+          if (_options.mode === "onBlur") {
+            if (isBlurEvent) {
+              _setValid();
+            }
+          } else if (!isBlurEvent) {
+            _setValid();
+          }
+        }
+        return shouldRender && _subjects.state.next({ name, ...watched ? {} : fieldState });
+      }
+      !isBlurEvent && watched && _subjects.state.next({ ..._formState });
+      if (_options.resolver) {
+        const { errors } = await _runSchema([name]);
+        _updateIsFieldValueUpdated(fieldValue);
+        if (isFieldValueUpdated) {
+          const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+          const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+          error = errorLookupResult.error;
+          name = errorLookupResult.name;
+          isValid = isEmptyObject(errors);
+        }
+      } else {
+        _updateIsValidating([name], true);
+        error = (await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation))[name];
+        _updateIsValidating([name]);
+        _updateIsFieldValueUpdated(fieldValue);
+        if (isFieldValueUpdated) {
+          if (error) {
+            isValid = false;
+          } else if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) {
+            isValid = await executeBuiltInValidation(_fields, true);
+          }
+        }
+      }
+      if (isFieldValueUpdated) {
+        field._f.deps && (!Array.isArray(field._f.deps) || field._f.deps.length > 0) && trigger(field._f.deps);
+        shouldRenderByError(name, isValid, error, fieldState);
+      }
+    }
+  };
+  const _focusInput = (ref, key) => {
+    if (get(_formState.errors, key) && ref.focus) {
+      ref.focus();
+      return 1;
+    }
+    return;
+  };
+  const trigger = async (name, options = {}) => {
+    let isValid;
+    let validationResult;
+    const fieldNames = convertToArrayPayload(name);
+    if (_options.resolver) {
+      const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
+      isValid = isEmptyObject(errors);
+      validationResult = name ? !fieldNames.some((name2) => get(errors, name2)) : isValid;
+    } else if (name) {
+      validationResult = (await Promise.all(fieldNames.map(async (fieldName) => {
+        const field = get(_fields, fieldName);
+        return await executeBuiltInValidation(field && field._f ? { [fieldName]: field } : field);
+      }))).every(Boolean);
+      !(!validationResult && !_formState.isValid) && _setValid();
+    } else {
+      validationResult = isValid = await executeBuiltInValidation(_fields);
+    }
+    _subjects.state.next({
+      ...!isString$1(name) || (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isValid !== _formState.isValid ? {} : { name },
+      ..._options.resolver || !name ? { isValid } : {},
+      errors: _formState.errors
+    });
+    options.shouldFocus && !validationResult && iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
+    return validationResult;
+  };
+  const getValues = (fieldNames, config) => {
+    let values = {
+      ..._state.mount ? _formValues : _defaultValues
+    };
+    if (config) {
+      values = extractFormValues(config.dirtyFields ? _formState.dirtyFields : _formState.touchedFields, values);
+    }
+    return isUndefined(fieldNames) ? values : isString$1(fieldNames) ? get(values, fieldNames) : fieldNames.map((name) => get(values, name));
+  };
+  const getFieldState = (name, formState) => ({
+    invalid: !!get((formState || _formState).errors, name),
+    isDirty: !!get((formState || _formState).dirtyFields, name),
+    error: get((formState || _formState).errors, name),
+    isValidating: !!get(_formState.validatingFields, name),
+    isTouched: !!get((formState || _formState).touchedFields, name)
+  });
+  const clearErrors = (name) => {
+    name && convertToArrayPayload(name).forEach((inputName) => unset(_formState.errors, inputName));
+    _subjects.state.next({
+      errors: name ? _formState.errors : {}
+    });
+  };
+  const setError = (name, error, options) => {
+    const ref = (get(_fields, name, { _f: {} })._f || {}).ref;
+    const currentError = get(_formState.errors, name) || {};
+    const { ref: currentRef, message, type, ...restOfErrorTree } = currentError;
+    set(_formState.errors, name, {
+      ...restOfErrorTree,
+      ...error,
+      ref
+    });
+    _subjects.state.next({
+      name,
+      errors: _formState.errors,
+      isValid: false
+    });
+    options && options.shouldFocus && ref && ref.focus && ref.focus();
+  };
+  const watch = (name, defaultValue) => isFunction$1(name) ? _subjects.state.subscribe({
+    next: (payload) => "values" in payload && name(_getWatch(void 0, defaultValue), payload)
+  }) : _getWatch(name, defaultValue, true);
+  const _subscribe = (props2) => _subjects.state.subscribe({
+    next: (formState) => {
+      if (shouldSubscribeByName(props2.name, formState.name, props2.exact) && shouldRenderFormState(formState, props2.formState || _proxyFormState, _setFormState, props2.reRenderRoot)) {
+        props2.callback({
+          values: { ..._formValues },
+          ..._formState,
+          ...formState,
+          defaultValues: _defaultValues
+        });
+      }
+    }
+  }).unsubscribe;
+  const subscribe = (props2) => {
+    _state.mount = true;
+    _proxySubscribeFormState = {
+      ..._proxySubscribeFormState,
+      ...props2.formState
+    };
+    return _subscribe({
+      ...props2,
+      formState: _proxySubscribeFormState
+    });
+  };
+  const unregister = (name, options = {}) => {
+    for (const fieldName of name ? convertToArrayPayload(name) : _names.mount) {
+      _names.mount.delete(fieldName);
+      _names.array.delete(fieldName);
+      if (!options.keepValue) {
+        unset(_fields, fieldName);
+        unset(_formValues, fieldName);
+      }
+      !options.keepError && unset(_formState.errors, fieldName);
+      !options.keepDirty && unset(_formState.dirtyFields, fieldName);
+      !options.keepTouched && unset(_formState.touchedFields, fieldName);
+      !options.keepIsValidating && unset(_formState.validatingFields, fieldName);
+      !_options.shouldUnregister && !options.keepDefaultValue && unset(_defaultValues, fieldName);
+    }
+    _subjects.state.next({
+      values: cloneObject(_formValues)
+    });
+    _subjects.state.next({
+      ..._formState,
+      ...!options.keepDirty ? {} : { isDirty: _getDirty() }
+    });
+    !options.keepIsValid && _setValid();
+  };
+  const _setDisabledField = ({ disabled, name }) => {
+    if (isBoolean(disabled) && _state.mount || !!disabled || _names.disabled.has(name)) {
+      disabled ? _names.disabled.add(name) : _names.disabled.delete(name);
+    }
+  };
+  const register = (name, options = {}) => {
+    let field = get(_fields, name);
+    const disabledIsDefined = isBoolean(options.disabled) || isBoolean(_options.disabled);
+    set(_fields, name, {
+      ...field || {},
+      _f: {
+        ...field && field._f ? field._f : { ref: { name } },
+        name,
+        mount: true,
+        ...options
+      }
+    });
+    _names.mount.add(name);
+    if (field) {
+      _setDisabledField({
+        disabled: isBoolean(options.disabled) ? options.disabled : _options.disabled,
+        name
+      });
+    } else {
+      updateValidAndValue(name, true, options.value);
+    }
+    return {
+      ...disabledIsDefined ? { disabled: options.disabled || _options.disabled } : {},
+      ..._options.progressive ? {
+        required: !!options.required,
+        min: getRuleValue(options.min),
+        max: getRuleValue(options.max),
+        minLength: getRuleValue(options.minLength),
+        maxLength: getRuleValue(options.maxLength),
+        pattern: getRuleValue(options.pattern)
+      } : {},
+      name,
+      onChange,
+      onBlur: onChange,
+      ref: (ref) => {
+        if (ref) {
+          register(name, options);
+          field = get(_fields, name);
+          const fieldRef = isUndefined(ref.value) ? ref.querySelectorAll ? ref.querySelectorAll("input,select,textarea")[0] || ref : ref : ref;
+          const radioOrCheckbox = isRadioOrCheckbox(fieldRef);
+          const refs = field._f.refs || [];
+          if (radioOrCheckbox ? refs.find((option) => option === fieldRef) : fieldRef === field._f.ref) {
+            return;
+          }
+          set(_fields, name, {
+            _f: {
+              ...field._f,
+              ...radioOrCheckbox ? {
+                refs: [
+                  ...refs.filter(live),
+                  fieldRef,
+                  ...Array.isArray(get(_defaultValues, name)) ? [{}] : []
+                ],
+                ref: { type: fieldRef.type, name }
+              } : { ref: fieldRef }
+            }
+          });
+          updateValidAndValue(name, false, void 0, fieldRef);
+        } else {
+          field = get(_fields, name, {});
+          if (field._f) {
+            field._f.mount = false;
+          }
+          (_options.shouldUnregister || options.shouldUnregister) && !(isNameInFieldArray(_names.array, name) && _state.action) && _names.unMount.add(name);
+        }
+      }
+    };
+  };
+  const _focusError = () => _options.shouldFocusError && iterateFieldsByAction(_fields, _focusInput, _names.mount);
+  const _disableForm = (disabled) => {
+    if (isBoolean(disabled)) {
+      _subjects.state.next({ disabled });
+      iterateFieldsByAction(_fields, (ref, name) => {
+        const currentField = get(_fields, name);
+        if (currentField) {
+          ref.disabled = currentField._f.disabled || disabled;
+          if (Array.isArray(currentField._f.refs)) {
+            currentField._f.refs.forEach((inputRef) => {
+              inputRef.disabled = currentField._f.disabled || disabled;
+            });
+          }
+        }
+      }, 0, false);
+    }
+  };
+  const handleSubmit = (onValid, onInvalid) => async (e) => {
+    let onValidError = void 0;
+    if (e) {
+      e.preventDefault && e.preventDefault();
+      e.persist && e.persist();
+    }
+    let fieldValues = cloneObject(_formValues);
+    _subjects.state.next({
+      isSubmitting: true
+    });
+    if (_options.resolver) {
+      const { errors, values } = await _runSchema();
+      _formState.errors = errors;
+      fieldValues = cloneObject(values);
+    } else {
+      await executeBuiltInValidation(_fields);
+    }
+    if (_names.disabled.size) {
+      for (const name of _names.disabled) {
+        unset(fieldValues, name);
+      }
+    }
+    unset(_formState.errors, "root");
+    if (isEmptyObject(_formState.errors)) {
+      _subjects.state.next({
+        errors: {}
+      });
+      try {
+        await onValid(fieldValues, e);
+      } catch (error) {
+        onValidError = error;
+      }
+    } else {
+      if (onInvalid) {
+        await onInvalid({ ..._formState.errors }, e);
+      }
+      _focusError();
+      setTimeout(_focusError);
+    }
+    _subjects.state.next({
+      isSubmitted: true,
+      isSubmitting: false,
+      isSubmitSuccessful: isEmptyObject(_formState.errors) && !onValidError,
+      submitCount: _formState.submitCount + 1,
+      errors: _formState.errors
+    });
+    if (onValidError) {
+      throw onValidError;
+    }
+  };
+  const resetField = (name, options = {}) => {
+    if (get(_fields, name)) {
+      if (isUndefined(options.defaultValue)) {
+        setValue(name, cloneObject(get(_defaultValues, name)));
+      } else {
+        setValue(name, options.defaultValue);
+        set(_defaultValues, name, cloneObject(options.defaultValue));
+      }
+      if (!options.keepTouched) {
+        unset(_formState.touchedFields, name);
+      }
+      if (!options.keepDirty) {
+        unset(_formState.dirtyFields, name);
+        _formState.isDirty = options.defaultValue ? _getDirty(name, cloneObject(get(_defaultValues, name))) : _getDirty();
+      }
+      if (!options.keepError) {
+        unset(_formState.errors, name);
+        _proxyFormState.isValid && _setValid();
+      }
+      _subjects.state.next({ ..._formState });
+    }
+  };
+  const _reset = (formValues, keepStateOptions = {}) => {
+    const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
+    const cloneUpdatedValues = cloneObject(updatedValues);
+    const isEmptyResetValues = isEmptyObject(formValues);
+    const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
+    if (!keepStateOptions.keepDefaultValues) {
+      _defaultValues = updatedValues;
+    }
+    if (!keepStateOptions.keepValues) {
+      if (keepStateOptions.keepDirtyValues) {
+        const fieldsToCheck = /* @__PURE__ */ new Set([
+          ..._names.mount,
+          ...Object.keys(getDirtyFields(_defaultValues, _formValues))
+        ]);
+        for (const fieldName of Array.from(fieldsToCheck)) {
+          get(_formState.dirtyFields, fieldName) ? set(values, fieldName, get(_formValues, fieldName)) : setValue(fieldName, get(values, fieldName));
+        }
+      } else {
+        if (isWeb && isUndefined(formValues)) {
+          for (const name of _names.mount) {
+            const field = get(_fields, name);
+            if (field && field._f) {
+              const fieldReference = Array.isArray(field._f.refs) ? field._f.refs[0] : field._f.ref;
+              if (isHTMLElement(fieldReference)) {
+                const form = fieldReference.closest("form");
+                if (form) {
+                  form.reset();
+                  break;
+                }
+              }
+            }
+          }
+        }
+        if (keepStateOptions.keepFieldsRef) {
+          for (const fieldName of _names.mount) {
+            setValue(fieldName, get(values, fieldName));
+          }
+        } else {
+          _fields = {};
+        }
+      }
+      _formValues = _options.shouldUnregister ? keepStateOptions.keepDefaultValues ? cloneObject(_defaultValues) : {} : cloneObject(values);
+      _subjects.array.next({
+        values: { ...values }
+      });
+      _subjects.state.next({
+        values: { ...values }
+      });
+    }
+    _names = {
+      mount: keepStateOptions.keepDirtyValues ? _names.mount : /* @__PURE__ */ new Set(),
+      unMount: /* @__PURE__ */ new Set(),
+      array: /* @__PURE__ */ new Set(),
+      disabled: /* @__PURE__ */ new Set(),
+      watch: /* @__PURE__ */ new Set(),
+      watchAll: false,
+      focus: ""
+    };
+    _state.mount = !_proxyFormState.isValid || !!keepStateOptions.keepIsValid || !!keepStateOptions.keepDirtyValues;
+    _state.watch = !!_options.shouldUnregister;
+    _subjects.state.next({
+      submitCount: keepStateOptions.keepSubmitCount ? _formState.submitCount : 0,
+      isDirty: isEmptyResetValues ? false : keepStateOptions.keepDirty ? _formState.isDirty : !!(keepStateOptions.keepDefaultValues && !deepEqual(formValues, _defaultValues)),
+      isSubmitted: keepStateOptions.keepIsSubmitted ? _formState.isSubmitted : false,
+      dirtyFields: isEmptyResetValues ? {} : keepStateOptions.keepDirtyValues ? keepStateOptions.keepDefaultValues && _formValues ? getDirtyFields(_defaultValues, _formValues) : _formState.dirtyFields : keepStateOptions.keepDefaultValues && formValues ? getDirtyFields(_defaultValues, formValues) : keepStateOptions.keepDirty ? _formState.dirtyFields : {},
+      touchedFields: keepStateOptions.keepTouched ? _formState.touchedFields : {},
+      errors: keepStateOptions.keepErrors ? _formState.errors : {},
+      isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful ? _formState.isSubmitSuccessful : false,
+      isSubmitting: false,
+      defaultValues: _defaultValues
+    });
+  };
+  const reset = (formValues, keepStateOptions) => _reset(isFunction$1(formValues) ? formValues(_formValues) : formValues, keepStateOptions);
+  const setFocus = (name, options = {}) => {
+    const field = get(_fields, name);
+    const fieldReference = field && field._f;
+    if (fieldReference) {
+      const fieldRef = fieldReference.refs ? fieldReference.refs[0] : fieldReference.ref;
+      if (fieldRef.focus) {
+        fieldRef.focus();
+        options.shouldSelect && isFunction$1(fieldRef.select) && fieldRef.select();
+      }
+    }
+  };
+  const _setFormState = (updatedFormState) => {
+    _formState = {
+      ..._formState,
+      ...updatedFormState
+    };
+  };
+  const _resetDefaultValues = () => isFunction$1(_options.defaultValues) && _options.defaultValues().then((values) => {
+    reset(values, _options.resetOptions);
+    _subjects.state.next({
+      isLoading: false
+    });
+  });
+  const methods = {
+    control: {
+      register,
+      unregister,
+      getFieldState,
+      handleSubmit,
+      setError,
+      _subscribe,
+      _runSchema,
+      _focusError,
+      _getWatch,
+      _getDirty,
+      _setValid,
+      _setFieldArray,
+      _setDisabledField,
+      _setErrors,
+      _getFieldArray,
+      _reset,
+      _resetDefaultValues,
+      _removeUnmounted,
+      _disableForm,
+      _subjects,
+      _proxyFormState,
+      get _fields() {
+        return _fields;
+      },
+      get _formValues() {
+        return _formValues;
+      },
+      get _state() {
+        return _state;
+      },
+      set _state(value) {
+        _state = value;
+      },
+      get _defaultValues() {
+        return _defaultValues;
+      },
+      get _names() {
+        return _names;
+      },
+      set _names(value) {
+        _names = value;
+      },
+      get _formState() {
+        return _formState;
+      },
+      get _options() {
+        return _options;
+      },
+      set _options(value) {
+        _options = {
+          ..._options,
+          ...value
+        };
+      }
+    },
+    subscribe,
+    trigger,
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    getValues,
+    reset,
+    resetField,
+    clearErrors,
+    unregister,
+    setError,
+    setFocus,
+    getFieldState
+  };
+  return {
+    ...methods,
+    formControl: methods
+  };
+}
+function useForm(props = {}) {
+  const _formControl = React.useRef(void 0);
+  const _values = React.useRef(void 0);
+  const [formState, updateFormState] = React.useState({
+    isDirty: false,
+    isValidating: false,
+    isLoading: isFunction$1(props.defaultValues),
+    isSubmitted: false,
+    isSubmitting: false,
+    isSubmitSuccessful: false,
+    isValid: false,
+    submitCount: 0,
+    dirtyFields: {},
+    touchedFields: {},
+    validatingFields: {},
+    errors: props.errors || {},
+    disabled: props.disabled || false,
+    isReady: false,
+    defaultValues: isFunction$1(props.defaultValues) ? void 0 : props.defaultValues
+  });
+  if (!_formControl.current) {
+    if (props.formControl) {
+      _formControl.current = {
+        ...props.formControl,
+        formState
+      };
+      if (props.defaultValues && !isFunction$1(props.defaultValues)) {
+        props.formControl.reset(props.defaultValues, props.resetOptions);
+      }
+    } else {
+      const { formControl, ...rest } = createFormControl(props);
+      _formControl.current = {
+        ...rest,
+        formState
+      };
+    }
+  }
+  const control = _formControl.current.control;
+  control._options = props;
+  useIsomorphicLayoutEffect(() => {
+    const sub = control._subscribe({
+      formState: control._proxyFormState,
+      callback: () => updateFormState({ ...control._formState }),
+      reRenderRoot: true
+    });
+    updateFormState((data) => ({
+      ...data,
+      isReady: true
+    }));
+    control._formState.isReady = true;
+    return sub;
+  }, [control]);
+  React.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
+  React.useEffect(() => {
+    if (props.mode) {
+      control._options.mode = props.mode;
+    }
+    if (props.reValidateMode) {
+      control._options.reValidateMode = props.reValidateMode;
+    }
+  }, [control, props.mode, props.reValidateMode]);
+  React.useEffect(() => {
+    if (props.errors) {
+      control._setErrors(props.errors);
+      control._focusError();
+    }
+  }, [control, props.errors]);
+  React.useEffect(() => {
+    props.shouldUnregister && control._subjects.state.next({
+      values: control._getWatch()
+    });
+  }, [control, props.shouldUnregister]);
+  React.useEffect(() => {
+    if (control._proxyFormState.isDirty) {
+      const isDirty = control._getDirty();
+      if (isDirty !== formState.isDirty) {
+        control._subjects.state.next({
+          isDirty
+        });
+      }
+    }
+  }, [control, formState.isDirty]);
+  React.useEffect(() => {
+    if (props.values && !deepEqual(props.values, _values.current)) {
+      control._reset(props.values, {
+        keepFieldsRef: true,
+        ...control._options.resetOptions
+      });
+      _values.current = props.values;
+      updateFormState((state) => ({ ...state }));
+    } else {
+      control._resetDefaultValues();
+    }
+  }, [control, props.values]);
+  React.useEffect(() => {
+    if (!control._state.mount) {
+      control._setValid();
+      control._state.mount = true;
+    }
+    if (control._state.watch) {
+      control._state.watch = false;
+      control._subjects.state.next({ ...control._formState });
+    }
+    control._removeUnmounted();
+  });
+  _formControl.current.formState = getProxyFormState(formState, control);
+  return _formControl.current;
+}
+const LoadingSpinner = ({
+  size = "md",
+  message,
+  className = ""
+}) => {
+  const sizeClasses = {
+    sm: "h-6 w-6",
+    md: "h-12 w-12",
+    lg: "h-16 w-16"
+  };
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: `flex flex-col items-center justify-center ${className}`, children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      "div",
+      {
+        className: `animate-spin rounded-full border-b-2 border-primary ${sizeClasses[size]}`
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/LoadingSpinner.tsx",
+        lineNumber: 20,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    message && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "mt-4 text-gray-600", children: message }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/LoadingSpinner.tsx",
+      lineNumber: 23,
+      columnNumber: 19
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/LoadingSpinner.tsx",
+    lineNumber: 19,
+    columnNumber: 5
+  }, void 0);
+};
+const ErrorMessage = ({
+  title = "Error",
+  message,
+  className = "",
+  onRetry
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: `border-red-200 ${className}`, children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { className: "text-red-800", children: title }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 26,
+      columnNumber: 9
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 25,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-red-600", children: message }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 29,
+      columnNumber: 9
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 28,
+      columnNumber: 7
+    }, void 0),
+    onRetry && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(w$, { className: "flex justify-end", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Eo, { onClick: onRetry, variant: "primary", children: "Try Again" }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 33,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+      lineNumber: 32,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/ErrorMessage.tsx",
+    lineNumber: 24,
+    columnNumber: 5
+  }, void 0);
+};
+const EmptyState = ({
+  title,
+  message,
+  icon,
+  action,
+  className = ""
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: `${className}`, children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { className: "text-center", children: [
+      icon && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-4 flex justify-center", children: icon }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+        lineNumber: 32,
+        columnNumber: 18
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: title }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+        lineNumber: 33,
+        columnNumber: 9
+      }, void 0),
+      message && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(b$, { children: message }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+        lineNumber: 34,
+        columnNumber: 21
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+      lineNumber: 31,
+      columnNumber: 7
+    }, void 0),
+    action && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(w$, { className: "flex justify-center", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Eo, { onClick: action.onClick, variant: "primary", size: "large", children: action.label }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+      lineNumber: 38,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+      lineNumber: 37,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/ui/EmptyState.tsx",
+    lineNumber: 30,
+    columnNumber: 5
+  }, void 0);
+};
+const TextField = ({ field, formField }) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextField.tsx",
+        lineNumber: 15,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextField.tsx",
+      lineNumber: 13,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      dP,
+      {
+        ...formField,
+        placeholder: field.label || field.name,
+        readOnly: field.readonly,
+        disabled: field.readonly
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextField.tsx",
+        lineNumber: 17,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextField.tsx",
+      lineNumber: 24,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextField.tsx",
+    lineNumber: 12,
+    columnNumber: 5
+  }, void 0);
+};
+const TextareaField = ({
+  field,
+  formField
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextareaField.tsx",
+        lineNumber: 18,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextareaField.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      soe,
+      {
+        ...formField,
+        placeholder: field.label || field.name,
+        rows: 4,
+        className: "text-sm",
+        readOnly: field.readonly,
+        disabled: field.readonly
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextareaField.tsx",
+        lineNumber: 20,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextareaField.tsx",
+      lineNumber: 29,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/TextareaField.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, void 0);
+};
+const CheckboxField = ({
+  field,
+  formField
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center h-full", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center space-x-2", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Mp,
+        {
+          id: field.name,
+          checked: formField.value,
+          onCheckedChange: formField.onChange,
+          disabled: field.readonly
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+          lineNumber: 17,
+          columnNumber: 9
+        },
+        void 0
+      ),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        "label",
+        {
+          htmlFor: field.name,
+          className: "text-sm font-normal text-gray-700",
+          children: [
+            field.label || field.name,
+            field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+              lineNumber: 28,
+              columnNumber: 30
+            }, void 0)
+          ]
+        },
+        void 0,
+        true,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+          lineNumber: 23,
+          columnNumber: 9
+        },
+        void 0
+      )
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, void 0),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1 ml-6", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+      lineNumber: 32,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxField.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, void 0);
+};
+const CheckboxGroupField = ({
+  field,
+  formField
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-2", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+        lineNumber: 18,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "space-y-2", children: field.choices?.map((choice) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center space-x-2", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Mp,
+        {
+          id: `${field.name}-${choice.value}`,
+          checked: Array.isArray(formField.value) && formField.value.includes(choice.value),
+          onCheckedChange: (checked) => {
+            const currentValues = Array.isArray(formField.value) ? formField.value : [];
+            if (checked) {
+              formField.onChange([...currentValues, choice.value]);
+            } else {
+              formField.onChange(
+                currentValues.filter((v) => v !== choice.value)
+              );
+            }
+          },
+          disabled: field.readonly
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+          lineNumber: 23,
+          columnNumber: 13
+        },
+        void 0
+      ),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        "label",
+        {
+          htmlFor: `${field.name}-${choice.value}`,
+          className: "text-sm font-normal text-gray-700",
+          children: choice.text
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+          lineNumber: 43,
+          columnNumber: 13
+        },
+        void 0
+      )
+    ] }, choice.value, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+      lineNumber: 22,
+      columnNumber: 11
+    }, void 0)) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+      lineNumber: 20,
+      columnNumber: 7
+    }, void 0),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-2", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+      lineNumber: 53,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CheckboxGroupField.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, void 0);
+};
+const RadioField = ({ field, formField }) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-2", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+        lineNumber: 15,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+      lineNumber: 13,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      zre,
+      {
+        value: formField.value,
+        onValueChange: formField.onChange,
+        disabled: field.readonly,
+        children: field.choices?.map((choice) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center space-x-2", children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            Bre,
+            {
+              value: choice.value,
+              id: `${field.name}-${choice.value}`,
+              label: "",
+              disabled: field.readonly
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+              lineNumber: 24,
+              columnNumber: 13
+            },
+            void 0
+          ),
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            "label",
+            {
+              htmlFor: `${field.name}-${choice.value}`,
+              className: "text-sm font-normal text-gray-700",
+              children: choice.text
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+              lineNumber: 30,
+              columnNumber: 13
+            },
+            void 0
+          )
+        ] }, choice.value, true, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+          lineNumber: 23,
+          columnNumber: 11
+        }, void 0))
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+        lineNumber: 17,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-2", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+      lineNumber: 40,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/RadioField.tsx",
+    lineNumber: 12,
+    columnNumber: 5
+  }, void 0);
+};
+const SelectField = ({
+  field,
+  formField
+}) => {
+  const selectValue = formField.value != null ? String(formField.value) : "";
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+        lineNumber: 26,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+      lineNumber: 24,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      ZX,
+      {
+        value: selectValue,
+        onValueChange: (value) => {
+          if (value || !formField.value) {
+            formField.onChange(value);
+          }
+        },
+        name: formField.name,
+        disabled: field.readonly,
+        children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(tJ, { onBlur: formField.onBlur, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(eJ, { placeholder: field.label || field.name }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+            lineNumber: 39,
+            columnNumber: 11
+          }, void 0) }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+            lineNumber: 38,
+            columnNumber: 9
+          }, void 0),
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(nJ, { children: field.choices?.map((choice) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(oJ, { value: String(choice.value), children: choice.text }, choice.value, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+            lineNumber: 43,
+            columnNumber: 13
+          }, void 0)) }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+            lineNumber: 41,
+            columnNumber: 9
+          }, void 0)
+        ]
+      },
+      void 0,
+      true,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+        lineNumber: 28,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+      lineNumber: 50,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/SelectField.tsx",
+    lineNumber: 23,
+    columnNumber: 5
+  }, void 0);
+};
+const CollectionAutocomplete = ({
+  value,
+  onChange,
+  onBlur,
+  options,
+  placeholder,
+  disabled,
+  isLoading,
+  name
+}) => {
+  const [open, setOpen] = reactExports.useState(false);
+  const [search, setSearch] = reactExports.useState("");
+  const filteredOptions = options.filter(
+    (option) => option.label.toLowerCase().includes(search.toLowerCase())
+  );
+  const displayValue = options.find((opt) => String(opt.id) === value)?.label || "";
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "relative", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      dP,
+      {
+        type: "text",
+        value: open ? search : displayValue,
+        onChange: (e) => {
+          setSearch(e.target.value);
+          if (!open) setOpen(true);
+        },
+        onFocus: () => {
+          setOpen(true);
+          setSearch("");
+        },
+        onBlur: () => {
+          setTimeout(() => {
+            setOpen(false);
+            setSearch("");
+            onBlur();
+          }, 200);
+        },
+        placeholder: isLoading ? "Loading..." : placeholder,
+        disabled: disabled || isLoading,
+        name,
+        autoComplete: "off"
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+        lineNumber: 37,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    open && filteredOptions.length > 0 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto", children: filteredOptions.map((option) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      "button",
+      {
+        type: "button",
+        className: "w-full px-3 py-2 text-left text-sm hover:bg-gray-100 focus:bg-gray-100 focus:outline-none",
+        onClick: () => {
+          onChange(String(option.id));
+          setOpen(false);
+          setSearch("");
+        },
+        children: option.label
+      },
+      option.id,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+        lineNumber: 63,
+        columnNumber: 13
+      },
+      void 0
+    )) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+      lineNumber: 61,
+      columnNumber: 9
+    }, void 0),
+    open && filteredOptions.length === 0 && search && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "px-3 py-2 text-sm text-gray-500", children: [
+      'No results found for "',
+      search,
+      '"'
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+      lineNumber: 80,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+      lineNumber: 79,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionAutocomplete.tsx",
+    lineNumber: 36,
+    columnNumber: 5
+  }, void 0);
+};
+const CollectionSelectField = ({
+  field,
+  formField,
+  isLoading,
+  error,
+  options
+}) => {
+  const collectionSelectValue = formField.value != null ? String(formField.value) : "";
+  if (!field.collection) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+        field.label || field.name,
+        field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+          lineNumber: 29,
+          columnNumber: 30
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+        lineNumber: 27,
+        columnNumber: 9
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Rre,
+        {
+          variant: "destructive",
+          className: "mt-1",
+          title: "Configuration Error",
+          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(qO, { children: "Collection not configured for this field" }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+            lineNumber: 36,
+            columnNumber: 11
+          }, void 0)
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+          lineNumber: 31,
+          columnNumber: 9
+        },
+        void 0
+      )
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+      lineNumber: 26,
+      columnNumber: 7
+    }, void 0);
+  }
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+        lineNumber: 48,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+      lineNumber: 46,
+      columnNumber: 7
+    }, void 0),
+    error ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rre, { variant: "destructive", className: "mt-1", title: "Error", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(qO, { children: [
+      "Failed to load options: ",
+      error
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+      lineNumber: 52,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+      lineNumber: 51,
+      columnNumber: 9
+    }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      CollectionAutocomplete,
+      {
+        value: collectionSelectValue,
+        onChange: (value) => {
+          if (value || !formField.value) {
+            formField.onChange(value);
+          }
+        },
+        onBlur: formField.onBlur,
+        options,
+        placeholder: field.label || field.name,
+        disabled: field.readonly || isLoading,
+        isLoading,
+        name: formField.name
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+        lineNumber: 55,
+        columnNumber: 9
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+      lineNumber: 71,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/CollectionSelectField.tsx",
+    lineNumber: 45,
+    columnNumber: 5
+  }, void 0);
+};
+const FileField = ({ field, formField }) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/FileField.tsx",
+        lineNumber: 15,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/FileField.tsx",
+      lineNumber: 13,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      dP,
+      {
+        type: "file",
+        onChange: (e) => {
+          const file = e.target.files?.[0];
+          if (file) {
+            formField.onChange(file);
+          }
+        },
+        disabled: field.readonly
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/FileField.tsx",
+        lineNumber: 17,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/FileField.tsx",
+      lineNumber: 28,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/FileField.tsx",
+    lineNumber: 12,
+    columnNumber: 5
+  }, void 0);
+};
+var dayjs_min$1 = { exports: {} };
+var dayjs_min = dayjs_min$1.exports;
+var hasRequiredDayjs_min;
+function requireDayjs_min() {
+  if (hasRequiredDayjs_min) return dayjs_min$1.exports;
+  hasRequiredDayjs_min = 1;
+  (function(module, exports) {
+    !(function(t, e) {
+      module.exports = e();
+    })(dayjs_min, (function() {
+      var t = 1e3, e = 6e4, n = 36e5, r = "millisecond", i = "second", s = "minute", u = "hour", a = "day", o = "week", c = "month", f2 = "quarter", h = "year", d = "date", l = "Invalid Date", $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/, y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, M = { name: "en", weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"), months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"), ordinal: function(t2) {
+        var e6 = ["th", "st", "nd", "rd"], n2 = t2 % 100;
+        return "[" + t2 + (e6[(n2 - 20) % 10] || e6[n2] || e6[0]) + "]";
+      } }, m = function(t2, e6, n2) {
+        var r2 = String(t2);
+        return !r2 || r2.length >= e6 ? t2 : "" + Array(e6 + 1 - r2.length).join(n2) + t2;
+      }, v = { s: m, z: function(t2) {
+        var e6 = -t2.utcOffset(), n2 = Math.abs(e6), r2 = Math.floor(n2 / 60), i2 = n2 % 60;
+        return (e6 <= 0 ? "+" : "-") + m(r2, 2, "0") + ":" + m(i2, 2, "0");
+      }, m: function t2(e6, n2) {
+        if (e6.date() < n2.date()) return -t2(n2, e6);
+        var r2 = 12 * (n2.year() - e6.year()) + (n2.month() - e6.month()), i2 = e6.clone().add(r2, c), s2 = n2 - i2 < 0, u2 = e6.clone().add(r2 + (s2 ? -1 : 1), c);
+        return +(-(r2 + (n2 - i2) / (s2 ? i2 - u2 : u2 - i2)) || 0);
+      }, a: function(t2) {
+        return t2 < 0 ? Math.ceil(t2) || 0 : Math.floor(t2);
+      }, p: function(t2) {
+        return { M: c, y: h, w: o, d: a, D: d, h: u, m: s, s: i, ms: r, Q: f2 }[t2] || String(t2 || "").toLowerCase().replace(/s$/, "");
+      }, u: function(t2) {
+        return void 0 === t2;
+      } }, g = "en", D = {};
+      D[g] = M;
+      var p2 = "$isDayjsObject", S = function(t2) {
+        return t2 instanceof _ || !(!t2 || !t2[p2]);
+      }, w = function t2(e6, n2, r2) {
+        var i2;
+        if (!e6) return g;
+        if ("string" == typeof e6) {
+          var s2 = e6.toLowerCase();
+          D[s2] && (i2 = s2), n2 && (D[s2] = n2, i2 = s2);
+          var u2 = e6.split("-");
+          if (!i2 && u2.length > 1) return t2(u2[0]);
+        } else {
+          var a2 = e6.name;
+          D[a2] = e6, i2 = a2;
+        }
+        return !r2 && i2 && (g = i2), i2 || !r2 && g;
+      }, O = function(t2, e6) {
+        if (S(t2)) return t2.clone();
+        var n2 = "object" == typeof e6 ? e6 : {};
+        return n2.date = t2, n2.args = arguments, new _(n2);
+      }, b = v;
+      b.l = w, b.i = S, b.w = function(t2, e6) {
+        return O(t2, { locale: e6.$L, utc: e6.$u, x: e6.$x, $offset: e6.$offset });
+      };
+      var _ = (function() {
+        function M2(t2) {
+          this.$L = w(t2.locale, null, true), this.parse(t2), this.$x = this.$x || t2.x || {}, this[p2] = true;
+        }
+        var m2 = M2.prototype;
+        return m2.parse = function(t2) {
+          this.$d = (function(t6) {
+            var e6 = t6.date, n2 = t6.utc;
+            if (null === e6) return /* @__PURE__ */ new Date(NaN);
+            if (b.u(e6)) return /* @__PURE__ */ new Date();
+            if (e6 instanceof Date) return new Date(e6);
+            if ("string" == typeof e6 && !/Z$/i.test(e6)) {
+              var r2 = e6.match($);
+              if (r2) {
+                var i2 = r2[2] - 1 || 0, s2 = (r2[7] || "0").substring(0, 3);
+                return n2 ? new Date(Date.UTC(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2)) : new Date(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2);
+              }
+            }
+            return new Date(e6);
+          })(t2), this.init();
+        }, m2.init = function() {
+          var t2 = this.$d;
+          this.$y = t2.getFullYear(), this.$M = t2.getMonth(), this.$D = t2.getDate(), this.$W = t2.getDay(), this.$H = t2.getHours(), this.$m = t2.getMinutes(), this.$s = t2.getSeconds(), this.$ms = t2.getMilliseconds();
+        }, m2.$utils = function() {
+          return b;
+        }, m2.isValid = function() {
+          return !(this.$d.toString() === l);
+        }, m2.isSame = function(t2, e6) {
+          var n2 = O(t2);
+          return this.startOf(e6) <= n2 && n2 <= this.endOf(e6);
+        }, m2.isAfter = function(t2, e6) {
+          return O(t2) < this.startOf(e6);
+        }, m2.isBefore = function(t2, e6) {
+          return this.endOf(e6) < O(t2);
+        }, m2.$g = function(t2, e6, n2) {
+          return b.u(t2) ? this[e6] : this.set(n2, t2);
+        }, m2.unix = function() {
+          return Math.floor(this.valueOf() / 1e3);
+        }, m2.valueOf = function() {
+          return this.$d.getTime();
+        }, m2.startOf = function(t2, e6) {
+          var n2 = this, r2 = !!b.u(e6) || e6, f4 = b.p(t2), l2 = function(t6, e10) {
+            var i2 = b.w(n2.$u ? Date.UTC(n2.$y, e10, t6) : new Date(n2.$y, e10, t6), n2);
+            return r2 ? i2 : i2.endOf(a);
+          }, $2 = function(t6, e10) {
+            return b.w(n2.toDate()[t6].apply(n2.toDate("s"), (r2 ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e10)), n2);
+          }, y2 = this.$W, M4 = this.$M, m6 = this.$D, v2 = "set" + (this.$u ? "UTC" : "");
+          switch (f4) {
+            case h:
+              return r2 ? l2(1, 0) : l2(31, 11);
+            case c:
+              return r2 ? l2(1, M4) : l2(0, M4 + 1);
+            case o:
+              var g2 = this.$locale().weekStart || 0, D2 = (y2 < g2 ? y2 + 7 : y2) - g2;
+              return l2(r2 ? m6 - D2 : m6 + (6 - D2), M4);
+            case a:
+            case d:
+              return $2(v2 + "Hours", 0);
+            case u:
+              return $2(v2 + "Minutes", 1);
+            case s:
+              return $2(v2 + "Seconds", 2);
+            case i:
+              return $2(v2 + "Milliseconds", 3);
+            default:
+              return this.clone();
+          }
+        }, m2.endOf = function(t2) {
+          return this.startOf(t2, false);
+        }, m2.$set = function(t2, e6) {
+          var n2, o2 = b.p(t2), f4 = "set" + (this.$u ? "UTC" : ""), l2 = (n2 = {}, n2[a] = f4 + "Date", n2[d] = f4 + "Date", n2[c] = f4 + "Month", n2[h] = f4 + "FullYear", n2[u] = f4 + "Hours", n2[s] = f4 + "Minutes", n2[i] = f4 + "Seconds", n2[r] = f4 + "Milliseconds", n2)[o2], $2 = o2 === a ? this.$D + (e6 - this.$W) : e6;
+          if (o2 === c || o2 === h) {
+            var y2 = this.clone().set(d, 1);
+            y2.$d[l2]($2), y2.init(), this.$d = y2.set(d, Math.min(this.$D, y2.daysInMonth())).$d;
+          } else l2 && this.$d[l2]($2);
+          return this.init(), this;
+        }, m2.set = function(t2, e6) {
+          return this.clone().$set(t2, e6);
+        }, m2.get = function(t2) {
+          return this[b.p(t2)]();
+        }, m2.add = function(r2, f4) {
+          var d2, l2 = this;
+          r2 = Number(r2);
+          var $2 = b.p(f4), y2 = function(t2) {
+            var e6 = O(l2);
+            return b.w(e6.date(e6.date() + Math.round(t2 * r2)), l2);
+          };
+          if ($2 === c) return this.set(c, this.$M + r2);
+          if ($2 === h) return this.set(h, this.$y + r2);
+          if ($2 === a) return y2(1);
+          if ($2 === o) return y2(7);
+          var M4 = (d2 = {}, d2[s] = e, d2[u] = n, d2[i] = t, d2)[$2] || 1, m6 = this.$d.getTime() + r2 * M4;
+          return b.w(m6, this);
+        }, m2.subtract = function(t2, e6) {
+          return this.add(-1 * t2, e6);
+        }, m2.format = function(t2) {
+          var e6 = this, n2 = this.$locale();
+          if (!this.isValid()) return n2.invalidDate || l;
+          var r2 = t2 || "YYYY-MM-DDTHH:mm:ssZ", i2 = b.z(this), s2 = this.$H, u2 = this.$m, a2 = this.$M, o2 = n2.weekdays, c2 = n2.months, f4 = n2.meridiem, h2 = function(t6, n6, i6, s6) {
+            return t6 && (t6[n6] || t6(e6, r2)) || i6[n6].slice(0, s6);
+          }, d2 = function(t6) {
+            return b.s(s2 % 12 || 12, t6, "0");
+          }, $2 = f4 || function(t6, e10, n6) {
+            var r4 = t6 < 12 ? "AM" : "PM";
+            return n6 ? r4.toLowerCase() : r4;
+          };
+          return r2.replace(y, (function(t6, r4) {
+            return r4 || (function(t10) {
+              switch (t10) {
+                case "YY":
+                  return String(e6.$y).slice(-2);
+                case "YYYY":
+                  return b.s(e6.$y, 4, "0");
+                case "M":
+                  return a2 + 1;
+                case "MM":
+                  return b.s(a2 + 1, 2, "0");
+                case "MMM":
+                  return h2(n2.monthsShort, a2, c2, 3);
+                case "MMMM":
+                  return h2(c2, a2);
+                case "D":
+                  return e6.$D;
+                case "DD":
+                  return b.s(e6.$D, 2, "0");
+                case "d":
+                  return String(e6.$W);
+                case "dd":
+                  return h2(n2.weekdaysMin, e6.$W, o2, 2);
+                case "ddd":
+                  return h2(n2.weekdaysShort, e6.$W, o2, 3);
+                case "dddd":
+                  return o2[e6.$W];
+                case "H":
+                  return String(s2);
+                case "HH":
+                  return b.s(s2, 2, "0");
+                case "h":
+                  return d2(1);
+                case "hh":
+                  return d2(2);
+                case "a":
+                  return $2(s2, u2, true);
+                case "A":
+                  return $2(s2, u2, false);
+                case "m":
+                  return String(u2);
+                case "mm":
+                  return b.s(u2, 2, "0");
+                case "s":
+                  return String(e6.$s);
+                case "ss":
+                  return b.s(e6.$s, 2, "0");
+                case "SSS":
+                  return b.s(e6.$ms, 3, "0");
+                case "Z":
+                  return i2;
+              }
+              return null;
+            })(t6) || i2.replace(":", "");
+          }));
+        }, m2.utcOffset = function() {
+          return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
+        }, m2.diff = function(r2, d2, l2) {
+          var $2, y2 = this, M4 = b.p(d2), m6 = O(r2), v2 = (m6.utcOffset() - this.utcOffset()) * e, g2 = this - m6, D2 = function() {
+            return b.m(y2, m6);
+          };
+          switch (M4) {
+            case h:
+              $2 = D2() / 12;
+              break;
+            case c:
+              $2 = D2();
+              break;
+            case f2:
+              $2 = D2() / 3;
+              break;
+            case o:
+              $2 = (g2 - v2) / 6048e5;
+              break;
+            case a:
+              $2 = (g2 - v2) / 864e5;
+              break;
+            case u:
+              $2 = g2 / n;
+              break;
+            case s:
+              $2 = g2 / e;
+              break;
+            case i:
+              $2 = g2 / t;
+              break;
+            default:
+              $2 = g2;
+          }
+          return l2 ? $2 : b.a($2);
+        }, m2.daysInMonth = function() {
+          return this.endOf(c).$D;
+        }, m2.$locale = function() {
+          return D[this.$L];
+        }, m2.locale = function(t2, e6) {
+          if (!t2) return this.$L;
+          var n2 = this.clone(), r2 = w(t2, e6, true);
+          return r2 && (n2.$L = r2), n2;
+        }, m2.clone = function() {
+          return b.w(this.$d, this);
+        }, m2.toDate = function() {
+          return new Date(this.valueOf());
+        }, m2.toJSON = function() {
+          return this.isValid() ? this.toISOString() : null;
+        }, m2.toISOString = function() {
+          return this.$d.toISOString();
+        }, m2.toString = function() {
+          return this.$d.toUTCString();
+        }, M2;
+      })(), k = _.prototype;
+      return O.prototype = k, [["$ms", r], ["$s", i], ["$m", s], ["$H", u], ["$W", a], ["$M", c], ["$y", h], ["$D", d]].forEach((function(t2) {
+        k[t2[1]] = function(e6) {
+          return this.$g(e6, t2[0], t2[1]);
+        };
+      })), O.extend = function(t2, e6) {
+        return t2.$i || (t2(e6, _, O), t2.$i = true), O;
+      }, O.locale = w, O.isDayjs = S, O.unix = function(t2) {
+        return O(1e3 * t2);
+      }, O.en = D[g], O.Ls = D, O.p = {}, O;
+    }));
+  })(dayjs_min$1);
+  return dayjs_min$1.exports;
+}
+var dayjs_minExports = requireDayjs_min();
+const dayjs = /* @__PURE__ */ getDefaultExportFromCjs(dayjs_minExports);
+var utc$2 = { exports: {} };
+var utc$1 = utc$2.exports;
+var hasRequiredUtc;
+function requireUtc() {
+  if (hasRequiredUtc) return utc$2.exports;
+  hasRequiredUtc = 1;
+  (function(module, exports) {
+    !(function(t, i) {
+      module.exports = i();
+    })(utc$1, (function() {
+      var t = "minute", i = /[+-]\d\d(?::?\d\d)?/g, e = /([+-]|\d\d)/g;
+      return function(s, f2, n) {
+        var u = f2.prototype;
+        n.utc = function(t2) {
+          var i2 = { date: t2, utc: true, args: arguments };
+          return new f2(i2);
+        }, u.utc = function(i2) {
+          var e6 = n(this.toDate(), { locale: this.$L, utc: true });
+          return i2 ? e6.add(this.utcOffset(), t) : e6;
+        }, u.local = function() {
+          return n(this.toDate(), { locale: this.$L, utc: false });
+        };
+        var r = u.parse;
+        u.parse = function(t2) {
+          t2.utc && (this.$u = true), this.$utils().u(t2.$offset) || (this.$offset = t2.$offset), r.call(this, t2);
+        };
+        var o = u.init;
+        u.init = function() {
+          if (this.$u) {
+            var t2 = this.$d;
+            this.$y = t2.getUTCFullYear(), this.$M = t2.getUTCMonth(), this.$D = t2.getUTCDate(), this.$W = t2.getUTCDay(), this.$H = t2.getUTCHours(), this.$m = t2.getUTCMinutes(), this.$s = t2.getUTCSeconds(), this.$ms = t2.getUTCMilliseconds();
+          } else o.call(this);
+        };
+        var a = u.utcOffset;
+        u.utcOffset = function(s2, f4) {
+          var n2 = this.$utils().u;
+          if (n2(s2)) return this.$u ? 0 : n2(this.$offset) ? a.call(this) : this.$offset;
+          if ("string" == typeof s2 && (s2 = (function(t2) {
+            void 0 === t2 && (t2 = "");
+            var s6 = t2.match(i);
+            if (!s6) return null;
+            var f6 = ("" + s6[0]).match(e) || ["-", 0, 0], n6 = f6[0], u6 = 60 * +f6[1] + +f6[2];
+            return 0 === u6 ? 0 : "+" === n6 ? u6 : -u6;
+          })(s2), null === s2)) return this;
+          var u2 = Math.abs(s2) <= 16 ? 60 * s2 : s2;
+          if (0 === u2) return this.utc(f4);
+          var r2 = this.clone();
+          if (f4) return r2.$offset = u2, r2.$u = false, r2;
+          var o2 = this.$u ? this.toDate().getTimezoneOffset() : -1 * this.utcOffset();
+          return (r2 = this.local().add(u2 + o2, t)).$offset = u2, r2.$x.$localOffset = o2, r2;
+        };
+        var h = u.format;
+        u.format = function(t2) {
+          var i2 = t2 || (this.$u ? "YYYY-MM-DDTHH:mm:ss[Z]" : "");
+          return h.call(this, i2);
+        }, u.valueOf = function() {
+          var t2 = this.$utils().u(this.$offset) ? 0 : this.$offset + (this.$x.$localOffset || this.$d.getTimezoneOffset());
+          return this.$d.valueOf() - 6e4 * t2;
+        }, u.isUTC = function() {
+          return !!this.$u;
+        }, u.toISOString = function() {
+          return this.toDate().toISOString();
+        }, u.toString = function() {
+          return this.toDate().toUTCString();
+        };
+        var l = u.toDate;
+        u.toDate = function(t2) {
+          return "s" === t2 && this.$offset ? n(this.format("YYYY-MM-DD HH:mm:ss:SSS")).toDate() : l.call(this);
+        };
+        var c = u.diff;
+        u.diff = function(t2, i2, e6) {
+          if (t2 && this.$u === t2.$u) return c.call(this, t2, i2, e6);
+          var s2 = this.local(), f4 = n(t2).local();
+          return c.call(s2, f4, i2, e6);
+        };
+      };
+    }));
+  })(utc$2);
+  return utc$2.exports;
+}
+var utcExports = requireUtc();
+const utc = /* @__PURE__ */ getDefaultExportFromCjs(utcExports);
+dayjs.extend(utc);
+const DateField = ({ field, formField }) => {
+  const dateValue = formField.value ? dayjs.utc(formField.value).format("YYYY-MM-DD") : "";
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/DateField.tsx",
+        lineNumber: 23,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/DateField.tsx",
+      lineNumber: 21,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      dP,
+      {
+        ...formField,
+        value: dateValue,
+        type: "date",
+        placeholder: field.label || field.name,
+        readOnly: field.readonly,
+        disabled: field.readonly
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/DateField.tsx",
+        lineNumber: 25,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/DateField.tsx",
+      lineNumber: 34,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/DateField.tsx",
+    lineNumber: 20,
+    columnNumber: 5
+  }, void 0);
+};
+const NumberField = ({
+  field,
+  formField
+}) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("label", { className: "block text-xs font-medium text-gray-700 mb-1", children: [
+      field.label || field.name,
+      field.required && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-red-500 ml-1", children: "*" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/NumberField.tsx",
+        lineNumber: 18,
+        columnNumber: 28
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/NumberField.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      dP,
+      {
+        ...formField,
+        type: "number",
+        step: "any",
+        placeholder: field.label || field.name,
+        onChange: (e) => {
+          const value = e.target.value;
+          formField.onChange(value === "" ? "" : value);
+        },
+        readOnly: field.readonly,
+        disabled: field.readonly
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/NumberField.tsx",
+        lineNumber: 20,
+        columnNumber: 7
+      },
+      void 0
+    ),
+    field.helper_text && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: field.helper_text }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/NumberField.tsx",
+      lineNumber: 33,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/form-fields/NumberField.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, void 0);
+};
+const getDefaultValue = (field, formData) => {
+  const value = formData[field.name];
+  switch (field.type) {
+    case "checkbox":
+      return value === true || value === "true" || value === "1" || false;
+    case "checkbox_group":
+      return Array.isArray(value) ? value : [];
+    case "file":
+      return value || "";
+    case "select":
+    case "radio":
+    case "collectionSelect":
+      return value != null && value !== "" ? String(value) : "";
+    case "date":
+      if (!value) return "";
+      try {
+        const dateMatch = String(value).match(/^(\d{4}-\d{2}-\d{2})/);
+        if (dateMatch) return dateMatch[1];
+        const date2 = new Date(value);
+        if (isNaN(date2.getTime())) return "";
+        return date2.toISOString().split("T")[0];
+      } catch {
+        return "";
+      }
+    case "number":
+      if (value === null || value === void 0 || value === "") return "";
+      const num = Number(value);
+      return isNaN(num) ? "" : num;
+    default:
+      return value ?? "";
+  }
+};
+const getWidthValue = (width) => {
+  switch (width) {
+    case "full":
+      return 100;
+    case "half":
+      return 50;
+    case "quarter":
+      return 25;
+    case "twenty":
+      return 20;
+    default:
+      return 100;
+  }
+};
+const getGridClass = (fields2) => {
+  if (fields2.length === 1) return "";
+  const widths = fields2.map((f2) => f2.width);
+  if (widths.every((w) => w === "quarter")) {
+    return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4";
+  }
+  if (widths.every((w) => w === "twenty")) {
+    return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4";
+  }
+  if (widths.every((w) => w === "half")) {
+    return "grid grid-cols-1 md:grid-cols-2 gap-4";
+  }
+  if (fields2.length === 2) {
+    return "grid grid-cols-1 md:grid-cols-2 gap-4";
+  }
+  if (fields2.length === 3) {
+    return "grid grid-cols-1 md:grid-cols-3 gap-4";
+  }
+  if (fields2.length === 4) {
+    return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4";
+  }
+  if (fields2.length === 5) {
+    return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4";
+  }
+  return "grid gap-4";
+};
+const FormBlock = ({ block, onSubmit }) => {
+  const {
+    formData,
+    isLoadingInitialValues,
+    isSubmitting,
+    successMessage,
+    errorMessage,
+    handleSubmit: handleFormSubmit,
+    handleDelete,
+    showDelete,
+    isDeleting,
+    clearSuccessMessage,
+    clearErrorMessage
+  } = useFormManagement({
+    block,
+    onSuccess: () => {
+      if (onSubmit) {
+        onSubmit(formData);
+      }
+    }
+  });
+  const { getCollectionData, isCollectionLoading, getCollectionError } = useCollectionSelect(block.form.fields);
+  const form = useForm({
+    defaultValues: block.form.fields.reduce((acc, field) => {
+      acc[field.name] = getDefaultValue(field, formData);
+      return acc;
+    }, {})
+  });
+  reactExports.useEffect(() => {
+    if (formData && Object.keys(formData).length > 0 && !isLoadingInitialValues) {
+      const newDefaultValues = block.form.fields.reduce((acc, field) => {
+        acc[field.name] = getDefaultValue(field, formData);
+        return acc;
+      }, {});
+      form.reset(newDefaultValues);
+    }
+  }, [formData, isLoadingInitialValues, block.form.fields, form]);
+  const onFormSubmit = (data) => {
+    if (successMessage) {
+      clearSuccessMessage();
+    }
+    if (errorMessage) {
+      clearErrorMessage();
+    }
+    handleFormSubmit(data);
+  };
+  const renderField = (field, formField) => {
+    switch (field.type) {
+      case "text":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(TextField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 107,
+          columnNumber: 16
+        }, void 0);
+      case "textarea":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(TextareaField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 110,
+          columnNumber: 16
+        }, void 0);
+      case "checkbox":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CheckboxField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 113,
+          columnNumber: 16
+        }, void 0);
+      case "checkbox_group":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CheckboxGroupField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 116,
+          columnNumber: 16
+        }, void 0);
+      case "radio":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RadioField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 119,
+          columnNumber: 16
+        }, void 0);
+      case "select":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(SelectField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 122,
+          columnNumber: 16
+        }, void 0);
+      case "collectionSelect":
+        if (!field.collection) {
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            CollectionSelectField,
+            {
+              field,
+              formField,
+              isLoading: false,
+              error: "Collection not configured",
+              options: []
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+              lineNumber: 127,
+              columnNumber: 13
+            },
+            void 0
+          );
+        }
+        const isLoadingCollection = isCollectionLoading(field.collection);
+        const collectionError = getCollectionError(field.collection);
+        const options = getCollectionData(field.collection) || [];
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          CollectionSelectField,
+          {
+            field,
+            formField,
+            isLoading: isLoadingCollection,
+            error: collectionError,
+            options
+          },
+          void 0,
+          false,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+            lineNumber: 142,
+            columnNumber: 11
+          },
+          void 0
+        );
+      case "file":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(FileField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 152,
+          columnNumber: 16
+        }, void 0);
+      case "date":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(DateField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 155,
+          columnNumber: 16
+        }, void 0);
+      case "number":
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(NumberField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 158,
+          columnNumber: 16
+        }, void 0);
+      default:
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(TextField, { field, formField }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 161,
+          columnNumber: 16
+        }, void 0);
+    }
+  };
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: "mb-4", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center justify-between", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: block.headline }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+        lineNumber: 169,
+        columnNumber: 11
+      }, void 0),
+      showDelete && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Eo,
+        {
+          type: "button",
+          onClick: handleDelete,
+          variant: "destructive",
+          size: "xl",
+          disabled: isDeleting,
+          children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "mr-2 text-xl", children: "×" }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+              lineNumber: 178,
+              columnNumber: 15
+            }, void 0),
+            isDeleting ? "Deleting..." : "Delete"
+          ]
+        },
+        void 0,
+        true,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 171,
+          columnNumber: 13
+        },
+        void 0
+      )
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 168,
+      columnNumber: 9
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 167,
+      columnNumber: 7
+    }, void 0),
+    isLoadingInitialValues ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(LoadingSpinner, { message: "Loading form data..." }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 187,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 186,
+      columnNumber: 9
+    }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Dre, { ...form, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("form", { onSubmit: form.handleSubmit(onFormSubmit), children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: [
+        successMessage && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          Rre,
+          {
+            title: "Adatok sikeresen elküldve!",
+            className: "mb-4 bg-green-50 border-green-200",
+            variant: "info"
+          },
+          void 0,
+          false,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+            lineNumber: 195,
+            columnNumber: 17
+          },
+          void 0
+        ),
+        errorMessage && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          Rre,
+          {
+            title: "Hiba történt",
+            className: "mb-4 bg-red-50 border-red-200",
+            variant: "destructive",
+            children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(qO, { className: "text-red-800", children: errorMessage }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+              lineNumber: 213,
+              columnNumber: 19
+            }, void 0)
+          },
+          void 0,
+          false,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+            lineNumber: 208,
+            columnNumber: 17
+          },
+          void 0
+        ),
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex flex-col gap-4", children: (() => {
+          const sortedFields = [...block.form.fields].sort(
+            (a, b) => a.sort - b.sort
+          );
+          const rows = [];
+          let i = 0;
+          while (i < sortedFields.length) {
+            const currentRow = [];
+            let rowWidth = 0;
+            while (i < sortedFields.length && rowWidth < 100) {
+              const field = sortedFields[i];
+              const fieldWidth = getWidthValue(field.width);
+              if (rowWidth + fieldWidth > 100) {
+                break;
+              }
+              currentRow.push(field);
+              rowWidth += fieldWidth;
+              i++;
+              if (rowWidth === 100) {
+                break;
+              }
+            }
+            if (currentRow.length > 0) {
+              rows.push(currentRow);
+            }
+          }
+          return rows.map((rowFields, rowIndex) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: getGridClass(rowFields), children: rowFields.map((field) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            K4,
+            {
+              control: form.control,
+              name: field.name,
+              rules: {
+                validate: field.required ? (value) => {
+                  const isValid = value !== void 0 && value !== null && value !== "";
+                  return isValid || `${field.label || field.name} is required`;
+                } : void 0
+              },
+              render: ({ field: formField }) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Y4, { children: field.type === "select" ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
+                renderField(field, formField),
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Q4, {}, void 0, false, {
+                  fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                  lineNumber: 279,
+                  columnNumber: 35
+                }, void 0)
+              ] }, void 0, true, {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                lineNumber: 277,
+                columnNumber: 33
+              }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(J4, { children: renderField(field, formField) }, void 0, false, {
+                  fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                  lineNumber: 283,
+                  columnNumber: 35
+                }, void 0),
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Q4, {}, void 0, false, {
+                  fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                  lineNumber: 286,
+                  columnNumber: 35
+                }, void 0)
+              ] }, void 0, true, {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                lineNumber: 282,
+                columnNumber: 33
+              }, void 0) }, void 0, false, {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+                lineNumber: 275,
+                columnNumber: 29
+              }, void 0)
+            },
+            field.id,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+              lineNumber: 256,
+              columnNumber: 25
+            },
+            void 0
+          )) }, rowIndex, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+            lineNumber: 254,
+            columnNumber: 21
+          }, void 0));
+        })() }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 219,
+          columnNumber: 15
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+        lineNumber: 192,
+        columnNumber: 13
+      }, void 0),
+      block.form.on_submit_url && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(w$, { className: "flex justify-end pt-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Eo,
+        {
+          type: "submit",
+          disabled: isSubmitting,
+          size: "large",
+          variant: "primary",
+          children: isSubmitting ? "Submitting..." : "Submit"
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+          lineNumber: 301,
+          columnNumber: 17
+        },
+        void 0
+      ) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+        lineNumber: 300,
+        columnNumber: 15
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 191,
+      columnNumber: 11
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+      lineNumber: 190,
+      columnNumber: 9
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/FormBlock.tsx",
+    lineNumber: 166,
+    columnNumber: 5
+  }, void 0);
+};
+const RichtextBlock = ({ block }) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: "mb-4", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: block.headline }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/RichtextBlock.tsx",
+      lineNumber: 18,
+      columnNumber: 9
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/RichtextBlock.tsx",
+      lineNumber: 17,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      "div",
+      {
+        className: "prose prose-lg max-w-none text-gray-700",
+        dangerouslySetInnerHTML: { __html: block.content }
+      },
+      void 0,
+      false,
+      {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/RichtextBlock.tsx",
+        lineNumber: 21,
+        columnNumber: 9
+      },
+      void 0
+    ) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/RichtextBlock.tsx",
+      lineNumber: 20,
+      columnNumber: 7
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/RichtextBlock.tsx",
+    lineNumber: 16,
+    columnNumber: 5
+  }, void 0);
+};
+const Icon = ({
+  name = "add",
+  className = ""
+}) => {
+  const iconMap = {
+    add: "+",
+    plus: "+",
+    minus: "−",
+    edit: "✎",
+    delete: "×",
+    remove: "×",
+    close: "×",
+    check: "✓",
+    search: "🔍",
+    filter: "⚲",
+    refresh: "↻",
+    download: "⬇",
+    upload: "⬆",
+    save: "💾",
+    settings: "⚙"
+  };
+  const iconSymbol = iconMap[name.toLowerCase()] || iconMap.add;
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className, children: iconSymbol }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+    lineNumber: 45,
+    columnNumber: 10
+  }, void 0);
+};
+const DataTableBase = ({
+  tableName,
+  data,
+  columns,
+  isLoading = false,
+  error = null,
+  totalCount,
+  onRowClickUrl,
+  enableSearch = true,
+  onSearchChange,
+  activeSearchQuery = "",
+  pagination = { pageIndex: 0, pageSize: 10 },
+  onPaginationChange,
+  paginationEnabled = true,
+  hideId = false,
+  extraButton = null
+}) => {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [searchInput, setSearchInput] = reactExports.useState(activeSearchQuery);
+  const displayColumns = hideId ? columns.filter((col) => col !== "id") : columns;
+  reactExports.useEffect(() => {
+    setSearchInput(activeSearchQuery);
+  }, [activeSearchQuery]);
+  const navigateWithParams = (destination) => {
+    const params = new URLSearchParams(searchParams);
+    const separator = destination.includes("?") ? "&" : "?";
+    const queryString = params.toString();
+    const url = queryString ? `${destination}${separator}${queryString}` : destination;
+    navigate(url);
+  };
+  const totalPages = Math.ceil(totalCount / pagination.pageSize);
+  const currentPage = pagination.pageIndex + 1;
+  const handleSearch = () => {
+    if (onSearchChange) {
+      onSearchChange(searchInput);
+    }
+  };
+  const handleClearSearch = () => {
+    setSearchInput("");
+    if (onSearchChange) {
+      onSearchChange("");
+    }
+  };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+  const handleRowClick = (rowId) => {
+    if (onRowClickUrl) {
+      navigate(`${onRowClickUrl}?id=${rowId}`);
+    }
+  };
+  const tableColumns = displayColumns.map((col) => ({
+    accessorFn: (row) => row[col],
+    id: col,
+    header: col.replace(/_/g, " ").toUpperCase(),
+    cell: ({ getValue, row }) => {
+      const value = getValue();
+      const displayValue = typeof value === "object" && value !== null ? JSON.stringify(value) : String(value ?? "");
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        "div",
+        {
+          onClick: () => handleRowClick(row.original.id),
+          className: onRowClickUrl ? "cursor-pointer hover:text-primary" : "",
+          children: displayValue
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 154,
+          columnNumber: 9
+        },
+        void 0
+      );
+    },
+    meta: {
+      label: col.replace(/_/g, " ")
+    }
+  }));
+  if (isLoading) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: "mb-6", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center justify-between", children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: tableName }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 172,
+          columnNumber: 13
+        }, void 0),
+        extraButton?.enabled && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          Eo,
+          {
+            type: "button",
+            onClick: () => navigateWithParams(extraButton.destination),
+            variant: "primary",
+            size: "xl",
+            children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Icon, { name: extraButton.icon, className: "mr-2 text-xl" }, void 0, false, {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+                lineNumber: 180,
+                columnNumber: 17
+              }, void 0),
+              extraButton.text
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 174,
+            columnNumber: 15
+          },
+          void 0
+        )
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 171,
+        columnNumber: 11
+      }, void 0) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 170,
+        columnNumber: 9
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(LoadingSpinner, {}, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 187,
+        columnNumber: 11
+      }, void 0) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 186,
+        columnNumber: 9
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+      lineNumber: 169,
+      columnNumber: 7
+    }, void 0);
+  }
+  if (error) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: "mb-6", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center justify-between", children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: tableName }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 198,
+          columnNumber: 13
+        }, void 0),
+        extraButton?.enabled && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          Eo,
+          {
+            type: "button",
+            onClick: () => navigateWithParams(extraButton.destination),
+            variant: "primary",
+            size: "xl",
+            children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Icon, { name: extraButton.icon, className: "mr-2 text-xl" }, void 0, false, {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+                lineNumber: 206,
+                columnNumber: 17
+              }, void 0),
+              extraButton.text
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 200,
+            columnNumber: 15
+          },
+          void 0
+        )
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 197,
+        columnNumber: 11
+      }, void 0) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 196,
+        columnNumber: 9
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ErrorMessage, { title: "Error loading data", message: error.message }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 213,
+        columnNumber: 11
+      }, void 0) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 212,
+        columnNumber: 9
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+      lineNumber: 195,
+      columnNumber: 7
+    }, void 0);
+  }
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(m$, { className: "mb-6", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(h$, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center justify-between", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(v$, { children: tableName }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 225,
+        columnNumber: 11
+      }, void 0),
+      extraButton?.enabled && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        Eo,
+        {
+          type: "button",
+          onClick: () => navigateWithParams(extraButton.destination),
+          variant: "primary",
+          size: "xl",
+          children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Icon, { name: extraButton.icon, className: "mr-2 text-xl" }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+              lineNumber: 233,
+              columnNumber: 15
+            }, void 0),
+            extraButton.text
+          ]
+        },
+        void 0,
+        true,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 227,
+          columnNumber: 13
+        },
+        void 0
+      )
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+      lineNumber: 224,
+      columnNumber: 9
+    }, void 0) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+      lineNumber: 223,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(x$, { children: [
+      data.length === 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
+        enableSearch && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "relative flex gap-2 mb-4", children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "relative", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            dP,
+            {
+              type: "text",
+              placeholder: "Search...",
+              value: searchInput,
+              onChange: (e) => setSearchInput(e.target.value),
+              onKeyPress: handleKeyPress,
+              className: "w-64"
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+              lineNumber: 246,
+              columnNumber: 19
+            },
+            void 0
+          ) }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 245,
+            columnNumber: 17
+          }, void 0),
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            Eo,
+            {
+              type: "button",
+              onClick: handleSearch,
+              variant: "primary",
+              size: "xl",
+              children: "Search"
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+              lineNumber: 255,
+              columnNumber: 17
+            },
+            void 0
+          ),
+          activeSearchQuery && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            Eo,
+            {
+              type: "button",
+              onClick: handleClearSearch,
+              variant: "secondary",
+              size: "xl",
+              children: "Clear"
+            },
+            void 0,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+              lineNumber: 264,
+              columnNumber: 19
+            },
+            void 0
+          )
+        ] }, void 0, true, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 244,
+          columnNumber: 15
+        }, void 0),
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-center py-8 text-gray-500", children: activeSearchQuery ? "No results found for your search" : "No data available" }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 275,
+          columnNumber: 13
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 242,
+        columnNumber: 11
+      }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        aoe,
+        {
+          columns: tableColumns,
+          data,
+          pagination: paginationEnabled ? pagination : void 0,
+          setPagination: paginationEnabled ? onPaginationChange || (() => {
+          }) : void 0,
+          rowCount: paginationEnabled ? totalCount : void 0,
+          filter: enableSearch ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "relative flex gap-2", children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "relative", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              dP,
+              {
+                type: "text",
+                placeholder: "Search...",
+                value: searchInput,
+                onChange: (e) => setSearchInput(e.target.value),
+                onKeyPress: handleKeyPress,
+                className: "w-64"
+              },
+              void 0,
+              false,
+              {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+                lineNumber: 294,
+                columnNumber: 21
+              },
+              void 0
+            ) }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+              lineNumber: 293,
+              columnNumber: 19
+            }, void 0),
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              Eo,
+              {
+                type: "button",
+                onClick: handleSearch,
+                variant: "primary",
+                size: "xl",
+                children: "Search"
+              },
+              void 0,
+              false,
+              {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+                lineNumber: 303,
+                columnNumber: 19
+              },
+              void 0
+            ),
+            activeSearchQuery && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              Eo,
+              {
+                type: "button",
+                onClick: handleClearSearch,
+                variant: "secondary",
+                size: "xl",
+                children: "Clear"
+              },
+              void 0,
+              false,
+              {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+                lineNumber: 312,
+                columnNumber: 21
+              },
+              void 0
+            )
+          ] }, void 0, true, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 292,
+            columnNumber: 17
+          }, void 0) : void 0
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 282,
+          columnNumber: 11
+        },
+        void 0
+      ),
+      data.length > 0 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: paginationEnabled ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mt-4 text-sm text-gray-600 flex justify-between items-center", children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+          "Total Items:",
+          " ",
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "font-semibold", children: totalCount }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 332,
+            columnNumber: 19
+          }, void 0)
+        ] }, void 0, true, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 330,
+          columnNumber: 17
+        }, void 0),
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
+          "Page ",
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "font-semibold", children: currentPage }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 335,
+            columnNumber: 24
+          }, void 0),
+          " of",
+          " ",
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "font-semibold", children: totalPages }, void 0, false, {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+            lineNumber: 336,
+            columnNumber: 19
+          }, void 0)
+        ] }, void 0, true, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 334,
+          columnNumber: 17
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 329,
+        columnNumber: 15
+      }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mt-4 text-sm text-gray-600", children: [
+        "Total Items: ",
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "font-semibold", children: totalCount }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+          lineNumber: 341,
+          columnNumber: 30
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 340,
+        columnNumber: 15
+      }, void 0) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 327,
+        columnNumber: 11
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("style", { children: `
+          .text-muted-foreground.flex-1.text-sm {
+            display: none;
+          }
+        ` }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+        lineNumber: 346,
+        columnNumber: 9
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+      lineNumber: 240,
+      columnNumber: 7
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBase.tsx",
+    lineNumber: 222,
+    columnNumber: 5
+  }, void 0);
+};
+function createJSONStorage(getStorage, options) {
+  let storage;
+  try {
+    storage = getStorage();
+  } catch (e) {
+    return;
+  }
+  const persistStorage = {
+    getItem: (name) => {
+      var _a2;
+      const parse = (str2) => {
+        if (str2 === null) {
+          return null;
+        }
+        return JSON.parse(str2, void 0);
+      };
+      const str = (_a2 = storage.getItem(name)) != null ? _a2 : null;
+      if (str instanceof Promise) {
+        return str.then(parse);
+      }
+      return parse(str);
+    },
+    setItem: (name, newValue) => storage.setItem(name, JSON.stringify(newValue, void 0)),
+    removeItem: (name) => storage.removeItem(name)
+  };
+  return persistStorage;
+}
+const toThenable = (fn2) => (input) => {
+  try {
+    const result = fn2(input);
+    if (result instanceof Promise) {
+      return result;
+    }
+    return {
+      then(onFulfilled) {
+        return toThenable(onFulfilled)(result);
+      },
+      catch(_onRejected) {
+        return this;
+      }
+    };
+  } catch (e) {
+    return {
+      then(_onFulfilled) {
+        return this;
+      },
+      catch(onRejected) {
+        return toThenable(onRejected)(e);
+      }
+    };
+  }
+};
+const persistImpl = (config, baseOptions) => (set2, get2, api2) => {
+  let options = {
+    storage: createJSONStorage(() => localStorage),
+    partialize: (state) => state,
+    version: 0,
+    merge: (persistedState, currentState) => ({
+      ...currentState,
+      ...persistedState
+    }),
+    ...baseOptions
+  };
+  let hasHydrated = false;
+  const hydrationListeners = /* @__PURE__ */ new Set();
+  const finishHydrationListeners = /* @__PURE__ */ new Set();
+  let storage = options.storage;
+  if (!storage) {
+    return config(
+      (...args) => {
+        console.warn(
+          `[zustand persist middleware] Unable to update item '${options.name}', the given storage is currently unavailable.`
+        );
+        set2(...args);
+      },
+      get2,
+      api2
+    );
+  }
+  const setItem = () => {
+    const state = options.partialize({ ...get2() });
+    return storage.setItem(options.name, {
+      state,
+      version: options.version
+    });
+  };
+  const savedSetState = api2.setState;
+  api2.setState = (state, replace) => {
+    savedSetState(state, replace);
+    return setItem();
+  };
+  const configResult = config(
+    (...args) => {
+      set2(...args);
+      return setItem();
+    },
+    get2,
+    api2
+  );
+  api2.getInitialState = () => configResult;
+  let stateFromStorage;
+  const hydrate = () => {
+    var _a2, _b2;
+    if (!storage) return;
+    hasHydrated = false;
+    hydrationListeners.forEach((cb2) => {
+      var _a22;
+      return cb2((_a22 = get2()) != null ? _a22 : configResult);
+    });
+    const postRehydrationCallback = ((_b2 = options.onRehydrateStorage) == null ? void 0 : _b2.call(options, (_a2 = get2()) != null ? _a2 : configResult)) || void 0;
+    return toThenable(storage.getItem.bind(storage))(options.name).then((deserializedStorageValue) => {
+      if (deserializedStorageValue) {
+        if (typeof deserializedStorageValue.version === "number" && deserializedStorageValue.version !== options.version) {
+          if (options.migrate) {
+            const migration = options.migrate(
+              deserializedStorageValue.state,
+              deserializedStorageValue.version
+            );
+            if (migration instanceof Promise) {
+              return migration.then((result) => [true, result]);
+            }
+            return [true, migration];
+          }
+          console.error(
+            `State loaded from storage couldn't be migrated since no migrate function was provided`
+          );
+        } else {
+          return [false, deserializedStorageValue.state];
+        }
+      }
+      return [false, void 0];
+    }).then((migrationResult) => {
+      var _a22;
+      const [migrated, migratedState] = migrationResult;
+      stateFromStorage = options.merge(
+        migratedState,
+        (_a22 = get2()) != null ? _a22 : configResult
+      );
+      set2(stateFromStorage, true);
+      if (migrated) {
+        return setItem();
+      }
+    }).then(() => {
+      postRehydrationCallback == null ? void 0 : postRehydrationCallback(stateFromStorage, void 0);
+      stateFromStorage = get2();
+      hasHydrated = true;
+      finishHydrationListeners.forEach((cb2) => cb2(stateFromStorage));
+    }).catch((e) => {
+      postRehydrationCallback == null ? void 0 : postRehydrationCallback(void 0, e);
+    });
+  };
+  api2.persist = {
+    setOptions: (newOptions) => {
+      options = {
+        ...options,
+        ...newOptions
+      };
+      if (newOptions.storage) {
+        storage = newOptions.storage;
+      }
+    },
+    clearStorage: () => {
+      storage == null ? void 0 : storage.removeItem(options.name);
+    },
+    getOptions: () => options,
+    rehydrate: () => hydrate(),
+    hasHydrated: () => hasHydrated,
+    onHydrate: (cb2) => {
+      hydrationListeners.add(cb2);
+      return () => {
+        hydrationListeners.delete(cb2);
+      };
+    },
+    onFinishHydration: (cb2) => {
+      finishHydrationListeners.add(cb2);
+      return () => {
+        finishHydrationListeners.delete(cb2);
+      };
+    }
+  };
+  if (!options.skipHydration) {
+    hydrate();
+  }
+  return stateFromStorage || configResult;
+};
+const persist = persistImpl;
+const defaultDataTableState = {
+  pagination: { pageIndex: 0, pageSize: 10 },
+  searchQuery: ""
+};
+const usePageStateStore = create()(
+  persist(
+    (set2, get2) => ({
+      pages: {},
+      setActiveTab: (pageKey, tabValue) => {
+        set2((state) => ({
+          pages: {
+            ...state.pages,
+            [pageKey]: {
+              ...state.pages[pageKey],
+              activeTab: tabValue,
+              dataTables: state.pages[pageKey]?.dataTables || {}
+            }
+          }
+        }));
+      },
+      getActiveTab: (pageKey) => {
+        return get2().pages[pageKey]?.activeTab;
+      },
+      setDataTableState: (pageKey, tableKey, state) => {
+        set2((prevState) => {
+          const currentPageState = prevState.pages[pageKey] || {
+            dataTables: {}
+          };
+          const currentTableState = currentPageState.dataTables[tableKey] || defaultDataTableState;
+          return {
+            pages: {
+              ...prevState.pages,
+              [pageKey]: {
+                ...currentPageState,
+                dataTables: {
+                  ...currentPageState.dataTables,
+                  [tableKey]: {
+                    ...currentTableState,
+                    ...state
+                  }
+                }
+              }
+            }
+          };
+        });
+      },
+      getDataTableState: (pageKey, tableKey) => {
+        return get2().pages[pageKey]?.dataTables[tableKey];
+      },
+      clearPageState: (pageKey) => {
+        set2((state) => {
+          const newPages = { ...state.pages };
+          delete newPages[pageKey];
+          return { pages: newPages };
+        });
+      }
+    }),
+    {
+      name: "page-state-storage",
+      partialize: (state) => ({ pages: state.pages })
+    }
+  )
+);
+const DataTableBlock = ({ block }) => {
+  const location = useLocation();
+  const pageKey = location.pathname + location.search;
+  const tableKey = `datatable-${block.collection}`;
+  const { getDataTableState, setDataTableState } = usePageStateStore();
+  const savedState = getDataTableState(pageKey, tableKey);
+  const [searchQuery, setSearchQuery] = reactExports.useState(savedState?.searchQuery || "");
+  const [pagination, setPagination] = reactExports.useState({
+    pageIndex: savedState?.pagination.pageIndex || 0,
+    pageSize: savedState?.pagination.pageSize || PAGINATION.DEFAULT_LIMIT
+  });
+  reactExports.useEffect(() => {
+    setDataTableState(pageKey, tableKey, {
+      searchQuery,
+      pagination
+    });
+  }, [searchQuery, pagination, pageKey, tableKey, setDataTableState]);
+  const isPaginationEnabled = block.pagination_enabled !== false;
+  const {
+    data: collectionData,
+    isLoading,
+    error
+  } = useCollectionData({
+    collection: block.collection,
+    page: isPaginationEnabled ? pagination.pageIndex + 1 : void 0,
+    // API uses 1-based indexing
+    limit: isPaginationEnabled ? pagination.pageSize : void 0,
+    search: searchQuery
+  });
+  const { data: columns } = useCollectionFields(block.collection);
+  const data = collectionData?.data || [];
+  const totalCount = collectionData?.meta?.filter_count || 0;
+  const handleSearchChange = (query) => {
+    setSearchQuery(query);
+    setPagination((prev) => ({ ...prev, pageIndex: 0 }));
+  };
+  const extraButton = block.extra_button_enabled && block.extra_button_text && block.extra_button_destination ? {
+    enabled: true,
+    text: block.extra_button_text,
+    destination: block.extra_button_destination,
+    icon: block.extra_button_icon || void 0
+  } : null;
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    DataTableBase,
+    {
+      tableName: block.table_name,
+      data,
+      columns: columns || [],
+      isLoading,
+      error: error || null,
+      totalCount,
+      onRowClickUrl: block.on_row_click_url,
+      enableSearch: true,
+      onSearchChange: handleSearchChange,
+      activeSearchQuery: searchQuery,
+      pagination,
+      onPaginationChange: setPagination,
+      paginationEnabled: isPaginationEnabled,
+      hideId: block.hide_id,
+      extraButton
+    },
+    void 0,
+    false,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableBlock.tsx",
+      lineNumber: 76,
+      columnNumber: 5
+    },
+    void 0
+  );
+};
+const DataTableCustomBlock = ({
+  block
+}) => {
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const pageKey = location.pathname + location.search;
+  const tableKey = `datatable-custom-${block.data_source_url}`;
+  const { getDataTableState, setDataTableState } = usePageStateStore();
+  const savedState = getDataTableState(pageKey, tableKey);
+  const [searchQuery, setSearchQuery] = reactExports.useState(savedState?.searchQuery || "");
+  const [pagination, setPagination] = reactExports.useState({
+    pageIndex: savedState?.pagination.pageIndex || 0,
+    pageSize: savedState?.pagination.pageSize || PAGINATION.DEFAULT_LIMIT
+  });
+  reactExports.useEffect(() => {
+    setDataTableState(pageKey, tableKey, {
+      searchQuery,
+      pagination
+    });
+  }, [searchQuery, pagination, pageKey, tableKey, setDataTableState]);
+  const isPaginationEnabled = block.pagination_enabled !== false;
+  const routeQueryParams = Object.fromEntries(searchParams.entries());
+  const {
+    data: responseData,
+    isLoading,
+    error
+  } = useQuery({
+    queryKey: [
+      ...QUERY_KEYS.CUSTOM_DATA_TABLE(
+        block.data_source_url,
+        pagination.pageIndex + 1,
+        pagination.pageSize,
+        searchQuery
+      ),
+      routeQueryParams,
+      isPaginationEnabled
+      // Include pagination state in query key
+    ],
+    queryFn: async () => {
+      const params = {
+        ...routeQueryParams,
+        search: searchQuery
+      };
+      if (isPaginationEnabled) {
+        params.page = pagination.pageIndex + 1;
+        params.limit = pagination.pageSize;
+      }
+      const response = await axios.get(block.data_source_url, {
+        params
+      });
+      return response.data;
+    }
+  });
+  const data = responseData?.data || [];
+  const totalCount = responseData?.meta?.filter_count || responseData?.meta?.total_count || data.length;
+  const columns = data.length > 0 ? Object.keys(data[0]) : [];
+  const handleSearchChange = (query) => {
+    setSearchQuery(query);
+    setPagination((prev) => ({ ...prev, pageIndex: 0 }));
+  };
+  const extraButton = block.extra_button_enabled && block.extra_button_text && block.extra_button_destination ? {
+    enabled: true,
+    text: block.extra_button_text,
+    destination: block.extra_button_destination,
+    icon: block.extra_button_icon || void 0
+  } : null;
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    DataTableBase,
+    {
+      tableName: block.table_name,
+      data,
+      columns,
+      isLoading,
+      error: error || null,
+      totalCount,
+      onRowClickUrl: block.on_row_click_url,
+      enableSearch: true,
+      onSearchChange: handleSearchChange,
+      activeSearchQuery: searchQuery,
+      pagination,
+      onPaginationChange: setPagination,
+      paginationEnabled: isPaginationEnabled,
+      hideId: block.hide_id,
+      extraButton
+    },
+    void 0,
+    false,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataTableCustomBlock.tsx",
+      lineNumber: 118,
+      columnNumber: 5
+    },
+    void 0
+  );
+};
+const DataExportBlock = ({ block }) => {
+  const [isLoading, setIsLoading] = reactExports.useState(false);
+  const [searchParams] = useSearchParams();
+  const handleExport = async () => {
+    try {
+      setIsLoading(true);
+      const routeQueryParams = Object.fromEntries(searchParams.entries());
+      const url = new URL(block.data_source_url);
+      Object.entries(routeQueryParams).forEach(([key, value]) => {
+        url.searchParams.append(key, value);
+      });
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      if (!response.ok) {
+        throw new Error("Export failed");
+      }
+      const data = await response.json();
+      const htmlContent = Array.isArray(data) ? data[0]?.html : data.html;
+      const printWindow = window.open("", "_blank");
+      if (!printWindow) {
+        throw new Error("Popup blocked. Please allow popups for this site.");
+      }
+      printWindow.document.write(htmlContent);
+      printWindow.document.close();
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      printWindow.print();
+      printWindow.onafterprint = () => {
+        printWindow.close();
+      };
+    } catch (error) {
+      console.error("Export error:", error);
+      alert("Failed to export data. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-white rounded-lg border border-gray-200 p-6", children: [
+    block.title && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h3", { className: "text-lg font-semibold mb-2", children: block.title }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataExportBlock.tsx",
+      lineNumber: 74,
+      columnNumber: 9
+    }, void 0),
+    block.description && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-gray-600 mb-4", children: block.description }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataExportBlock.tsx",
+      lineNumber: 77,
+      columnNumber: 9
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Eo, { onClick: handleExport, disabled: isLoading, children: isLoading ? "Loading..." : block.export_button_title || "Export" }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataExportBlock.tsx",
+      lineNumber: 79,
+      columnNumber: 7
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/DataExportBlock.tsx",
+    lineNumber: 72,
+    columnNumber: 5
+  }, void 0);
+};
+const PageHeaderButton = ({
+  button
+}) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (button.type === "back") {
+      navigate(-1);
+    } else if (button.type === "goto" && button.destination_url) {
+      navigate(button.destination_url);
+    }
+  };
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    Eo,
+    {
+      onClick: handleClick,
+      variant: "secondary",
+      className: "flex items-center gap-2 mb-6",
+      children: [
+        button.type === "back" && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "mr-2", children: "←" }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageHeaderButton.tsx",
+          lineNumber: 29,
+          columnNumber: 34
+        }, void 0),
+        button.button_text
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageHeaderButton.tsx",
+      lineNumber: 24,
+      columnNumber: 5
+    },
+    void 0
+  );
+};
+const RefetchContext = reactExports.createContext(void 0);
+const RefetchProvider = ({
+  children
+}) => {
+  const [refetchTrigger, setRefetchTrigger] = reactExports.useState(0);
+  const triggerRefetch = reactExports.useCallback(() => {
+    setRefetchTrigger((prev) => prev + 1);
+  }, []);
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RefetchContext.Provider, { value: { refetchTrigger, triggerRefetch }, children }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/contexts/RefetchContext.tsx",
+    lineNumber: 20,
+    columnNumber: 5
+  }, void 0);
+};
+const useRefetch = () => {
+  const context = reactExports.useContext(RefetchContext);
+  if (context === void 0) {
+    throw new Error("useRefetch must be used within a RefetchProvider");
+  }
+  return context;
+};
+const BlockRendererInner = ({ block }) => {
+  const { triggerRefetch } = useRefetch();
+  const handleFormSubmit = async (data) => {
+    triggerRefetch();
+  };
+  if (isBlockForm(block)) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(FormBlock, { block: block.item, onSubmit: handleFormSubmit }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 47,
+      columnNumber: 12
+    }, void 0);
+  }
+  if (isBlockRichtext(block)) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RichtextBlock, { block: block.item }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 51,
+      columnNumber: 12
+    }, void 0);
+  }
+  if (isBlockDataTable(block)) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(DataTableBlock, { block: block.item }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 55,
+      columnNumber: 12
+    }, void 0);
+  }
+  if (isBlockDataTableCustom(block)) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(DataTableCustomBlock, { block: block.item }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 59,
+      columnNumber: 12
+    }, void 0);
+  }
+  if (isBlockDataExport(block)) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(DataExportBlock, { block: block.item }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 63,
+      columnNumber: 12
+    }, void 0);
+  }
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6", children: [
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-yellow-800 font-semibold", children: [
+      "Unknown block type: ",
+      block.collection
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 69,
+      columnNumber: 7
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: "text-xs mt-2 text-yellow-700", children: JSON.stringify(block, null, 2) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+    lineNumber: 68,
+    columnNumber: 5
+  }, void 0);
+};
+const BlockRenderer = (props) => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BlockRendererInner, { ...props }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+    lineNumber: 80,
+    columnNumber: 10
+  }, void 0);
+};
+const ContainerRenderer = ({
+  container: container2
+}) => {
+  const sortedContent = Array.isArray(container2.content) ? [...container2.content].sort((a, b) => a.sort - b.sort) : [];
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    "div",
+    {
+      className: container2.direction === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-4" : "space-y-4",
+      children: sortedContent.map((contentBlock) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BlockRenderer, { block: contentBlock }, contentBlock.id, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+        lineNumber: 110,
+        columnNumber: 11
+      }, void 0))
+    },
+    void 0,
+    false,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 102,
+      columnNumber: 7
+    },
+    void 0
+  ) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+    lineNumber: 96,
+    columnNumber: 5
+  }, void 0);
+};
+const PageRenderer = ({ sections }) => {
+  const sortedElements = [...sections].sort((a, b) => a.sort - b.sort);
+  const headerButtons = sortedElements.filter(isPageHeaderButton);
+  const sectionElements = sortedElements.filter(isSectionWrapper);
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RefetchProvider, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    PageRendererInner,
+    {
+      headerButtons,
+      sections: sectionElements
+    },
+    void 0,
+    false,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 132,
+      columnNumber: 7
+    },
+    void 0
+  ) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+    lineNumber: 131,
+    columnNumber: 5
+  }, void 0);
+};
+const PageRendererInner = ({
+  headerButtons,
+  sections
+}) => {
+  const location = useLocation();
+  const pageKey = location.pathname + location.search;
+  const { getActiveTab, setActiveTab } = usePageStateStore();
+  if (sections.length === 1) {
+    const sectionWrapper = sections[0];
+    const section = sectionWrapper.item;
+    const sortedContainers = Array.isArray(section.containers) ? [...section.containers].sort((a, b) => a.sort - b.sort) : [];
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "w-full max-w-8xl mx-auto px-4", children: [
+      headerButtons.length > 0 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-4", children: headerButtons.map((buttonWrapper) => {
+        if (isPageHeaderButton(buttonWrapper)) {
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            PageHeaderButton,
+            {
+              button: buttonWrapper.item
+            },
+            buttonWrapper.id,
+            false,
+            {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+              lineNumber: 169,
+              columnNumber: 19
+            },
+            void 0
+          );
+        }
+        return null;
+      }) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+        lineNumber: 165,
+        columnNumber: 11
+      }, void 0),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-12", children: sortedContainers.map((containerWrapper) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        ContainerRenderer,
+        {
+          container: containerWrapper.item
+        },
+        containerWrapper.id,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+          lineNumber: 185,
+          columnNumber: 13
+        },
+        void 0
+      )) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+        lineNumber: 180,
+        columnNumber: 9
+      }, void 0)
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 162,
+      columnNumber: 7
+    }, void 0);
+  }
+  const defaultValue = sections[0]?.id.toString();
+  const savedTab = getActiveTab(pageKey);
+  const activeTab = savedTab || defaultValue;
+  const handleTabChange = (value) => {
+    setActiveTab(pageKey, value);
+  };
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "w-full max-w-8xl mx-auto px-4", children: [
+    headerButtons.length > 0 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-4", children: headerButtons.map((buttonWrapper) => {
+      if (isPageHeaderButton(buttonWrapper)) {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          PageHeaderButton,
+          {
+            button: buttonWrapper.item
+          },
+          buttonWrapper.id,
+          false,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+            lineNumber: 214,
+            columnNumber: 17
+          },
+          void 0
+        );
+      }
+      return null;
+    }) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 210,
+      columnNumber: 9
+    }, void 0),
+    /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(cre, { value: activeTab, onValueChange: handleTabChange, className: "-mt-4", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ure, { children: sections.map((sectionWrapper) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        dre,
+        {
+          value: sectionWrapper.id.toString(),
+          children: sectionWrapper.item.section_name || `Section ${sectionWrapper.id}`
+        },
+        sectionWrapper.id,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+          lineNumber: 228,
+          columnNumber: 13
+        },
+        void 0
+      )) }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+        lineNumber: 226,
+        columnNumber: 9
+      }, void 0),
+      sections.map((sectionWrapper) => {
+        const section = sectionWrapper.item;
+        const sortedContainers = Array.isArray(section.containers) ? [...section.containers].sort((a, b) => a.sort - b.sort) : [];
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          fre,
+          {
+            value: sectionWrapper.id.toString(),
+            children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mb-12 mt-2", children: sortedContainers.map((containerWrapper) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              ContainerRenderer,
+              {
+                container: containerWrapper.item
+              },
+              containerWrapper.id,
+              false,
+              {
+                fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+                lineNumber: 251,
+                columnNumber: 19
+              },
+              void 0
+            )) }, void 0, false, {
+              fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+              lineNumber: 249,
+              columnNumber: 15
+            }, void 0)
+          },
+          sectionWrapper.id,
+          false,
+          {
+            fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+            lineNumber: 245,
+            columnNumber: 13
+          },
+          void 0
+        );
+      })
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+      lineNumber: 225,
+      columnNumber: 7
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/components/PageRenderer.tsx",
+    lineNumber: 207,
+    columnNumber: 5
+  }, void 0);
+};
+function SlugPage() {
+  const { slug, "*": splat } = useParams();
+  const navigate = useNavigate();
+  const fullPath = splat ? `${slug}/${splat}` : slug;
+  const { data, isLoading, error } = usePageData(fullPath || "");
+  if (error?.message === "Page not found") {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 flex items-center justify-center py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-2xl mx-auto px-4 text-center", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-white rounded-lg shadow-md p-12", children: [
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-6xl font-bold text-gray-300 mb-4", children: "404" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+        lineNumber: 21,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h1", { className: "text-3xl font-bold text-gray-800 mb-4", children: "Page Not Found" }, void 0, false, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+        lineNumber: 22,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-gray-600 mb-8", children: [
+        "The page",
+        " ",
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "font-mono text-primary", children: [
+          "/",
+          fullPath
+        ] }, void 0, true, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+          lineNumber: 27,
+          columnNumber: 15
+        }, this),
+        " could not be found."
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+        lineNumber: 25,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        "button",
+        {
+          onClick: () => navigate("/"),
+          className: "px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors",
+          children: "Go to Home"
+        },
+        void 0,
+        false,
+        {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+          lineNumber: 30,
+          columnNumber: 13
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 20,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 19,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 18,
+      columnNumber: 7
+    }, this);
+  }
+  if (isLoading) {
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-white rounded-lg shadow-md p-8 text-center", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(LoadingSpinner, { message: "Loading page content..." }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 48,
+      columnNumber: 13
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 47,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 46,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 45,
+      columnNumber: 7
+    }, this);
+  }
+  if (error) {
+    const errorMessage = error instanceof Error ? error.message : "An error occurred while loading the page";
+    return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ErrorMessage, { title: "Error Loading Page", message: errorMessage }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 64,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 63,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 62,
+      columnNumber: 7
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "min-h-screen bg-gray-50 py-8", children: data?.data?.sections && data.data.sections.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PageRenderer, { sections: data.data.sections }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+    lineNumber: 75,
+    columnNumber: 11
+  }, this) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+    lineNumber: 74,
+    columnNumber: 9
+  }, this) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-4xl mx-auto px-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+    EmptyState,
+    {
+      title: data?.data?.title || "Empty Page",
+      message: "This page has no content yet."
+    },
+    void 0,
+    false,
+    {
+      fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+      lineNumber: 79,
+      columnNumber: 11
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+    lineNumber: 78,
+    columnNumber: 9
+  }, this) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/[slug].tsx",
+    lineNumber: 72,
+    columnNumber: 5
+  }, this);
+}
+const Welcome = () => {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("h1", { children: "WELCOME!" }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/home.tsx",
+    lineNumber: 10,
+    columnNumber: 7
+  }, void 0) }, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/home.tsx",
+    lineNumber: 9,
+    columnNumber: 5
+  }, void 0);
+};
+function Home() {
+  return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Welcome, {}, void 0, false, {
+    fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/routes/home.tsx",
+    lineNumber: 16,
+    columnNumber: 10
+  }, this);
+}
+var parser = {};
+var lexer = {};
+var moo$1 = { exports: {} };
+var moo = moo$1.exports;
+var hasRequiredMoo;
+function requireMoo() {
+  if (hasRequiredMoo) return moo$1.exports;
+  hasRequiredMoo = 1;
+  (function(module) {
+    (function(root2, factory2) {
+      if (module.exports) {
+        module.exports = factory2();
+      } else {
+        root2.moo = factory2();
+      }
+    })(moo, function() {
+      var hasOwnProperty2 = Object.prototype.hasOwnProperty;
+      var toString3 = Object.prototype.toString;
+      var hasSticky = typeof new RegExp().sticky === "boolean";
+      function isRegExp2(o) {
+        return o && toString3.call(o) === "[object RegExp]";
+      }
+      function isObject2(o) {
+        return o && typeof o === "object" && !isRegExp2(o) && !Array.isArray(o);
+      }
+      function reEscape(s) {
+        return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+      }
+      function reGroups(s) {
+        var re = new RegExp("|" + s);
+        return re.exec("").length - 1;
+      }
+      function reCapture(s) {
+        return "(" + s + ")";
+      }
+      function reUnion(regexps) {
+        if (!regexps.length) return "(?!)";
+        var source = regexps.map(function(s) {
+          return "(?:" + s + ")";
+        }).join("|");
+        return "(?:" + source + ")";
+      }
+      function regexpOrLiteral(obj) {
+        if (typeof obj === "string") {
+          return "(?:" + reEscape(obj) + ")";
+        } else if (isRegExp2(obj)) {
+          if (obj.ignoreCase) throw new Error("RegExp /i flag not allowed");
+          if (obj.global) throw new Error("RegExp /g flag is implied");
+          if (obj.sticky) throw new Error("RegExp /y flag is implied");
+          if (obj.multiline) throw new Error("RegExp /m flag is implied");
+          return obj.source;
+        } else {
+          throw new Error("Not a pattern: " + obj);
+        }
+      }
+      function pad(s, length) {
+        if (s.length > length) {
+          return s;
+        }
+        return Array(length - s.length + 1).join(" ") + s;
+      }
+      function lastNLines(string, numLines) {
+        var position = string.length;
+        var lineBreaks = 0;
+        while (true) {
+          var idx = string.lastIndexOf("\n", position - 1);
+          if (idx === -1) {
+            break;
+          } else {
+            lineBreaks++;
+          }
+          position = idx;
+          if (lineBreaks === numLines) {
+            break;
+          }
+          if (position === 0) {
+            break;
+          }
+        }
+        var startPosition = lineBreaks < numLines ? 0 : position + 1;
+        return string.substring(startPosition).split("\n");
+      }
+      function objectToRules(object) {
+        var keys = Object.getOwnPropertyNames(object);
+        var result = [];
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          var thing = object[key];
+          var rules = [].concat(thing);
+          if (key === "include") {
+            for (var j = 0; j < rules.length; j++) {
+              result.push({ include: rules[j] });
+            }
+            continue;
+          }
+          var match = [];
+          rules.forEach(function(rule) {
+            if (isObject2(rule)) {
+              if (match.length) result.push(ruleOptions(key, match));
+              result.push(ruleOptions(key, rule));
+              match = [];
+            } else {
+              match.push(rule);
+            }
+          });
+          if (match.length) result.push(ruleOptions(key, match));
+        }
+        return result;
+      }
+      function arrayToRules(array) {
+        var result = [];
+        for (var i = 0; i < array.length; i++) {
+          var obj = array[i];
+          if (obj.include) {
+            var include = [].concat(obj.include);
+            for (var j = 0; j < include.length; j++) {
+              result.push({ include: include[j] });
+            }
+            continue;
+          }
+          if (!obj.type) {
+            throw new Error("Rule has no type: " + JSON.stringify(obj));
+          }
+          result.push(ruleOptions(obj.type, obj));
+        }
+        return result;
+      }
+      function ruleOptions(type, obj) {
+        if (!isObject2(obj)) {
+          obj = { match: obj };
+        }
+        if (obj.include) {
+          throw new Error("Matching rules cannot also include states");
+        }
+        var options = {
+          defaultType: type,
+          lineBreaks: !!obj.error || !!obj.fallback,
+          pop: false,
+          next: null,
+          push: null,
+          error: false,
+          fallback: false,
+          value: null,
+          type: null,
+          shouldThrow: false
+        };
+        for (var key in obj) {
+          if (hasOwnProperty2.call(obj, key)) {
+            options[key] = obj[key];
+          }
+        }
+        if (typeof options.type === "string" && type !== options.type) {
+          throw new Error("Type transform cannot be a string (type '" + options.type + "' for token '" + type + "')");
+        }
+        var match = options.match;
+        options.match = Array.isArray(match) ? match : match ? [match] : [];
+        options.match.sort(function(a, b) {
+          return isRegExp2(a) && isRegExp2(b) ? 0 : isRegExp2(b) ? -1 : isRegExp2(a) ? 1 : b.length - a.length;
+        });
+        return options;
+      }
+      function toRules(spec) {
+        return Array.isArray(spec) ? arrayToRules(spec) : objectToRules(spec);
+      }
+      var defaultErrorRule = ruleOptions("error", { lineBreaks: true, shouldThrow: true });
+      function compileRules(rules, hasStates) {
+        var errorRule = null;
+        var fast = /* @__PURE__ */ Object.create(null);
+        var fastAllowed = true;
+        var unicodeFlag = null;
+        var groups = [];
+        var parts = [];
+        for (var i = 0; i < rules.length; i++) {
+          if (rules[i].fallback) {
+            fastAllowed = false;
+          }
+        }
+        for (var i = 0; i < rules.length; i++) {
+          var options = rules[i];
+          if (options.include) {
+            throw new Error("Inheritance is not allowed in stateless lexers");
+          }
+          if (options.error || options.fallback) {
+            if (errorRule) {
+              if (!options.fallback === !errorRule.fallback) {
+                throw new Error("Multiple " + (options.fallback ? "fallback" : "error") + " rules not allowed (for token '" + options.defaultType + "')");
+              } else {
+                throw new Error("fallback and error are mutually exclusive (for token '" + options.defaultType + "')");
+              }
+            }
+            errorRule = options;
+          }
+          var match = options.match.slice();
+          if (fastAllowed) {
+            while (match.length && typeof match[0] === "string" && match[0].length === 1) {
+              var word = match.shift();
+              fast[word.charCodeAt(0)] = options;
+            }
+          }
+          if (options.pop || options.push || options.next) {
+            if (!hasStates) {
+              throw new Error("State-switching options are not allowed in stateless lexers (for token '" + options.defaultType + "')");
+            }
+            if (options.fallback) {
+              throw new Error("State-switching options are not allowed on fallback tokens (for token '" + options.defaultType + "')");
+            }
+          }
+          if (match.length === 0) {
+            continue;
+          }
+          fastAllowed = false;
+          groups.push(options);
+          for (var j = 0; j < match.length; j++) {
+            var obj = match[j];
+            if (!isRegExp2(obj)) {
+              continue;
+            }
+            if (unicodeFlag === null) {
+              unicodeFlag = obj.unicode;
+            } else if (unicodeFlag !== obj.unicode && options.fallback === false) {
+              throw new Error("If one rule is /u then all must be");
+            }
+          }
+          var pat = reUnion(match.map(regexpOrLiteral));
+          var regexp = new RegExp(pat);
+          if (regexp.test("")) {
+            throw new Error("RegExp matches empty string: " + regexp);
+          }
+          var groupCount = reGroups(pat);
+          if (groupCount > 0) {
+            throw new Error("RegExp has capture groups: " + regexp + "\nUse (?: … ) instead");
+          }
+          if (!options.lineBreaks && regexp.test("\n")) {
+            throw new Error("Rule should declare lineBreaks: " + regexp);
+          }
+          parts.push(reCapture(pat));
+        }
+        var fallbackRule = errorRule && errorRule.fallback;
+        var flags = hasSticky && !fallbackRule ? "ym" : "gm";
+        var suffix = hasSticky || fallbackRule ? "" : "|";
+        if (unicodeFlag === true) flags += "u";
+        var combined = new RegExp(reUnion(parts) + suffix, flags);
+        return { regexp: combined, groups, fast, error: errorRule || defaultErrorRule };
+      }
+      function compile(rules) {
+        var result = compileRules(toRules(rules));
+        return new Lexer({ start: result }, "start");
+      }
+      function checkStateGroup(g, name, map) {
+        var state = g && (g.push || g.next);
+        if (state && !map[state]) {
+          throw new Error("Missing state '" + state + "' (in token '" + g.defaultType + "' of state '" + name + "')");
+        }
+        if (g && g.pop && +g.pop !== 1) {
+          throw new Error("pop must be 1 (in token '" + g.defaultType + "' of state '" + name + "')");
+        }
+      }
+      function compileStates(states, start) {
+        var all3 = states.$all ? toRules(states.$all) : [];
+        delete states.$all;
+        var keys = Object.getOwnPropertyNames(states);
+        if (!start) start = keys[0];
+        var ruleMap = /* @__PURE__ */ Object.create(null);
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          ruleMap[key] = toRules(states[key]).concat(all3);
+        }
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          var rules = ruleMap[key];
+          var included = /* @__PURE__ */ Object.create(null);
+          for (var j = 0; j < rules.length; j++) {
+            var rule = rules[j];
+            if (!rule.include) continue;
+            var splice = [j, 1];
+            if (rule.include !== key && !included[rule.include]) {
+              included[rule.include] = true;
+              var newRules = ruleMap[rule.include];
+              if (!newRules) {
+                throw new Error("Cannot include nonexistent state '" + rule.include + "' (in state '" + key + "')");
+              }
+              for (var k = 0; k < newRules.length; k++) {
+                var newRule = newRules[k];
+                if (rules.indexOf(newRule) !== -1) continue;
+                splice.push(newRule);
+              }
+            }
+            rules.splice.apply(rules, splice);
+            j--;
+          }
+        }
+        var map = /* @__PURE__ */ Object.create(null);
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          map[key] = compileRules(ruleMap[key], true);
+        }
+        for (var i = 0; i < keys.length; i++) {
+          var name = keys[i];
+          var state = map[name];
+          var groups = state.groups;
+          for (var j = 0; j < groups.length; j++) {
+            checkStateGroup(groups[j], name, map);
+          }
+          var fastKeys = Object.getOwnPropertyNames(state.fast);
+          for (var j = 0; j < fastKeys.length; j++) {
+            checkStateGroup(state.fast[fastKeys[j]], name, map);
+          }
+        }
+        return new Lexer(map, start);
+      }
+      function keywordTransform(map) {
+        var isMap = typeof Map !== "undefined";
+        var reverseMap = isMap ? /* @__PURE__ */ new Map() : /* @__PURE__ */ Object.create(null);
+        var types = Object.getOwnPropertyNames(map);
+        for (var i = 0; i < types.length; i++) {
+          var tokenType = types[i];
+          var item = map[tokenType];
+          var keywordList = Array.isArray(item) ? item : [item];
+          keywordList.forEach(function(keyword) {
+            if (typeof keyword !== "string") {
+              throw new Error("keyword must be string (in keyword '" + tokenType + "')");
+            }
+            if (isMap) {
+              reverseMap.set(keyword, tokenType);
+            } else {
+              reverseMap[keyword] = tokenType;
+            }
+          });
+        }
+        return function(k) {
+          return isMap ? reverseMap.get(k) : reverseMap[k];
+        };
+      }
+      var Lexer = function(states, state) {
+        this.startState = state;
+        this.states = states;
+        this.buffer = "";
+        this.stack = [];
+        this.reset();
+      };
+      Lexer.prototype.reset = function(data, info) {
+        this.buffer = data || "";
+        this.index = 0;
+        this.line = info ? info.line : 1;
+        this.col = info ? info.col : 1;
+        this.queuedToken = info ? info.queuedToken : null;
+        this.queuedText = info ? info.queuedText : "";
+        this.queuedThrow = info ? info.queuedThrow : null;
+        this.setState(info ? info.state : this.startState);
+        this.stack = info && info.stack ? info.stack.slice() : [];
+        return this;
+      };
+      Lexer.prototype.save = function() {
+        return {
+          line: this.line,
+          col: this.col,
+          state: this.state,
+          stack: this.stack.slice(),
+          queuedToken: this.queuedToken,
+          queuedText: this.queuedText,
+          queuedThrow: this.queuedThrow
+        };
+      };
+      Lexer.prototype.setState = function(state) {
+        if (!state || this.state === state) return;
+        this.state = state;
+        var info = this.states[state];
+        this.groups = info.groups;
+        this.error = info.error;
+        this.re = info.regexp;
+        this.fast = info.fast;
+      };
+      Lexer.prototype.popState = function() {
+        this.setState(this.stack.pop());
+      };
+      Lexer.prototype.pushState = function(state) {
+        this.stack.push(this.state);
+        this.setState(state);
+      };
+      var eat = hasSticky ? function(re, buffer) {
+        return re.exec(buffer);
+      } : function(re, buffer) {
+        var match = re.exec(buffer);
+        if (match[0].length === 0) {
+          return null;
+        }
+        return match;
+      };
+      Lexer.prototype._getGroup = function(match) {
+        var groupCount = this.groups.length;
+        for (var i = 0; i < groupCount; i++) {
+          if (match[i + 1] !== void 0) {
+            return this.groups[i];
+          }
+        }
+        throw new Error("Cannot find token type for matched text");
+      };
+      function tokenToString() {
+        return this.value;
+      }
+      Lexer.prototype.next = function() {
+        var index = this.index;
+        if (this.queuedGroup) {
+          var token = this._token(this.queuedGroup, this.queuedText, index);
+          this.queuedGroup = null;
+          this.queuedText = "";
+          return token;
+        }
+        var buffer = this.buffer;
+        if (index === buffer.length) {
+          return;
+        }
+        var group = this.fast[buffer.charCodeAt(index)];
+        if (group) {
+          return this._token(group, buffer.charAt(index), index);
+        }
+        var re = this.re;
+        re.lastIndex = index;
+        var match = eat(re, buffer);
+        var error = this.error;
+        if (match == null) {
+          return this._token(error, buffer.slice(index, buffer.length), index);
+        }
+        var group = this._getGroup(match);
+        var text = match[0];
+        if (error.fallback && match.index !== index) {
+          this.queuedGroup = group;
+          this.queuedText = text;
+          return this._token(error, buffer.slice(index, match.index), index);
+        }
+        return this._token(group, text, index);
+      };
+      Lexer.prototype._token = function(group, text, offset) {
+        var lineBreaks = 0;
+        if (group.lineBreaks) {
+          var matchNL = /\n/g;
+          var nl2 = 1;
+          if (text === "\n") {
+            lineBreaks = 1;
+          } else {
+            while (matchNL.exec(text)) {
+              lineBreaks++;
+              nl2 = matchNL.lastIndex;
+            }
+          }
+        }
+        var token = {
+          type: typeof group.type === "function" && group.type(text) || group.defaultType,
+          value: typeof group.value === "function" ? group.value(text) : text,
+          text,
+          toString: tokenToString,
+          offset,
+          lineBreaks,
+          line: this.line,
+          col: this.col
+        };
+        var size = text.length;
+        this.index += size;
+        this.line += lineBreaks;
+        if (lineBreaks !== 0) {
+          this.col = size - nl2 + 1;
+        } else {
+          this.col += size;
+        }
+        if (group.shouldThrow) {
+          var err = new Error(this.formatError(token, "invalid syntax"));
+          throw err;
+        }
+        if (group.pop) this.popState();
+        else if (group.push) this.pushState(group.push);
+        else if (group.next) this.setState(group.next);
+        return token;
+      };
+      if (typeof Symbol !== "undefined" && Symbol.iterator) {
+        var LexerIterator = function(lexer2) {
+          this.lexer = lexer2;
+        };
+        LexerIterator.prototype.next = function() {
+          var token = this.lexer.next();
+          return { value: token, done: !token };
+        };
+        LexerIterator.prototype[Symbol.iterator] = function() {
+          return this;
+        };
+        Lexer.prototype[Symbol.iterator] = function() {
+          return new LexerIterator(this);
+        };
+      }
+      Lexer.prototype.formatError = function(token, message) {
+        if (token == null) {
+          var text = this.buffer.slice(this.index);
+          var token = {
+            text,
+            offset: this.index,
+            lineBreaks: text.indexOf("\n") === -1 ? 0 : 1,
+            line: this.line,
+            col: this.col
+          };
+        }
+        var numLinesAround = 2;
+        var firstDisplayedLine = Math.max(token.line - numLinesAround, 1);
+        var lastDisplayedLine = token.line + numLinesAround;
+        var lastLineDigits = String(lastDisplayedLine).length;
+        var displayedLines = lastNLines(
+          this.buffer,
+          this.line - token.line + numLinesAround + 1
+        ).slice(0, 5);
+        var errorLines = [];
+        errorLines.push(message + " at line " + token.line + " col " + token.col + ":");
+        errorLines.push("");
+        for (var i = 0; i < displayedLines.length; i++) {
+          var line = displayedLines[i];
+          var lineNo = firstDisplayedLine + i;
+          errorLines.push(pad(String(lineNo), lastLineDigits) + "  " + line);
+          if (lineNo === token.line) {
+            errorLines.push(pad("", lastLineDigits + token.col + 1) + "^");
+          }
+        }
+        return errorLines.join("\n");
+      };
+      Lexer.prototype.clone = function() {
+        return new Lexer(this.states, this.state);
+      };
+      Lexer.prototype.has = function(tokenType) {
+        return true;
+      };
+      return {
+        compile,
+        states: compileStates,
+        error: Object.freeze({ error: true }),
+        fallback: Object.freeze({ fallback: true }),
+        keywords: keywordTransform
+      };
+    });
+  })(moo$1);
+  return moo$1.exports;
+}
+var hasRequiredLexer;
+function requireLexer() {
+  if (hasRequiredLexer) return lexer;
+  hasRequiredLexer = 1;
+  (function(exports) {
+    var __importDefault = lexer && lexer.__importDefault || function(mod) {
+      return mod && mod.__esModule ? mod : { "default": mod };
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.lexer = exports.states = void 0;
+    const moo_1 = __importDefault(requireMoo());
+    exports.states = {
+      body: {
+        doubleapos: { match: "''", value: () => "'" },
+        quoted: {
+          lineBreaks: true,
+          match: /'[{}#](?:[^']|'')*'(?!')/u,
+          value: (src) => src.slice(1, -1).replace(/''/g, "'")
+        },
+        argument: {
+          lineBreaks: true,
+          match: /\{\s*[^\p{Pat_Syn}\p{Pat_WS}]+\s*/u,
+          push: "arg",
+          value: (src) => src.substring(1).trim()
+        },
+        octothorpe: "#",
+        end: { match: "}", pop: 1 },
+        content: { lineBreaks: true, match: /[^][^{}#']*/u }
+      },
+      arg: {
+        select: {
+          lineBreaks: true,
+          match: /,\s*(?:plural|select|selectordinal)\s*,\s*/u,
+          next: "select",
+          value: (src) => src.split(",")[1].trim()
+        },
+        "func-args": {
+          lineBreaks: true,
+          match: /,\s*[^\p{Pat_Syn}\p{Pat_WS}]+\s*,/u,
+          next: "body",
+          value: (src) => src.split(",")[1].trim()
+        },
+        "func-simple": {
+          lineBreaks: true,
+          match: /,\s*[^\p{Pat_Syn}\p{Pat_WS}]+\s*/u,
+          value: (src) => src.substring(1).trim()
+        },
+        end: { match: "}", pop: 1 }
+      },
+      select: {
+        offset: {
+          lineBreaks: true,
+          match: /\s*offset\s*:\s*\d+\s*/u,
+          value: (src) => src.split(":")[1].trim()
+        },
+        case: {
+          lineBreaks: true,
+          match: /\s*(?:=\d+|[^\p{Pat_Syn}\p{Pat_WS}]+)\s*\{/u,
+          push: "body",
+          value: (src) => src.substring(0, src.indexOf("{")).trim()
+        },
+        end: { match: /\s*\}/u, pop: 1 }
+      }
+    };
+    exports.lexer = moo_1.default.states(exports.states);
+  })(lexer);
+  return lexer;
+}
+var hasRequiredParser;
+function requireParser() {
+  if (hasRequiredParser) return parser;
+  hasRequiredParser = 1;
+  Object.defineProperty(parser, "__esModule", { value: true });
+  parser.ParseError = void 0;
+  parser.parse = parse;
+  const lexer_js_1 = requireLexer();
+  const getContext = (lt2) => ({
+    offset: lt2.offset,
+    line: lt2.line,
+    col: lt2.col,
+    text: lt2.text,
+    lineBreaks: lt2.lineBreaks
+  });
+  const isSelectType = (type) => type === "plural" || type === "select" || type === "selectordinal";
+  function strictArgStyleParam(lt2, param) {
+    let value = "";
+    let text = "";
+    for (const p2 of param) {
+      const pText = p2.ctx.text;
+      text += pText;
+      switch (p2.type) {
+        case "content":
+          value += p2.value;
+          break;
+        case "argument":
+        case "function":
+        case "octothorpe":
+          value += pText;
+          break;
+        default:
+          throw new ParseError(lt2, `Unsupported part in strict mode function arg style: ${pText}`);
+      }
+    }
+    const c = {
+      type: "content",
+      value: value.trim(),
+      ctx: Object.assign({}, param[0].ctx, { text })
+    };
+    return [c];
+  }
+  const strictArgTypes = [
+    "number",
+    "date",
+    "time",
+    "spellout",
+    "ordinal",
+    "duration"
+  ];
+  const defaultPluralKeys = ["zero", "one", "two", "few", "many", "other"];
+  class ParseError extends Error {
+    /** @internal */
+    constructor(lt2, msg) {
+      super(lexer_js_1.lexer.formatError(lt2, msg));
+    }
+  }
+  parser.ParseError = ParseError;
+  class Parser {
+    constructor(src, opt) {
+      var _a2, _b2, _c2, _d2;
+      this.lexer = lexer_js_1.lexer.reset(src);
+      this.cardinalKeys = (_a2 = opt === null || opt === void 0 ? void 0 : opt.cardinal) !== null && _a2 !== void 0 ? _a2 : defaultPluralKeys;
+      this.ordinalKeys = (_b2 = opt === null || opt === void 0 ? void 0 : opt.ordinal) !== null && _b2 !== void 0 ? _b2 : defaultPluralKeys;
+      this.strict = (_c2 = opt === null || opt === void 0 ? void 0 : opt.strict) !== null && _c2 !== void 0 ? _c2 : false;
+      this.strictPluralKeys = (_d2 = opt === null || opt === void 0 ? void 0 : opt.strictPluralKeys) !== null && _d2 !== void 0 ? _d2 : true;
+    }
+    parse() {
+      return this.parseBody(false, true);
+    }
+    checkSelectKey(lt2, type, key) {
+      if (key[0] === "=") {
+        if (type === "select") {
+          throw new ParseError(lt2, `The case ${key} is not valid with select`);
+        }
+      } else if (type !== "select") {
+        const keys = type === "plural" ? this.cardinalKeys : this.ordinalKeys;
+        if (this.strictPluralKeys && keys.length > 0 && !keys.includes(key)) {
+          const msg = `The ${type} case ${key} is not valid in this locale`;
+          throw new ParseError(lt2, msg);
+        }
+      }
+    }
+    parseSelect({ value: arg }, inPlural, ctx, type) {
+      const sel = { type, arg, cases: [], ctx };
+      if (type === "plural" || type === "selectordinal")
+        inPlural = true;
+      else if (this.strict)
+        inPlural = false;
+      for (const lt2 of this.lexer) {
+        switch (lt2.type) {
+          case "offset":
+            if (type === "select") {
+              throw new ParseError(lt2, "Unexpected plural offset for select");
+            }
+            if (sel.cases.length > 0) {
+              throw new ParseError(lt2, "Plural offset must be set before cases");
+            }
+            sel.pluralOffset = Number(lt2.value);
+            ctx.text += lt2.text;
+            ctx.lineBreaks += lt2.lineBreaks;
+            break;
+          case "case": {
+            this.checkSelectKey(lt2, type, lt2.value);
+            sel.cases.push({
+              key: lt2.value,
+              tokens: this.parseBody(inPlural),
+              ctx: getContext(lt2)
+            });
+            break;
+          }
+          case "end":
+            return sel;
+          /* istanbul ignore next: never happens */
+          default:
+            throw new ParseError(lt2, `Unexpected lexer token: ${lt2.type}`);
+        }
+      }
+      throw new ParseError(null, "Unexpected message end");
+    }
+    parseArgToken(lt2, inPlural) {
+      const ctx = getContext(lt2);
+      const argType = this.lexer.next();
+      if (!argType)
+        throw new ParseError(null, "Unexpected message end");
+      ctx.text += argType.text;
+      ctx.lineBreaks += argType.lineBreaks;
+      if (this.strict && (argType.type === "func-simple" || argType.type === "func-args") && !strictArgTypes.includes(argType.value)) {
+        const msg = `Invalid strict mode function arg type: ${argType.value}`;
+        throw new ParseError(lt2, msg);
+      }
+      switch (argType.type) {
+        case "end":
+          return { type: "argument", arg: lt2.value, ctx };
+        case "func-simple": {
+          const end = this.lexer.next();
+          if (!end)
+            throw new ParseError(null, "Unexpected message end");
+          if (end.type !== "end") {
+            throw new ParseError(end, `Unexpected lexer token: ${end.type}`);
+          }
+          ctx.text += end.text;
+          if (isSelectType(argType.value.toLowerCase())) {
+            throw new ParseError(argType, `Invalid type identifier: ${argType.value}`);
+          }
+          return {
+            type: "function",
+            arg: lt2.value,
+            key: argType.value,
+            ctx
+          };
+        }
+        case "func-args": {
+          if (isSelectType(argType.value.toLowerCase())) {
+            const msg = `Invalid type identifier: ${argType.value}`;
+            throw new ParseError(argType, msg);
+          }
+          let param = this.parseBody(this.strict ? false : inPlural);
+          if (this.strict && param.length > 0) {
+            param = strictArgStyleParam(lt2, param);
+          }
+          return {
+            type: "function",
+            arg: lt2.value,
+            key: argType.value,
+            param,
+            ctx
+          };
+        }
+        case "select":
+          if (isSelectType(argType.value)) {
+            return this.parseSelect(lt2, inPlural, ctx, argType.value);
+          } else {
+            throw new ParseError(argType, `Unexpected select type ${argType.value}`);
+          }
+        /* istanbul ignore next: never happens */
+        default:
+          throw new ParseError(argType, `Unexpected lexer token: ${argType.type}`);
+      }
+    }
+    parseBody(inPlural, atRoot) {
+      const tokens = [];
+      let content = null;
+      for (const lt2 of this.lexer) {
+        if (lt2.type === "argument") {
+          if (content)
+            content = null;
+          tokens.push(this.parseArgToken(lt2, inPlural));
+        } else if (lt2.type === "octothorpe" && inPlural) {
+          if (content)
+            content = null;
+          tokens.push({ type: "octothorpe", ctx: getContext(lt2) });
+        } else if (lt2.type === "end" && !atRoot) {
+          return tokens;
+        } else {
+          let value = lt2.value;
+          if (!inPlural && lt2.type === "quoted" && value[0] === "#") {
+            if (value.includes("{")) {
+              const errMsg = `Unsupported escape pattern: ${value}`;
+              throw new ParseError(lt2, errMsg);
+            }
+            value = lt2.text;
+          }
+          if (content) {
+            content.value += value;
+            content.ctx.text += lt2.text;
+            content.ctx.lineBreaks += lt2.lineBreaks;
+          } else {
+            content = { type: "content", value, ctx: getContext(lt2) };
+            tokens.push(content);
+          }
+        }
+      }
+      if (atRoot)
+        return tokens;
+      throw new ParseError(null, "Unexpected message end");
+    }
+  }
+  function parse(src, options = {}) {
+    const parser2 = new Parser(src, options);
+    return parser2.parse();
+  }
+  return parser;
+}
+var parserExports = requireParser();
+class DateFormatError extends Error {
+  /** @internal */
+  constructor(msg, token, type) {
+    super(msg);
+    this.token = token;
+    this.type = type || "error";
+  }
+}
+const alpha = (width) => width < 4 ? "short" : width === 4 ? "long" : "narrow";
+const numeric = (width) => width % 2 === 0 ? "2-digit" : "numeric";
+function yearOptions(token, onError) {
+  switch (token.char) {
+    case "y":
+      return { year: numeric(token.width) };
+    case "r":
+      return { calendar: "gregory", year: "numeric" };
+    case "u":
+    case "U":
+    case "Y":
+    default:
+      onError(`${token.desc} is not supported; falling back to year:numeric`, DateFormatError.WARNING);
+      return { year: "numeric" };
+  }
+}
+function monthStyle(token, onError) {
+  switch (token.width) {
+    case 1:
+      return "numeric";
+    case 2:
+      return "2-digit";
+    case 3:
+      return "short";
+    case 4:
+      return "long";
+    case 5:
+      return "narrow";
+    default:
+      onError(`${token.desc} is not supported with width ${token.width}`);
+      return void 0;
+  }
+}
+function dayStyle(token, onError) {
+  const { char, desc, width } = token;
+  if (char === "d") {
+    return numeric(width);
+  } else {
+    onError(`${desc} is not supported`);
+    return void 0;
+  }
+}
+function weekdayStyle(token, onError) {
+  const { char, desc, width } = token;
+  if ((char === "c" || char === "e") && width < 3) {
+    const msg = `Numeric value is not supported for ${desc}; falling back to weekday:short`;
+    onError(msg, DateFormatError.WARNING);
+  }
+  return alpha(width);
+}
+function hourOptions(token) {
+  const hour = numeric(token.width);
+  let hourCycle;
+  switch (token.char) {
+    case "h":
+      hourCycle = "h12";
+      break;
+    case "H":
+      hourCycle = "h23";
+      break;
+    case "k":
+      hourCycle = "h24";
+      break;
+    case "K":
+      hourCycle = "h11";
+      break;
+  }
+  return hourCycle ? { hour, hourCycle } : { hour };
+}
+function timeZoneNameStyle(token, onError) {
+  const { char, desc, width } = token;
+  switch (char) {
+    case "v":
+    case "z":
+      return width === 4 ? "long" : "short";
+    case "V":
+      if (width === 4)
+        return "long";
+      onError(`${desc} is not supported with width ${width}`);
+      return void 0;
+    case "X":
+      onError(`${desc} is not supported`);
+      return void 0;
+  }
+  return "short";
+}
+function compileOptions(token, onError) {
+  switch (token.field) {
+    case "era":
+      return { era: alpha(token.width) };
+    case "year":
+      return yearOptions(token, onError);
+    case "month":
+      return { month: monthStyle(token, onError) };
+    case "day":
+      return { day: dayStyle(token, onError) };
+    case "weekday":
+      return { weekday: weekdayStyle(token, onError) };
+    case "period":
+      return void 0;
+    case "hour":
+      return hourOptions(token);
+    case "min":
+      return { minute: numeric(token.width) };
+    case "sec":
+      return { second: numeric(token.width) };
+    case "tz":
+      return { timeZoneName: timeZoneNameStyle(token, onError) };
+    case "quarter":
+    case "week":
+    case "sec-frac":
+    case "ms":
+      onError(`${token.desc} is not supported`);
+  }
+  return void 0;
+}
+function getDateFormatOptions(tokens, timeZone, onError = (error) => {
+  throw error;
+}) {
+  const options = {
+    timeZone
+  };
+  const fields2 = [];
+  for (const token of tokens) {
+    const { error, field, str } = token;
+    if (error) {
+      const dte2 = new DateFormatError(error.message, token);
+      dte2.stack = error.stack;
+      onError(dte2);
+    }
+    if (str) {
+      const msg = `Ignoring string part: ${str}`;
+      onError(new DateFormatError(msg, token, DateFormatError.WARNING));
+    }
+    if (field) {
+      if (fields2.indexOf(field) === -1)
+        fields2.push(field);
+      else
+        onError(new DateFormatError(`Duplicate ${field} token`, token));
+    }
+    const opt = compileOptions(token, (msg, isWarning) => onError(new DateFormatError(msg, token, isWarning)));
+    if (opt)
+      Object.assign(options, opt);
+  }
+  return options;
+}
+const fields = {
+  G: { field: "era", desc: "Era" },
+  y: { field: "year", desc: "Year" },
+  Y: { field: "year", desc: 'Year of "Week of Year"' },
+  u: { field: "year", desc: "Extended year" },
+  U: { field: "year", desc: "Cyclic year name" },
+  r: { field: "year", desc: "Related Gregorian year" },
+  Q: { field: "quarter", desc: "Quarter" },
+  q: { field: "quarter", desc: "Stand-alone quarter" },
+  M: { field: "month", desc: "Month in year" },
+  L: { field: "month", desc: "Stand-alone month in year" },
+  w: { field: "week", desc: "Week of year" },
+  W: { field: "week", desc: "Week of month" },
+  d: { field: "day", desc: "Day in month" },
+  D: { field: "day", desc: "Day of year" },
+  F: { field: "day", desc: "Day of week in month" },
+  g: { field: "day", desc: "Modified julian day" },
+  E: { field: "weekday", desc: "Day of week" },
+  e: { field: "weekday", desc: "Local day of week" },
+  c: { field: "weekday", desc: "Stand-alone local day of week" },
+  a: { field: "period", desc: "AM/PM marker" },
+  b: { field: "period", desc: "AM/PM/noon/midnight marker" },
+  B: { field: "period", desc: "Flexible day period" },
+  h: { field: "hour", desc: "Hour in AM/PM (1~12)" },
+  H: { field: "hour", desc: "Hour in day (0~23)" },
+  k: { field: "hour", desc: "Hour in day (1~24)" },
+  K: { field: "hour", desc: "Hour in AM/PM (0~11)" },
+  j: { field: "hour", desc: "Hour in preferred cycle" },
+  J: { field: "hour", desc: "Hour in preferred cycle without marker" },
+  C: { field: "hour", desc: "Hour in preferred cycle with flexible marker" },
+  m: { field: "min", desc: "Minute in hour" },
+  s: { field: "sec", desc: "Second in minute" },
+  S: { field: "sec-frac", desc: "Fractional second" },
+  A: { field: "ms", desc: "Milliseconds in day" },
+  z: { field: "tz", desc: "Time Zone: specific non-location" },
+  Z: { field: "tz", desc: "Time Zone" },
+  O: { field: "tz", desc: "Time Zone: localized" },
+  v: { field: "tz", desc: "Time Zone: generic non-location" },
+  V: { field: "tz", desc: "Time Zone: ID" },
+  X: { field: "tz", desc: "Time Zone: ISO8601 with Z" },
+  x: { field: "tz", desc: "Time Zone: ISO8601" }
+};
+const isLetter = (char) => char >= "A" && char <= "Z" || char >= "a" && char <= "z";
+function readFieldToken(src, pos) {
+  const char = src[pos];
+  let width = 1;
+  while (src[++pos] === char)
+    ++width;
+  const field = fields[char];
+  if (!field) {
+    const msg = `The letter ${char} is not a valid field identifier`;
+    return { char, error: new Error(msg), width };
+  }
+  return { char, field: field.field, desc: field.desc, width };
+}
+function readQuotedToken(src, pos) {
+  let str = src[++pos];
+  let width = 2;
+  if (str === "'")
+    return { char: "'", str, width };
+  while (true) {
+    const next = src[++pos];
+    ++width;
+    if (next === void 0) {
+      const msg = `Unterminated quoted literal in pattern: ${str || src}`;
+      return { char: "'", error: new Error(msg), str, width };
+    } else if (next === "'") {
+      if (src[++pos] !== "'")
+        return { char: "'", str, width };
+      else
+        ++width;
+    }
+    str += next;
+  }
+}
+function readToken(src, pos) {
+  const char = src[pos];
+  if (!char)
+    return null;
+  if (isLetter(char))
+    return readFieldToken(src, pos);
+  if (char === "'")
+    return readQuotedToken(src, pos);
+  let str = char;
+  let width = 1;
+  while (true) {
+    const next = src[++pos];
+    if (!next || isLetter(next) || next === "'")
+      return { char, str, width };
+    str += next;
+    width += 1;
+  }
+}
+function parseDateTokens(src) {
+  const tokens = [];
+  let pos = 0;
+  while (true) {
+    const token = readToken(src, pos);
+    if (!token)
+      return tokens;
+    tokens.push(token);
+    pos += token.width;
+  }
+}
+function processTokens(tokens, mapText) {
+  if (!tokens.filter((token) => token.type !== "content").length) {
+    return tokens.map((token) => mapText(token.value));
+  }
+  return tokens.map((token) => {
+    if (token.type === "content") {
+      return mapText(token.value);
+    } else if (token.type === "octothorpe") {
+      return "#";
+    } else if (token.type === "argument") {
+      return [token.arg];
+    } else if (token.type === "function") {
+      const _param = token?.param?.[0];
+      if (token.key === "date" && _param) {
+        const opts = compileDateExpression(_param.value.trim(), (e) => {
+          throw new Error(`Unable to compile date expression: ${e.message}`);
+        });
+        return [token.arg, token.key, opts];
+      }
+      if (_param) {
+        return [token.arg, token.key, _param.value.trim()];
+      } else {
+        return [token.arg, token.key];
+      }
+    }
+    const offset = token.pluralOffset;
+    const formatProps = {};
+    token.cases.forEach(({ key, tokens: tokens2 }) => {
+      const prop = key[0] === "=" ? key.slice(1) : key;
+      formatProps[prop] = processTokens(tokens2, mapText);
+    });
+    return [
+      token.arg,
+      token.type,
+      {
+        offset,
+        ...formatProps
+      }
+    ];
+  });
+}
+function compileDateExpression(format, onError) {
+  if (/^::/.test(format)) {
+    const tokens = parseDateTokens(format.substring(2));
+    return getDateFormatOptions(tokens, void 0, onError);
+  }
+  return format;
+}
+function compileMessageOrThrow(message, mapText = (v) => v) {
+  return processTokens(parserExports.parse(message), mapText);
+}
+function compileMessage(message, mapText = (v) => v) {
+  try {
+    return compileMessageOrThrow(message, mapText);
+  } catch (e) {
+    console.error(`${e.message} 
+
+Message: ${message}`);
+    return [message];
+  }
+}
+var define_process_env_default = {};
+const isString = (s) => typeof s === "string";
+const isFunction = (f2) => typeof f2 === "function";
+const cache = /* @__PURE__ */ new Map();
+const defaultLocale = "en";
+function normalizeLocales(locales) {
+  const out = Array.isArray(locales) ? locales : [locales];
+  return [...out, defaultLocale];
+}
+function date(locales, value, format) {
+  const _locales = normalizeLocales(locales);
+  if (!format) {
+    format = "default";
+  }
+  let o;
+  if (typeof format === "string") {
+    o = {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    };
+    switch (format) {
+      case "full":
+        o.weekday = "long";
+      case "long":
+        o.month = "long";
+        break;
+      case "short":
+        o.month = "numeric";
+        break;
+    }
+  } else {
+    o = format;
+  }
+  const formatter = getMemoized(
+    () => cacheKey("date", _locales, format),
+    () => new Intl.DateTimeFormat(_locales, o)
+  );
+  return formatter.format(isString(value) ? new Date(value) : value);
+}
+function time(locales, value, format) {
+  let o;
+  if (!format) {
+    format = "default";
+  }
+  if (typeof format === "string") {
+    o = {
+      second: "numeric",
+      minute: "numeric",
+      hour: "numeric"
+    };
+    switch (format) {
+      case "full":
+      case "long":
+        o.timeZoneName = "short";
+        break;
+      case "short":
+        delete o.second;
+    }
+  } else {
+    o = format;
+  }
+  return date(locales, value, o);
+}
+function number(locales, value, format) {
+  const _locales = normalizeLocales(locales);
+  const formatter = getMemoized(
+    () => cacheKey("number", _locales, format),
+    () => new Intl.NumberFormat(_locales, format)
+  );
+  return formatter.format(value);
+}
+function plural(locales, ordinal, value, { offset = 0, ...rules }) {
+  const _locales = normalizeLocales(locales);
+  const plurals = ordinal ? getMemoized(
+    () => cacheKey("plural-ordinal", _locales),
+    () => new Intl.PluralRules(_locales, { type: "ordinal" })
+  ) : getMemoized(
+    () => cacheKey("plural-cardinal", _locales),
+    () => new Intl.PluralRules(_locales, { type: "cardinal" })
+  );
+  return rules[value] ?? rules[plurals.select(value - offset)] ?? rules.other;
+}
+function getMemoized(getKey, construct) {
+  const key = getKey();
+  let formatter = cache.get(key);
+  if (!formatter) {
+    formatter = construct();
+    cache.set(key, formatter);
+  }
+  return formatter;
+}
+function cacheKey(type, locales, options) {
+  const localeKey = locales.join("-");
+  return `${type}-${localeKey}-${JSON.stringify(options)}`;
+}
+const ESCAPE_SEQUENCE_REGEX = /\\u[a-fA-F0-9]{4}|\\x[a-fA-F0-9]{2}/;
+const decodeEscapeSequences = (str) => {
+  return str.replace(
+    // Same pattern but with capturing groups for extracting values during replacement
+    /\\u([a-fA-F0-9]{4})|\\x([a-fA-F0-9]{2})/g,
+    (_, unicode, hex) => {
+      if (unicode) {
+        const codePoint = parseInt(unicode, 16);
+        return String.fromCharCode(codePoint);
+      } else {
+        const codePoint = parseInt(hex, 16);
+        return String.fromCharCode(codePoint);
+      }
+    }
+  );
+};
+const OCTOTHORPE_PH = "%__lingui_octothorpe__%";
+const getDefaultFormats = (locale, passedLocales, formats2 = {}) => {
+  const locales = passedLocales || locale;
+  const style = (format) => {
+    if (typeof format === "object")
+      return format;
+    return formats2[format];
+  };
+  const replaceOctothorpe = (value, message) => {
+    const numberFormat = Object.keys(formats2).length ? style("number") : void 0;
+    const valueStr = number(locales, value, numberFormat);
+    return message.replace(new RegExp(OCTOTHORPE_PH, "g"), valueStr);
+  };
+  return {
+    plural: (value, cases) => {
+      const { offset = 0 } = cases;
+      const message = plural(locales, false, value, cases);
+      return replaceOctothorpe(value - offset, message);
+    },
+    selectordinal: (value, cases) => {
+      const { offset = 0 } = cases;
+      const message = plural(locales, true, value, cases);
+      return replaceOctothorpe(value - offset, message);
+    },
+    select: selectFormatter,
+    number: (value, format) => number(
+      locales,
+      value,
+      style(format) || { style: format }
+    ),
+    date: (value, format) => date(locales, value, style(format) || format),
+    time: (value, format) => time(locales, value, style(format) || format)
+  };
+};
+const selectFormatter = (value, rules) => rules[value] ?? rules.other;
+function interpolate(translation, locale, locales) {
+  return (values = {}, formats2) => {
+    const formatters = getDefaultFormats(locale, locales, formats2);
+    const formatMessage = (tokens, replaceOctothorpe = false) => {
+      if (!Array.isArray(tokens))
+        return tokens;
+      return tokens.reduce((message, token) => {
+        if (token === "#" && replaceOctothorpe) {
+          return message + OCTOTHORPE_PH;
+        }
+        if (isString(token)) {
+          return message + token;
+        }
+        const [name, type, format] = token;
+        let interpolatedFormat = {};
+        if (type === "plural" || type === "selectordinal" || type === "select") {
+          Object.entries(format).forEach(
+            ([key, value2]) => {
+              interpolatedFormat[key] = formatMessage(
+                value2,
+                type === "plural" || type === "selectordinal"
+              );
+            }
+          );
+        } else {
+          interpolatedFormat = format;
+        }
+        let value;
+        if (type) {
+          const formatter = formatters[type];
+          value = formatter(values[name], interpolatedFormat);
+        } else {
+          value = values[name];
+        }
+        if (value == null) {
+          return message;
+        }
+        return message + value;
+      }, "");
+    };
+    const result = formatMessage(translation);
+    if (isString(result) && ESCAPE_SEQUENCE_REGEX.test(result)) {
+      return decodeEscapeSequences(result);
+    }
+    if (isString(result))
+      return result;
+    return result ? String(result) : "";
+  };
+}
+var __defProp$1 = Object.defineProperty;
+var __defNormalProp$1 = (obj, key, value) => key in obj ? __defProp$1(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField$1 = (obj, key, value) => {
+  __defNormalProp$1(obj, key + "", value);
+  return value;
+};
+class EventEmitter {
+  constructor() {
+    __publicField$1(this, "_events", {});
+  }
+  on(event, listener) {
+    var _a2;
+    (_a2 = this._events)[event] ?? (_a2[event] = []);
+    this._events[event].push(listener);
+    return () => this.removeListener(event, listener);
+  }
+  removeListener(event, listener) {
+    const maybeListeners = this._getListeners(event);
+    if (!maybeListeners)
+      return;
+    const index = maybeListeners.indexOf(listener);
+    if (~index)
+      maybeListeners.splice(index, 1);
+  }
+  emit(event, ...args) {
+    const maybeListeners = this._getListeners(event);
+    if (!maybeListeners)
+      return;
+    maybeListeners.map((listener) => listener.apply(this, args));
+  }
+  _getListeners(event) {
+    const maybeListeners = this._events[event];
+    return Array.isArray(maybeListeners) ? maybeListeners : false;
+  }
+}
+var __defProp = Object.defineProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
+class I18n extends EventEmitter {
+  constructor(params) {
+    super();
+    __publicField(this, "_locale", "");
+    __publicField(this, "_locales");
+    __publicField(this, "_localeData", {});
+    __publicField(this, "_messages", {});
+    __publicField(this, "_missing");
+    __publicField(this, "_messageCompiler");
+    __publicField(this, "t", this._.bind(this));
+    if (define_process_env_default.NODE_ENV !== "production") {
+      this.setMessagesCompiler(compileMessage);
+    }
+    if (params.missing != null)
+      this._missing = params.missing;
+    if (params.messages != null)
+      this.load(params.messages);
+    if (params.localeData != null)
+      this.loadLocaleData(params.localeData);
+    if (typeof params.locale === "string" || params.locales) {
+      this.activate(params.locale ?? defaultLocale, params.locales);
+    }
+  }
+  get locale() {
+    return this._locale;
+  }
+  get locales() {
+    return this._locales;
+  }
+  get messages() {
+    return this._messages[this._locale] ?? {};
+  }
+  /**
+   * @deprecated this has no effect. Please remove this from the code. Deprecated in v4
+   */
+  get localeData() {
+    return this._localeData[this._locale] ?? {};
+  }
+  _loadLocaleData(locale, localeData) {
+    const maybeLocaleData = this._localeData[locale];
+    if (!maybeLocaleData) {
+      this._localeData[locale] = localeData;
+    } else {
+      Object.assign(maybeLocaleData, localeData);
+    }
+  }
+  /**
+   * Registers a `MessageCompiler` to enable the use of uncompiled catalogs at runtime.
+   *
+   * In production builds, the `MessageCompiler` is typically excluded to reduce bundle size.
+   * By default, message catalogs should be precompiled during the build process. However,
+   * if you need to compile catalogs at runtime, you can use this method to set a message compiler.
+   *
+   * Example usage:
+   *
+   * ```ts
+   * import { compileMessage } from "@lingui/message-utils/compileMessage";
+   *
+   * i18n.setMessagesCompiler(compileMessage);
+   * ```
+   */
+  setMessagesCompiler(compiler) {
+    this._messageCompiler = compiler;
+    return this;
+  }
+  /**
+   * @deprecated Plurals automatically used from Intl.PluralRules you can safely remove this call. Deprecated in v4
+   */
+  loadLocaleData(localeOrAllData, localeData) {
+    if (typeof localeOrAllData === "string") {
+      this._loadLocaleData(localeOrAllData, localeData);
+    } else {
+      Object.keys(localeOrAllData).forEach(
+        (locale) => this._loadLocaleData(locale, localeOrAllData[locale])
+      );
+    }
+    this.emit("change");
+  }
+  _load(locale, messages) {
+    const maybeMessages = this._messages[locale];
+    if (!maybeMessages) {
+      this._messages[locale] = messages;
+    } else {
+      Object.assign(maybeMessages, messages);
+    }
+  }
+  load(localeOrMessages, messages) {
+    if (typeof localeOrMessages == "string" && typeof messages === "object") {
+      this._load(localeOrMessages, messages);
+    } else {
+      Object.entries(localeOrMessages).forEach(
+        ([locale, messages2]) => this._load(locale, messages2)
+      );
+    }
+    this.emit("change");
+  }
+  /**
+   * @param options {@link LoadAndActivateOptions}
+   */
+  loadAndActivate({ locale, locales, messages }) {
+    this._locale = locale;
+    this._locales = locales || void 0;
+    this._messages[this._locale] = messages;
+    this.emit("change");
+  }
+  activate(locale, locales) {
+    if (define_process_env_default.NODE_ENV !== "production") {
+      if (!this._messages[locale]) {
+        console.warn(`Messages for locale "${locale}" not loaded.`);
+      }
+    }
+    this._locale = locale;
+    this._locales = locales;
+    this.emit("change");
+  }
+  _(id2, values, options) {
+    if (!this.locale) {
+      throw new Error(
+        "Lingui: Attempted to call a translation function without setting a locale.\nMake sure to call `i18n.activate(locale)` before using Lingui functions.\nThis issue may also occur due to a race condition in your initialization logic."
+      );
+    }
+    let message = options?.message;
+    if (!id2) {
+      id2 = "";
+    }
+    if (!isString(id2)) {
+      values = id2.values || values;
+      message = id2.message;
+      id2 = id2.id;
+    }
+    const messageForId = this.messages[id2];
+    const messageMissing = messageForId === void 0;
+    const missing = this._missing;
+    if (missing && messageMissing) {
+      return isFunction(missing) ? missing(this._locale, id2) : missing;
+    }
+    if (messageMissing) {
+      this.emit("missing", { id: id2, locale: this._locale });
+    }
+    let translation = messageForId || message || id2;
+    if (isString(translation)) {
+      if (this._messageCompiler) {
+        translation = this._messageCompiler(translation);
+      } else {
+        console.warn(`Uncompiled message detected! Message:
+
+> ${translation}
+
+That means you use raw catalog or your catalog doesn't have a translation for the message and fallback was used.
+ICU features such as interpolation and plurals will not work properly for that message. 
+
+Please compile your catalog first. 
+`);
+      }
+    }
+    if (isString(translation) && ESCAPE_SEQUENCE_REGEX.test(translation))
+      return decodeEscapeSequences(translation);
+    if (isString(translation))
+      return translation;
+    return interpolate(
+      translation,
+      this._locale,
+      this._locales
+    )(values, options?.formats);
+  }
+  date(value, format) {
+    return date(this._locales || this._locale, value, format);
+  }
+  number(value, format) {
+    return number(this._locales || this._locale, value, format);
+  }
+}
+function setupI18n(params = {}) {
+  return new I18n(params);
+}
+const i18n = setupI18n();
+function parseError(error) {
+  if (error instanceof Error) {
+    return { statusCode: 0, message: error.message };
+  }
+  return { statusCode: 0, message: i18n._("Unexpected error.") };
+}
+const showErrorToast = (error) => {
+  const toast = usePluginStore.getState().toast;
+  const parsed = parseError(error);
+  toast.error(parsed.statusCode, {
+    description: parsed.message
+  });
+};
+const queryClient = new QueryClient({
+  queryCache: new QueryCache({
+    onError: (error) => {
+      showErrorToast(error);
+    }
+  }),
+  mutationCache: new MutationCache({
+    onError: (error) => {
+      showErrorToast(error);
+    }
+  })
+});
 let root = null;
 let container = null;
 const plugin = {
@@ -65114,21 +77824,40 @@ const plugin = {
     container.shadowRoot?.appendChild(el2);
     root = clientExports.createRoot(el2);
     root.render(
-      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BrowserRouter, { basename: "/modular-erp", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Plugin, { context, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Routes, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Route, { path: "/projects" }, void 0, false, {
-        fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin-entry.tsx",
-        lineNumber: 35,
+      /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(BrowserRouter, { basename: "/modular-erp", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Plugin, { context, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Routes, { children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Route, { path: "/", element: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Home, {}, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+          lineNumber: 40,
+          columnNumber: 40
+        }, void 0) }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+          lineNumber: 40,
+          columnNumber: 15
+        }, void 0),
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Route, { path: ":slug/*", element: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(SlugPage, {}, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+          lineNumber: 41,
+          columnNumber: 46
+        }, void 0) }, void 0, false, {
+          fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+          lineNumber: 41,
+          columnNumber: 15
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+        lineNumber: 39,
         columnNumber: 13
       }, void 0) }, void 0, false, {
-        fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin-entry.tsx",
-        lineNumber: 34,
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+        lineNumber: 38,
         columnNumber: 11
       }, void 0) }, void 0, false, {
-        fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin-entry.tsx",
-        lineNumber: 33,
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+        lineNumber: 37,
         columnNumber: 9
       }, void 0) }, void 0, false, {
-        fileName: "/Users/norbi/Documents/HelixSoft/Projects/FDB/ModularERP/app/plugin/plugin-entry.tsx",
-        lineNumber: 32,
+        fileName: "/Users/helixsoft/projects/DIJKSTRA/Dijkstra.ModularERP/app/plugin/plugin-entry.tsx",
+        lineNumber: 36,
         columnNumber: 7
       }, void 0)
     );
